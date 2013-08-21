@@ -295,7 +295,7 @@ ENDIF BSP_NOOES !
 ;-------------------------------------------------------------------------
 ; DM9000 A1 Driver
 IF BSP_NODM9000A1 !
-	dm9isa1.dll	$(_FLATRELEASEDIR)\dm9isa1.dll		                NK			SHK	
+	dm9000.dll	$(_FLATRELEASEDIR)\dm9000.dll		                NK			SHK	
 ENDIF BSP_NODM9000A1 !
 ;----------------------------- LED -----------------------------
 IF BSP_NO_LED !
@@ -331,18 +331,18 @@ FILES
      regedit.exe                 $(_FLATRELEASEDIR)\regedit.exe                 NK     U
     recorder.exe                $(_FLATRELEASEDIR)\recorder.exe                   NK     U
 ;    idletime.exe                $(_FLATRELEASEDIR)\idletime.exe          NK     U
-;     CameraDshowApp.exe          $(_FLATRELEASEDIR)\CameraDshowApp.exe          NK     U
+     CameraDshowApp.exe          $(_FLATRELEASEDIR)\CameraDshowApp.exe          NK     U
    RotateScreen.exe            $(_FLATRELEASEDIR)\RotateScreen.exe               NK     U
-    HSPITestApp.exe             $(_FLATRELEASEDIR)\HSPITestApp.exe       NK     U
+;    HSPITestApp.exe             $(_FLATRELEASEDIR)\HSPITestApp.exe       NK     U
 ;    tvout_test_RGBIF.exe            $(_FLATRELEASEDIR)\tvout_test_RGBIF.exe    NK   U
-;    tvout_test.exe            $(_FLATRELEASEDIR)\tvout_test.exe    NK   U
+    tvout_test.exe            $(_FLATRELEASEDIR)\tvout_test.exe    NK   U
 ;     tvout_test_Switch.exe           $(_FLATRELEASEDIR)\tvout_test_Switch.exe   NK   U
 ;    tvout_test_DMA_Disable.exe      $(_FLATRELEASEDIR)\tvout_test_DMA_Disable.exe   NK    U
 ;    tvout_test_DMA_Primary.exe      $(_FLATRELEASEDIR)\tvout_test_DMA_Primary.exe   NK    U
 ;    tvout_test_DMA_Overlay.exe      $(_FLATRELEASEDIR)\tvout_test_DMA_Overlay.exe   NK    U
      TouchCalibration.exe            $(_FLATRELEASEDIR)\TouchCalibration.exe         NK   U
 ;    GarField.wmv                 $(_FLATRELEASEDIR)\GarField.wmv          NK     U
-   brandy.exe                 $(_FLATRELEASEDIR)\brandy.exe          NK     U
+;   brandy.exe                 $(_FLATRELEASEDIR)\brandy.exe          NK     U
 IF BSP_NOOES !
     libGLESv1_CM.dll                $(_FLATRELEASEDIR)\libGLESv1_CM.dll          NK     U
     libGLESv2.dll                   $(_FLATRELEASEDIR)\libGLESv2.dll          NK     U
@@ -355,3 +355,5 @@ ENDIF BSP_NOOES !
 
 ;####################################################################
 
+; @CESYSGEN IF SYSGEN_FTPD || SYSGEN_TELNETD || SYSGEN_HTTPD
+; @CESYSGEN ENDIF SYSGEN_FTPD || SYSGEN_TELNETD || SYSGEN_HTTPD

@@ -1,6 +1,6 @@
  s3c6410_Video
 
- Timestamp is 512b0abc (Mon Feb 25 14:54:52 2013)
+ Timestamp is 5214589b (Wed Aug 21 14:05:15 2013)
 
  Preferred load address is 10000000
 
@@ -13,18 +13,18 @@
  0001:00000014 00000004H .CRT$XPZ                CODE
  0001:00000018 00000004H .CRT$XTA                CODE
  0001:0000001c 00000004H .CRT$XTZ                CODE
- 0001:00000020 000048b8H .rdata                  CODE
- 0001:000048d8 0000002aH .rdata$debug            CODE
- 0001:00004904 000089f0H .text                   CODE
- 0001:0000d2f8 00000098H .xdata                  CODE
- 0001:0000d390 00000028H .idata$2                CODE
- 0001:0000d3b8 00000014H .idata$3                CODE
- 0001:0000d3cc 0000009cH .idata$4                CODE
- 0001:0000d468 00000016H .idata$6                CODE
- 0001:0000d480 000000d1H .edata                  CODE
+ 0001:00000020 000048a8H .rdata                  CODE
+ 0001:000048c8 0000002aH .rdata$debug            CODE
+ 0001:000048f4 000089f0H .text                   CODE
+ 0001:0000d2e8 00000098H .xdata                  CODE
+ 0001:0000d380 00000028H .idata$2                CODE
+ 0001:0000d3a8 00000014H .idata$3                CODE
+ 0001:0000d3bc 0000009cH .idata$4                CODE
+ 0001:0000d458 00000016H .idata$6                CODE
+ 0001:0000d470 000000d1H .edata                  CODE
  0002:00000000 0000009cH .idata$5                DATA
- 0002:000000a0 00000880H .data                   DATA
- 0002:00000920 0000086cH .bss                    DATA
+ 0002:000000a0 000007d8H .data                   DATA
+ 0002:00000878 0000086cH .bss                    DATA
  0003:00000000 00000520H .pdata                  DATA
 
   Address         Publics by Value              Rva+Base       Lib:Object
@@ -156,231 +156,229 @@
  0001:00003560       ??_C@_1LC@OKJOEMOF@?$AA?$FL?$AAD?$AAI?$AAS?$AAP?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAD?$AAi?$AAs?$AAp?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu@ 10004560     s3c6410_disp_lib:s3c6410_display_con.obj
  0001:00003618       ??_C@_1KG@OBBOBCFG@?$AA?$FL?$AAD?$AAI?$AAS?$AAP?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAD?$AAi?$AAs?$AAp?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu@ 10004618     s3c6410_disp_lib:s3c6410_display_con.obj
  0001:000036c0       ??_C@_1FO@BKENGAED@?$AA?$FL?$AAD?$AAI?$AAS?$AAP?$AA?$FN?$AA?$CL?$AA?$CL?$AAD?$AAi?$AAs?$AAp?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu?$AAt?$AA_?$AAi@ 100046c0     s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00003720       ??_C@_0P@OLMFJJKE@MegaDisplay?57A?$AA@ 10004720     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003730       ??_C@_0P@OJIDCHPN@MegaDisplay?54A?$AA@ 10004730     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003740       ??_C@_0P@OMMMDBHI@MegaDisplay?53A?$AA@ 10004740     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003750       ??_C@_02IHOKFKFD@TV?$AA@   10004750     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003754       ??_C@_0N@MNHBCMKH@VGA_1024x768?$AA@ 10004754     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003764       ??_C@_0M@GJHCBNAO@VGA_800x600?$AA@ 10004764     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003770       ??_C@_0M@CMKNLCBM@VGA_640x480?$AA@ 10004770     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000377c       ??_C@_0BA@OAJNNLGN@MegaDisplay?55HD?$AA@ 1000477c     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000378c       ??_C@_0BA@PAOOJHPM@MegaDisplay?55SD?$AA@ 1000478c     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000379c       ??_C@_0O@MKHEOKMD@MegaDisplay?57?$AA@ 1000479c     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:000037ac       ??_C@_0O@OBFJLJAA@MegaDisplay?54?$AA@ 100047ac     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:000037bc       ??_C@_0O@KOBICPMH@MegaDisplay?53?$AA@ 100047bc     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:000037cc       ??_C@_04OKGDLNCL@NONE?$AA@ 100047cc     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:000037d4       ??_C@_06DJKJCCMC@LP3303?$AA@ 100047d4     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:000037dc       ??_C@_06LMLJGLPA@direct?$AA@ 100047dc     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:000037e4       ??_C@_08GOJFCIDL@SM8121AH?$AA@ 100047e4     s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:00003880       ??_C@_1JC@BNPIEBII@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg?$AAi?$AAs@ 10004880     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003918       ??_C@_1HE@CBHHCOKM@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004918     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003990       ??_C@_1GK@NOPPJOJF@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004990     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003a00       ??_C@_1HI@MIIIAFPN@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004a00     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003a78       ??_C@_1GO@FDFMLJGD@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004a78     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003ae8       ??_C@_1HI@BCJAKCLM@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAg?$AAe?$AAt?$AA_?$AAp?$AAr?$AAe?$AAs?$AAc?$AAa?$AAl?$AAe?$AAr?$AA_?$AAs?$AAh@ 10004ae8     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003b60       ??_C@_1HA@MOPJAIE@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10004b60     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003bd0       ??_C@_1HK@POMJJABD@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10004bd0     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003c50       ??_C@_1JA@LFKEMJPJ@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa?$AAt?$AAi?$AAo?$AAn?$AA_@ 10004c50     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003ce0       ??_C@_1JK@IJBFGJML@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAn?$AAe?$AAx?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa@ 10004ce0     s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:00003d80       ??_C@_1JG@GJCKEDHJ@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg@ 10004d80     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:00003e18       ??_C@_1HO@OHIDGHFG@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3@ 10004e18     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:00003e98       ??_C@_1HK@BPLCKCEP@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3@ 10004e98     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:00003f18       ??_C@_1MC@GMNFIIGG@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAs?$AAe?$AAt?$AA_?$AAs?$AAo?$AAu?$AAr?$AAc?$AAe?$AA_?$AAb?$AAu?$AAf@ 10004f18     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:00003fe0       ??_C@_1NG@CCKDBILC@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa?$AAt?$AAi?$AAo@ 10004fe0     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:000040b8       ??_C@_1JC@BIDBKDFI@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg?$AAi?$AAs@ 100050b8     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004150       ??_C@_1HI@EBIFIIMF@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10005150     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:000041c8       ??_C@_1GO@FJMFJCJ@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 100051c8     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004238       ??_C@_1GK@HBABCHIF@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10005238     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:000042a8       ??_C@_1HE@LJBMHMHN@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 100052a8     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004320       ??_C@_1HI@JLJNCPIE@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAg?$AAe?$AAt?$AA_?$AAp?$AAr?$AAe?$AAs?$AAc?$AAa?$AAl?$AAe?$AAr?$AA_?$AAs?$AAh@ 10005320     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004398       ??_C@_1HA@KGHDIDLD@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10005398     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004408       ??_C@_1HK@HKFPFKHI@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10005408     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004488       ??_C@_1IG@MFOJBLII@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAs?$AAo?$AAu?$AAr?$AAc?$AAe?$AA_?$AAb?$AAu?$AAf?$AAf?$AAe@ 10005488     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004510       ??_C@_1JA@GEDDIFDA@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAn?$AAe?$AAx?$AAt?$AA_?$AAs?$AAo?$AAu?$AAr?$AAc?$AAe?$AA_@ 10005510     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:000045a0       ??_C@_1JA@MEHIIIK@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa?$AAt?$AAi?$AAo?$AAn?$AA_@ 100055a0     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:00004630       ??_C@_1JK@OFDAGIOF@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAn?$AAe?$AAx?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa@ 10005630     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:000046d0       ??_C@_1JG@IEJDDMBK@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg@ 100056d0     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:00004768       ??_C@_1HM@KOGPMGCP@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAs?$AAe?$AAt?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu?$AAt?$AA_?$AAm?$AAo?$AAd@ 10005768     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:000047e8       ??_C@_1HE@EMJBGOBF@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAs?$AAe?$AAt?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu?$AAt?$AA_?$AAm?$AAo?$AAd@ 100057e8     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:00004860       ??_C@_1HI@DGOCEEKC@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAs?$AAe?$AAt?$AA_?$AAv?$AAi?$AAd?$AAe?$AAo?$AA_?$AAs?$AAi?$AAz?$AAe@ 10005860     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:00004904       SVE_get_context            10005904 f   SVEngine.obj
- 0001:00004950       SVE_get_power_context      10005950 f   SVEngine.obj
- 0001:0000495c       SVE_map_device_address     1000595c f   SVEngine.obj
- 0001:00004ac0       SVE_unmap_device_address   10005ac0 f   SVEngine.obj
- 0001:00004bd8       SVE_initialize_context     10005bd8 f   SVEngine.obj
- 0001:00004cfc       SVE_deinitialize_context   10005cfc f   SVEngine.obj
- 0001:00004d8c       SVE_get_api_function_code  10005d8c f   SVEngine.obj
- 0001:00004d98       SVE_get_driver_signature   10005d98 f   SVEngine.obj
- 0001:00004dac       SVE_add_open_context       10005dac f   SVEngine.obj
- 0001:00004ddc       SVE_remove_open_context    10005ddc f   SVEngine.obj
- 0001:00004e84       SVE_deinitialize_video_engine 10005e84 f   SVEngine.obj
- 0001:00004ea8       SVE_initialize_video_engine 10005ea8 f   SVEngine.obj
- 0001:00005020       SVE_initialize_interrupt   10006020 f   Interrupt.obj
- 0001:00005204       SVE_deinitialize_interrupt 10006204 f   Interrupt.obj
- 0001:0000536c       SVE_deinitialize_thread    1000636c f   Interrupt.obj
- 0001:000053e4       SVE_DisplayIntrThread      100063e4 f   Interrupt.obj
- 0001:000054e8       SVE_PostIntrThread         100064e8 f   Interrupt.obj
- 0001:00005570       SVE_RotatorIntrThread      10006570 f   Interrupt.obj
- 0001:000055e4       SVE_TVScalerIntrThread     100065e4 f   Interrupt.obj
- 0001:0000566c       SVE_wait_disp_cmd_done     1000666c f   Interrupt.obj
- 0001:00005688       SVE_wait_post_cmd_done     10006688 f   Interrupt.obj
- 0001:000056a4       SVE_wait_tvsc_cmd_done     100066a4 f   Interrupt.obj
- 0001:000056c0       SVE_wait_rotator_finish    100066c0 f   Interrupt.obj
- 0001:000056dc       SVE_initialize_thread      100066dc f   Interrupt.obj
- 0001:000057c4       SVE_initialize_power_context 100067c4 f   Power.obj
- 0001:000058a4       SVE_deinitialize_power_context 100068a4 f   Power.obj
- 0001:000058a8       SVE_initialize_power_control 100068a8 f   Power.obj
- 0001:00005900       SVE_deinitialize_power_control 10006900 f   Power.obj
- 0001:0000591c       SVE_hw_clock_control       1000691c f   Power.obj
- 0001:00005b10       SVE_hw_power_control       10006b10 f   Power.obj
- 0001:00006060       SVE_video_engine_power_on  10007060 f   Power.obj
- 0001:0000653c       SVE_video_engine_power_off 1000753c f   Power.obj
- 0001:00006618       SVE_resource_request_FIMD_interface 10007618 f   ResourceAPI.obj
- 0001:00006678       SVE_resource_release_FIMD_interface 10007678 f   ResourceAPI.obj
- 0001:000066d0       SVE_resource_compare_FIMD_interface 100076d0 f   ResourceAPI.obj
- 0001:00006704       SVE_resource_request_FIMD_window 10007704 f   ResourceAPI.obj
- 0001:00006748       SVE_resource_release_FIMD_window 10007748 f   ResourceAPI.obj
- 0001:00006780       SVE_resource_compare_FIMD_window 10007780 f   ResourceAPI.obj
- 0001:000067b0       SVE_resource_request_Post  100077b0 f   ResourceAPI.obj
- 0001:00006810       SVE_resource_release_Post  10007810 f   ResourceAPI.obj
- 0001:00006868       SVE_resource_compare_Post  10007868 f   ResourceAPI.obj
- 0001:00006890       SVE_resource_request_Rotator 10007890 f   ResourceAPI.obj
- 0001:000068f0       SVE_resource_release_Rotator 100078f0 f   ResourceAPI.obj
- 0001:00006948       SVE_resource_compare_Rotator 10007948 f   ResourceAPI.obj
- 0001:00006970       SVE_resource_request_TVScaler_TVEncoder 10007970 f   ResourceAPI.obj
- 0001:000069d4       SVE_resource_release_TVScaler_TVEncoder 100079d4 f   ResourceAPI.obj
- 0001:00006a30       SVE_resource_compare_TVScaler_TVEncoder 10007a30 f   ResourceAPI.obj
- 0001:00006a58       SVE_Resource_API_Proc      10007a58 f   ResourceAPI.obj
- 0001:00006b78       SVE_DispCon_API_Proc       10007b78 f   DispConAPI.obj
- 0001:000071ac       SVE_Post_API_Proc          100081ac f   PostAPI.obj
- 0001:000076a8       SVE_LocalPath_API_Proc     100086a8 f   LocalPathAPI.obj
- 0001:0000782c       SVE_Rotator_API_Proc       1000882c f   RotatorAPI.obj
- 0001:00007a6c       SVE_TVScaler_API_Proc      10008a6c f   TVScalerAPI.obj
- 0001:00007f68       SVE_TVEncoder_API_Proc     10008f68 f   TVEncoderAPI.obj
- 0001:000080d8       DllEntry                   100090d8 f   video_driver.obj
- 0001:000080f8       VDE_Init                   100090f8 f   video_driver.obj
- 0001:0000811c       VDE_Deinit                 1000911c f   video_driver.obj
- 0001:00008148       VDE_Open                   10009148 f   video_driver.obj
- 0001:00008174       VDE_Close                  10009174 f   video_driver.obj
- 0001:00008184       VDE_Read                   10009184 f   video_driver.obj
- 0001:0000818c       VDE_Write                  1000918c f   video_driver.obj
- 0001:00008194       VDE_Seek                   10009194 f   video_driver.obj
- 0001:000081a4       VDE_IOControl              100091a4 f   video_driver.obj
- 0001:00008c14       Disp_initialize_register_address 10009c14 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00008ccc       Disp_set_output_device_information 10009ccc f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00008d28       Disp_set_output_TV_information 10009d28 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00008e0c       Disp_set_window_position   10009e0c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009028       Disp_set_framebuffer       1000a028 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000924c       Disp_envid_onoff           1000a24c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009300       Disp_get_envid_status      1000a300 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009348       Disp_window_onfoff         1000a348 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:000094d4       Disp_local_path_off        1000a4d4 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009590       Disp_set_color_key         1000a590 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009734       Disp_set_alpha_blending    1000a734 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:000098c0       Disp_set_frame_interrupt   1000a8c0 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009974       Disp_enable_frame_interrupt 1000a974 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:000099c0       Disp_disable_frame_interrupt 1000a9c0 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009a1c       Disp_clear_interrupt_pending 1000aa1c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009a74       Disp_get_line_count        1000aa74 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009ab4       Disp_get_vertical_status   1000aab4 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009ad0       Disp_get_win_num_from_win_mode 1000aad0 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a870       Disp_Check_Vsync_Value     1000b870 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a8a4       Disp_VSync_Enable          1000b8a4 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a8dc       Disp_GetFlipStatus         1000b8dc f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a8ec       Disp_set_window_mode       1000b8ec f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000ad98       Disp_initialize_output_interface 1000bd98 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000ae70       LDI_getDisplayName         1000be70 f   s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000ae94       LDI_initialize_register_address 1000be94 f   s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000aeb8       LDI_set_LCD_module_type    1000beb8 f   s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000aed0       LDI_fill_output_device_information 1000bed0 f   s3c6410_ldi_lib:s3c6410_ldi.obj
- 0001:0000af9c       Post_initialize_register_address 1000bf9c f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000afe8       Post_processing_start      1000bfe8 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b018       Post_processing_stop       1000c018 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b048       Post_autoload_disable      1000c048 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b064       Post_get_processing_state  1000c064 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b084       Post_enable_interrupt      1000c084 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b0b4       Post_disable_interrupt     1000c0b4 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b0e4       Post_clear_interrupt_pending 1000c0e4 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b7fc       Post_initialize            1000c7fc f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b8f0       Post_set_source_buffer     1000c8f0 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000bac0       Post_set_next_source_buffer 1000cac0 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000bae0       Post_set_destination_buffer 1000cae0 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000bcd4       Post_set_next_destination_buffer 1000ccd4 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000bd28       Rotator_initialize_register_address 1000cd28 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bd64       Rotator_initialize         1000cd64 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000be90       Rotator_set_source_buffer  1000ce90 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bf04       Rotator_set_destination_buffer 1000cf04 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bf78       Rotator_start              1000cf78 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bf94       Rotator_stop               1000cf94 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bfb0       Rotator_enable_interrupt   1000cfb0 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bfcc       Rotator_disable_interrupt  1000cfcc f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000bfe8       Rotator_clear_interrupt_pending 1000cfe8 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
- 0001:0000c008       TVSC_initialize_register_address 1000d008 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c054       TVSC_processing_start      1000d054 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c084       TVSC_processing_stop       1000d084 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c0b8       TVSC_autoload_disable      1000d0b8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c0d4       TVSC_get_processing_state  1000d0d4 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c0f4       TVSC_enable_interrupt      1000d0f4 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c124       TVSC_disable_interrupt     1000d124 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c154       TVSC_clear_interrupt_pending 1000d154 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c8b8       TVSC_initialize            1000d8b8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c940       TVSC_set_source_buffer     1000d940 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c98c       TVSC_set_next_source_buffer 1000d98c f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c9d8       TVSC_set_destination_buffer 1000d9d8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000ca2c       TVSC_set_next_destination_buffer 1000da2c f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000ca80       TVEnc_initialize_register_address 1000da80 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:0000cad0       TVEnc_output_onoff         1000dad0 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:0000caf8       TVEnc_get_output_state     1000daf8 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:0000cd04       TVEnc_initialize           1000dd04 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:0000cd9c       NKDbgPrintfW               1000dd9c f   coredll:COREDLL.dll
- 0001:0000cdac       CreateEventW               1000ddac f   coredll:COREDLL.dll
- 0001:0000cdbc       InitializeCriticalSection  1000ddbc f   coredll:COREDLL.dll
- 0001:0000cdcc       CloseHandle                1000ddcc f   coredll:COREDLL.dll
- 0001:0000cddc       DeleteCriticalSection      1000dddc f   coredll:COREDLL.dll
- 0001:0000cdec       KernelIoControl            1000ddec f   coredll:COREDLL.dll
- 0001:0000cdfc       EventModify                1000ddfc f   coredll:COREDLL.dll
- 0001:0000ce0c       InterruptInitialize        1000de0c f   coredll:COREDLL.dll
- 0001:0000ce1c       InterruptDisable           1000de1c f   coredll:COREDLL.dll
- 0001:0000ce2c       InterruptDone              1000de2c f   coredll:COREDLL.dll
- 0001:0000ce3c       WaitForSingleObject        1000de3c f   coredll:COREDLL.dll
- 0001:0000ce4c       CeSetThreadPriority        1000de4c f   coredll:COREDLL.dll
- 0001:0000ce5c       CreateThread               1000de5c f   coredll:COREDLL.dll
- 0001:0000ce6c       CreateFileW                1000de6c f   coredll:COREDLL.dll
- 0001:0000ce7c       DeviceIoControl            1000de7c f   coredll:COREDLL.dll
- 0001:0000ce8c       LeaveCriticalSection       1000de8c f   coredll:COREDLL.dll
- 0001:0000ce9c       EnterCriticalSection       1000de9c f   coredll:COREDLL.dll
- 0001:0000ceac       Sleep                      1000deac f   coredll:COREDLL.dll
- 0001:0000cebc       __GetUserKData             1000debc f   coredll:COREDLL.dll
- 0001:0000cecc       RegisterDbgZones           1000decc f   coredll:COREDLL.dll
- 0001:0000cedc       GetDirectCallerProcessId   1000dedc f   coredll:COREDLL.dll
- 0001:0000ceec       SetLastError               1000deec f   coredll:COREDLL.dll
- 0001:0000cefc       CeSafeCopyMemory           1000defc f   coredll:COREDLL.dll
- 0001:0000cf0c       MmMapIoSpace               1000df0c f   ceddk:CEDDK.dll
- 0001:0000cf1c       MmUnmapIoSpace             1000df1c f   ceddk:CEDDK.dll
- 0001:0000cf2c       _DllEntryCRTStartup        1000df2c f   corelib0:pegdentry.obj
- 0001:0000cf74       __GSHandlerCheck_SEH       1000df74 f   corelib0:gshandlerseh.obj
- 0001:0000cfc4       __security_init_cookie     1000dfc4 f   corelib0:seccinit.obj
- 0001:0000d020       __security_check_cookie    1000e020 f   corelib0:armsecgs.obj
- 0001:0000d034       __gsfailure                1000e034 f   corelib0:armsecgs.obj
- 0001:0000d174       _cexit                     1000e174 f   corelib0:cexit.obj
- 0001:0000d190       _initterm                  1000e190 f   corelib0:crt0dat.obj
- 0001:0000d1c4       _cinit                     1000e1c4 f   corelib0:crt0dat.obj
- 0001:0000d1f8       __GSHandlerCheckCommon     1000e1f8 f   corelib0:gshandler.obj
- 0001:0000d234       memcpy                     1000e234 f   corelib1:COREDLL.dll
- 0001:0000d244       memset                     1000e244 f   corelib1:COREDLL.dll
- 0001:0000d254       __rt_udiv                  1000e254 f   corelib1:COREDLL.dll
- 0001:0000d264       __utod                     1000e264 f   corelib1:COREDLL.dll
- 0001:0000d274       __divd                     1000e274 f   corelib1:COREDLL.dll
- 0001:0000d284       __dtou                     1000e284 f   corelib1:COREDLL.dll
- 0001:0000d294       __C_specific_handler       1000e294 f   corelib1:COREDLL.dll
- 0001:0000d2a4       __security_gen_cookie2     1000e2a4 f   corelib1:COREDLL.dll
- 0001:0000d2b4       __report_gsfailure         1000e2b4 f   corelib1:COREDLL.dll
- 0001:0000d2c4       free                       1000e2c4 f   corelib1:COREDLL.dll
- 0001:0000d2d4       InterlockedExchange        1000e2d4 f   coredll:COREDLL.dll
- 0001:0000d2e4       TerminateProcess           1000e2e4 f   coredll:COREDLL.dll
- 0001:0000d390       __IMPORT_DESCRIPTOR_COREDLL 1000e390     coredll:COREDLL.dll
- 0001:0000d3a4       __IMPORT_DESCRIPTOR_CEDDK  1000e3a4     ceddk:CEDDK.dll
- 0001:0000d3b8       __NULL_IMPORT_DESCRIPTOR   1000e3b8     coredll:COREDLL.dll
+ 0001:00003720       ??_C@_0N@MNHBCMKH@VGA_1024x768?$AA@ 10004720     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003730       ??_C@_0M@GJHCBNAO@VGA_800x600?$AA@ 10004730     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:0000373c       ??_C@_0M@CMKNLCBM@VGA_640x480?$AA@ 1000473c     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003748       ??_C@_0P@NJGMKNKB@MegaDisplay?510?$AA@ 10004748     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003758       ??_C@_0BA@OAJNNLGN@MegaDisplay?55HD?$AA@ 10004758     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003768       ??_C@_0BA@PAOOJHPM@MegaDisplay?55SD?$AA@ 10004768     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003778       ??_C@_0P@GMFNIFGL@MegaDisplay?57N?$AA@ 10004778     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003788       ??_C@_0O@MKHEOKMD@MegaDisplay?57?$AA@ 10004788     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003798       ??_C@_0O@OBFJLJAA@MegaDisplay?54?$AA@ 10004798     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:000037a8       ??_C@_0O@KOBICPMH@MegaDisplay?53?$AA@ 100047a8     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:000037b8       ??_C@_04OKGDLNCL@NONE?$AA@ 100047b8     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:000037c0       ??_C@_06DJKJCCMC@LP3303?$AA@ 100047c0     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:000037c8       ??_C@_06LMLJGLPA@direct?$AA@ 100047c8     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:000037d0       ??_C@_08GOJFCIDL@SM8121AH?$AA@ 100047d0     s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:00003870       ??_C@_1JC@BNPIEBII@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg?$AAi?$AAs@ 10004870     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003908       ??_C@_1HE@CBHHCOKM@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004908     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003980       ??_C@_1GK@NOPPJOJF@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004980     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:000039f0       ??_C@_1HI@MIIIAFPN@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 100049f0     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003a68       ??_C@_1GO@FDFMLJGD@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10004a68     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003ad8       ??_C@_1HI@BCJAKCLM@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAg?$AAe?$AAt?$AA_?$AAp?$AAr?$AAe?$AAs?$AAc?$AAa?$AAl?$AAe?$AAr?$AA_?$AAs?$AAh@ 10004ad8     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003b50       ??_C@_1HA@MOPJAIE@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10004b50     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003bc0       ??_C@_1HK@POMJJABD@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10004bc0     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003c40       ??_C@_1JA@LFKEMJPJ@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa?$AAt?$AAi?$AAo?$AAn?$AA_@ 10004c40     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003cd0       ??_C@_1JK@IJBFGJML@?$AA?$FL?$AAP?$AAO?$AAS?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAP?$AAo?$AAs?$AAt?$AA_?$AAs?$AAe?$AAt?$AA_?$AAn?$AAe?$AAx?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa@ 10004cd0     s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:00003d70       ??_C@_1JG@GJCKEDHJ@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg@ 10004d70     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:00003e08       ??_C@_1HO@OHIDGHFG@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3@ 10004e08     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:00003e88       ??_C@_1HK@BPLCKCEP@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3@ 10004e88     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:00003f08       ??_C@_1MC@GMNFIIGG@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAs?$AAe?$AAt?$AA_?$AAs?$AAo?$AAu?$AAr?$AAc?$AAe?$AA_?$AAb?$AAu?$AAf@ 10004f08     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:00003fd0       ??_C@_1NG@CCKDBILC@?$AA?$FL?$AAR?$AAO?$AAT?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAR?$AAo?$AAt?$AAa?$AAt?$AAo?$AAr?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa?$AAt?$AAi?$AAo@ 10004fd0     s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:000040a8       ??_C@_1JC@BIDBKDFI@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg?$AAi?$AAs@ 100050a8     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004140       ??_C@_1HI@EBIFIIMF@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10005140     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:000041b8       ??_C@_1GO@FJMFJCJ@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 100051b8     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004228       ??_C@_1GK@HBABCHIF@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10005228     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004298       ??_C@_1HE@LJBMHMHN@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAm?$AAo?$AAd?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AA?3?$AA?5?$AAU?$AAn?$AAk@ 10005298     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004310       ??_C@_1HI@JLJNCPIE@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAg?$AAe?$AAt?$AA_?$AAp?$AAr?$AAe?$AAs?$AAc?$AAa?$AAl?$AAe?$AAr?$AA_?$AAs?$AAh@ 10005310     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004388       ??_C@_1HA@KGHDIDLD@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 10005388     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:000043f8       ??_C@_1HK@HKFPFKHI@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAm?$AAa?$AA_?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI@ 100053f8     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004478       ??_C@_1IG@MFOJBLII@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAs?$AAo?$AAu?$AAr?$AAc?$AAe?$AA_?$AAb?$AAu?$AAf?$AAf?$AAe@ 10005478     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004500       ??_C@_1JA@GEDDIFDA@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAn?$AAe?$AAx?$AAt?$AA_?$AAs?$AAo?$AAu?$AAr?$AAc?$AAe?$AA_@ 10005500     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004590       ??_C@_1JA@MEHIIIK@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa?$AAt?$AAi?$AAo?$AAn?$AA_@ 10005590     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:00004620       ??_C@_1JK@OFDAGIOF@?$AA?$FL?$AAT?$AAV?$AAS?$AAC?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAS?$AAC?$AA_?$AAs?$AAe?$AAt?$AA_?$AAn?$AAe?$AAx?$AAt?$AA_?$AAd?$AAe?$AAs?$AAt?$AAi?$AAn?$AAa@ 10005620     s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:000046c0       ??_C@_1JG@IEJDDMBK@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA_?$AAr?$AAe?$AAg@ 100056c0     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:00004758       ??_C@_1HM@KOGPMGCP@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAs?$AAe?$AAt?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu?$AAt?$AA_?$AAm?$AAo?$AAd@ 10005758     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:000047d8       ??_C@_1HE@EMJBGOBF@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAs?$AAe?$AAt?$AA_?$AAo?$AAu?$AAt?$AAp?$AAu?$AAt?$AA_?$AAm?$AAo?$AAd@ 100057d8     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:00004850       ??_C@_1HI@DGOCEEKC@?$AA?$FL?$AAT?$AAV?$AAE?$AAn?$AAc?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAT?$AAV?$AAE?$AAn?$AAc?$AA_?$AAs?$AAe?$AAt?$AA_?$AAv?$AAi?$AAd?$AAe?$AAo?$AA_?$AAs?$AAi?$AAz?$AAe@ 10005850     s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:000048f4       SVE_get_context            100058f4 f   SVEngine.obj
+ 0001:00004940       SVE_get_power_context      10005940 f   SVEngine.obj
+ 0001:0000494c       SVE_map_device_address     1000594c f   SVEngine.obj
+ 0001:00004ab0       SVE_unmap_device_address   10005ab0 f   SVEngine.obj
+ 0001:00004bc8       SVE_initialize_context     10005bc8 f   SVEngine.obj
+ 0001:00004cec       SVE_deinitialize_context   10005cec f   SVEngine.obj
+ 0001:00004d7c       SVE_get_api_function_code  10005d7c f   SVEngine.obj
+ 0001:00004d88       SVE_get_driver_signature   10005d88 f   SVEngine.obj
+ 0001:00004d9c       SVE_add_open_context       10005d9c f   SVEngine.obj
+ 0001:00004dcc       SVE_remove_open_context    10005dcc f   SVEngine.obj
+ 0001:00004e74       SVE_deinitialize_video_engine 10005e74 f   SVEngine.obj
+ 0001:00004e98       SVE_initialize_video_engine 10005e98 f   SVEngine.obj
+ 0001:00005010       SVE_initialize_interrupt   10006010 f   Interrupt.obj
+ 0001:000051f4       SVE_deinitialize_interrupt 100061f4 f   Interrupt.obj
+ 0001:0000535c       SVE_deinitialize_thread    1000635c f   Interrupt.obj
+ 0001:000053d4       SVE_DisplayIntrThread      100063d4 f   Interrupt.obj
+ 0001:000054d8       SVE_PostIntrThread         100064d8 f   Interrupt.obj
+ 0001:00005560       SVE_RotatorIntrThread      10006560 f   Interrupt.obj
+ 0001:000055d4       SVE_TVScalerIntrThread     100065d4 f   Interrupt.obj
+ 0001:0000565c       SVE_wait_disp_cmd_done     1000665c f   Interrupt.obj
+ 0001:00005678       SVE_wait_post_cmd_done     10006678 f   Interrupt.obj
+ 0001:00005694       SVE_wait_tvsc_cmd_done     10006694 f   Interrupt.obj
+ 0001:000056b0       SVE_wait_rotator_finish    100066b0 f   Interrupt.obj
+ 0001:000056cc       SVE_initialize_thread      100066cc f   Interrupt.obj
+ 0001:000057b4       SVE_initialize_power_context 100067b4 f   Power.obj
+ 0001:00005894       SVE_deinitialize_power_context 10006894 f   Power.obj
+ 0001:00005898       SVE_initialize_power_control 10006898 f   Power.obj
+ 0001:000058f0       SVE_deinitialize_power_control 100068f0 f   Power.obj
+ 0001:0000590c       SVE_hw_clock_control       1000690c f   Power.obj
+ 0001:00005b00       SVE_hw_power_control       10006b00 f   Power.obj
+ 0001:00006050       SVE_video_engine_power_on  10007050 f   Power.obj
+ 0001:0000652c       SVE_video_engine_power_off 1000752c f   Power.obj
+ 0001:00006608       SVE_resource_request_FIMD_interface 10007608 f   ResourceAPI.obj
+ 0001:00006668       SVE_resource_release_FIMD_interface 10007668 f   ResourceAPI.obj
+ 0001:000066c0       SVE_resource_compare_FIMD_interface 100076c0 f   ResourceAPI.obj
+ 0001:000066f4       SVE_resource_request_FIMD_window 100076f4 f   ResourceAPI.obj
+ 0001:00006738       SVE_resource_release_FIMD_window 10007738 f   ResourceAPI.obj
+ 0001:00006770       SVE_resource_compare_FIMD_window 10007770 f   ResourceAPI.obj
+ 0001:000067a0       SVE_resource_request_Post  100077a0 f   ResourceAPI.obj
+ 0001:00006800       SVE_resource_release_Post  10007800 f   ResourceAPI.obj
+ 0001:00006858       SVE_resource_compare_Post  10007858 f   ResourceAPI.obj
+ 0001:00006880       SVE_resource_request_Rotator 10007880 f   ResourceAPI.obj
+ 0001:000068e0       SVE_resource_release_Rotator 100078e0 f   ResourceAPI.obj
+ 0001:00006938       SVE_resource_compare_Rotator 10007938 f   ResourceAPI.obj
+ 0001:00006960       SVE_resource_request_TVScaler_TVEncoder 10007960 f   ResourceAPI.obj
+ 0001:000069c4       SVE_resource_release_TVScaler_TVEncoder 100079c4 f   ResourceAPI.obj
+ 0001:00006a20       SVE_resource_compare_TVScaler_TVEncoder 10007a20 f   ResourceAPI.obj
+ 0001:00006a48       SVE_Resource_API_Proc      10007a48 f   ResourceAPI.obj
+ 0001:00006b68       SVE_DispCon_API_Proc       10007b68 f   DispConAPI.obj
+ 0001:0000719c       SVE_Post_API_Proc          1000819c f   PostAPI.obj
+ 0001:00007698       SVE_LocalPath_API_Proc     10008698 f   LocalPathAPI.obj
+ 0001:0000781c       SVE_Rotator_API_Proc       1000881c f   RotatorAPI.obj
+ 0001:00007a5c       SVE_TVScaler_API_Proc      10008a5c f   TVScalerAPI.obj
+ 0001:00007f58       SVE_TVEncoder_API_Proc     10008f58 f   TVEncoderAPI.obj
+ 0001:000080c8       DllEntry                   100090c8 f   video_driver.obj
+ 0001:000080e8       VDE_Init                   100090e8 f   video_driver.obj
+ 0001:0000810c       VDE_Deinit                 1000910c f   video_driver.obj
+ 0001:00008138       VDE_Open                   10009138 f   video_driver.obj
+ 0001:00008164       VDE_Close                  10009164 f   video_driver.obj
+ 0001:00008174       VDE_Read                   10009174 f   video_driver.obj
+ 0001:0000817c       VDE_Write                  1000917c f   video_driver.obj
+ 0001:00008184       VDE_Seek                   10009184 f   video_driver.obj
+ 0001:00008194       VDE_IOControl              10009194 f   video_driver.obj
+ 0001:00008c04       Disp_initialize_register_address 10009c04 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00008cbc       Disp_set_output_device_information 10009cbc f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00008d18       Disp_set_output_TV_information 10009d18 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00008dfc       Disp_set_window_position   10009dfc f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009018       Disp_set_framebuffer       1000a018 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000923c       Disp_envid_onoff           1000a23c f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:000092f0       Disp_get_envid_status      1000a2f0 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009338       Disp_window_onfoff         1000a338 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:000094c4       Disp_local_path_off        1000a4c4 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009580       Disp_set_color_key         1000a580 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009724       Disp_set_alpha_blending    1000a724 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:000098b0       Disp_set_frame_interrupt   1000a8b0 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009964       Disp_enable_frame_interrupt 1000a964 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:000099b0       Disp_disable_frame_interrupt 1000a9b0 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009a0c       Disp_clear_interrupt_pending 1000aa0c f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009a64       Disp_get_line_count        1000aa64 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009aa4       Disp_get_vertical_status   1000aaa4 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009ac0       Disp_get_win_num_from_win_mode 1000aac0 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a860       Disp_Check_Vsync_Value     1000b860 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a894       Disp_VSync_Enable          1000b894 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a8cc       Disp_GetFlipStatus         1000b8cc f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a8dc       Disp_set_window_mode       1000b8dc f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000ad88       Disp_initialize_output_interface 1000bd88 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000ae60       LDI_getDisplayName         1000be60 f   s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:0000ae84       LDI_initialize_register_address 1000be84 f   s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:0000aea8       LDI_set_LCD_module_type    1000bea8 f   s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:0000aec0       LDI_fill_output_device_information 1000bec0 f   s3c6410_ldi_lib:s3c6410_ldi.obj
+ 0001:0000af8c       Post_initialize_register_address 1000bf8c f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000afd8       Post_processing_start      1000bfd8 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b008       Post_processing_stop       1000c008 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b038       Post_autoload_disable      1000c038 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b054       Post_get_processing_state  1000c054 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b074       Post_enable_interrupt      1000c074 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b0a4       Post_disable_interrupt     1000c0a4 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b0d4       Post_clear_interrupt_pending 1000c0d4 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b7ec       Post_initialize            1000c7ec f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b8e0       Post_set_source_buffer     1000c8e0 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000bab0       Post_set_next_source_buffer 1000cab0 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000bad0       Post_set_destination_buffer 1000cad0 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000bcc4       Post_set_next_destination_buffer 1000ccc4 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000bd18       Rotator_initialize_register_address 1000cd18 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bd54       Rotator_initialize         1000cd54 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000be80       Rotator_set_source_buffer  1000ce80 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bef4       Rotator_set_destination_buffer 1000cef4 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bf68       Rotator_start              1000cf68 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bf84       Rotator_stop               1000cf84 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bfa0       Rotator_enable_interrupt   1000cfa0 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bfbc       Rotator_disable_interrupt  1000cfbc f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bfd8       Rotator_clear_interrupt_pending 1000cfd8 f   s3c6410_image_rotator_lib:s3c6410_image_rotator.obj
+ 0001:0000bff8       TVSC_initialize_register_address 1000cff8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c044       TVSC_processing_start      1000d044 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c074       TVSC_processing_stop       1000d074 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c0a8       TVSC_autoload_disable      1000d0a8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c0c4       TVSC_get_processing_state  1000d0c4 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c0e4       TVSC_enable_interrupt      1000d0e4 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c114       TVSC_disable_interrupt     1000d114 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c144       TVSC_clear_interrupt_pending 1000d144 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c8a8       TVSC_initialize            1000d8a8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c930       TVSC_set_source_buffer     1000d930 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c97c       TVSC_set_next_source_buffer 1000d97c f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c9c8       TVSC_set_destination_buffer 1000d9c8 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000ca1c       TVSC_set_next_destination_buffer 1000da1c f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000ca70       TVEnc_initialize_register_address 1000da70 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:0000cac0       TVEnc_output_onoff         1000dac0 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:0000cae8       TVEnc_get_output_state     1000dae8 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:0000ccf4       TVEnc_initialize           1000dcf4 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:0000cd8c       NKDbgPrintfW               1000dd8c f   coredll:COREDLL.dll
+ 0001:0000cd9c       CreateEventW               1000dd9c f   coredll:COREDLL.dll
+ 0001:0000cdac       InitializeCriticalSection  1000ddac f   coredll:COREDLL.dll
+ 0001:0000cdbc       CloseHandle                1000ddbc f   coredll:COREDLL.dll
+ 0001:0000cdcc       DeleteCriticalSection      1000ddcc f   coredll:COREDLL.dll
+ 0001:0000cddc       KernelIoControl            1000dddc f   coredll:COREDLL.dll
+ 0001:0000cdec       EventModify                1000ddec f   coredll:COREDLL.dll
+ 0001:0000cdfc       InterruptInitialize        1000ddfc f   coredll:COREDLL.dll
+ 0001:0000ce0c       InterruptDisable           1000de0c f   coredll:COREDLL.dll
+ 0001:0000ce1c       InterruptDone              1000de1c f   coredll:COREDLL.dll
+ 0001:0000ce2c       WaitForSingleObject        1000de2c f   coredll:COREDLL.dll
+ 0001:0000ce3c       CeSetThreadPriority        1000de3c f   coredll:COREDLL.dll
+ 0001:0000ce4c       CreateThread               1000de4c f   coredll:COREDLL.dll
+ 0001:0000ce5c       CreateFileW                1000de5c f   coredll:COREDLL.dll
+ 0001:0000ce6c       DeviceIoControl            1000de6c f   coredll:COREDLL.dll
+ 0001:0000ce7c       LeaveCriticalSection       1000de7c f   coredll:COREDLL.dll
+ 0001:0000ce8c       EnterCriticalSection       1000de8c f   coredll:COREDLL.dll
+ 0001:0000ce9c       Sleep                      1000de9c f   coredll:COREDLL.dll
+ 0001:0000ceac       __GetUserKData             1000deac f   coredll:COREDLL.dll
+ 0001:0000cebc       RegisterDbgZones           1000debc f   coredll:COREDLL.dll
+ 0001:0000cecc       GetDirectCallerProcessId   1000decc f   coredll:COREDLL.dll
+ 0001:0000cedc       SetLastError               1000dedc f   coredll:COREDLL.dll
+ 0001:0000ceec       CeSafeCopyMemory           1000deec f   coredll:COREDLL.dll
+ 0001:0000cefc       MmMapIoSpace               1000defc f   ceddk:CEDDK.dll
+ 0001:0000cf0c       MmUnmapIoSpace             1000df0c f   ceddk:CEDDK.dll
+ 0001:0000cf1c       _DllEntryCRTStartup        1000df1c f   corelib0:pegdentry.obj
+ 0001:0000cf64       __GSHandlerCheck_SEH       1000df64 f   corelib0:gshandlerseh.obj
+ 0001:0000cfb4       __security_init_cookie     1000dfb4 f   corelib0:seccinit.obj
+ 0001:0000d010       __security_check_cookie    1000e010 f   corelib0:armsecgs.obj
+ 0001:0000d024       __gsfailure                1000e024 f   corelib0:armsecgs.obj
+ 0001:0000d164       _cexit                     1000e164 f   corelib0:cexit.obj
+ 0001:0000d180       _initterm                  1000e180 f   corelib0:crt0dat.obj
+ 0001:0000d1b4       _cinit                     1000e1b4 f   corelib0:crt0dat.obj
+ 0001:0000d1e8       __GSHandlerCheckCommon     1000e1e8 f   corelib0:gshandler.obj
+ 0001:0000d224       memcpy                     1000e224 f   corelib1:COREDLL.dll
+ 0001:0000d234       memset                     1000e234 f   corelib1:COREDLL.dll
+ 0001:0000d244       __rt_udiv                  1000e244 f   corelib1:COREDLL.dll
+ 0001:0000d254       __utod                     1000e254 f   corelib1:COREDLL.dll
+ 0001:0000d264       __divd                     1000e264 f   corelib1:COREDLL.dll
+ 0001:0000d274       __dtou                     1000e274 f   corelib1:COREDLL.dll
+ 0001:0000d284       __C_specific_handler       1000e284 f   corelib1:COREDLL.dll
+ 0001:0000d294       __security_gen_cookie2     1000e294 f   corelib1:COREDLL.dll
+ 0001:0000d2a4       __report_gsfailure         1000e2a4 f   corelib1:COREDLL.dll
+ 0001:0000d2b4       free                       1000e2b4 f   corelib1:COREDLL.dll
+ 0001:0000d2c4       InterlockedExchange        1000e2c4 f   coredll:COREDLL.dll
+ 0001:0000d2d4       TerminateProcess           1000e2d4 f   coredll:COREDLL.dll
+ 0001:0000d380       __IMPORT_DESCRIPTOR_COREDLL 1000e380     coredll:COREDLL.dll
+ 0001:0000d394       __IMPORT_DESCRIPTOR_CEDDK  1000e394     ceddk:CEDDK.dll
+ 0001:0000d3a8       __NULL_IMPORT_DESCRIPTOR   1000e3a8     coredll:COREDLL.dll
  0002:00000000       __imp_MmMapIoSpace         1000f000     ceddk:CEDDK.dll
  0002:00000004       __imp_MmUnmapIoSpace       1000f004     ceddk:CEDDK.dll
  0002:00000008       \177CEDDK_NULL_THUNK_DATA  1000f008     ceddk:CEDDK.dll
@@ -422,32 +420,32 @@
  0002:00000098       \177COREDLL_NULL_THUNK_DATA 1000f098     coredll:COREDLL.dll
  0002:000000a0       dpCurSettings              1000f0a0     video_driver.obj
  0002:000004e4       g_flipCompleted            1000f4e4     s3c6410_disp_lib:s3c6410_display_con.obj
- 0002:00000918       __security_cookie          1000f918     corelib0:seccinit.obj
- 0002:0000091c       __security_cookie_complement 1000f91c     corelib0:seccinit.obj
- 0002:0000117c       _exitflag                  1001017c     corelib0:cexit.obj
- 0002:00001180       __onexitend                10010180     <common>
- 0002:00001184       __onexitbegin              10010184     <common>
- 0002:00001188       g_pcsExit                  10010188     <common>
+ 0002:00000870       __security_cookie          1000f870     corelib0:seccinit.obj
+ 0002:00000874       __security_cookie_complement 1000f874     corelib0:seccinit.obj
+ 0002:000010d4       _exitflag                  100100d4     corelib0:cexit.obj
+ 0002:000010d8       __onexitend                100100d8     <common>
+ 0002:000010dc       __onexitbegin              100100dc     <common>
+ 0002:000010e0       g_pcsExit                  100100e0     <common>
 
- entry point at        0001:0000cf2c
+ entry point at        0001:0000cf1c
 
  Static symbols
 
- 0001:00009b38       Disp_initialize_port_RGBIF 1000ab38 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009bfc       Disp_initialize_TVEnc      1000abfc f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009d0c       Disp_window0_initialize    1000ad0c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:00009f28       Disp_window1_initialize    1000af28 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a13c       Disp_window2_initialize    1000b13c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a350       Disp_window3_initialize    1000b350 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a4b4       Disp_window4_initialize    1000b4b4 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000a618       Disp_get_vclk_direction_divider 1000b618 f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000aa4c       Disp_initialize_RGBIF      1000ba4c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000ab9c       Disp_initialize_RGBIF_withTVEnc 1000bb9c f   s3c6410_disp_lib:s3c6410_display_con.obj
- 0001:0000b110       Post_set_mode              1000c110 f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b30c       Post_update_condition      1000c30c f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000b4dc       Post_set_dma_address       1000c4dc f   s3c6410_post_lib:s3c6410_post_proc.obj
- 0001:0000c180       TVSC_set_mode              1000d180 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c3b0       TVSC_update_condition      1000d3b0 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000c580       TVSC_set_dma_address       1000d580 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
- 0001:0000cb18       TVEnc_set_output_mode      1000db18 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
- 0001:0000d078       doexit                     1000e078 f   corelib0:cexit.obj
+ 0001:00009b28       Disp_initialize_port_RGBIF 1000ab28 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009bec       Disp_initialize_TVEnc      1000abec f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009cfc       Disp_window0_initialize    1000acfc f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:00009f18       Disp_window1_initialize    1000af18 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a12c       Disp_window2_initialize    1000b12c f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a340       Disp_window3_initialize    1000b340 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a4a4       Disp_window4_initialize    1000b4a4 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000a608       Disp_get_vclk_direction_divider 1000b608 f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000aa3c       Disp_initialize_RGBIF      1000ba3c f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000ab8c       Disp_initialize_RGBIF_withTVEnc 1000bb8c f   s3c6410_disp_lib:s3c6410_display_con.obj
+ 0001:0000b100       Post_set_mode              1000c100 f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b2fc       Post_update_condition      1000c2fc f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000b4cc       Post_set_dma_address       1000c4cc f   s3c6410_post_lib:s3c6410_post_proc.obj
+ 0001:0000c170       TVSC_set_mode              1000d170 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c3a0       TVSC_update_condition      1000d3a0 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000c570       TVSC_set_dma_address       1000d570 f   s3c6410_tv_scaler_lib:s3c6410_tv_scaler.obj
+ 0001:0000cb08       TVEnc_set_output_mode      1000db08 f   s3c6410_tv_encoder_lib:s3c6410_tv_encoder.obj
+ 0001:0000d068       doexit                     1000e068 f   corelib0:cexit.obj

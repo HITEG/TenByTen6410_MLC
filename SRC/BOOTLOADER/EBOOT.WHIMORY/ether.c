@@ -85,7 +85,7 @@ BOOL InitEthDevice(PBOOT_CFG pBootCfg)
 
     pBaseIOAddress   = (PBYTE)OALPAtoVA(pBSPArgs->kitl.devLoc.LogicalLoc, FALSE);
 
-    MemoryBase       = (UINT32)OALPAtoVA(BSP_BASE_REG_PA_CS8900A_MEMBASE, FALSE);
+    MemoryBase       = (UINT32)OALPAtoVA(BSP_BASE_REG_PA_DM9000A_MEMBASE, FALSE);
 
     // Initialize the Ethernet controller.
     //

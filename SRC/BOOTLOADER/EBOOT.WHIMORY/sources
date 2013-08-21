@@ -73,7 +73,7 @@ TARGETLIBS= \
     $(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\fulllibc.lib           \
     $(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\gsnull.lib             \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_args.lib      \
-    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_pm.lib        \
+#    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_pm.lib        \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\extpowerctl_lib.lib  \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_disp_lib.lib  \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_ldi_lib.lib   \
@@ -104,6 +104,7 @@ SOURCES= \
     DisplayMenu.c \
     LogoCraft.c \
     uartMenu.c \
+    InterruptController.c \
 
 
 ARM_SOURCES =    \
@@ -122,4 +123,5 @@ FILE_VIEW_INCLUDES_FOLDER= \
     usb.h \
     utils.h \
     debugUART.h \
+    InterruptController.h \
 

@@ -459,7 +459,7 @@ PhysicalStart
         ldr          r0, =APLL_CON          ; Check APLL
         ldr          r1, [r0]
         and          r1, r1, r3
-        ldr          r2, =((1<<31)+(Startup_APLL_MVAL<<16)+(Startup_APLL_PVAL<<8)+(Startup_APLL_SVAL))     ; APLL_CON value to configure
+        ldr          r2, =((1<<31)+( APLL_MVAL<<16)+( APLL_PVAL<<8)+( APLL_SVAL))     ; APLL_CON value to configure
         cmp          r1, r2
         bne          PLL_NeedToConfigure
 
@@ -488,7 +488,7 @@ PhysicalStart
         ldr          r1, [r0]
         and          r1, r1, r6
         
-        ldr          r2, =((Startup_PCLK_DIV<<12)+(Startup_HCLKx2_DIV<<9)+(Startup_HCLK_DIV<<8)+(MPLL_DIV<<4)+(Startup_APLL_DIV<<0))          ; CLKDIV0 value to configure
+        ldr          r2, =(( PCLK_DIV<<12)+( HCLKx2_DIV<<9)+( HCLK_DIV<<8)+(MPLL_DIV<<4)+( APLL_DIV<<0))          ; CLKDIV0 value to configure
 
         cmp          r1, r2
         bne          CLKDIV_NeedToConfigure
@@ -514,7 +514,7 @@ PLL_NeedToConfigure
         ldr          r1, [r0]
         bic          r1, r1, #0xff00
         bic          r1, r1, #0xff
-        ldr        r2, = ((Startup_PCLK_DIV<<12)+(Startup_HCLKx2_DIV<<9)+(Startup_HCLK_DIV<<8)+(MPLL_DIV<<4)+(Startup_APLL_DIV<<0))
+        ldr        r2, = (( PCLK_DIV<<12)+( HCLKx2_DIV<<9)+( HCLK_DIV<<8)+(MPLL_DIV<<4)+( APLL_DIV<<0))
         orr        r1, r1, r2
         str        r1, [r0]
 
@@ -532,7 +532,7 @@ PLL_NeedToConfigure
         str          r2, [r0, #0x8]               ; EPLL Lock Time
 
         ldr          r0, =APLL_CON
-        ldr          r1, =((1<<31)+(Startup_APLL_MVAL<<16)+(Startup_APLL_PVAL<<8)+(Startup_APLL_SVAL))
+        ldr          r1, =((1<<31)+( APLL_MVAL<<16)+( APLL_PVAL<<8)+( APLL_SVAL))
         str          r1, [r0]
 
         ldr          r0, =MPLL_CON
@@ -558,7 +558,7 @@ CLKDIV_NeedToConfigure
         bic          r1, r1, #0x30000
         bic          r1, r1, #0xff00
         bic          r1, r1, #0xff
-        ldr          r2, =((Startup_PCLK_DIV<<12)+(Startup_HCLKx2_DIV<<9)+(Startup_HCLK_DIV<<8)+(MPLL_DIV<<4)+(Startup_APLL_DIV<<0))
+        ldr          r2, =(( PCLK_DIV<<12)+( HCLKx2_DIV<<9)+( HCLK_DIV<<8)+(MPLL_DIV<<4)+( APLL_DIV<<0))
         orr          r1, r1, r2
         str          r1, [r0]
 

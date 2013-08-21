@@ -196,6 +196,8 @@ VOID OEMInitDebugSerial()
 
     g_pUARTReg->UBRDIV = (UINT32)Div;                                    // Baud rate
     g_pUARTReg->UDIVSLOT = aSlotTable[DivSlot];
+
+	OALDebugRemoveFromRegistry(DEBUG_PORT);
 #endif
 }
 

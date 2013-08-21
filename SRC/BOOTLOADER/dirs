@@ -13,7 +13,8 @@ install media.
 DIRS=\
 	Eboot.Whimory\
 	NBL1.LSB\
-	NBL2
+	NBL2\
+	NBL1.IROM_SD
 
 !if 0	# For FMD
 #    EBOOT \

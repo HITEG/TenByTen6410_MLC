@@ -34,7 +34,7 @@ BOOL BSPIntrInit()
 	RETAILMSG(1,(TEXT("BSPIntrInit: SYSINTR_DM9000A1 High level triggered \r\n")));
     pGPIOReg->GPNCON &= ~(0x3<<14);
 	pGPIOReg->GPNCON |=  (0x2<<14);
-
+	
 	RETAILMSG(1, (TEXT("******DM9000A1 pGPIOReg->GPNCON=%x\r\n "),pGPIOReg->GPNCON));
 	
 	pGPIOReg->EINT0CON0 &= ~(0x7<<12);
@@ -45,6 +45,11 @@ BOOL BSPIntrInit()
 	RETAILMSG(1, (TEXT("******DM9000A1 pGPIOReg->EINT0MASK  =%x\r\n "),	pGPIOReg->EINT0MASK));
     RETAILMSG(1, (TEXT("******DM9000A1 pGPIOReg->EINT0PEND  =%x\r\n "), pGPIOReg->EINT0PEND));
 	OALIntrStaticTranslate(SYSINTR_DM9000A1, IRQ_EINT7);
+
+	pGPIOReg->GPNCON &= ~(0x3<<0);
+	pGPIOReg->GPNCON |=  (0x2<<0);
+	pGPIOReg->GPNCON &= ~(0x3<<2);
+	pGPIOReg->GPNCON |=  (0x2<<2);
     OALMSG(OAL_INTR&&OAL_FUNC, (L"[OAL] --BSPIntrInit()\r\n"));
 
     return TRUE;
@@ -77,8 +82,8 @@ BOOL BSPIntrRequestIrqs(DEVICE_LOCATION *pDevLoc, UINT32 *pCount, UINT32 *pIrqs)
         case Internal:
             switch ((ULONG)pDevLoc->LogicalLoc)
             {
-                case BSP_BASE_REG_PA_CS8900A_IOBASE:
-                    pIrqs[0] = IRQ_EINT10;
+                case BSP_BASE_REG_PA_DM9000A_IOBASE:
+                    pIrqs[0] = IRQ_EINT7;
                     *pCount = 1;
                     bRet = TRUE;
                     break;

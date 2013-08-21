@@ -8,11 +8,11 @@ If you did not accept the terms of the EULA, you are not authorized to use
 this source code. For a copy of the EULA, please see the LICENSE.RTF on your
 install media.
 !endif
-!if 0
+!IF 0
 !IF "$(BSP_USEDVS)" != "1"
 SKIPBUILD=1
 !ENDIF
-!endif
+!ENDIF
 TARGETNAME = s3c6410_PM
 TARGETTYPE = LIBRARY
 

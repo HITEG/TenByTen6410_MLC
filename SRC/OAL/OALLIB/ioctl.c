@@ -572,7 +572,7 @@ static BOOL OALIoCtlHalInitRegistry(
 	DWORD *port;
     KITLIoctl(IOCTL_HAL_INITREGISTRY, NULL, 0, NULL, 0, NULL);
 	port = (DWORD *)OALArgsQuery(BSP_ARGS_QUERY_DEBUGUART);
-	OALDebugRemoveFromRegistry(*port);
+	//OALDebugRemoveFromRegistry(*port);
 
     return TRUE;
 }

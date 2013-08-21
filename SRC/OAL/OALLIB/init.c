@@ -96,10 +96,9 @@ BOOL OEMSetMemoryAttributes (
 //
 void OEMInit()
 {
-    BOOL *bCleanBootFlag;
-	DWORD *port;
+	BOOL *bCleanBootFlag;
     OALMSG(OAL_FUNC, (L"[OAL] ++OEMInit()\r\n"));
-
+	
     OALMSG(OAL_FUNC, (TEXT("[OAL] S3C6410_APLL_CLK   : %d\n\r"), System_GetAPLLCLK()));
     OALMSG(OAL_FUNC, (TEXT("[OAL] ARMCLK : %d\n\r"), System_GetARMCLK()));
     OALMSG(OAL_FUNC, (TEXT("[OAL] HCLK   : %d\n\r"), System_GetHCLK()));
@@ -109,6 +108,7 @@ void OEMInit()
     OALMSG(1, (TEXT("[OAL] ARMCLK : %d\n\r"), System_GetARMCLK()));
     OALMSG(1, (TEXT("[OAL] HCLK   : %d\n\r"), System_GetHCLK()));
     OALMSG(1, (TEXT("[OAL] PCLK   : %d\n\r"), System_GetPCLK()));
+
     g_oalIoCtlClockSpeed = System_GetARMCLK();
 
     //CEProcessorType = PROCESSOR_STRONGARM;
@@ -171,7 +171,7 @@ void OEMInit()
     //
     OALMSG(OAL_FUNC, (TEXT("[OAL] OEMInit() : BSP Args forces Clean Boot\r\n")));
     bCleanBootFlag = (BOOL *)OALArgsQuery(BSP_ARGS_QUERY_CLEANBOOT);
-    if (*bCleanBootFlag)
+    if (((BOOL)*bCleanBootFlag)==TRUE)
     {
         // Notify to filesys.exe that we want a clean boot.
         NKForceCleanBoot();
@@ -232,7 +232,7 @@ static void InitializeBank()
 static void InitializeCLKGating(void)
 {
     volatile S3C6410_SYSCON_REG *pSysConReg = (S3C6410_SYSCON_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_SYSCON, FALSE);
-	DWORD * port;
+
     OALMSG(OAL_FUNC, (L"[OAL] InitializeCLKGating()\r\n"));
 
     // CAUTION !!!
@@ -270,7 +270,6 @@ static void InitializeCLKGating(void)
                             |(0<<2)        // Trust Interrupt Controller
                             |(1<<1)        // Interrupt Controller        <--- Always On
                             |(1<<0);        // MFC                    <--- Always On (for Power Mode)
-	port = (DWORD *)OALArgsQuery(BSP_ARGS_QUERY_DEBUGUART);
 
     pSysConReg->PCLK_GATE = (0x7F<<25)    // Reserved
                             |(0<<24)    // Security Key
@@ -292,38 +291,29 @@ static void InitializeCLKGating(void)
                             |(0<<8)        // PCM0
                             |(1<<7)        // PWM Timer                <--- Always On
                             |(1<<6)        // RTC                    <--- Always On            
-                            |(1<<5);		// WatchDog Timer for SW_RST                           
-if(*port == 0)                // Be Careful to Serial KITL Clock
-                    pSysConReg->PCLK_GATE |=  (0<<4)        // UART3
-											|(0<<3)        // UART2
-											|(0<<2)        // UART1
-											|(1<<1)        // UART0                    <--- Always On
-											|(0<<0);        // MFC
-else if    (*port == 1)                // Be Careful to Serial KITL Clock
-           pSysConReg->PCLK_GATE |=  (0<<4)        // UART3
+                            |(1<<5)        // WatchDog Timer for SW_RST                           
+#if         (DEBUG_PORT == DEBUG_UART0)                // Be Careful to Serial KITL Clock
+                            |(0<<4)        // UART3
+                            |(0<<3)        // UART2
+                            |(0<<2)        // UART1
+                            |(1<<1)        // UART0                    <--- Always On
+#elif    (DEBUG_PORT == DEBUG_UART1)                // Be Careful to Serial KITL Clock
+                            |(0<<4)        // UART3
                             |(0<<3)        // UART2
                             |(1<<2)        // UART1                    <--- Always On
                             |(0<<1)        // UART0
-							|(0<<0);        // MFC
-else if    (*port == 2)                // Be Careful to Serial KITL Clock
-           pSysConReg->PCLK_GATE |=(0<<4)        // UART3
+#elif    (DEBUG_PORT == DEBUG_UART2)                // Be Careful to Serial KITL Clock
+                            |(0<<4)        // UART3
                             |(1<<3)        // UART2                    <--- Always On
                             |(0<<2)        // UART1
                             |(0<<1)        // UART0
-							|(0<<0);        // MFC
-else if    (*port == 3)                // Be Careful to Serial KITL Clock
-           pSysConReg->PCLK_GATE |=(1<<4)        // UART3                    <--- Always On
+#elif    (DEBUG_PORT == DEBUG_UART3)                // Be Careful to Serial KITL Clock
+                            |(1<<4)        // UART3                    <--- Always On
                             |(0<<3)        // UART2
                             |(0<<2)        // UART1
                             |(0<<1)        // UART0
-							|(0<<0);        // MFC
-else
-           pSysConReg->PCLK_GATE |=(0<<4)        // UART3
-                            |(0<<3)        // UART2
-                            |(0<<2)        // UART1
-                            |(0<<1)        // UART0
-							|(0<<0);        // MFC
-                           
+#endif
+                            |(0<<0);        // MFC
 
     pSysConReg->SCLK_GATE = (0x1<<31)    // Reserved
                             |(0<<30)    // USB Host

@@ -90,7 +90,7 @@ void Isr_Init(void);
 void C_IsrHandler(unsigned int val);
 extern void ASM_IsrHandler(void);
 void SetEndpoint(void);
-
+ULONG g_PCLK;
 
 // start // from otg_dev.c
 
@@ -104,10 +104,12 @@ void SetEndpoint(void);
 void OTGDEV_InitOtg(USB_SPEED eSpeed)
 {
     UINT8 ucMode;
+	volatile UINT32 uTemp;
     volatile S3C6410_SYSCON_REG *pSysConReg = (S3C6410_SYSCON_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_SYSCON, FALSE);    
     
-
-    volatile UINT32 uTemp;
+	g_PCLK=System_GetPCLK();
+	
+    
     uTemp = Inp32SYSC(0x900);
     Outp32SYSC(0x900, uTemp|(1<<16)); // unmask usb signal  // For NAND Boot
 
@@ -1558,6 +1560,9 @@ void InitializeInterrupt(void)
 
     VIC_InterruptEnable(PHYIRQ_OTG);
 }
+extern void ADC_NormalISR(void);
+extern void ADCTS_StylusCheckISR(void);
+extern void ADCTS_StylusTrackingISR(void);
 
 void C_IsrHandler(unsigned int val)
 {
@@ -1579,6 +1584,12 @@ void C_IsrHandler(unsigned int val)
         Isr_IIC();
         VIC_InterruptEnable(PHYIRQ_I2C);
     }
+	if(irq == PHYIRQ_ADC)
+	{
+		VIC_InterruptDisable(PHYIRQ_ADC);
+
+		VIC_InterruptEnable(PHYIRQ_ADC);
+	}
     VIC_ClearVectAddr();
 }
 
@@ -1769,14 +1780,14 @@ static void delayLoop(int count)
 
 /*=================================IIC================================================*/
 static volatile u8 *g_PcIIC_BUFFER;
-static volatile u32 g_uIIC_PT;
-static u32 g_uIIC_DATALEN;
+static volatile ULONG g_uIIC_PT;
+static ULONG g_uIIC_DATALEN;
 static volatile u8 g_cIIC_STAT0;
 static volatile u8 g_cIIC_SlaveRxDone;
 static volatile u8 g_cIIC_SlaveTxDone;
-static volatile u32 g_IIC_WRITE_TIME;
-static volatile u32 g_IIC_WAIT_TIME;
-int g_PCLK = 12000000;
+static volatile ULONG g_IIC_WRITE_TIME;
+static volatile ULONG g_IIC_WAIT_TIME;
+
 
 //////////
 // Function Name : Isr_IIC
@@ -1787,14 +1798,14 @@ int g_PCLK = 12000000;
 // Version : v0.1
 void Isr_IIC( void)
 {
-	u32 uTemp0 = 0;
+	ULONG uTemp0 = 0;
 	u8 cCnt;
 	//EdbgOutputDebugString("[Eboot] IIC_ISR\r\n");
 	g_cIIC_STAT0 = Input32(rIICSTAT0);
 	switch( (g_cIIC_STAT0>>6)&0x3) 
 	{
 		case SlaveRX	:	
-			//UART_Printf("IICSTAT0 = %x	",g_cIIC_STAT0);
+			//OEMWriteDebugString(L"IICSTAT0 = %x	",g_cIIC_STAT0);
 
 			if(g_uIIC_PT<100) 
 			{
@@ -1819,7 +1830,7 @@ void Isr_IIC( void)
 			break;
 
 		case SlaveTX	:		
-			//UART_Printf("IICSTAT = %x	",g_cIIC_STAT0);
+			//OEMWriteDebugString(L"IICSTAT = %x	",g_cIIC_STAT0);
 
 			if(g_uIIC_PT>100)
 			{
@@ -1888,15 +1899,17 @@ void Isr_IIC( void)
 // Input : ufreq	ufreq(Hz) = PCLK/16/uClkValue
 // Output : NONE
 // Version : v0.1
-void IIC_Open( u32 ufreq)		//	Hz order. freq(Hz) = PCLK/16/clk_divider
+void IIC_Open( ULONG ufreq)		//	Hz order. freq(Hz) = PCLK/16/clk_divider
 {
-	u32	uSelClkSrc;
-	u32	uClkValue;
+	ULONG	uSelClkSrc;
+	ULONG	uClkValue;
 
 	
 	//INTC_SetVectAddr(NUM_IIC,Isr_IIC);
 	//INTC_Enable(NUM_IIC);
     volatile S3C6410_GPIO_REG *pGPIOReg = (S3C6410_GPIO_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_GPIO, FALSE);
+
+	g_PCLK=System_GetPCLK();
 
 	pGPIOReg->GPBCON &= ~((0xf<<20)|(0xf<<24));
 	pGPIOReg->GPBCON |= ((0x2<<20)|(0x2<<24));
@@ -1968,10 +1981,10 @@ void IIC_Close(void)
 // Output : NONE
 // Version : v0.1
 
-static void IIC_SetWrite( u8 cSlaveAddr,  u8 *pData, u32 uDataLen)
+static void IIC_SetWrite( u8 cSlaveAddr,  u8 *pData, ULONG uDataLen)
 {
-	u32 uTmp0;
-	u32 uTmp1;
+	ULONG uTmp0;
+	ULONG uTmp1;
 	
 	uTmp0 = Input32(rIICSTAT0);
 	while(uTmp0&(1<<5))		//	Wait until IIC bus is free.
@@ -2080,10 +2093,10 @@ BOOL IIC_Write(u8 cSlaveAddr, u8 cAddr, u8 cData)
 //		  uDataLen [Data Length]
 // Output : NONE
 // Version : v0.1
-static void IIC_SetRead(  u8 cSlaveAddr,  u8 *pData, u32 uDataLen)
+static void IIC_SetRead(  u8 cSlaveAddr,  u8 *pData, ULONG uDataLen)
 {
-	u32 uTmp2;
-	u32 uTmp3;
+	ULONG uTmp2;
+	ULONG uTmp3;
 	
 	uTmp2= Input32(rIICSTAT0);
 	while(uTmp2&(1<<5))		//	Wait until IIC bus is free.

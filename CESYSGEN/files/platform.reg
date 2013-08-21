@@ -51,6 +51,14 @@ IF BSP_NODISPLAY !
 [HKEY_LOCAL_MACHINE\System\GDI\DisplayCandidates]
     "Candidate10"="Drivers\\Display\\s3c6410\\Config"
 
+; GWES will pass this value to the LCD driver; the driver will open the
+; key to which it points to read its configuration.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\State\UserIdle\{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}]
+	"Default"=dword:0								; D4    set Display on when useridle
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\State\SystemIdle\{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}]
+	"Default"=dword:0
+
 ; Let GWES save/restore video memory during suspend/resume
 [HKEY_LOCAL_MACHINE\SYSTEM\GWE]
 ;   "PORepaint"=dword:0 - the display driver handles everything
@@ -130,7 +138,7 @@ ENDIF BSP_NOD3DM !
 IF IMGHIVEREG
 [HKEY_LOCAL_MACHINE\Init\BootVars]
     "Flags"=dword:3
-   "RegistryFlags"=dword:1 ;
+   "RegistryFlags"=dword:1
 ENDIF IMGHIVEREG
 
 IF IMGHIVEREG
@@ -649,9 +657,9 @@ ENDIF BSP_NOSPI !
 ; @CESYSGEN IF CE_MODULES_SERIAL
 IF BSP_NOSERIAL !
 
-;IF BSP_NOUART0 !
+IF BSP_NOUART0 !
 ;IF BSP_KITL != SERIAL_UART0
-;IF BSP_DEBUGPORT != SERIAL_UART0
+IF BSP_DEBUGPORT != SERIAL_UART0
 ;--------------- UART0 (Physical COM1 Port) ----------------------------------
 [HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Serial0]
     "DeviceArrayIndex"=dword:0
@@ -670,8 +678,8 @@ IF BSP_NOSERIAL !
     "IClass"="{CC5195AC-BA49-48a0-BE17-DF6D1B0173DD}"
     "DevConfig"=hex: 10,00, 00,00, 05,00,00,00, 10,01,00,00, 00,4B,00,00, 00,00, 08, 00, 00, 00,00,00,00
 ;--------------------------------------------------------------------------
-;ENDIF
-;ENDIF
+ENDIF
+ENDIF
 ;ENDIF
 
 ;IF BSP_NOUART1 !
@@ -696,9 +704,6 @@ IF BSP_NOSERIAL !
     "DevConfig"=hex: 10,00, 00,00, 05,00,00,00, 10,01,00,00, 00,4B,00,00, 00,00, 08, 00, 00, 00,00,00,00
     
 ; @CESYSGEN IF CE_MODULES_BTHUART
-IF BSP_BLUETOOTH_BUILTIN_UART
-    "RxBufferSize"=dword:2000   ; extra buffer size as a workaround for a BTHUART/SerialMDD bug
-ENDIF
 ; @CESYSGEN ENDIF CE_MODULES_BTHUART
 
 ;--------------------------------------------------------------------------
@@ -838,20 +843,20 @@ IF BSP_NOBACKLIGHT !
     "Order"=dword:40
     "IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"
 
-[HKEY_CURRENT_USER\ControlPanel\Backlight]
-    "BatteryTimeout"=dword:3c   ;For battery, unit is sec,  0x3c == 60(dec) - It means that backlight will be turned off after 60 seconds,
-    "BacklightOnTap"=dword:1
-    "ACTimeout"=dword:258       ;For AC Power, unit is sec,     0x258 == 600(dec),
-    "ACBacklightOnTap"=dword:1
+;[HKEY_CURRENT_USER\ControlPanel\Backlight]
+;    "BatteryTimeout"=dword:0   ;For battery, unit is sec,  0x3c == 60(dec) - It means that backlight will be turned off after 60 seconds,
+;    "BacklightOnTap"=dword:1
+;    "ACTimeout"=dword:258       ;For AC Power, unit is sec,     0x258 == 600(dec),
+;    "ACBacklightOnTap"=dword:1
 
-[HKEY_CURRENT_USER\ControlPanel\Backlight]
-    "OnOff"=dword:00000001
-    "Brightness"=dword:00000032         ;the brightness of backlight while OS use Battery Power
-    "ACBrightness"=dword:00000040           ;the brightness of backlight while OS use AC power.
-    "ACTimeoutUnchecked"=dword:00000000     ;temporary store ACTimeout
-    "ACBacklightOnTap"=dword:00000001
-    "BatteryTimeoutUnchecked"=dword:00000000    ;temporary store BatteryTimeout
-    "ExtOnOff"=dword:00000001
+;[HKEY_CURRENT_USER\ControlPanel\Backlight]
+;    "OnOff"=dword:00000001
+;    "Brightness"=dword:00000032         ;the brightness of backlight while OS use Battery Power
+;    "ACBrightness"=dword:00000040           ;the brightness of backlight while OS use AC power.
+;    "ACTimeoutUnchecked"=dword:00000000     ;temporary store ACTimeout
+;    "ACBacklightOnTap"=dword:00000001
+;    "BatteryTimeoutUnchecked"=dword:00000000    ;temporary store BatteryTimeout
+;    "ExtOnOff"=dword:00000001
 ENDIF BSP_NOBACKLIGHT !
 ; @CESYSGEN ENDIF DEVICE_PMIF
 ;------------------------------------------------------------------------------
@@ -946,7 +951,7 @@ IF BSP_XRPLUGIN_OPENGL
 
 ENDIF BSP_XRPLUGIN_OPENGL
 IF BSP_NODM9000A1 !
-#include "$(_TARGETPLATROOT)\SRC\DRIVERS\DM9000A1\dm9isa1.reg"
+#include "$(_TARGETPLATROOT)\SRC\DRIVERS\DM9000A\dm9000.reg"
 ENDIF BSP_NODM9000A1 !
 ;-------------------- Led --------------------
 IF BSP_NO_LED !
@@ -980,6 +985,16 @@ ENDIF BSP_NOEXTPOWERCTL !
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\Timeouts]
 ; @CESYSGEN IF PM_PM_DEFAULT_PDD
+    "ACUserIdle"=dword:0      ; in seconds
+    "ACSystemIdle"=dword:0    ; in seconds
+    "ACSuspend"=dword:0       ; in seconds
+    "BattUserIdle"=dword:0      ; in seconds
+    "BattSystemIdle"=dword:0   ; in seconds
+    "BattSuspend"=dword:0      ; in seconds
+    "BattPowerOff"=dword:0
+	"ExtPowerOff"=dword:0
+	"WakeupPowerOff"=dword:0
+	"ScreenPowerOff"=dword:0
 ; @CESYSGEN ENDIF PM_PM_DEFAULT_PDD
 
 --------------------HIVE BASE REGISTRY----------------------------------------------------------
@@ -996,20 +1011,7 @@ ENDIF BSP_NOEXTPOWERCTL !
 ; END HIVE BOOT SECTION
 ; @CESYSGEN ENDIF FILESYS_FSREGHIVE
 
-;=======================================================================================
 
-;=================net setting===========
- [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
-    "Start Page"="http://www.hiteg.com"
-    "Search Page"="http://www.google.com"
-    
-[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\User Agent]
-		"Template"="Same as Windows XP"
+	
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
-    "EnableAutodial"=dword:0
-    
-;============wave Volume=================
-[HKEY_CURRENT_USER\ControlPanel\Volume]
-        "Volume"=dword:FFFFFFFF ; 0=off, 0xFFFFFFFF=maximum 
   

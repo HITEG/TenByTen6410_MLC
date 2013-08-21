@@ -1,0 +1,26 @@
+!if 0
+    File:   sources
+
+     Copyright (c) 1995-2002 Microsoft Corporation.  All rights reserved.
+!endif
+
+!if "$(BSP_NOWATCHDOG)" == "1"
+SKIPBUILD=1
+!endif
+
+RELEASETYPE=PLATFORM
+TARGETNAME=WDT
+TARGETTYPE=DYNLINK
+DLLENTRY=DllEntry
+
+TARGETLIBS= \
+    $(_COMMONSDKROOT)\lib\$(_CPUINDPATH)\coredll.lib \
+
+MSC_WARNING_LEVEL = $(MSC_WARNING_LEVEL) /W3 /WX
+
+      
+SOURCES= wdt.cpp     
+
+FILE_VIEW_INCLUDES_FOLDER= \
+    wdt.h \
+

@@ -53,8 +53,8 @@ extern "C" {
 //  memory_cfg.h for this memory area.
 //
 
-#define BSP_BASE_REG_PA_CS8900A_IOBASE        (0x18800300)
-#define BSP_BASE_REG_PA_CS8900A_MEMBASE        (0x18000000)
+//#define BSP_BASE_REG_PA_CS8900A_IOBASE        (0x18800300)
+//#define BSP_BASE_REG_PA_CS8900A_MEMBASE        (0x18000000)
 #define BSP_BASE_REG_PA_DM9000A_IOBASE        (0x18800300)
 #define BSP_BASE_REG_PA_DM9000A_MEMBASE        (0x18000000)
 //------------------------------------------------------------------------------

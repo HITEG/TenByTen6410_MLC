@@ -39,6 +39,9 @@ extern void OEMsetDisplayType(DWORD value);
 extern void OEMsetLCDBpp(DWORD value);
 extern void OEMclrLogoHW();
 extern void editDisplayMenu(unsigned type);
+extern unsigned OEMGetHeight();
+extern unsigned OEMGetWidth();
+int bpp;
 
 DWORD enterBGColor()
 {
@@ -51,13 +54,101 @@ DWORD enterBGColor()
 	return (mystrtoul(szCount, 16));
 }
 
+void __drawLineH16(int x,int y, int w)
+{
+	int n;
+	unsigned short *fb=(unsigned short *)IMAGE_FRAMEBUFFER_PA_START;
+	for(n=0;n<w;n++)
+	{
+		fb[y*OEMGetWidth()+x+n]=0x0;
+	}
+}
+void __drawLineV16(int x,int y, int h)
+{
+	int n;
+	unsigned short *fb=(unsigned short *)IMAGE_FRAMEBUFFER_PA_START;
+	for(n=0;n<h;n++)
+	{
+		fb[(n+y)*OEMGetWidth()+x]=0x0;
+	}
+}
+
+void __drawLineH24(int x,int y, int w)
+{
+	int n;
+	unsigned  *fb=(unsigned  *)IMAGE_FRAMEBUFFER_PA_START;
+	for(n=0;n<w;n++)
+	{
+		fb[y*OEMGetWidth()+x+n]=0x0;
+	}
+}
+void __drawLineV24(int x,int y, int h)
+{
+	int n;
+	unsigned  *fb=(unsigned  *)IMAGE_FRAMEBUFFER_PA_START;
+	for(n=0;n<h;n++)
+	{
+		fb[(n+y)*OEMGetWidth()+x]=0x0;
+	}
+}
+
+void __drawLineH(int x,int y, int w)
+{
+	if(bpp==16) return __drawLineH16(x,y,w);
+	__drawLineH24(x,y,w);
+}
+void __drawLineV(int x,int y, int h)
+{
+	if(bpp==16) return __drawLineV16(x,y,h);
+	__drawLineV24(x,y,h);
+}
+extern void displayLogo();
+
+void __TestPattern()
+{
+	DWORD scr_width, scr_height;
+	int n,m=0;
+	int step=128;
+	LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, 0x00FFFFFF); //white screen
+	// black lines
+	scr_width=OEMGetWidth();
+	scr_height=OEMGetHeight();
+	
+	for(n=256;n<scr_width;n+=step)
+	{
+		__drawLineV(n,0,scr_height);
+		m++;
+		if(m==2)
+		{
+			m=0;
+			if(step>=2)
+				step>>=1;
+		}
+		
+	}
+
+	step=64;m=0;
+
+	for(n=64;n<scr_height;n+=step)
+	{
+		__drawLineH(0,n,scr_width);
+		m++;
+		if(m==2)
+		{
+			m=0;
+			if(step>=2)
+				step>>=1;
+		}
+		
+	}
+}
+
 void DisplayMenu(DWORD *displayType)
 {
 	DWORD display;
 	int n;
+	bpp=16;
 displayMenu:
-	EdbgOutputDebugString("\r\n#############################################\r\n");
-	EdbgOutputDebugString("I) Identify Display (not implemented, yet)\r\n");
 	EdbgOutputDebugString("\r\n#############################################\r\n");
 	EdbgOutputDebugString("S) Set Display manually\r\n");
 	EdbgOutputDebugString("\r\n#############################################\r\n");
@@ -77,8 +168,10 @@ displayMenu:
 	EdbgOutputDebugString("R) Test-Fill with red\r\n");
 	EdbgOutputDebugString("G) Test-Fill with green\r\n");
 	EdbgOutputDebugString("B) Test-Fill with blue\r\n");
+	EdbgOutputDebugString("W) Test-Fill with white\r\n");
+	EdbgOutputDebugString("E) Test-Fill with black\r\n");
 	EdbgOutputDebugString("\r\n#############################################\r\n");
-	EdbgOutputDebugString("D) Drop logo\r\n");
+	EdbgOutputDebugString("T) Test Pattern\r\n");
 	EdbgOutputDebugString("\r\n#############################################\r\n");
 	EdbgOutputDebugString("Q) Exit\r\n");
 	EdbgOutputDebugString("\r\n#############################################\r\n");
@@ -109,6 +202,7 @@ displayMenu:
         {
             OEMsetLCDBpp(16); // defined in bsp_cfg.h
 			initDisplay();
+			bpp=16;
             goto displayMenu;
         }
         if(key=='C')
@@ -120,6 +214,12 @@ displayMenu:
         if(key=='R')
         {
 			LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, 0x00FF0000);
+            goto displayMenu;
+        }
+        if(key=='T')
+        {
+			__TestPattern();
+
             goto displayMenu;
         }
         if(key=='G')
@@ -137,7 +237,17 @@ displayMenu:
 			LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, 0x000000FF);
             goto displayMenu;
         }
-		if(key=='E')
+        if(key=='W')
+        {
+			LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, 0x00FFFFFF);
+            goto displayMenu;
+        }
+        if(key=='E')
+        {
+			LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, 0x00000000);
+            goto displayMenu;
+        }
+		if(key=='Y')
 		{
 		 editDisplayMenu(*displayType);
 		 goto displayMenu;
@@ -146,6 +256,7 @@ displayMenu:
         {
             OEMsetLCDBpp(24); // defined in bsp_cfg.h
 			initDisplay();
+			bpp=24;
             goto displayMenu;
         }
 		if(key=='Q' || key==27){

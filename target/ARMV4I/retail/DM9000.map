@@ -1,0 +1,288 @@
+ DM9000
+
+ Timestamp is 521458a8 (Wed Aug 21 14:05:28 2013)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000144eH .rdata                  CODE
+ 0001:00001450 00000023H .rdata$debug            CODE
+ 0001:00001474 000045e0H .text                   CODE
+ 0001:00005a54 00000010H .xdata                  CODE
+ 0001:00005a64 0000003cH .idata$2                CODE
+ 0001:00005aa0 00000014H .idata$3                CODE
+ 0001:00005ab4 000000a0H .idata$4                CODE
+ 0001:00005b54 000001caH .idata$6                CODE
+ 0001:00005d20 00000049H .edata                  CODE
+ 0002:00000000 000000a0H .idata$5                DATA
+ 0002:000000a0 00000170H .data                   DATA
+ 0002:00000210 00000004H .bss                    DATA
+ 0003:00000000 00000328H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:0000001c       ??_C@_1DO@NAANEOJL@?$AAD?$AAM?$AA9?$AA0?$AA0?$AA0?$AAx?$AA?5?$AAD?$AAL?$AAL?$AA_?$AAP?$AAR?$AAO?$AAC?$AAE?$AAS?$AAS?$AA_?$AAA?$AAT?$AAT?$AAA?$AAC?$AAH?$AA?$CB?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 1000101c     wince.obj
+ 0001:0000005c       ??_C@_1DO@BOCFCJDI@?$AAD?$AAM?$AA9?$AA0?$AA0?$AA0?$AAx?$AA?5?$AAD?$AAL?$AAL?$AA_?$AAP?$AAR?$AAO?$AAC?$AAE?$AAS?$AAS?$AA_?$AAD?$AAE?$AAT?$AAA?$AAC?$AAH?$AA?$CB?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 1000105c     wince.obj
+ 0001:000000a0       ??_C@_1GA@NDDLLNNN@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AAI?$AAn?$AAd?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AA?5?$AA?5?$AAA?$AAI?$AAD?$AA_@ 100010a0     driver.obj
+ 0001:00000100       ??_C@_1HM@LLKONLHB@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AAI?$AAn?$AAd?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AA?5?$AA?5?$AAA?$AAI?$AAD?$AA_@ 10001100     driver.obj
+ 0001:00000180       ??_C@_1HK@MIDFEBPD@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAD?$AAr?$AAi?$AAv?$AAe?$AAr?$AAI?$AAn?$AAd?$AAi?$AAc?$AAa?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAA?$AAI?$AAD?$AA_?$AAL@ 10001180     driver.obj
+ 0001:000001fc       ??_C@_0BL@BLOGHFBJ@Davicom?5Semiconductor?0?5Inc?$AA@ 100011fc     driver.obj
+ 0001:00000218       ??_7NIC_DRIVER_OBJECT@@6B@ 10001218     driver.obj
+ 0001:00000258       ??_C@_0N@HAOMBGEI@Device?5error?$AA@ 10001258     driver.obj
+ 0001:00000268       ??_C@_0BE@PMJFEMCP@Insufficient?5memory?$AA@ 10001268     driver.obj
+ 0001:0000027c       ??_C@_0CI@KEMPKEBL@?$CK?$CK?$CK?5Error?5in?5retriving?5configura@ 1000127c     driver.obj
+ 0001:000002a4       ??_C@_0BP@PANLKOMJ@Error?5in?5opening?5configuration?$AA@ 100012a4     driver.obj
+ 0001:000002c4       ??_C@_0BC@KNMBDOID@Unsupported?5media?$AA@ 100012c4     driver.obj
+ 0001:000002d8       ??_C@_0BJ@GJCOIDMC@Error?5in?5creating?5device?$AA@ 100012d8     driver.obj
+ 0001:000002f8       ??_C@_1IO@KFPCFCFI@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAM?$AAA?$AAC?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAi?$AAs?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AA0?$AA2?$AAx?$AA?5@ 100012f8     device.obj
+ 0001:00000388       ??_C@_1GK@EDBBKKKJ@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAl?$AAo?$AAa?$AAd?$AA?5?$AAN?$AAI?$AAC?$AA?5?$AAM?$AAA?$AAC?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAf@ 10001388     device.obj
+ 0001:000003f8       ??_C@_1IC@LMFPCEO@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAl?$AAo?$AAa?$AAd?$AA?5?$AAN?$AAI?$AAC?$AA?5?$AAM?$AAA?$AAC?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAf@ 100013f8     device.obj
+ 0001:00000480       ??_C@_1IK@GOIBIHLD@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAl?$AAo?$AAa?$AAd?$AA?5?$AAN?$AAI?$AAC?$AA?5?$AAM?$AAA?$AAC?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAf@ 10001480     device.obj
+ 0001:00000510       ??_C@_1GG@HAOFBHNC@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAl?$AAo?$AAa?$AAd?$AA?5?$AAN?$AAI?$AAC?$AA?5?$AAM?$AAA?$AAC?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAf@ 10001510     device.obj
+ 0001:00000578       ??_C@_1GK@LJJGLKK@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAl?$AAo?$AAa?$AAd?$AA?5?$AAN?$AAI?$AAC?$AA?5?$AAM?$AAA?$AAC?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAf@ 10001578     device.obj
+ 0001:000005e8       ??_C@_1FC@MNBAOBEK@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAI?$AAo?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs@ 100015e8     device.obj
+ 0001:00000640       ??_C@_1FC@CFBNGGEJ@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAI?$AAr?$AAq?$AAN?$AAu?$AAm?$AAb?$AAe@ 10001640     device.obj
+ 0001:00000698       ??_C@_1FO@DGNMCPPG@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAI?$AAn?$AAt?$AA_?$AAA?$AAc?$AAt?$AAi@ 10001698     device.obj
+ 0001:000006f8       ??_C@_1GG@ODHAONNB@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAF?$AAl?$AAo?$AAw?$AA_?$AAC?$AAo?$AAn@ 100016f8     device.obj
+ 0001:00000760       ??_C@_1FK@OAFMJMOF@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAM?$AAA?$AAC?$AA_?$AAL?$AAo?$AAa?$AAd@ 10001760     device.obj
+ 0001:000007c0       ??_C@_1FE@JADKIOCB@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR@ 100017c0     device.obj
+ 0001:00000818       ??_C@_1FE@HPGIDIMA@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR@ 10001818     device.obj
+ 0001:00000870       ??_C@_1FE@JFOOOFKC@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR@ 10001870     device.obj
+ 0001:000008c8       ??_C@_1FE@HKLMFDED@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR@ 100018c8     device.obj
+ 0001:00000920       ??_C@_1FE@HEMAOPMG@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?5?$AAr?$AAe?$AAg?$AAi?$AAs?$AAt?$AAe?$AAr?$AA?5?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR@ 10001920     device.obj
+ 0001:00000974       ??_C@_0BG@EKKLKDPI@Fails?5to?5map?5io?5space?$AA@ 10001974     device.obj
+ 0001:0000098c       ??_C@_0BP@IMCKHPLH@Error?5in?5registering?5interrupt?$AA@ 1000198c     device.obj
+ 0001:000009ac       ??_C@_1BG@HMNJFOMM@?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR?$AA_?$AA5?$AA?$AA@ 100019ac     DM9000.obj
+ 0001:000009c4       ??_C@_1BG@MEGFDJKJ@?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR?$AA_?$AA4?$AA?$AA@ 100019c4     DM9000.obj
+ 0001:000009dc       ??_C@_1BG@FJLCABBA@?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR?$AA_?$AA3?$AA?$AA@ 100019dc     DM9000.obj
+ 0001:000009f4       ??_C@_1BG@OBAOGGHF@?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR?$AA_?$AA2?$AA?$AA@ 100019f4     DM9000.obj
+ 0001:00000a0c       ??_C@_1BG@PDLLMJJL@?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR?$AA_?$AA1?$AA?$AA@ 10001a0c     DM9000.obj
+ 0001:00000a24       ??_C@_1BG@ELAHKOPO@?$AAM?$AAA?$AAC?$AA_?$AAA?$AAD?$AAD?$AAR?$AA_?$AA0?$AA?$AA@ 10001a24     DM9000.obj
+ 0001:00000a3c       ??_C@_1BM@LMMEJBNO@?$AAM?$AAA?$AAC?$AA_?$AAL?$AAo?$AAa?$AAd?$AA_?$AAM?$AAo?$AAd?$AAe?$AA?$AA@ 10001a3c     DM9000.obj
+ 0001:00000a58       ??_C@_1CI@OCBEDJOJ@?$AAF?$AAl?$AAo?$AAw?$AA_?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA_?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?$AA@ 10001a58     DM9000.obj
+ 0001:00000a80       ??_C@_1CA@ENCCFAPF@?$AAI?$AAn?$AAt?$AA_?$AAA?$AAc?$AAt?$AAi?$AAv?$AAe?$AA_?$AAH?$AAi?$AAg?$AAh?$AA?$AA@ 10001a80     DM9000.obj
+ 0001:00000aa0       ??_C@_1BE@JJMPHOLO@?$AAI?$AAr?$AAq?$AAN?$AAu?$AAm?$AAb?$AAe?$AAr?$AA?$AA@ 10001aa0     DM9000.obj
+ 0001:00000ab4       ??_C@_1BE@IMGCPOOB@?$AAI?$AAo?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$AA@ 10001ab4     DM9000.obj
+ 0001:00000ac8       ??_7NIC_DEVICE_OBJECT@@6B@ 10001ac8     DM9000.obj
+ 0001:00000b90       ??_7C_DM9000@@6B@          10001b90     DM9000.obj
+ 0001:00000c70       ??_C@_1FO@EFOMIPBE@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA_?$AAd?$AA?$FN?$AA?3?$AA?5?$AAP?$AAR?$AAI?$AAN?$AAT?$AA_?$AAR?$AAE?$AAG?$AA_?$AAD?$AAA?$AAT?$AAA?$AA?5?$AAr?$AAe?$AAg?$AA?5?$AA?$CF@ 10001c70     DM9000.obj
+ 0001:00000cd0       ??_C@_1GM@MAGEJEFG@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAE?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CB?$AA?5?$AAc?$AAh?$AAi@ 10001cd0     DM9000.obj
+ 0001:00000d40       ??_C@_1GM@PIOKCMBA@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAE?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CB?$AA?5?$AAc?$AAh?$AAi@ 10001d40     DM9000.obj
+ 0001:00000db0       ??_C@_1GK@IBGJIHPC@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAE?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CB?$AA?5?$AAc?$AAh?$AAi@ 10001db0     DM9000.obj
+ 0001:00000e20       ??_C@_1GE@OOJLMFOJ@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAE?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CB?$AA?5?$AAn?$AAi?$AAc@ 10001e20     DM9000.obj
+ 0001:00000e88       ??_C@_1FM@LEOCHAAK@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAE?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?$CB?$AA?5?$AAp?$AAh?$AAy@ 10001e88     DM9000.obj
+ 0001:00000ee4       ??_C@_1DC@HKDINOGB@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAH?$AAa?$AAl?$AAt?$AA?$CB?$AA?5?$AA?$AN?$AA?6?$AA?$AA@ 10001ee4     DM9000.obj
+ 0001:00000f18       ??_C@_1EK@EPHPMDFD@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAI?$AAN?$AAT?$AA_?$AAE?$AAd?$AAg?$AAe?$AA_?$AAD?$AAe?$AAt?$AAe?$AAc?$AAt?$AA?5?$AA?$CF?$AAx?$AA?5?$AA?$CF?$AAx?$AA?5@ 10001f18     DM9000.obj
+ 0001:00000f68       ??_C@_1FM@DCIBODNO@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAt?$AAx?$AA?5?$AAp?$AAo?$AAi?$AAn?$AAt?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AA?$CF?$AAx?$AA?5?$AA?0?$AA?5?$AA?$CF?$AAx@ 10001f68     DM9000.obj
+ 0001:00000fc8       ??_C@_1FK@FDBAPOJP@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAp?$AAd?$AAe?$AAs?$AAc?$AA?9?$AA?$DO?$AAn?$AAL?$AAe?$AAn?$AAg?$AAt?$AAh?$AA?5?$AAo?$AAv?$AAe?$AAr?$AA?5?$AA?$CF?$AAx@ 10001fc8     DM9000.obj
+ 0001:00001028       ??_C@_1EI@IGFBMODD@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAp?$AAd?$AAe?$AAs?$AAc?$AA?9?$AA?$DO?$AAb?$AAS?$AAt?$AAa?$AAt?$AAe?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AA?$CF?$AAx@ 10002028     DM9000.obj
+ 0001:00001070       ??_C@_1FM@GAFIAGCE@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAx?$AA?5?$AAp?$AAo?$AAi?$AAn?$AAt?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AA?$CF?$AAx?$AA?5?$AA?0?$AA?5?$AA?$CF?$AAx@ 10002070     DM9000.obj
+ 0001:000010d0       ??_C@_1EI@HOEGGAOF@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAp?$AAd?$AAe?$AAs?$AAc?$AA?9?$AA?$DO?$AAb?$AAS?$AAt?$AAa?$AAt?$AAu?$AAs?$AA?5?$AA?$CF?$AA0?$AA2?$AAx?$AA?$CB?$AA?$CB?$AA?$CB@ 100020d0     DM9000.obj
+ 0001:00001118       ??_C@_1FK@LPEJLMDO@?$AAD?$AAM?$AA9?$AA0?$AA0?$AA0?$AA?5?$AAN?$AAI?$AAC?$AA_?$AAD?$AAE?$AAV?$AAI?$AAC?$AAE?$AA_?$AAO?$AAB?$AAJ?$AAE?$AAC?$AAT?$AA?5?$AA?$CK?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe@ 10002118     DM9000.obj
+ 0001:00001174       ??_C@_03HPADHAHE@N?1A?$AA@ 10002174     DM9000.obj
+ 0001:00001178       ??_C@_1EI@KMEGMIEH@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAI?$AAR?$AAQ?$AA?5?$AAp?$AAi?$AAn?$AA?5?$AAa?$AAc?$AAt?$AAi?$AAv?$AAe?$AA?5?$AAi?$AAs?$AA?5?$AAH?$AAI?$AAG?$AAH@ 10002178     DM9000.obj
+ 0001:000011c0       ??_C@_1EG@DAABJONI@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAI?$AAR?$AAQ?$AA?5?$AAp?$AAi?$AAn?$AA?5?$AAa?$AAc?$AAt?$AAi?$AAv?$AAe?$AA?5?$AAi?$AAs?$AA?5?$AAL?$AAO?$AAW?$AA?5@ 100021c0     DM9000.obj
+ 0001:00001208       ??_C@_1EC@BDCCEDDH@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAg?$AA?5?$AAD?$AAM?$AA9?$AA_?$AAI?$AAN?$AAT?$AAF?$AAN?$AA?5?$AAi?$AAs?$AA?5?$AA?$CF?$AAx?$AA?5?$AA?$AN?$AA?6@ 10002208     DM9000.obj
+ 0001:00001250       ??_C@_1EG@MEHPGNLA@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAr?$AAe?$AAg?$AA?5?$AAD?$AAM?$AA9?$AA_?$AAC?$AAH?$AAI?$AAP?$AAR?$AAE?$AAV?$AA?5?$AAi?$AAs?$AA?5?$AA?$CF?$AAx?$AA?5@ 10002250     DM9000.obj
+ 0001:00001298       ??_C@_1EA@CGHHHBGO@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAs?$AAi?$AAg?$AAn?$AAa?$AAt?$AAu?$AAr?$AAe?$AA?5?$AAi?$AAs?$AA?5?$AA?$CF?$AA0?$AA8?$AAX?$AA?5?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 10002298     DM9000.obj
+ 0001:000012d8       ??_C@_0BL@BOGBOLLM@Unknown?5device?5id?5error?5?$CFx?$AA@ 100022d8     DM9000.obj
+ 0001:000012f4       ??_C@_1DO@JELADGMF@?$AAU?$AAn?$AAk?$AAn?$AAo?$AAw?$AAn?$AA?5?$AAd?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAi?$AAd?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AA?$CF?$AAx?$AA?5?$AA?$CB?$AA?$AN?$AA?6?$AA?$AA@ 100022f4     DM9000.obj
+ 0001:00001334       ??_C@_0BL@DNEAGMPI@Unknown?5device?5io?5error?5?$CFx?$AA@ 10002334     DM9000.obj
+ 0001:00001350       ??_C@_1FM@GKFPADEL@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAU?$AAn?$AAk?$AAn?$AAo?$AAw?$AAn?$AA?5?$AAd?$AAe?$AAv?$AAi?$AAc?$AAe?$AA?5?$AAi?$AAo?$AA?5?$AAe?$AAr?$AAr?$AAo@ 10002350     DM9000.obj
+ 0001:000013b0       ??_C@_1FA@JHFIOCFL@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAR?$AAE?$AAG?$AA_?$AAI?$AAN?$AAD?$AAE?$AAX?$AA_?$AAA?$AAD?$AAD?$AAR?$AAE?$AAS?$AAS?$AA?5?$AAi?$AAs?$AA?5?$AA?$CF@ 100023b0     DM9000.obj
+ 0001:00001400       ??_C@_1EO@ODOGGLNI@?$AA?$FL?$AAD?$AAM?$AA9?$AAI?$AAS?$AAA?$AA?$FN?$AA?3?$AA?5?$AAR?$AAE?$AAG?$AA_?$AAD?$AAA?$AAT?$AAA?$AA_?$AAA?$AAD?$AAD?$AAR?$AAE?$AAS?$AAS?$AA?5?$AAi?$AAs?$AA?5?$AA?$CF?$AA0@ 10002400     DM9000.obj
+ 0001:00001474       DllEntry                   10002474 f   wince.obj
+ 0001:000014a4       ?Dequeue@CQueue@@QAAPAU_CQUEUE_GEN_HEADER@@XZ 100024a4 f i driver.obj
+ 0001:000014ec       ?DriverStart@NIC_DRIVER_OBJECT@@UAAXXZ 100024ec f   driver.obj
+ 0001:0000150c       ?DriverIndication@NIC_DRIVER_OBJECT@@UAAXK@Z 1000250c f   driver.obj
+ 0001:000015a0       ?DriverIsr@NIC_DRIVER_OBJECT@@UAAXPAE0@Z 100025a0 f   driver.obj
+ 0001:0000168c       ?DriverInterruptHandler@NIC_DRIVER_OBJECT@@UAAXXZ 1000268c f   driver.obj
+ 0001:000016f8       ?DriverQueryInformation@NIC_DRIVER_OBJECT@@UAAHKPAXKPAK1@Z 100026f8 f   driver.obj
+ 0001:00001e54       ?DriverSetInformation@NIC_DRIVER_OBJECT@@UAAHKPAXKPAK1@Z 10002e54 f   driver.obj
+ 0001:00001f78       ?DriverEnableInterrupt@NIC_DRIVER_OBJECT@@UAAXXZ 10002f78 f   driver.obj
+ 0001:00001f98       ?DriverDisableInterrupt@NIC_DRIVER_OBJECT@@UAAXXZ 10002f98 f   driver.obj
+ 0001:00001fb8       ?DriverCheckForHang@NIC_DRIVER_OBJECT@@UAAHXZ 10002fb8 f   driver.obj
+ 0001:00001fec       ?DriverHalt@NIC_DRIVER_OBJECT@@UAAXXZ 10002fec f   driver.obj
+ 0001:0000200c       ?DriverReset@NIC_DRIVER_OBJECT@@UAAHPAE@Z 1000300c f   driver.obj
+ 0001:0000205c       ?DriverSend@NIC_DRIVER_OBJECT@@UAAHPAU_NDIS_PACKET@@I@Z 1000305c f   driver.obj
+ 0001:00002184       ?DriverReceiveIndication@NIC_DRIVER_OBJECT@@UAAXHPAXH@Z 10003184 f   driver.obj
+ 0001:000021e4       ?DriverSendCompleted@NIC_DRIVER_OBJECT@@UAAXPAU_CQUEUE_GEN_HEADER@@@Z 100031e4 f   driver.obj
+ 0001:00002224       MiniportISRHandler         10003224 f   driver.obj
+ 0001:00002268       MiniportInterruptHandler   10003268 f   driver.obj
+ 0001:0000229c       MiniportQueryInformation   1000329c f   driver.obj
+ 0001:000022e8       MiniportSetInformation     100032e8 f   driver.obj
+ 0001:00002334       MiniportCheckForHang       10003334 f   driver.obj
+ 0001:0000236c       MiniportHalt               1000336c f   driver.obj
+ 0001:000023a0       MiniportReset              100033a0 f   driver.obj
+ 0001:000023e0       MiniportSend               100033e0 f   driver.obj
+ 0001:00002414       ??0NIC_DRIVER_OBJECT@@QAA@PAX0@Z 10003414 f i driver.obj
+ 0001:00002478       ?DriverIsOutOfResource@NIC_DRIVER_OBJECT@@UAAHXZ 10003478 f i driver.obj
+ 0001:00002480       ?EDriverInitialize@NIC_DRIVER_OBJECT@@UAAXPAHPAIPAW4_NDIS_MEDIUM@@I@Z 10003480 f   driver.obj
+ 0001:000029c0       MiniportInitialize         100039c0 f   driver.obj
+ 0001:00002b14       DriverEntry                10003b14 f   driver.obj
+ 0001:00002c2c       ?DeviceCalculateCRC32@NIC_DEVICE_OBJECT@@QAAKPAEHH@Z 10003c2c f   device.obj
+ 0001:00002cc8       ?DeviceMacAddress@NIC_DEVICE_OBJECT@@UAAPAEPAE@Z 10003cc8 f   device.obj
+ 0001:00002e7c       ?DeviceVendorID@NIC_DEVICE_OBJECT@@UAAGXZ 10003e7c f   device.obj
+ 0001:00002e90       ?DeviceProductID@NIC_DEVICE_OBJECT@@UAAGXZ 10003e90 f   device.obj
+ 0001:00002ea4       ?DeviceRegisterAdapter@NIC_DEVICE_OBJECT@@UAAXXZ 10003ea4 f   device.obj
+ 0001:00002ef0       ?DeviceReportStatistics@NIC_DEVICE_OBJECT@@QAAXKK@Z 10003ef0 f   device.obj
+ 0001:00002f08       ?DeviceRetriveConfigurations@NIC_DEVICE_OBJECT@@UAAXPAX@Z 10003f08 f   device.obj
+ 0001:00003044       ?DeviceSetDefaultSettings@NIC_DEVICE_OBJECT@@UAAXXZ 10004044 f   device.obj
+ 0001:000030ec       ?EDeviceLoadEeprom@NIC_DEVICE_OBJECT@@UAAXXZ 100040ec f   device.obj
+ 0001:0000313c       ?DevicePolling@NIC_DEVICE_OBJECT@@QAAHKKKKK@Z 1000413c f   device.obj
+ 0001:000031e0       ?SetConnectionStatus@NIC_DEVICE_OBJECT@@IAAX_N@Z 100041e0 f   device.obj
+ 0001:00003294       ?DeviceCheckForHang@NIC_DEVICE_OBJECT@@UAAHXZ 10004294 f   device.obj
+ 0001:00003360       DeviceTimerTrunkRoutine    10004360 f   device.obj
+ 0001:0000339c       ?DeviceInitializeTimer@NIC_DEVICE_OBJECT@@UAAXXZ 1000439c f   device.obj
+ 0001:000033c4       ?DeviceCancelTimer@NIC_DEVICE_OBJECT@@UAAXXZ 100043c4 f   device.obj
+ 0001:000033e4       ?DeviceSetTimer@NIC_DEVICE_OBJECT@@UAAXK@Z 100043e4 f   device.obj
+ 0001:000033f8       ?DeviceOnTimer@NIC_DEVICE_OBJECT@@UAAXXZ 100043f8 f   device.obj
+ 0001:000033fc       ?EDeviceRegisterIoSpace@NIC_DEVICE_OBJECT@@UAAXXZ 100043fc f   device.obj
+ 0001:000034a0       ?EDeviceRegisterInterrupt@NIC_DEVICE_OBJECT@@UAAXXZ 100044a0 f   device.obj
+ 0001:0000355c       ??0NIC_DEVICE_OBJECT@@QAA@PAVNIC_DRIVER_OBJECT@@PAX@Z 1000455c f i DM9000.obj
+ 0001:00003688       ?DeviceQueryInformation@NIC_DEVICE_OBJECT@@UAAHPAHKPAXKPAK2@Z 10004688 f i DM9000.obj
+ 0001:00003690       ?DeviceSetInformation@NIC_DEVICE_OBJECT@@UAAHPAHKPAXKPAK2@Z 10004690 f i DM9000.obj
+ 0001:00003698       ?DeviceHardwareStatus@NIC_DEVICE_OBJECT@@UAAKXZ 10004698 f i DM9000.obj
+ 0001:000036a0       ?DeviceEnableTransmit@NIC_DEVICE_OBJECT@@UAAXXZ 100046a0 f i DM9000.obj
+ 0001:000036a4       ?DeviceDisableTransmit@NIC_DEVICE_OBJECT@@UAAXXZ 100046a4 f i DM9000.obj
+ 0001:000036a8       ??0C_DM9000@@QAA@PAVNIC_DRIVER_OBJECT@@PAX@Z 100046a8 f i DM9000.obj
+ 0001:000036f0       ?DevicePCIID@C_DM9000@@UAAKXZ 100046f0 f i DM9000.obj
+ 0001:000036f8       ?DeviceEnableTransmit@C_DM9000@@UAAXXZ 100046f8 f i DM9000.obj
+ 0001:00003704       ?DeviceDisableTransmit@C_DM9000@@UAAXXZ 10004704 f i DM9000.obj
+ 0001:00003710       ?DeviceQueryTxResources@C_DM9000@@UAAHXZ 10004710 f i DM9000.obj
+ 0001:00003728       ?DeviceConfigureParameters@C_DM9000@@UAAPAU_CONFIG_PARAMETER@@XZ 10004728 f   DM9000.obj
+ 0001:00003734       ?DeviceSetEepromFormat@C_DM9000@@UAAXXZ 10004734 f   DM9000.obj
+ 0001:00003750       ?DeviceWritePort@C_DM9000@@UAAKKK@Z 10004750 f   DM9000.obj
+ 0001:00003790       ?DeviceReadPort@C_DM9000@@UAAKK@Z 10004790 f   DM9000.obj
+ 0001:000037cc       ?DeviceReadEeprom@C_DM9000@@UAAGK@Z 100047cc f   DM9000.obj
+ 0001:000038ac       ?DeviceWriteEeprom@C_DM9000@@UAAGKG@Z 100048ac f   DM9000.obj
+ 0001:00003978       ?DeviceReadPhy@C_DM9000@@UAAGKK@Z 10004978 f   DM9000.obj
+ 0001:00003a50       ?DeviceWritePhy@C_DM9000@@UAAGKKG@Z 10004a50 f   DM9000.obj
+ 0001:00003b24       ?DeviceReadData@C_DM9000@@UAAKXZ 10004b24 f   DM9000.obj
+ 0001:00003b54       ?DeviceReadDataWithoutIncrement@C_DM9000@@UAAKXZ 10004b54 f   DM9000.obj
+ 0001:00003c08       ?DeviceReadString@C_DM9000@@UAAPAEPAEH@Z 10004c08 f   DM9000.obj
+ 0001:00003cd8       ?DeviceWriteString@C_DM9000@@UAAPAEPAEH@Z 10004cd8 f   DM9000.obj
+ 0001:00003db0       ?PRINT_REG_DATA@C_DM9000@@UAAXE@Z 10004db0 f   DM9000.obj
+ 0001:00003f48       ?TX_SEND_CHECK@C_DM9000@@UAAXXZ 10004f48 f   DM9000.obj
+ 0001:00003fe4       ?REG_INDEX_SAVE@C_DM9000@@UAAXXZ 10004fe4 f   DM9000.obj
+ 0001:00004014       ?REG_INDEX_RESTORE@C_DM9000@@UAAXXZ 10005014 f   DM9000.obj
+ 0001:00004044       ?DeviceEnableInterrupt@C_DM9000@@UAAXXZ 10005044 f   DM9000.obj
+ 0001:00004068       ?DeviceDisableInterrupt@C_DM9000@@UAAXXZ 10005068 f   DM9000.obj
+ 0001:0000408c       ?DeviceEnableReceive@C_DM9000@@UAAXXZ 1000508c f   DM9000.obj
+ 0001:000040c4       ?DeviceDisableReceive@C_DM9000@@UAAXXZ 100050c4 f   DM9000.obj
+ 0001:000040fc       ?DeviceGetInterruptStatus@C_DM9000@@UAAKXZ 100050fc f   DM9000.obj
+ 0001:00004120       ?DeviceSetInterruptStatus@C_DM9000@@UAAKK@Z 10005120 f   DM9000.obj
+ 0001:00004144       ?DeviceGetReceiveStatus@C_DM9000@@UAAKXZ 10005144 f   DM9000.obj
+ 0001:00004170       ?DeviceStart@C_DM9000@@UAAXXZ 10005170 f   DM9000.obj
+ 0001:000041c4       ?EDeviceInitialize@C_DM9000@@UAAXH@Z 100051c4 f   DM9000.obj
+ 0001:00004584       ?DeviceResetPHYceiver@C_DM9000@@UAAXXZ 10005584 f   DM9000.obj
+ 0001:00004588       ?DeviceHalt@C_DM9000@@UAAXXZ 10005588 f   DM9000.obj
+ 0001:00004640       ?DeviceIsr@C_DM9000@@UAAXK@Z 10005640 f   DM9000.obj
+ 0001:00004644       ?DeviceOnTimer@C_DM9000@@UAAXXZ 10005644 f   DM9000.obj
+ 0001:000047b4       ?DeviceOnSetupFilter@C_DM9000@@UAAHK@Z 100057b4 f   DM9000.obj
+ 0001:000049bc       ?DeviceInterruptEventHandler@C_DM9000@@UAAXK@Z 100059bc f   DM9000.obj
+ 0001:00004a50       ?DeviceHardwareStatus@C_DM9000@@UAAKXZ 10005a50 f   DM9000.obj
+ 0001:00004a64       ?DeviceSend@C_DM9000@@UAAHPAU_CQUEUE_GEN_HEADER@@@Z 10005a64 f   DM9000.obj
+ 0001:00004ca8       ?Dm9LookupRxBuffers@C_DM9000@@UAAHXZ 10005ca8 f   DM9000.obj
+ 0001:00004fdc       ?DeviceCheckLink@C_DM9000@@UAAKXZ 10005fdc f   DM9000.obj
+ 0001:00005158       DeviceEntry                10006158 f   DM9000.obj
+ 0001:000051a4       ?EDeviceRegisterIoSpace@C_DM9000@@UAAXXZ 100061a4 f   DM9000.obj
+ 0001:00005508       ?EDeviceValidateConfigurations@C_DM9000@@UAAXXZ 10006508 f   DM9000.obj
+ 0001:000055e0       ?DeviceReset@C_DM9000@@UAAXXZ 100065e0 f   DM9000.obj
+ 0001:0000574c       NdisFreeMemory             1000674c f   ndis:NDIS.dll
+ 0001:0000575c       NdisInitializeString       1000675c f   ndis:NDIS.dll
+ 0001:0000576c       NdisAllocateSpinLock       1000676c f   ndis:NDIS.dll
+ 0001:0000577c       NdisFreeSpinLock           1000677c f   ndis:NDIS.dll
+ 0001:0000578c       NdisAcquireSpinLock        1000678c f   ndis:NDIS.dll
+ 0001:0000579c       NdisReleaseSpinLock        1000679c f   ndis:NDIS.dll
+ 0001:000057ac       NdisQueryPacket            100067ac f   ndis:NDIS.dll
+ 0001:000057bc       NdisCloseConfiguration     100067bc f   ndis:NDIS.dll
+ 0001:000057cc       NdisOpenConfiguration      100067cc f   ndis:NDIS.dll
+ 0001:000057dc       NdisTerminateWrapper       100067dc f   ndis:NDIS.dll
+ 0001:000057ec       NdisMRegisterMiniport      100067ec f   ndis:NDIS.dll
+ 0001:000057fc       NdisInitializeWrapper      100067fc f   ndis:NDIS.dll
+ 0001:0000580c       NdisMSetAttributesEx       1000680c f   ndis:NDIS.dll
+ 0001:0000581c       NdisReadConfiguration      1000681c f   ndis:NDIS.dll
+ 0001:0000582c       NdisStallExecution         1000682c f   ndis:NDIS.dll
+ 0001:0000583c       NdisMInitializeTimer       1000683c f   ndis:NDIS.dll
+ 0001:0000584c       NdisMCancelTimer           1000684c f   ndis:NDIS.dll
+ 0001:0000585c       NdisSetTimer               1000685c f   ndis:NDIS.dll
+ 0001:0000586c       NdisMRegisterInterrupt     1000686c f   ndis:NDIS.dll
+ 0001:0000587c       NKDbgPrintfW               1000687c f   coredll:COREDLL.dll
+ 0001:0000588c       DisableThreadLibraryCalls  1000688c f   coredll:COREDLL.dll
+ 0001:0000589c       TryEnterCriticalSection    1000689c f   coredll:COREDLL.dll
+ 0001:000058ac       LeaveCriticalSection       100068ac f   coredll:COREDLL.dll
+ 0001:000058bc       Random                     100068bc f   coredll:COREDLL.dll
+ 0001:000058cc       InitializeCriticalSection  100068cc f   coredll:COREDLL.dll
+ 0001:000058dc       EnterCriticalSection       100068dc f   coredll:COREDLL.dll
+ 0001:000058ec       MmMapIoSpace               100068ec f   ceddk:CEDDK.dll
+ 0001:000058fc       __GSHandlerCheckCommon     100068fc f   corelib0:gshandler.obj
+ 0001:00005938       __GSHandlerCheck           10006938 f   corelib0:gshandler.obj
+ 0001:0000595c       __security_check_cookie    1000695c f   corelib0:armsecgs.obj
+ 0001:00005970       __gsfailure                10006970 f   corelib0:armsecgs.obj
+ 0001:000059b4       memset                     100069b4 f   corelib1:COREDLL.dll
+ 0001:000059c4       ??3@YAXPAX@Z               100069c4 f   corelib1:COREDLL.dll
+ 0001:000059d4       memcpy                     100069d4 f   corelib1:COREDLL.dll
+ 0001:000059e4       malloc                     100069e4 f   corelib1:COREDLL.dll
+ 0001:000059f4       longjmp                    100069f4 f   corelib1:COREDLL.dll
+ 0001:00005a04       ??2@YAPAXI@Z               10006a04 f   corelib1:COREDLL.dll
+ 0001:00005a14       setjmp                     10006a14 f   corelib1:COREDLL.dll
+ 0001:00005a24       _purecall                  10006a24 f   corelib1:COREDLL.dll
+ 0001:00005a34       __rt_sdiv                  10006a34 f   corelib1:COREDLL.dll
+ 0001:00005a44       __report_gsfailure         10006a44 f   corelib1:COREDLL.dll
+ 0001:00005a64       __IMPORT_DESCRIPTOR_NDIS   10006a64     ndis:NDIS.dll
+ 0001:00005a78       __IMPORT_DESCRIPTOR_COREDLL 10006a78     coredll:COREDLL.dll
+ 0001:00005a8c       __IMPORT_DESCRIPTOR_CEDDK  10006a8c     ceddk:CEDDK.dll
+ 0001:00005aa0       __NULL_IMPORT_DESCRIPTOR   10006aa0     ndis:NDIS.dll
+ 0002:00000000       __imp_MmMapIoSpace         10007000     ceddk:CEDDK.dll
+ 0002:00000004       \177CEDDK_NULL_THUNK_DATA  10007004     ceddk:CEDDK.dll
+ 0002:00000008       __imp___rt_sdiv            10007008     corelib1:COREDLL.dll
+ 0002:0000000c       __imp__purecall            1000700c     corelib1:COREDLL.dll
+ 0002:00000010       __imp_setjmp               10007010     corelib1:COREDLL.dll
+ 0002:00000014       __imp_??2@YAPAXI@Z         10007014     corelib1:COREDLL.dll
+ 0002:00000018       __imp_malloc               10007018     corelib1:COREDLL.dll
+ 0002:0000001c       __imp_memcpy               1000701c     corelib1:COREDLL.dll
+ 0002:00000020       __imp_??3@YAXPAX@Z         10007020     corelib1:COREDLL.dll
+ 0002:00000024       __imp_memset               10007024     corelib1:COREDLL.dll
+ 0002:00000028       __imp_longjmp              10007028     corelib1:COREDLL.dll
+ 0002:0000002c       __imp_EnterCriticalSection 1000702c     coredll:COREDLL.dll
+ 0002:00000030       __imp_InitializeCriticalSection 10007030     coredll:COREDLL.dll
+ 0002:00000034       __imp_Random               10007034     coredll:COREDLL.dll
+ 0002:00000038       __imp_LeaveCriticalSection 10007038     coredll:COREDLL.dll
+ 0002:0000003c       __imp_TryEnterCriticalSection 1000703c     coredll:COREDLL.dll
+ 0002:00000040       __imp_NKDbgPrintfW         10007040     coredll:COREDLL.dll
+ 0002:00000044       __imp_DisableThreadLibraryCalls 10007044     coredll:COREDLL.dll
+ 0002:00000048       __imp___report_gsfailure   10007048     corelib1:COREDLL.dll
+ 0002:0000004c       \177COREDLL_NULL_THUNK_DATA 1000704c     coredll:COREDLL.dll
+ 0002:00000050       __imp_NdisMRegisterInterrupt 10007050     ndis:NDIS.dll
+ 0002:00000054       __imp_NdisSetTimer         10007054     ndis:NDIS.dll
+ 0002:00000058       __imp_NdisMCancelTimer     10007058     ndis:NDIS.dll
+ 0002:0000005c       __imp_NdisMInitializeTimer 1000705c     ndis:NDIS.dll
+ 0002:00000060       __imp_NdisStallExecution   10007060     ndis:NDIS.dll
+ 0002:00000064       __imp_NdisReadConfiguration 10007064     ndis:NDIS.dll
+ 0002:00000068       __imp_NdisMSetAttributesEx 10007068     ndis:NDIS.dll
+ 0002:0000006c       __imp_NdisInitializeWrapper 1000706c     ndis:NDIS.dll
+ 0002:00000070       __imp_NdisMRegisterMiniport 10007070     ndis:NDIS.dll
+ 0002:00000074       __imp_NdisTerminateWrapper 10007074     ndis:NDIS.dll
+ 0002:00000078       __imp_NdisOpenConfiguration 10007078     ndis:NDIS.dll
+ 0002:0000007c       __imp_NdisCloseConfiguration 1000707c     ndis:NDIS.dll
+ 0002:00000080       __imp_NdisQueryPacket      10007080     ndis:NDIS.dll
+ 0002:00000084       __imp_NdisReleaseSpinLock  10007084     ndis:NDIS.dll
+ 0002:00000088       __imp_NdisAcquireSpinLock  10007088     ndis:NDIS.dll
+ 0002:0000008c       __imp_NdisFreeSpinLock     1000708c     ndis:NDIS.dll
+ 0002:00000090       __imp_NdisAllocateSpinLock 10007090     ndis:NDIS.dll
+ 0002:00000094       __imp_NdisInitializeString 10007094     ndis:NDIS.dll
+ 0002:00000098       __imp_NdisFreeMemory       10007098     ndis:NDIS.dll
+ 0002:0000009c       \177NDIS_NULL_THUNK_DATA   1000709c     ndis:NDIS.dll
+ 0002:000000a0       ?gszNICSupportedOid@@3PAKA 100070a0     driver.obj
+ 0002:00000148       ?g_szDm9ConfigParams@@3PAU_CONFIG_PARAMETER@@A 10007148     DM9000.obj
+ 0002:00000208       __security_cookie          10007208     corelib0:seccinit.obj
+ 0002:0000020c       __security_cookie_complement 1000720c     corelib0:seccinit.obj
+ 0002:00000210       ?_gpExpData@@3PAU_EXCEPTION_DATA@@A 10007210     common.obj
+
+ entry point at        0001:00001474
+
+ Static symbols
+

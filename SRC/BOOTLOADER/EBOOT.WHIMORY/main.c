@@ -49,7 +49,7 @@
 //#include <WMR_Eboot.h>
 
 
-#define EBOOT_VERSION 	"Ver.: 1.1, 2012 Hiteg Ltd"
+#define EBOOT_VERSION 	"Ver.: 1.2,(C) 2013 Hiteg Limited (HK)"
 
 
 // For USB Download function
@@ -435,7 +435,6 @@ static void PrintMainMenu(PBOOT_CFG pBootCfg)
     EdbgOutputDebugString ( "C) Force Clean Boot Option      : [%s]\r\n", (pBootCfg->ConfigFlags & BOOT_OPTION_CLEAN)?"*True":"False");
     EdbgOutputDebugString ( "H) Hive Clean on Boot-time      : [%s]\r\n",  (pBootCfg->ConfigFlags & BOOT_OPTION_HIVECLEAN)?"True":"*False");
     EdbgOutputDebugString ( "P) Format Partition on Boot-time: [%s]\r\n",  (pBootCfg->ConfigFlags & BOOT_OPTION_FORMATPARTITION)?"True":"*False");
-	EdbgOutputDebugString ( "9) WinCE debug Serial port      : [%s]\r\n",  getDebugUARTName(pBootCfg->debugUART ));
     EdbgOutputDebugString ( "\r\n------------- NAND Flash Section -------------\r\n");
     // N.B: we need this option here since BinFS is really a RAM image, where you "format" the media
     // with an MBR. There is no way to parse the image to say it's ment to be BinFS enabled.
@@ -602,12 +601,6 @@ static BOOL MainMenu(PBOOT_CFG pBootCfg)
                 OALMSG(TRUE, (TEXT(" --Format FTL (Erase FTL Area + FTL Format)\r\n")));
             }
             break;
-		case '9':
-			{
-			g_pBootCfg->debugUART=pBSPArgs->debugUART=toggleDebugUART(g_pBootCfg->debugUART);
-			bConfigChanged = TRUE;
-			}
-			break;
         case 'C':
         case 'c':
             pBootCfg->ConfigFlags= (pBootCfg->ConfigFlags ^ BOOT_OPTION_CLEAN);
@@ -1053,7 +1046,7 @@ void SetKITLConfigAndBootOptions()
                 // Configure Ethernet controller.
                 g_KITLConfig->devLoc.IfcType    = Internal;
                 g_KITLConfig->devLoc.BusNumber  = 0;
-                g_KITLConfig->devLoc.LogicalLoc = BSP_BASE_REG_PA_CS8900A_IOBASE;
+                g_KITLConfig->devLoc.LogicalLoc = BSP_BASE_REG_PA_DM9000A_IOBASE;
                 g_KITLConfig->flags |= OAL_KITL_FLAGS_VMINI;
             }
             break;
@@ -1141,7 +1134,6 @@ void OEMInitPowerCTL()
 */
 BOOL OEMPlatformInit(void)
 {
-	unsigned n;
     UINT8 KeySelect;
     BOOL bResult = FALSE;
     FlashInfo flashInfo;
@@ -1154,7 +1146,7 @@ BOOL OEMPlatformInit(void)
     // Check if Current ARM speed is not matched to Target Arm speed
     // then To get speed up, set Voltage
 */
-    EdbgOutputDebugString("Microsoft Windows CE Bootloader for the Samsung SMDK6410 Version %d.%d Built %s\r\n\r\n",
+    EdbgOutputDebugString("Microsoft Windows CE Bootloader for the Hiteg Limited TenByTen6410 MLC Version %d.%d Built %s\r\n\r\n",
     EBOOT_VERSION_MAJOR, EBOOT_VERSION_MINOR, __DATE__);
 
     // Set OTG Device's Phy clock
@@ -2018,14 +2010,11 @@ void InitializeDisplay(void)
 		LDI_fill_output_device_information(&RGBDevInfo);
 
 		// Setup Output Device Information
-		if((OEMgetDisplayType() != HITEG_TV))
-			Disp_set_output_device_information(&RGBDevInfo);
-		else
-			Disp_set_output_TV_information(LDI_GetDisplayWidth(OEMgetDisplayType()), LDI_GetDisplayHeight(OEMgetDisplayType()) );
-		
+		Disp_set_output_device_information(&RGBDevInfo);
+			
 		// Initialize Display Controller
 		//Disp_initialize_output_interface(DISP_VIDOUT_RGBIF_TVENCODER);
-		Disp_initialize_output_interface((OEMgetDisplayType()==HITEG_TV)?DISP_VIDOUT_TVENCODER:DISP_VIDOUT_RGBIF);
+		Disp_initialize_output_interface(DISP_VIDOUT_RGBIF);
 		
 		if(OEMgetLCDBpp()==16)
 		{
@@ -2046,31 +2035,19 @@ void InitializeDisplay(void)
 		Disp_window_onfoff(DISP_WIN1, DISP_WINDOW_ON);
 		//LDI_setClock((OEMgetDisplayType()==HITEG_TV)?1:0);
 	
-		if(OEMgetDisplayType() == HITEG_TV)
-		{
-			PWRCTL_setPower(&pBSPArgs->powerCTL, DAC0);
-			PWRCTL_setPower(&pBSPArgs->powerCTL, DAC1);
-			PWRCTL_setAllTo(&pBSPArgs->powerCTL);
-			OEMsetPowerCTL(pBSPArgs->powerCTL);
-		}
-		else
-		{
+
 			PWRCTL_clrPower(&pBSPArgs->powerCTL, DAC0);
 			PWRCTL_setPower(&pBSPArgs->powerCTL, LCD);
 			PWRCTL_setAllTo(&pBSPArgs->powerCTL);
 			OEMsetPowerCTL(pBSPArgs->powerCTL);
-		}
+
 
 		Disp_envid_onoff(DISP_ENVID_ON); // we switch the TFT controller on...
 
-		if((OEMgetDisplayType() != HITEG_TV))
-			LDI_setBacklight(100);
-		else
-			LDI_setBacklight(0);
-			
-
-			LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, OEMgetBGColor());
-			displayLogo();
+		LDI_setBacklight(100);
+		
+		LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, OEMgetBGColor());
+		displayLogo();
 
 			
 

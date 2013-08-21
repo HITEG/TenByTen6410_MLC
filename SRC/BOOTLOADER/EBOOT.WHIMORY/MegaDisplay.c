@@ -38,6 +38,7 @@ static void InitIIC()
 #define LS0		5
 
 static unsigned tmpPSC0=0;
+static unsigned tmpDRVLCD=0;
 
 void identifyDisplay()
 {
@@ -173,7 +174,9 @@ void editDisplayMenu(unsigned type)
 		EdbgOutputDebugString ("%s 6) HSPW: [%u]\r\n",(current==6)?"*":"", tmp.HSPW);
 		EdbgOutputDebugString ("%s 7) FRAME_RATE: [%u]\r\n",(current==7)?"*":"", tmp.FRAME_RATE);
 		EdbgOutputDebugString ("%s 8) PSC0: [%u]\r\n",(current==8)?"*":"", tmpPSC0);
+		EdbgOutputDebugString ("%s 9) DRVLCD: [%u]\r\n",(current==9)?"*":"", tmpDRVLCD);
 		EdbgOutputDebugString ("###############################################\r\n");
+		/*
 		IIC_Read(g_hasPCA9530,INPUT,&data);
 		EdbgOutputDebugString ("read INPUT: %u\r\n",data%0xFF);
 		IIC_Read(g_hasPCA9530,PCS0,&data);
@@ -187,13 +190,15 @@ void editDisplayMenu(unsigned type)
 		IIC_Read(g_hasPCA9530,LS0,&data);
 		EdbgOutputDebugString ("read LS0: %u\r\n",data%0xFF);
 		EdbgOutputDebugString ("###############################################\r\n");
+		*/
 		ch=getChar();
 
 		if(ch=='P' | ch=='p') dir=1;
-		if(ch=='B' | ch=='b') testPWM();
+		//if(ch=='B' | ch=='b') testPWM();
 		if(ch=='M' | ch=='p') dir=-1;
 		if(ch=='q' || ch=='Q') return;
 		if(ch>='1' && ch<='8') current=ch-'0';
+		/*
 		if(ch=='u' || ch=='U') {
 		IIC_Read(g_hasPCA9530,LS0,&data);
 		EdbgOutputDebugString ("read %u\r\n",data%0xFF);
@@ -222,6 +227,7 @@ void editDisplayMenu(unsigned type)
 		IIC_Read(g_hasPCA9530,LS0,&data);
 		EdbgOutputDebugString ("read back %u\r\n",data%0xFF);
 		}
+		*/
 		if(ch=='p' || ch=='P' || ch=='m' || ch=='M')
 		{
 			switch(current)
@@ -250,6 +256,9 @@ void editDisplayMenu(unsigned type)
 				case 8:
 					tmpPSC0+=dir;
 					break;
+				case 9:
+					tmpDRVLCD+=dir;
+					tmpDRVLCD=tmpDRVLCD % 4;
 				default:
 					break;
 			}

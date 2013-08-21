@@ -56,7 +56,7 @@ VOID BSPPowerOff()
     //-----------------------------
     // Disable DVS and Set to Full Speed
     //-----------------------------
-    ChangeDVSLevel(SYS_L0);
+    //ChangeDVSLevel(SYS_L0);
 
     // RTC Control Disable
     pRTCReg->RTCCON = 0x0;            // Subclk 32768 Hz, No Reset, Merged BCD counter, XTAL 2^-15, Control Disable
@@ -121,7 +121,7 @@ static void S3C6410_WakeUpSource_Configure(void)
                             |(1<<15)    // MMC1        (Disabled, Only for Stop)
                             |(1<<14)    // MMC0        (Disabled, Only for Stop)
                             |(1<<13)    // HSI        (Disabled)
-                            |(1<<12)    // Touch        (Disabled, Only for Stop)
+                            |(0<<12)    // Touch        (Disabled, Only for Stop)
 #ifdef    SLEEP_AGING_TEST
                             |(0<<11)    // RTC Tick    (Enabled)
 #else
@@ -139,11 +139,11 @@ static void S3C6410_WakeUpSource_Configure(void)
     //-----------------
     // External Interrupt
     //-----------------
-    // Power Button EINT[9] (GPN[9] is Retention Port)
-    //pGPIOReg->GPNCON = (pGPIOReg->GPNCON & ~(0x3<<22)) | (0x2<<22);    // GPN[11] as EINT[11]
+    // Power Button EINT[0] (GPN[0] is Retention Port)
+    pGPIOReg->GPNCON = (pGPIOReg->GPNCON & ~(0x3<<0)) | (0x2<<0);    // GPN[0] as EINT[0]
 
     pSysConReg->EINT_MASK = 0x0FFFFFFF;        // Mask All EINT Wake Up Source at Sleep
-    //pSysConReg->EINT_MASK &= ~(1<<11);        // Enable EINT[11] as Wake Up Source at Sleep
+    pSysConReg->EINT_MASK &= ~(1<<0);        // Enable EINT[0] as Wake Up Source at Sleep
 
     //-----------------
     // RTC Tick
@@ -177,10 +177,10 @@ static void S3C6410_WakeUpSource_Detect(void)
     switch(g_LastWakeupStatus)
     {
     case 0x1:    // External Interrupt
-        if (pGPIOReg->EINT0PEND&(1<<9))        // Power Button : EINT[9]
+        if (pGPIOReg->EINT0PEND&(1<<0))        // Power Button : EINT[0]
         {
-            g_oalWakeSource = SYSWAKE_POWER_BUTTON;    // OEMWAKE_EINT9;
-            pGPIOReg->EINT0PEND = (1<<9);    // Clear Pending (Power Button Driver No Need to Handle Wake Up Interrupt)
+            g_oalWakeSource = SYSWAKE_POWER_BUTTON;    // OEMWAKE_EINT0;
+            pGPIOReg->EINT0PEND = (1<<0);    // Clear Pending (Power Button Driver No Need to Handle Wake Up Interrupt)
         }
         else
         {

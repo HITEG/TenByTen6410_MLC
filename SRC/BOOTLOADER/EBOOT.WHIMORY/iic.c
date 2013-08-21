@@ -127,7 +127,7 @@ int IICPoll( )
             break;
 
         case SETRDADDR:
-//          Uart_Printf("[S%d]",_iicDataCount);
+//          OEMWriteDebugString(L"[S%d]",_iicDataCount);
             if((_iicDataCount--)==0)
             {
 				goto failure;

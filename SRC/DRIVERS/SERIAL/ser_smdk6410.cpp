@@ -48,6 +48,7 @@ public:
         m_pIOPregs = NULL;
         m_pSysconRegs = NULL;
         //m_fIsDSRSet = FALSE;
+		RETAILMSG( FALSE, (TEXT("DEBUG: Serial0 created\r\n"))); 
     }
     ~CPdd6410Serial0()
     {
@@ -173,7 +174,7 @@ public:
         m_CommPorp.dwMaxBaud           = BAUD_115200;
         m_CommPorp.dwProvSubType       = PST_RS232;
         m_CommPorp.dwProvCapabilities  =
-            PCF_DTRDSR | PCF_RLSD | PCF_RTSCTS |
+            PCF_RTSCTS |
             PCF_SETXCHAR |
             PCF_INTTIMEOUTS |
             PCF_PARITY_CHECK |
@@ -188,7 +189,7 @@ public:
             BAUD_115200 | BAUD_57600 | BAUD_USER;
         m_CommPorp.dwSettableParams    =
             SP_BAUD | SP_DATABITS | SP_HANDSHAKING | SP_PARITY |
-            SP_PARITY_CHECK | SP_RLSD | SP_STOPBITS;
+            SP_PARITY_CHECK | SP_STOPBITS;
         m_CommPorp.wSettableData       =
             DATABITS_5 | DATABITS_6 | DATABITS_7 | DATABITS_8;
         m_CommPorp.wSettableStopParity =
@@ -231,6 +232,7 @@ public:
     {
         m_pIOPregs = NULL;
         m_pSysconRegs = NULL;
+		RETAILMSG( FALSE, (TEXT("DEBUG: Serial1 created\r\n"))); 
     }
     ~CPdd6410Serial1()
     {
@@ -317,7 +319,12 @@ public:
         }
         CSerialPDD::PowerOn();
         return TRUE;
+    } 
+       virtual BOOL    InitModem(BOOL bInit)
+    {
+        return CPdd6410Uart::InitModem(bInit);
     }
+    virtual void    SetDTR(BOOL bSet) {}
     virtual ULONG   GetModemStatus()
     {
         // return (CPdd6410Uart::GetModemStatus() | MS_CTS_ON);
@@ -336,7 +343,6 @@ public:
         m_CommPorp.dwMaxBaud           = BAUD_115200;
         m_CommPorp.dwProvSubType       = PST_RS232;
         m_CommPorp.dwProvCapabilities  =
-            PCF_DTRDSR | PCF_RLSD | PCF_RTSCTS |
             PCF_SETXCHAR |
             PCF_INTTIMEOUTS |
             PCF_PARITY_CHECK |
@@ -389,6 +395,7 @@ public:
     {
         m_pIOPregs = NULL;
         m_pSysconRegs = NULL;
+		RETAILMSG( FALSE, (TEXT("DEBUG: Serial2 created\r\n"))); 
     }
     ~CPdd6410Serial2()
     {
@@ -471,9 +478,16 @@ public:
         CSerialPDD::PowerOn();
         return TRUE;
     }
+       virtual BOOL    InitModem(BOOL bInit)
+    {
+        return CPdd6410Uart::InitModem(bInit);
+    }
+    virtual void    SetDTR(BOOL bSet) {}
     virtual ULONG   GetModemStatus()
     {
-        return (CPdd6410Uart::GetModemStatus() | MS_CTS_ON);
+        // return (CPdd6410Uart::GetModemStatus() | MS_CTS_ON);
+        // return TRUE modem status
+        return CPdd6410Uart::GetModemStatus();
     }
     virtual void    SetDefaultConfiguration()
     {
@@ -484,10 +498,9 @@ public:
         m_CommPorp.dwReserved1         = 0;
         m_CommPorp.dwMaxTxQueue        = 16;
         m_CommPorp.dwMaxRxQueue        = 16;
-        m_CommPorp.dwMaxBaud           = BAUD_115200;
+        m_CommPorp.dwMaxBaud           = BAUD_USER;
         m_CommPorp.dwProvSubType       = PST_RS232;
         m_CommPorp.dwProvCapabilities  =
-            PCF_DTRDSR | PCF_RLSD | PCF_RTSCTS |
             PCF_SETXCHAR |
             PCF_INTTIMEOUTS |
             PCF_PARITY_CHECK |
@@ -555,6 +568,8 @@ public:
     {
         m_pIOPregs = NULL;
         m_pSysconRegs = NULL;
+		RETAILMSG( FALSE, (TEXT("DEBUG: Serial3 created\r\n"))); 
+
     }
     ~CPdd6410Serial3()
     {
@@ -637,9 +652,16 @@ public:
         CSerialPDD::PowerOn();
         return TRUE;
     }
+       virtual BOOL    InitModem(BOOL bInit)
+    {
+        return CPdd6410Uart::InitModem(bInit);
+    }
+    virtual void    SetDTR(BOOL bSet) {}
     virtual ULONG   GetModemStatus()
     {
-        return (CPdd6410Uart::GetModemStatus() | MS_CTS_ON);
+        // return (CPdd6410Uart::GetModemStatus() | MS_CTS_ON);
+        // return TRUE modem status
+        return CPdd6410Uart::GetModemStatus();
     }
     virtual void    SetDefaultConfiguration()
     {
@@ -650,10 +672,9 @@ public:
         m_CommPorp.dwReserved1         = 0;
         m_CommPorp.dwMaxTxQueue        = 16;
         m_CommPorp.dwMaxRxQueue        = 16;
-        m_CommPorp.dwMaxBaud           = BAUD_115200;
+        m_CommPorp.dwMaxBaud           = BAUD_USER;
         m_CommPorp.dwProvSubType       = PST_RS232;
         m_CommPorp.dwProvCapabilities  =
-            PCF_DTRDSR | PCF_RLSD | PCF_RTSCTS |
             PCF_SETXCHAR |
             PCF_INTTIMEOUTS |
             PCF_PARITY_CHECK |
@@ -719,12 +740,12 @@ CSerialPDD * CreateSerialObject(LPTSTR lpActivePath, PVOID pMdd,PHWOBJ pHwObj, D
     case 1:        ///< UART1
         pSerialPDD = new CPdd6410Serial1(lpActivePath,pMdd, pHwObj);
         break;
-    case 2:        ///< UART2(IrDA)
+    case 2:        
         pSerialPDD = new CPdd6410Serial2(lpActivePath, pMdd, pHwObj);
         break;
-    //case 3:        ///< UART3(IrDA)
-    //    pSerialPDD = new CPdd6410Serial3(lpActivePath, pMdd, pHwObj);
-    //    break;
+    case 3:        
+        pSerialPDD = new CPdd6410Serial3(lpActivePath, pMdd, pHwObj);
+        break;
     }
     if (pSerialPDD && !pSerialPDD->Init())
     {

@@ -2270,22 +2270,46 @@ static const BOOT_LOGO logo={
 
 extern DWORD OEMgetDisplayType();
 extern void LDI_clearScreen(int framebuffer, DWORD color);
+extern DWORD OEMgetLCDBpp();
+
+void *video_buffer;
+
+ unsigned short red_mask=0xf800;
+ unsigned short green_mask=0x7e0;
+ unsigned short blue_mask=0x1f;
+ unsigned short red_blue_mask=0xf81f;
+
+void _pixel24(unsigned idx, unsigned color)
+{
+	((unsigned int *)video_buffer)[idx]=(unsigned int)((0x0 << 24) | ((color&red_mask)>>8)<<16 | ((color&green_mask)>>3)<<8 | ((color & blue_mask)<<3));
+}
+
+void _pixel16(unsigned idx, unsigned color)
+{
+	((unsigned short *)video_buffer)[idx]=(unsigned short) (color & 0xFFFF);
+}
+
+ 
 
 void displayLogo()
 {
 		DWORD scr_width, scr_height, dst_w, dst_h;
+
 		int xstart, ystart, ix, iy;
-		unsigned short *video_buffer;
+		
 		unsigned short *data;
 		DWORD pixel;
 		DWORD dst_idx, src_idx;
 		DWORD offset;
+		void (*setPixel)(unsigned idx,unsigned color);
 
 		scr_width=LDI_GetDisplayWidth(OEMgetDisplayType());
 		scr_height=LDI_GetDisplayHeight(OEMgetDisplayType());
 		LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START,logo.background);
 		dst_w= logo.width; 
 		dst_h= logo.height;
+		setPixel=(OEMgetLCDBpp()==16)?&_pixel16:&_pixel24;
+
 		if(dst_w>scr_width) dst_w=scr_width;
 		if(dst_h>scr_height) dst_h=scr_height;
 		xstart=(scr_width-logo.width)>>1;
@@ -2300,7 +2324,7 @@ void displayLogo()
 			for(ix = 0; ix < dst_w ; ix++)
 			{
 				dst_idx = ((ystart+iy) * scr_width) + (xstart + ix);
-				video_buffer[dst_idx] = data[offset++];
+				setPixel(dst_idx, data[offset++]);
 			}
 		}
 

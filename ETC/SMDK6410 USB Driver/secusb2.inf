@@ -1,4 +1,4 @@
-; Installation inf for the SEC SOC S3C2443X USB 2.0 Bulk IO Test B/D
+; Installation inf for the TenByTen6410 USB 2.0 Bulk IO
 
 [Version]
 Signature="$CHICAGO$"
@@ -8,7 +8,7 @@ provider=%ProviderName%
 DriverVer=03/21/2007
 
 [SourceDisksNames]
-1="USB Downloader Installation Disk for SEC SOC",,,
+1="USB Downloader Installation Disk for TenByTen6410",,,
 
 [SourceDisksFiles]
 SECUSB2.sys = 1
@@ -64,9 +64,9 @@ SECUSB2.Inf
 ;---------------------------------------------------------------;
 
 [Strings]
-ProviderName="SEC AP application Team"
-MfgName="SEC, SYSTEM LSI"
-USB\VID_04E8&PID_1234.DeviceDesc="SEC SOC SMDK Board"
-USB\VID_04E8&PID_6400.DeviceDesc="SEC SOC SMDK Board"
+ProviderName="Hiteg Limited (HK), please change"
+MfgName="Hiteg Limited"
+USB\VID_04E8&PID_1234.DeviceDesc="TenByTen6410 Board"
+USB\VID_04E8&PID_6400.DeviceDesc="TenByTen6410 Board"
 SECUSB2.SvcDesc="SECUSB2.sys, SEC SOC USBD Driver"
 

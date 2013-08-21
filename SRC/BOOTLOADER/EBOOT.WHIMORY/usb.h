@@ -24,8 +24,8 @@
 #define USBOTG_LINK_BASE    (0xB1800000) //(0x7C000000) -> 0x91800000
 #define USBOTG_PHY_BASE     (0xB1900000) //(0x7C100000) -> 0x91900000
 
-//---->add by phantom for iic
-typedef unsigned long    u32;
+
+typedef unsigned long    ULONG;
 typedef unsigned short    u16;
 typedef unsigned char    u8;
 
@@ -46,9 +46,9 @@ enum IIC0_SFR			// Channel0, Added by SOP on 2008/03/01
 #define	MasterTX		(3)
 
 void Isr_IIC( void);
-void IIC_Open(u32 ufreq);
+void IIC_Open(ULONG ufreq);
 void IIC_Close(void);
-static void IIC_SetWrite(u8 cSlaveAddr, u8 * pData, u32 uDataLen);
+static void IIC_SetWrite(u8 cSlaveAddr, u8 * pData, ULONG uDataLen);
 static BOOL IIC_Wait(void);
 u8 IIC_Status(void);
 

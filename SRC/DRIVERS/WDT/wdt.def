@@ -1,0 +1,15 @@
+;
+; Windows CE Key Driver. Written by flyingfingers
+
+LIBRARY WDT
+EXPORTS
+	WDT_Close
+	WDT_Deinit
+	WDT_Init
+	WDT_IOControl
+	WDT_Open
+	WDT_PowerDown
+	WDT_PowerUp
+	WDT_Read
+	WDT_Seek
+	WDT_Write

@@ -25,59 +25,20 @@
 //
 //  Prefix used to generate device name for bootload/KITL
 //
-#define BSP_DEVICE_PREFIX       "SMDK6410"        // Device name prefix
+#define BSP_DEVICE_PREFIX       "TBT6410"        // Device name prefix
 
 #define PWRCTL_HITEG_FACTORY_DEFAULTS ((1<<0) | (1<<1) | (1<<4))
 
-//------------------------------------------------------------------------------
-// SMDK6410 Display Dimension, is going to be replaced by extended LDI module
-// We currently use these values int bsp_args.(c|h) for init values...
-//------------------------------------------------------------------------------
-#define MEGADISPLAY3		(0)   	//CHIMEI lq035nc111_v05
-#define MEGADISPLAY4		(1)   	//INNOLUX AT043
-#define MEGADISPLAY7        	(2)   	//INNOLUX AT070 	
-#define TV_OUT			(3)	// TV_OUT only
-#define MEGADISPLAY3A		(4)   	//CHIMEI lq035nc111_v05 with ATMEL 48pa
-#define MEGADISPLAY4A		(5)   	//INNOLUX AT043 with ATMEL 48pa
-#define MEGADISPLAY7A       	(6)   	//INNOLUX AT070 with ATMEL 48pa	
-#define NO_DISPLAY	      (123) 	// No Display or unknown
-
-#define SMDK6410_LCD_MODULE       	(NO_DISPLAY)
-#define DEFAULT_FRAMEBUFFER_COLOR	(0x00101010)
-#define DEFAULT_LOGO_POSITION		(~0)
-
-#if (SMDK6410_LCD_MODULE == MEGADISPLAY3 || SMDK6410_LCD_MODULE == MEGADISPLAY3A )
-#define LCD_WIDTH            320
-#define LCD_HEIGHT           240
-#define LCD_BPP              24
-#elif (SMDK6410_LCD_MODULE == MEGADISPLAY4 || SMDK6410_LCD_MODULE == MEGADISPLAY4A)
-#define LCD_WIDTH		     480
-#define LCD_HEIGHT		     272
-#define LCD_BPP			      24
-#elif (SMDK6410_LCD_MODULE == MEGADISPLAY7 || SMDK6410_LCD_MODULE == MEGADISPLAY7A)
-#define LCD_WIDTH            800
-#define LCD_HEIGHT           480
-#define LCD_BPP              16		// fluid
-#elif (SMDK6410_LCD_MODULE == TV_OUT)
-#define LCD_WIDTH            640
-#define LCD_HEIGHT           480
-#define LCD_BPP               16	// conservative
-#elif (SMDK6410_LCD_MODULE == NO_DISPLAY)
-#define LCD_WIDTH            0
-#define LCD_HEIGHT           0
-#define LCD_BPP              16
-#else
-#error LCD_MODULE_UNDEFINED_ERROR
-#endif
 
 // We define the maximum values for the S3C6410 as reported by SAMSUNG
 // However we suggest using in the max resolution 8Bit depth for the framebuffer to get 
 // fluid visuals....no OpenGL on that one though....but check out the TFT controller and 2D Accel. !!!!
 
 #define LCD_MAX_WIDTH	1024
-#define LCD_MAX_hEIGHT	 768
-#define LCD_MAX_BPP	  32
- 
+#define LCD_MAX_HEIGHT	 768
+#define LCD_MAX_BPP		  32
+
+#define NO_DISPLAY		(~0)
 
 //------------------------------------------------------------------------------
 // SMDK6410 Audio Sampling Rate
@@ -117,7 +78,7 @@
 #define SYSINTR_DM9000A1     (SYSINTR_FIRMWARE+2)	// for DM9000 Adp1, nCS4, 18
 #endif
 //------------------------------------------------------------------------------
-// SMDK6410 Keypad Layout
+// TenByTen6410 Keypad Layout
 //------------------------------------------------------------------------------
 #define LAYOUT0                (0)        // 8*8 Keypad board
 #define LAYOUT1                (1)        // On-Board Key

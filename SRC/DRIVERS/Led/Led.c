@@ -36,8 +36,21 @@ volatile S3C6410_GPIO_REG *v_pIOP_LED_regs = NULL;
 #define     LED2_BIT   1
 #define     LED3_BIT   2
 #define     LED4_BIT   3
-#define     Led_On(x)		(v_pIOP_LED_regs->GPMDAT |= (0x1 << (x)))
-#define     Led_Off(x)		(v_pIOP_LED_regs->GPMDAT &= ~(0x1 << (x)))
+// #define     Led_On(x)		(v_pIOP_LED_regs->GPMDAT |= (0x1 << (x)))
+// #define     Led_Off(x)		(v_pIOP_LED_regs->GPMDAT &= ~(0x1 << (x)))
+static void Led_On(int x)
+{
+	v_pIOP_LED_regs->GPMDAT |= (0x1 << (x));
+	v_pIOP_LED_regs->GPNDAT &= ~(0x1 << (x+2));
+}
+
+static void Led_Off(int x)
+{
+	v_pIOP_LED_regs->GPMDAT &= ~(0x1 << (x));
+	v_pIOP_LED_regs->GPNDAT |= (0x1 << (x+2));
+	
+}
+
 
 void  InitLedAddr()
 {
@@ -75,17 +88,27 @@ void GPIOInit()
 		v_pIOP_LED_regs->GPMCON |= (0x1<<4);//Disable GPD0, GPD4 as output
 		v_pIOP_LED_regs->GPMCON |= (0x1<<8);
 		v_pIOP_LED_regs->GPMCON |=(0x1<<12);
-		/*
-		v_pIOP_LED_regs->GPMDAT |= (0x1<<0);//Turn The led1, led2 off 
-		v_pIOP_LED_regs->GPMDAT |= (0x1<<1);//Turn The led1, led2 off 
-		v_pIOP_LED_regs->GPMDAT |= (0x1<<2);//Turn The led1, led2 off 
-		v_pIOP_LED_regs->GPMDAT |= (0x1<<3);//Turn The led1, led2 off 
-		*/
-		
-		v_pIOP_LED_regs->GPMDAT &= ~(0x1<<0);//Turn The led1, led2 off 
-		v_pIOP_LED_regs->GPMDAT &= ~(0x1<<1);//Turn The led1, led2 off 
-		v_pIOP_LED_regs->GPMDAT &= ~(0x1<<2);//Turn The led1, led2 off 
-		v_pIOP_LED_regs->GPMDAT &= ~(0x1<<3);//Turn The led1, led2 off 
+
+//****************************************************************************
+		//GPN2~GPN5
+		v_pIOP_LED_regs->GPNPUD &= ~((0x3<<2)|(0x3<<4)|(0x3<<6)|(0x3<<8));//Disable GPD0, GPD4 pull up/down
+		v_pIOP_LED_regs->GPNPUD |= (0x1<<2);//Disable GPM0 pull down
+		v_pIOP_LED_regs->GPNPUD |= (0x1<<4);//Disable GPM1 pull down
+		v_pIOP_LED_regs->GPNPUD |= (0x1<<6);//Disable GPM2 pull down
+		v_pIOP_LED_regs->GPNPUD |= (0x1<<8);//Disable GPM3 pull down
+		v_pIOP_LED_regs->GPNCON &= ~(0x3<<4);
+		v_pIOP_LED_regs->GPNCON &= ~(0x3<<6);
+		v_pIOP_LED_regs->GPNCON &= ~(0x3<<8);
+		v_pIOP_LED_regs->GPNCON &= ~(0x3<<10);
+		v_pIOP_LED_regs->GPNCON |= (0x1<<4);//Disable GPD0, GPD4 as output
+		v_pIOP_LED_regs->GPNCON |= (0x1<<6);//Disable GPD0, GPD4 as output
+		v_pIOP_LED_regs->GPNCON |= (0x1<<8);
+		v_pIOP_LED_regs->GPNCON |= (0x1<<10);
+
+		Led_Off(LED1_BIT);
+		Led_Off(LED2_BIT);
+		Led_On(LED3_BIT);
+		Led_Off(LED4_BIT);
 	}
 }
 
@@ -181,7 +204,7 @@ DWORD LED_Init(
   LPCVOID lpvBusContext
 )
 {
-	RETAILMSG(LED_DBG_MSG, (TEXT("LED_Init+++\r\n")));
+	RETAILMSG(TRUE, (TEXT("LED_Init+++\r\n")));
 	InitLedAddr();
 	GPIOInit();
 	RETAILMSG(LED_DBG_MSG, (TEXT("LED_Init---\r\n")));
