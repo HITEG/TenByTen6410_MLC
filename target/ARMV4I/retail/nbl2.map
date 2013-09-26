@@ -1,6 +1,6 @@
  nbl2
 
- Timestamp is 521458aa (Wed Aug 21 14:05:30 2013)
+ Timestamp is 5243ded6 (Thu Sep 26 15:14:30 2013)
 
  Preferred load address is 00010000
 
@@ -8,9 +8,9 @@
  0001:00000000 00000214H .astart                 CODE
  0001:00000220 00002e40H .rdata                  CODE
  0001:00003060 00000021H .rdata$debug            CODE
- 0001:00003084 00009728H .text                   CODE
- 0001:0000c7ac 00000010H .xdata                  CODE
- 0001:0000c7bc 00000000H .edata                  CODE
+ 0001:00003084 000097f4H .text                   CODE
+ 0001:0000c878 00000010H .xdata                  CODE
+ 0001:0000c888 00000000H .edata                  CODE
  0002:00000000 000005f4H .data                   DATA
  0002:000005f8 0000cc4cH .bss                    DATA
  0003:00000000 00000240H .pdata                  DATA
@@ -161,97 +161,99 @@
  0001:00003668       System_GetMPLLCLK          00014668 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
  0001:000036c0       System_VCheckSyncMode      000146c0 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
  0001:000036f0       System_GetPCLK             000146f0 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:00003758       NKDbgPrintfW               00014758 f   oal_blnk:wrappers.obj
- 0001:00003818       NKwvsprintfW               00014818 f   oal_blnk:format.obj
- 0001:0000415c       __report_gsfailure         0001515c f   gsnull:gsnull.obj
- 0001:00004160       __utos                     00015160 f   fulllibc:r_itos.obj
- 0001:00004178       __itos                     00015178 f   fulllibc:r_itos.obj
- 0001:00004228       __stod                     00015228 f   fulllibc:r_stod.obj
- 0001:00004358       __divd                     00015358 f   fulllibc:r_divd.obj
- 0001:00004640       __dtos                     00015640 f   fulllibc:r_dtos.obj
- 0001:00004794       __stoi                     00015794 f   fulllibc:r_stoi.obj
- 0001:0000487c       __subs                     0001587c f   fulllibc:r_adds.obj
- 0001:00004894       __adds                     00015894 f   fulllibc:r_adds.obj
- 0001:00004ae0       __flt_underflow            00015ae0     fulllibc:r_adds.obj
- 0001:00004b84       __fArithReturn             00015b84     fulllibc:r_adds.obj
- 0001:00004bd4       __fArithNaNCheck           00015bd4     fulllibc:r_adds.obj
- 0001:00004c0c       __muls                     00015c0c f   fulllibc:r_muls.obj
- 0001:00004cbc       fmul_fdiv_overflow         00015cbc     fulllibc:r_muls.obj
- 0001:00004d44       __stou                     00015d44 f   fulllibc:r_stou.obj
- 0001:00004e14       memset                     00015e14 f   fulllibc:memset.obj
- 0001:00004e9c       memcpy                     00015e9c f   fulllibc:memcpy.obj
- 0001:00005248       memcpybigblk               00016248 f   fulllibc:memcpy.obj
- 0001:00005bfc       __GSHandlerCheckCommon     00016bfc f   fulllibc:gshandler.obj
- 0001:00005c38       __GSHandlerCheck           00016c38 f   fulllibc:gshandler.obj
- 0001:00005c5c       __rt_udiv                  00016c5c f   fulllibc:__udiv.obj
- 0001:00005d20       __security_check_cookie    00016d20 f   fulllibc:armsecgs.obj
- 0001:00005d34       __gsfailure                00016d34 f   fulllibc:armsecgs.obj
- 0001:00005d78       __rt_udivrem64by64         00016d78 f   fulllibc:mdsdiv64.obj
- 0001:00005e70       __rt_divrem64by64          00016e70 f   fulllibc:mdsdiv64.obj
- 0001:00005ec0       __rt_udiv64by64            00016ec0 f   fulllibc:mdsdiv64.obj
- 0001:00005ed0       __rt_urem64by64            00016ed0 f   fulllibc:mdsdiv64.obj
- 0001:00005ee8       __rt_sdiv64by64            00016ee8 f   fulllibc:mdsdiv64.obj
- 0001:00005ef8       __rt_srem64by64            00016ef8 f   fulllibc:mdsdiv64.obj
- 0001:00005f10       __fp_veneer_error          00016f10     fulllibc:error.obj
- 0001:00005f10       __fp_nonveneer_error       00016f10     fulllibc:error.obj
- 0001:00005f14       __fp_exception             00016f14     fulllibc:error.obj
- 0001:00006058       __fp_norm_op1              00017058     fulllibc:normop1.obj
- 0001:00006120       FPE_Raise                  00017120 f   fulllibc:fpraise.obj
- 0001:000067c0       __fp_div_common            000177c0     fulllibc:div.obj
- 0001:000067e4       __fp_rdv_common            000177e4     fulllibc:div.obj
- 0001:00006c88       __fp_rdv_uncommon          00017c88     fulllibc:div.obj
- 0001:00006c88       __fp_div_uncommon          00017c88     fulllibc:div.obj
- 0001:00006dc8       __fp_norm_op2              00017dc8     fulllibc:normop2.obj
- 0001:00006e88       _e2d                       00017e88     fulllibc:e2d.obj
- 0001:00006e94       __fp_e2d                   00017e94     fulllibc:e2d.obj
- 0001:00006f2c       _e2d_ExpUnderflow          00017f2c     fulllibc:e2d.obj
- 0001:00007154       __flt_normalise2           00018154     fulllibc:fnorm2.obj
- 0001:000071e8       __raise_int_divide_by_zero 000181e8 f   fulllibc:diverr.obj
- 0001:0000720c       __fp_fcheck_NaN2           0001820c     fulllibc:check.obj
- 0001:00007238       __fp_dcheck_NaN2           00018238     fulllibc:check.obj
- 0001:00007280       __fp_return_NaN            00018280     fulllibc:check.obj
- 0001:000072e8       __fp_return_Inf            000182e8     fulllibc:check.obj
- 0001:000072ec       __crtRaiseException        000182ec f   fulllibc:raiseexc.obj
- 0001:00007308       __fp_convert_NaNs          00018308     fulllibc:nans.obj
- 0001:00007328       __fp_convert_NaN_2Of2      00018328     fulllibc:nans.obj
- 0001:00007340       __fp_convert_NaN1          00018340     fulllibc:nans.obj
- 0001:0000734c       __fp_convert_NaN_1Of2      0001834c     fulllibc:nans.obj
- 0001:000073dc       __fp_norm_denorm_op1       000183dc     fulllibc:normal.obj
- 0001:000074c4       __fp_norm_denorm_op2       000184c4     fulllibc:normal.obj
- 0001:000075d0       __fp_normalise_op1         000185d0     fulllibc:normal.obj
- 0001:00007634       __fp_normalise_op2         00018634     fulllibc:normal.obj
- 0001:00007698       __fp_normalise_op1neg      00018698     fulllibc:normal.obj
- 0001:00007714       CalcGlobal                 00018714 f   WMRGlobal:WMRGlobal.obj
- 0001:000078ac       GetMlcClass                000188ac f   WMRGlobal:WMRGlobal.obj
- 0001:000078b4       FIL_Init                   000188b4 f   SMDK6410_MLC_FIL:FIL.obj
- 0001:00007938       FIL_GetFuncTbl             00018938 f   SMDK6410_MLC_FIL:FIL.obj
- 0001:00007944       NF_WAIT_ECC_DEC_DONE       00018944 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:000079c8       NAND_GetPlatformInfo       000189c8 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00007a68       NAND_Steploader_Write      00018a68 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00007d68       NAND_Sync                  00018d68 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00007f70       NAND_Reset                 00018f70 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000936c       NAND_Init                  0001a36c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000986c       NAND_Write                 0001a86c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00009eec       NAND_Erase                 0001aeec f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000b794       NAND_Read                  0001c794 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000be68       NAND_Read_Retry            0001ce68 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000c098       _Read_512Byte              0001d098 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c0d8       _Read_512Byte_Unaligned    0001d0d8 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c174       _Write_512Byte             0001d174 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c1b4       _Write_512Byte_Unaligned   0001d1b4 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c250       _Write_Dummy_468Byte_AllFF 0001d250 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c2a4       _Write_Dummy_428Byte_AllFF 0001d2a4 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c2f0       _Write_Dummy_364Byte_AllFF 0001d2f0 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c33c       _Write_Dummy_500Byte_AllFF 0001d33c f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c390       _Write_Dummy_492Byte_AllFF 0001d390 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c3dc       _Write_Dummy_480Byte_AllFF 0001d3dc f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c41c       _Write_Dummy_448Byte_AllFF 0001d41c f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c45c       _STOP_FOR_BREAK            0001d45c f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
- 0001:0000c474       WMR_GetChkSum              0001d474 f   OSLessWMROAM:OSLessWMROAM.obj
- 0001:0000c534       OAM_Memset                 0001d534 f   OSLessWMROAM:OSLessWMROAM.obj
- 0001:0000c5a8       OAM_Assert                 0001d5a8 f   OSLessWMROAM:OSLessWMROAM.obj
- 0001:0000c5e8       OALPAtoVA                  0001d5e8 f   oal_blmemory_arm:memory.obj
- 0001:0000c6b8       OALVAtoPA                  0001d6b8 f   oal_blmemory_arm:memory.obj
+ 0001:00003758       OALStall_us                00014758 f   s3c6410_system_lib_sec_v1:s3c6410_stall.obj
+ 0001:000037bc       OALStall_ms                000147bc f   s3c6410_system_lib_sec_v1:s3c6410_stall.obj
+ 0001:00003824       NKDbgPrintfW               00014824 f   oal_blnk:wrappers.obj
+ 0001:000038e4       NKwvsprintfW               000148e4 f   oal_blnk:format.obj
+ 0001:00004228       __report_gsfailure         00015228 f   gsnull:gsnull.obj
+ 0001:0000422c       __utos                     0001522c f   fulllibc:r_itos.obj
+ 0001:00004244       __itos                     00015244 f   fulllibc:r_itos.obj
+ 0001:000042f4       __stod                     000152f4 f   fulllibc:r_stod.obj
+ 0001:00004424       __divd                     00015424 f   fulllibc:r_divd.obj
+ 0001:0000470c       __dtos                     0001570c f   fulllibc:r_dtos.obj
+ 0001:00004860       __stoi                     00015860 f   fulllibc:r_stoi.obj
+ 0001:00004948       __subs                     00015948 f   fulllibc:r_adds.obj
+ 0001:00004960       __adds                     00015960 f   fulllibc:r_adds.obj
+ 0001:00004bac       __flt_underflow            00015bac     fulllibc:r_adds.obj
+ 0001:00004c50       __fArithReturn             00015c50     fulllibc:r_adds.obj
+ 0001:00004ca0       __fArithNaNCheck           00015ca0     fulllibc:r_adds.obj
+ 0001:00004cd8       __muls                     00015cd8 f   fulllibc:r_muls.obj
+ 0001:00004d88       fmul_fdiv_overflow         00015d88     fulllibc:r_muls.obj
+ 0001:00004e10       __stou                     00015e10 f   fulllibc:r_stou.obj
+ 0001:00004ee0       memset                     00015ee0 f   fulllibc:memset.obj
+ 0001:00004f68       memcpy                     00015f68 f   fulllibc:memcpy.obj
+ 0001:00005314       memcpybigblk               00016314 f   fulllibc:memcpy.obj
+ 0001:00005cc8       __GSHandlerCheckCommon     00016cc8 f   fulllibc:gshandler.obj
+ 0001:00005d04       __GSHandlerCheck           00016d04 f   fulllibc:gshandler.obj
+ 0001:00005d28       __rt_udiv                  00016d28 f   fulllibc:__udiv.obj
+ 0001:00005dec       __security_check_cookie    00016dec f   fulllibc:armsecgs.obj
+ 0001:00005e00       __gsfailure                00016e00 f   fulllibc:armsecgs.obj
+ 0001:00005e44       __rt_udivrem64by64         00016e44 f   fulllibc:mdsdiv64.obj
+ 0001:00005f3c       __rt_divrem64by64          00016f3c f   fulllibc:mdsdiv64.obj
+ 0001:00005f8c       __rt_udiv64by64            00016f8c f   fulllibc:mdsdiv64.obj
+ 0001:00005f9c       __rt_urem64by64            00016f9c f   fulllibc:mdsdiv64.obj
+ 0001:00005fb4       __rt_sdiv64by64            00016fb4 f   fulllibc:mdsdiv64.obj
+ 0001:00005fc4       __rt_srem64by64            00016fc4 f   fulllibc:mdsdiv64.obj
+ 0001:00005fdc       __fp_veneer_error          00016fdc     fulllibc:error.obj
+ 0001:00005fdc       __fp_nonveneer_error       00016fdc     fulllibc:error.obj
+ 0001:00005fe0       __fp_exception             00016fe0     fulllibc:error.obj
+ 0001:00006124       __fp_norm_op1              00017124     fulllibc:normop1.obj
+ 0001:000061ec       FPE_Raise                  000171ec f   fulllibc:fpraise.obj
+ 0001:0000688c       __fp_div_common            0001788c     fulllibc:div.obj
+ 0001:000068b0       __fp_rdv_common            000178b0     fulllibc:div.obj
+ 0001:00006d54       __fp_div_uncommon          00017d54     fulllibc:div.obj
+ 0001:00006d54       __fp_rdv_uncommon          00017d54     fulllibc:div.obj
+ 0001:00006e94       __fp_norm_op2              00017e94     fulllibc:normop2.obj
+ 0001:00006f54       _e2d                       00017f54     fulllibc:e2d.obj
+ 0001:00006f60       __fp_e2d                   00017f60     fulllibc:e2d.obj
+ 0001:00006ff8       _e2d_ExpUnderflow          00017ff8     fulllibc:e2d.obj
+ 0001:00007220       __flt_normalise2           00018220     fulllibc:fnorm2.obj
+ 0001:000072b4       __raise_int_divide_by_zero 000182b4 f   fulllibc:diverr.obj
+ 0001:000072d8       __fp_fcheck_NaN2           000182d8     fulllibc:check.obj
+ 0001:00007304       __fp_dcheck_NaN2           00018304     fulllibc:check.obj
+ 0001:0000734c       __fp_return_NaN            0001834c     fulllibc:check.obj
+ 0001:000073b4       __fp_return_Inf            000183b4     fulllibc:check.obj
+ 0001:000073b8       __crtRaiseException        000183b8 f   fulllibc:raiseexc.obj
+ 0001:000073d4       __fp_convert_NaNs          000183d4     fulllibc:nans.obj
+ 0001:000073f4       __fp_convert_NaN_2Of2      000183f4     fulllibc:nans.obj
+ 0001:0000740c       __fp_convert_NaN1          0001840c     fulllibc:nans.obj
+ 0001:00007418       __fp_convert_NaN_1Of2      00018418     fulllibc:nans.obj
+ 0001:000074a8       __fp_norm_denorm_op1       000184a8     fulllibc:normal.obj
+ 0001:00007590       __fp_norm_denorm_op2       00018590     fulllibc:normal.obj
+ 0001:0000769c       __fp_normalise_op1         0001869c     fulllibc:normal.obj
+ 0001:00007700       __fp_normalise_op2         00018700     fulllibc:normal.obj
+ 0001:00007764       __fp_normalise_op1neg      00018764     fulllibc:normal.obj
+ 0001:000077e0       CalcGlobal                 000187e0 f   WMRGlobal:WMRGlobal.obj
+ 0001:00007978       GetMlcClass                00018978 f   WMRGlobal:WMRGlobal.obj
+ 0001:00007980       FIL_Init                   00018980 f   SMDK6410_MLC_FIL:FIL.obj
+ 0001:00007a04       FIL_GetFuncTbl             00018a04 f   SMDK6410_MLC_FIL:FIL.obj
+ 0001:00007a10       NF_WAIT_ECC_DEC_DONE       00018a10 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00007a94       NAND_GetPlatformInfo       00018a94 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00007b34       NAND_Steploader_Write      00018b34 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00007e34       NAND_Sync                  00018e34 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000803c       NAND_Reset                 0001903c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00009438       NAND_Init                  0001a438 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00009938       NAND_Write                 0001a938 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00009fb8       NAND_Erase                 0001afb8 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000b860       NAND_Read                  0001c860 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000bf34       NAND_Read_Retry            0001cf34 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000c164       _Read_512Byte              0001d164 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c1a4       _Read_512Byte_Unaligned    0001d1a4 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c240       _Write_512Byte             0001d240 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c280       _Write_512Byte_Unaligned   0001d280 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c31c       _Write_Dummy_468Byte_AllFF 0001d31c f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c370       _Write_Dummy_428Byte_AllFF 0001d370 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c3bc       _Write_Dummy_364Byte_AllFF 0001d3bc f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c408       _Write_Dummy_500Byte_AllFF 0001d408 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c45c       _Write_Dummy_492Byte_AllFF 0001d45c f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c4a8       _Write_Dummy_480Byte_AllFF 0001d4a8 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c4e8       _Write_Dummy_448Byte_AllFF 0001d4e8 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c528       _STOP_FOR_BREAK            0001d528 f   SMDK6410_MLC_FIL:S3C6410_FIL_opt.obj
+ 0001:0000c540       WMR_GetChkSum              0001d540 f   OSLessWMROAM:OSLessWMROAM.obj
+ 0001:0000c600       OAM_Memset                 0001d600 f   OSLessWMROAM:OSLessWMROAM.obj
+ 0001:0000c674       OAM_Assert                 0001d674 f   OSLessWMROAM:OSLessWMROAM.obj
+ 0001:0000c6b4       OALPAtoVA                  0001d6b4 f   oal_blmemory_arm:memory.obj
+ 0001:0000c784       OALVAtoPA                  0001d784 f   oal_blmemory_arm:memory.obj
  0002:00000048       __security_cookie          0001e048     gsnull:gsnull.obj
  0002:0000004c       __security_cookie_complement 0001e04c     gsnull:gsnull.obj
  0002:00000050       __fp_status_flags          0001e050     fulllibc:fpdata.obj
@@ -271,19 +273,19 @@
 
  Static symbols
 
- 0001:00003790       GetFormatValue             00014790 f   oal_blnk:format.obj
- 0001:00007fd0       Read_DeviceID              00018fd0 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008148       MLC_Print_Page_Data        00019148 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008234       Write_Spare                00019234 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008540       Write_Spare_Separate       00019540 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008960       Write_Spare_8BitECC        00019960 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008cc8       Decoding_MainECC           00019cc8 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008da8       Decoding_Main8BitECC       00019da8 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00008f30       Decoding_SpareECC          00019f30 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000906c       Decoding_Spare8BitECC      0001a06c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:00009228       MLC_Print_SFR              0001a228 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000a130       Read_Sector                0001b130 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000a37c       Read_Sector_8BitECC        0001b37c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000a5cc       Read_Spare                 0001b5cc f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000abec       Read_Spare_Separate        0001bbec f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
- 0001:0000b194       Read_Spare_8BitECC         0001c194 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000385c       GetFormatValue             0001485c f   oal_blnk:format.obj
+ 0001:0000809c       Read_DeviceID              0001909c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00008214       MLC_Print_Page_Data        00019214 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00008300       Write_Spare                00019300 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000860c       Write_Spare_Separate       0001960c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00008a2c       Write_Spare_8BitECC        00019a2c f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00008d94       Decoding_MainECC           00019d94 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00008e74       Decoding_Main8BitECC       00019e74 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00008ffc       Decoding_SpareECC          00019ffc f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:00009138       Decoding_Spare8BitECC      0001a138 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:000092f4       MLC_Print_SFR              0001a2f4 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000a1fc       Read_Sector                0001b1fc f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000a448       Read_Sector_8BitECC        0001b448 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000a698       Read_Spare                 0001b698 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000acb8       Read_Spare_Separate        0001bcb8 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj
+ 0001:0000b260       Read_Spare_8BitECC         0001c260 f   SMDK6410_MLC_FIL:S3C6410_FIL.obj

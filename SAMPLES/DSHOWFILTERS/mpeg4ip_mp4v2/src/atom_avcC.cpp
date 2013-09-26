@@ -39,7 +39,7 @@ class SizeTableProperty : public MP4TableProperty
     MP4IntegerProperty *pIntProp = (MP4IntegerProperty *)m_pProperties[0];
     // set the size in the bytes property
     MP4BytesProperty *pBytesProp = (MP4BytesProperty *)m_pProperties[1];
-    pBytesProp->SetValueSize(pIntProp->GetValue(index), index);
+    pBytesProp->SetValueSize((u_int32_t)pIntProp->GetValue(index), index);
     // And read the bytes
     m_pProperties[1]->Read(pFile, index);
   };

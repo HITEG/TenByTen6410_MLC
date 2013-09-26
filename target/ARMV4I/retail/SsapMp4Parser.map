@@ -1,6 +1,6 @@
  SsapMp4Parser
 
- Timestamp is 521458ae (Wed Aug 21 14:05:34 2013)
+ Timestamp is 5243da21 (Thu Sep 26 14:54:25 2013)
 
  Preferred load address is 10000000
 
@@ -15,14 +15,14 @@
  0001:0000001c 00000004H .CRT$XTZ                CODE
  0001:00000020 0000646cH .rdata                  CODE
  0001:0000648c 0000002aH .rdata$debug            CODE
- 0001:000064b8 0001f830H .text                   CODE
- 0001:00025ce8 000001d4H .xdata                  CODE
- 0001:00025ebc 00000054H .xdata$x                CODE
- 0001:00025f10 0000003cH .idata$2                CODE
- 0001:00025f4c 00000014H .idata$3                CODE
- 0001:00025f60 000001bcH .idata$4                CODE
- 0001:0002611c 000000aaH .idata$6                CODE
- 0001:000261d0 000000a9H .edata                  CODE
+ 0001:000064b8 0001f83cH .text                   CODE
+ 0001:00025cf4 000001d4H .xdata                  CODE
+ 0001:00025ec8 00000054H .xdata$x                CODE
+ 0001:00025f1c 0000003cH .idata$2                CODE
+ 0001:00025f58 00000014H .idata$3                CODE
+ 0001:00025f6c 000001bcH .idata$4                CODE
+ 0001:00026128 000000aaH .idata$6                CODE
+ 0001:000261e0 000000a9H .edata                  CODE
  0002:00000000 000001bcH .idata$5                DATA
  0002:000001c0 000003d8H .data                   DATA
  0002:00000598 00000154H .bss                    DATA
@@ -2223,249 +2223,249 @@
  0001:00021180       ??_EMP4MvhdAtom@@UAAPAXI@Z 10022180 f i libmp4v2:atom_mvhd.obj
  0001:000211a8       ?AddProperties@MP4MvhdAtom@@IAAXE@Z 100221a8 f   libmp4v2:atom_mvhd.obj
  0001:000213a0       ?Generate@MP4MvhdAtom@@UAAXXZ 100223a0 f   libmp4v2:atom_mvhd.obj
- 0001:00021538       ?Read@MP4MvhdAtom@@UAAXXZ  10022538 f   libmp4v2:atom_mvhd.obj
- 0001:00021580       ??0MP4MdhdAtom@@QAA@XZ     10022580 f   libmp4v2:atom_mdhd.obj
- 0001:000215b4       ??_GMP4MdhdAtom@@UAAPAXI@Z 100225b4 f i libmp4v2:atom_mdhd.obj
- 0001:000215b4       ??_EMP4MdhdAtom@@UAAPAXI@Z 100225b4 f i libmp4v2:atom_mdhd.obj
- 0001:000215dc       ?AddProperties@MP4MdhdAtom@@IAAXE@Z 100225dc f   libmp4v2:atom_mdhd.obj
- 0001:00021760       ?Generate@MP4MdhdAtom@@UAAXXZ 10022760 f   libmp4v2:atom_mdhd.obj
- 0001:00021838       ?Read@MP4MdhdAtom@@UAAXXZ  10022838 f   libmp4v2:atom_mdhd.obj
- 0001:00021880       ?Generate@MP4FtypAtom@@UAAXXZ 10022880 f   libmp4v2:atom_ftyp.obj
- 0001:00021944       ?Read@MP4FtypAtom@@UAAXXZ  10022944 f   libmp4v2:atom_ftyp.obj
- 0001:000219c4       ??0MP4FtypAtom@@QAA@XZ     100229c4 f   libmp4v2:atom_ftyp.obj
- 0001:00021b18       ??_GMP4FtypAtom@@UAAPAXI@Z 10022b18 f i libmp4v2:atom_ftyp.obj
- 0001:00021b18       ??_EMP4FtypAtom@@UAAPAXI@Z 10022b18 f i libmp4v2:atom_ftyp.obj
- 0001:00021b40       ??0MP4FreeAtom@@QAA@XZ     10022b40 f   libmp4v2:atom_free.obj
- 0001:00021b6c       ?Read@MP4FreeAtom@@UAAXXZ  10022b6c f   libmp4v2:atom_free.obj
- 0001:00021b7c       ?Write@MP4FreeAtom@@UAAXXZ 10022b7c f   libmp4v2:atom_free.obj
- 0001:00021c3c       ??_GMP4FreeAtom@@UAAPAXI@Z 10022c3c f i libmp4v2:atom_free.obj
- 0001:00021c3c       ??_EMP4FreeAtom@@UAAPAXI@Z 10022c3c f i libmp4v2:atom_free.obj
- 0001:00021c64       ??0MP4SmiAtom@@QAA@XZ      10022c64 f   libmp4v2:atom_smi.obj
- 0001:00021cc8       ?Read@MP4SmiAtom@@UAAXXZ   10022cc8 f   libmp4v2:atom_smi.obj
- 0001:00021cfc       ??_EMP4SmiAtom@@UAAPAXI@Z  10022cfc f i libmp4v2:atom_smi.obj
- 0001:00021cfc       ??_GMP4SmiAtom@@UAAPAXI@Z  10022cfc f i libmp4v2:atom_smi.obj
- 0001:00021d24       ?Generate@MP4VideoAtom@@UAAXXZ 10022d24 f   libmp4v2:atom_video.obj
- 0001:00021dec       ??0MP4VideoAtom@@QAA@PBD@Z 10022dec f   libmp4v2:atom_video.obj
- 0001:00021fac       ??_EMP4VideoAtom@@UAAPAXI@Z 10022fac f i libmp4v2:atom_video.obj
- 0001:00021fac       ??_GMP4VideoAtom@@UAAPAXI@Z 10022fac f i libmp4v2:atom_video.obj
- 0001:00021fd4       ?Delete@MP4PropertyArray@@QAAXI@Z 10022fd4 f i libmp4v2:atom_sound.obj
- 0001:00022080       ?Generate@MP4SoundAtom@@UAAXXZ 10023080 f   libmp4v2:atom_sound.obj
- 0001:00022174       ??0MP4SoundAtom@@QAA@PBD@Z 10023174 f   libmp4v2:atom_sound.obj
- 0001:00022388       ??_EMP4SoundAtom@@UAAPAXI@Z 10023388 f i libmp4v2:atom_sound.obj
- 0001:00022388       ??_GMP4SoundAtom@@UAAPAXI@Z 10023388 f i libmp4v2:atom_sound.obj
- 0001:000223b0       ?AddProperties@MP4SoundAtom@@IAAXE@Z 100233b0 f   libmp4v2:atom_sound.obj
- 0001:000224a0       ?Read@MP4SoundAtom@@UAAXXZ 100234a0 f   libmp4v2:atom_sound.obj
- 0001:0002260c       ??0MP4UrlAtom@@QAA@PBD@Z   1002360c f   libmp4v2:atom_url.obj
- 0001:00022670       ?Read@MP4UrlAtom@@UAAXXZ   10023670 f   libmp4v2:atom_url.obj
- 0001:000226b0       ?Write@MP4UrlAtom@@UAAXXZ  100236b0 f   libmp4v2:atom_url.obj
- 0001:0002272c       ??_EMP4UrlAtom@@UAAPAXI@Z  1002372c f i libmp4v2:atom_url.obj
- 0001:0002272c       ??_GMP4UrlAtom@@UAAPAXI@Z  1002372c f i libmp4v2:atom_url.obj
- 0001:00022754       ?ReadEntry@SizeTableProperty@@MAAXPAVMP4File@@I@Z 10023754 f i libmp4v2:atom_avcC.obj
- 0001:00022810       ?Generate@MP4AvcCAtom@@UAAXXZ 10023810 f   libmp4v2:atom_avcC.obj
- 0001:000228d8       ??_ESizeTableProperty@@UAAPAXI@Z 100238d8 f i libmp4v2:atom_avcC.obj
- 0001:000228d8       ??_GSizeTableProperty@@UAAPAXI@Z 100238d8 f i libmp4v2:atom_avcC.obj
- 0001:00022900       ??0MP4AvcCAtom@@QAA@XZ     10023900 f   libmp4v2:atom_avcC.obj
- 0001:00022c78       ??_GMP4AvcCAtom@@UAAPAXI@Z 10023c78 f i libmp4v2:atom_avcC.obj
- 0001:00022c78       ??_EMP4AvcCAtom@@UAAPAXI@Z 10023c78 f i libmp4v2:atom_avcC.obj
- 0001:00022ca0       ?Generate@MP4Avc1Atom@@UAAXXZ 10023ca0 f   libmp4v2:atom_avc1.obj
- 0001:00022d70       ??0MP4Avc1Atom@@QAA@XZ     10023d70 f   libmp4v2:atom_avc1.obj
- 0001:00022f04       ??_GMP4Avc1Atom@@UAAPAXI@Z 10023f04 f i libmp4v2:atom_avc1.obj
- 0001:00022f04       ??_EMP4Avc1Atom@@UAAPAXI@Z 10023f04 f i libmp4v2:atom_avc1.obj
- 0001:00022f2c       ?Read@MP4TrefTypeAtom@@UAAXXZ 10023f2c f   libmp4v2:atom_treftype.obj
- 0001:00022f9c       ??0MP4TrefTypeAtom@@QAA@PBD@Z 10023f9c f   libmp4v2:atom_treftype.obj
- 0001:00023064       ??_GMP4TrefTypeAtom@@UAAPAXI@Z 10024064 f i libmp4v2:atom_treftype.obj
- 0001:00023064       ??_EMP4TrefTypeAtom@@UAAPAXI@Z 10024064 f i libmp4v2:atom_treftype.obj
- 0001:000230ac       ?Read@MP4DrefAtom@@UAAXXZ  100240ac f   libmp4v2:atom_dref.obj
- 0001:00023128       ??0MP4DrefAtom@@QAA@XZ     10024128 f   libmp4v2:atom_dref.obj
- 0001:000231dc       ??_GMP4DrefAtom@@UAAPAXI@Z 100241dc f i libmp4v2:atom_dref.obj
- 0001:000231dc       ??_EMP4DrefAtom@@UAAPAXI@Z 100241dc f i libmp4v2:atom_dref.obj
- 0001:00023204       ?Generate@MP4DamrAtom@@UAAXXZ 10024204 f   libmp4v2:atom_damr.obj
- 0001:00023254       ??0MP4DamrAtom@@QAA@XZ     10024254 f   libmp4v2:atom_damr.obj
- 0001:00023370       ??_GMP4DamrAtom@@UAAPAXI@Z 10024370 f i libmp4v2:atom_damr.obj
- 0001:00023370       ??_EMP4DamrAtom@@UAAPAXI@Z 10024370 f i libmp4v2:atom_damr.obj
- 0001:00023398       ?Generate@MP4D263Atom@@UAAXXZ 10024398 f   libmp4v2:atom_d263.obj
- 0001:000233e8       ?Write@MP4D263Atom@@UAAXXZ 100243e8 f   libmp4v2:atom_d263.obj
- 0001:0002348c       ??0MP4D263Atom@@QAA@XZ     1002448c f   libmp4v2:atom_d263.obj
- 0001:00023590       ??_EMP4D263Atom@@UAAPAXI@Z 10024590 f i libmp4v2:atom_d263.obj
- 0001:00023590       ??_GMP4D263Atom@@UAAPAXI@Z 10024590 f i libmp4v2:atom_d263.obj
- 0001:000235b8       ?Generate@MP4EncvAtom@@UAAXXZ 100245b8 f   libmp4v2:atom_encv.obj
- 0001:00023688       ??0MP4EncvAtom@@QAA@XZ     10024688 f   libmp4v2:atom_encv.obj
- 0001:0002381c       ??_GMP4EncvAtom@@UAAPAXI@Z 1002481c f i libmp4v2:atom_encv.obj
- 0001:0002381c       ??_EMP4EncvAtom@@UAAPAXI@Z 1002481c f i libmp4v2:atom_encv.obj
- 0001:00023844       ?Generate@MP4EncaAtom@@UAAXXZ 10024844 f   libmp4v2:atom_enca.obj
- 0001:000238c8       ??0MP4EncaAtom@@QAA@XZ     100248c8 f   libmp4v2:atom_enca.obj
- 0001:000239c0       ??_GMP4EncaAtom@@UAAPAXI@Z 100249c0 f i libmp4v2:atom_enca.obj
- 0001:000239c0       ??_EMP4EncaAtom@@UAAPAXI@Z 100249c0 f i libmp4v2:atom_enca.obj
- 0001:000239e8       ??0MP4ElstAtom@@QAA@XZ     100249e8 f   libmp4v2:atom_elst.obj
- 0001:00023a84       ??_EMP4ElstAtom@@UAAPAXI@Z 10024a84 f i libmp4v2:atom_elst.obj
- 0001:00023a84       ??_GMP4ElstAtom@@UAAPAXI@Z 10024a84 f i libmp4v2:atom_elst.obj
- 0001:00023aac       ?AddProperties@MP4ElstAtom@@IAAXE@Z 10024aac f   libmp4v2:atom_elst.obj
- 0001:00023bd8       ?Generate@MP4ElstAtom@@UAAXXZ 10024bd8 f   libmp4v2:atom_elst.obj
- 0001:00023c0c       ?Read@MP4ElstAtom@@UAAXXZ  10024c0c f   libmp4v2:atom_elst.obj
- 0001:00023c54       ?Read@MP4ContentClassDescriptor@@UAAXPAVMP4File@@@Z 10024c54 f   libmp4v2:ocidescriptors.obj
- 0001:00023ca0       ?Mutate@MP4KeywordDescriptor@@MAAXXZ 10024ca0 f   libmp4v2:ocidescriptors.obj
- 0001:00023d10       ?Read@MP4RatingDescriptor@@UAAXPAVMP4File@@@Z 10024d10 f   libmp4v2:ocidescriptors.obj
- 0001:00023d5c       ??0MP4LanguageDescriptor@@QAA@XZ 10024d5c f   libmp4v2:ocidescriptors.obj
- 0001:00023dbc       ?Mutate@MP4ShortTextDescriptor@@MAAXXZ 10024dbc f   libmp4v2:ocidescriptors.obj
- 0001:00023e3c       ?Mutate@MP4ExpandedTextDescriptor@@MAAXXZ 10024e3c f   libmp4v2:ocidescriptors.obj
- 0001:00023efc       ?ReadEntry@MP4CreatorTableProperty@@MAAXPAVMP4File@@I@Z 10024efc f   libmp4v2:ocidescriptors.obj
- 0001:00024004       ?WriteEntry@MP4CreatorTableProperty@@MAAXPAVMP4File@@I@Z 10025004 f   libmp4v2:ocidescriptors.obj
- 0001:0002407c       ??0MP4UnknownOCIDescriptor@@QAA@XZ 1002507c f   libmp4v2:ocidescriptors.obj
- 0001:000240dc       ?Read@MP4UnknownOCIDescriptor@@UAAXPAVMP4File@@@Z 100250dc f   libmp4v2:ocidescriptors.obj
- 0001:00024124       ??0MP4ContentClassDescriptor@@QAA@XZ 10025124 f   libmp4v2:ocidescriptors.obj
- 0001:000241e4       ??_GMP4ContentClassDescriptor@@UAAPAXI@Z 100251e4 f i libmp4v2:ocidescriptors.obj
- 0001:000241e4       ??_EMP4ContentClassDescriptor@@UAAPAXI@Z 100251e4 f i libmp4v2:ocidescriptors.obj
- 0001:0002420c       ??0MP4KeywordDescriptor@@QAA@XZ 1002520c f   libmp4v2:ocidescriptors.obj
- 0001:000243a0       ??_EMP4KeywordDescriptor@@UAAPAXI@Z 100253a0 f i libmp4v2:ocidescriptors.obj
- 0001:000243a0       ??_GMP4KeywordDescriptor@@UAAPAXI@Z 100253a0 f i libmp4v2:ocidescriptors.obj
- 0001:000243c8       ??0MP4RatingDescriptor@@QAA@XZ 100253c8 f   libmp4v2:ocidescriptors.obj
- 0001:00024488       ??_EMP4RatingDescriptor@@UAAPAXI@Z 10025488 f i libmp4v2:ocidescriptors.obj
- 0001:00024488       ??_GMP4RatingDescriptor@@UAAPAXI@Z 10025488 f i libmp4v2:ocidescriptors.obj
- 0001:000244b0       ??_GMP4LanguageDescriptor@@UAAPAXI@Z 100254b0 f i libmp4v2:ocidescriptors.obj
- 0001:000244b0       ??_EMP4LanguageDescriptor@@UAAPAXI@Z 100254b0 f i libmp4v2:ocidescriptors.obj
- 0001:000244d8       ??0MP4ShortTextDescriptor@@QAA@XZ 100254d8 f   libmp4v2:ocidescriptors.obj
- 0001:00024638       ??_GMP4ShortTextDescriptor@@UAAPAXI@Z 10025638 f i libmp4v2:ocidescriptors.obj
- 0001:00024638       ??_EMP4ShortTextDescriptor@@UAAPAXI@Z 10025638 f i libmp4v2:ocidescriptors.obj
- 0001:00024660       ??0MP4ExpandedTextDescriptor@@QAA@XZ 10025660 f   libmp4v2:ocidescriptors.obj
- 0001:00024878       ??_GMP4ExpandedTextDescriptor@@UAAPAXI@Z 10025878 f i libmp4v2:ocidescriptors.obj
- 0001:00024878       ??_EMP4ExpandedTextDescriptor@@UAAPAXI@Z 10025878 f i libmp4v2:ocidescriptors.obj
- 0001:000248a0       ??_EMP4CreatorTableProperty@@UAAPAXI@Z 100258a0 f i libmp4v2:ocidescriptors.obj
- 0001:000248a0       ??_GMP4CreatorTableProperty@@UAAPAXI@Z 100258a0 f i libmp4v2:ocidescriptors.obj
- 0001:000248c8       ??0MP4CreatorDescriptor@@QAA@E@Z 100258c8 f   libmp4v2:ocidescriptors.obj
- 0001:00024a5c       ??_GMP4CreatorDescriptor@@UAAPAXI@Z 10025a5c f i libmp4v2:ocidescriptors.obj
- 0001:00024a5c       ??_EMP4CreatorDescriptor@@UAAPAXI@Z 10025a5c f i libmp4v2:ocidescriptors.obj
- 0001:00024a84       ??0MP4CreationDescriptor@@QAA@E@Z 10025a84 f   libmp4v2:ocidescriptors.obj
- 0001:00024af0       ??_EMP4CreationDescriptor@@UAAPAXI@Z 10025af0 f i libmp4v2:ocidescriptors.obj
- 0001:00024af0       ??_GMP4CreationDescriptor@@UAAPAXI@Z 10025af0 f i libmp4v2:ocidescriptors.obj
- 0001:00024b18       ??0MP4SmpteCameraDescriptor@@QAA@XZ 10025b18 f   libmp4v2:ocidescriptors.obj
- 0001:00024c0c       ??_GMP4SmpteCameraDescriptor@@UAAPAXI@Z 10025c0c f i libmp4v2:ocidescriptors.obj
- 0001:00024c0c       ??_EMP4SmpteCameraDescriptor@@UAAPAXI@Z 10025c0c f i libmp4v2:ocidescriptors.obj
- 0001:00024c34       ??_EMP4UnknownOCIDescriptor@@UAAPAXI@Z 10025c34 f i libmp4v2:ocidescriptors.obj
- 0001:00024c34       ??_GMP4UnknownOCIDescriptor@@UAAPAXI@Z 10025c34 f i libmp4v2:ocidescriptors.obj
- 0001:00024c5c       ?CreateOCIDescriptor@@YAPAVMP4Descriptor@@E@Z 10025c5c f   libmp4v2:ocidescriptors.obj
- 0001:00024db0       ??0MP4UnknownQosQualifier@@QAA@XZ 10025db0 f   libmp4v2:qosqualifiers.obj
- 0001:00024e10       ?Read@MP4UnknownQosQualifier@@UAAXPAVMP4File@@@Z 10025e10 f   libmp4v2:qosqualifiers.obj
- 0001:00024e58       ??_GMP4QosQualifierProperty@@UAAPAXI@Z 10025e58 f i libmp4v2:qosqualifiers.obj
- 0001:00024e58       ??_EMP4QosQualifierProperty@@UAAPAXI@Z 10025e58 f i libmp4v2:qosqualifiers.obj
- 0001:00024e80       ??0MP4QosDescriptor@@QAA@XZ 10025e80 f   libmp4v2:qosqualifiers.obj
- 0001:00024f34       ??_EMP4QosDescriptor@@UAAPAXI@Z 10025f34 f i libmp4v2:qosqualifiers.obj
- 0001:00024f34       ??_GMP4QosDescriptor@@UAAPAXI@Z 10025f34 f i libmp4v2:qosqualifiers.obj
- 0001:00024f5c       ??0MP4MaxDelayQosQualifier@@QAA@XZ 10025f5c f   libmp4v2:qosqualifiers.obj
- 0001:00024fb4       ??_GMP4MaxDelayQosQualifier@@UAAPAXI@Z 10025fb4 f i libmp4v2:qosqualifiers.obj
- 0001:00024fb4       ??_EMP4MaxDelayQosQualifier@@UAAPAXI@Z 10025fb4 f i libmp4v2:qosqualifiers.obj
- 0001:00024fdc       ??0MP4PrefMaxDelayQosQualifier@@QAA@XZ 10025fdc f   libmp4v2:qosqualifiers.obj
- 0001:00025034       ??_EMP4PrefMaxDelayQosQualifier@@UAAPAXI@Z 10026034 f i libmp4v2:qosqualifiers.obj
- 0001:00025034       ??_GMP4PrefMaxDelayQosQualifier@@UAAPAXI@Z 10026034 f i libmp4v2:qosqualifiers.obj
- 0001:0002505c       ??0MP4LossProbQosQualifier@@QAA@XZ 1002605c f   libmp4v2:qosqualifiers.obj
- 0001:000250b4       ??_EMP4LossProbQosQualifier@@UAAPAXI@Z 100260b4 f i libmp4v2:qosqualifiers.obj
- 0001:000250b4       ??_GMP4LossProbQosQualifier@@UAAPAXI@Z 100260b4 f i libmp4v2:qosqualifiers.obj
- 0001:000250dc       ??0MP4MaxGapLossQosQualifier@@QAA@XZ 100260dc f   libmp4v2:qosqualifiers.obj
- 0001:00025134       ??_EMP4MaxGapLossQosQualifier@@UAAPAXI@Z 10026134 f i libmp4v2:qosqualifiers.obj
- 0001:00025134       ??_GMP4MaxGapLossQosQualifier@@UAAPAXI@Z 10026134 f i libmp4v2:qosqualifiers.obj
- 0001:0002515c       ??0MP4MaxAUSizeQosQualifier@@QAA@XZ 1002615c f   libmp4v2:qosqualifiers.obj
- 0001:000251b4       ??_EMP4MaxAUSizeQosQualifier@@UAAPAXI@Z 100261b4 f i libmp4v2:qosqualifiers.obj
- 0001:000251b4       ??_GMP4MaxAUSizeQosQualifier@@UAAPAXI@Z 100261b4 f i libmp4v2:qosqualifiers.obj
- 0001:000251dc       ??0MP4AvgAUSizeQosQualifier@@QAA@XZ 100261dc f   libmp4v2:qosqualifiers.obj
- 0001:00025234       ??_EMP4AvgAUSizeQosQualifier@@UAAPAXI@Z 10026234 f i libmp4v2:qosqualifiers.obj
- 0001:00025234       ??_GMP4AvgAUSizeQosQualifier@@UAAPAXI@Z 10026234 f i libmp4v2:qosqualifiers.obj
- 0001:0002525c       ??0MP4MaxAURateQosQualifier@@QAA@XZ 1002625c f   libmp4v2:qosqualifiers.obj
- 0001:000252b4       ??_EMP4MaxAURateQosQualifier@@UAAPAXI@Z 100262b4 f i libmp4v2:qosqualifiers.obj
- 0001:000252b4       ??_GMP4MaxAURateQosQualifier@@UAAPAXI@Z 100262b4 f i libmp4v2:qosqualifiers.obj
- 0001:000252dc       ??_GMP4UnknownQosQualifier@@UAAPAXI@Z 100262dc f i libmp4v2:qosqualifiers.obj
- 0001:000252dc       ??_EMP4UnknownQosQualifier@@UAAPAXI@Z 100262dc f i libmp4v2:qosqualifiers.obj
- 0001:00025304       ?CreateDescriptor@MP4QosQualifierProperty@@MAAPAVMP4Descriptor@@E@Z 10026304 f   libmp4v2:qosqualifiers.obj
- 0001:00025428       htonl                      10026428 f   ws2:WS2.dll
- 0001:00025438       DllMain                    10026438 f   corelib0:dllmain.obj
- 0001:00025554       _DllMainCRTStartup         10026554 f   corelib0:pegdmain.obj
- 0001:00025584       __GSHandlerCheckCommon     10026584 f   corelib0:gshandler.obj
- 0001:000255c0       __GSHandlerCheck           100265c0 f   corelib0:gshandler.obj
- 0001:000255e4       __security_init_cookie     100265e4 f   corelib0:seccinit.obj
- 0001:00025640       __security_check_cookie    10026640 f   corelib0:armsecgs.obj
- 0001:00025654       __gsfailure                10026654 f   corelib0:armsecgs.obj
- 0001:00025698       __GSHandlerCheck_SEH       10026698 f   corelib0:gshandlerseh.obj
- 0001:000257e4       _cexit                     100267e4 f   corelib0:cexit.obj
- 0001:00025800       _initterm                  10026800 f   corelib0:crt0dat.obj
- 0001:00025834       _cinit                     10026834 f   corelib0:crt0dat.obj
- 0001:00025868       __utod                     10026868 f   corelib1:COREDLL.dll
- 0001:00025878       free                       10026878 f   corelib1:COREDLL.dll
- 0001:00025888       ??3@YAXPAX@Z               10026888 f   corelib1:COREDLL.dll
- 0001:00025898       memcmp                     10026898 f   corelib1:COREDLL.dll
- 0001:000258a8       memcpy                     100268a8 f   corelib1:COREDLL.dll
- 0001:000258b8       wcslen                     100268b8 f   corelib1:COREDLL.dll
- 0001:000258c8       __divd                     100268c8 f   corelib1:COREDLL.dll
- 0001:000258d8       printf                     100268d8 f   corelib1:COREDLL.dll
- 0001:000258e8       malloc                     100268e8 f   corelib1:COREDLL.dll
- 0001:000258f8       strcmp                     100268f8 f   corelib1:COREDLL.dll
- 0001:00025908       memset                     10026908 f   corelib1:COREDLL.dll
- 0001:00025918       ??2@YAPAXI@Z               10026918 f   corelib1:COREDLL.dll
- 0001:00025928       wcscpy                     10026928 f   corelib1:COREDLL.dll
- 0001:00025938       __utos                     10026938 f   corelib1:COREDLL.dll
- 0001:00025948       __divs                     10026948 f   corelib1:COREDLL.dll
- 0001:00025958       __muls                     10026958 f   corelib1:COREDLL.dll
- 0001:00025968       __stou                     10026968 f   corelib1:COREDLL.dll
- 0001:00025978       __i64tod                   10026978 f   corelib1:COREDLL.dll
- 0001:00025988       __dtoi64                   10026988 f   corelib1:COREDLL.dll
- 0001:00025998       __muld                     10026998 f   corelib1:COREDLL.dll
- 0001:000259a8       __rt_sdiv64by64            100269a8 f   corelib1:COREDLL.dll
- 0001:000259b8       __led                      100269b8 f   corelib1:COREDLL.dll
- 0001:000259c8       _purecall                  100269c8 f   corelib1:COREDLL.dll
- 0001:000259d8       __rt_udiv64by64            100269d8 f   corelib1:COREDLL.dll
- 0001:000259e8       memmove                    100269e8 f   corelib1:COREDLL.dll
- 0001:000259f8       __CxxThrowException        100269f8 f   corelib1:COREDLL.dll
- 0001:00025a08       ??_7type_info@@6B@         10026a08 f   corelib1:COREDLL.dll
- 0001:00025a18       __C_specific_handler       10026a18 f   corelib1:COREDLL.dll
- 0001:00025a28       fprintf                    10026a28 f   corelib1:COREDLL.dll
- 0001:00025a38       _getstdfilex               10026a38 f   corelib1:COREDLL.dll
- 0001:00025a48       sprintf                    10026a48 f   corelib1:COREDLL.dll
- 0001:00025a58       strlen                     10026a58 f   corelib1:COREDLL.dll
- 0001:00025a68       _stricmp                   10026a68 f   corelib1:COREDLL.dll
- 0001:00025a78       strcpy                     10026a78 f   corelib1:COREDLL.dll
- 0001:00025a88       realloc                    10026a88 f   corelib1:COREDLL.dll
- 0001:00025a98       fclose                     10026a98 f   corelib1:COREDLL.dll
- 0001:00025aa8       ftell                      10026aa8 f   corelib1:COREDLL.dll
- 0001:00025ab8       fseek                      10026ab8 f   corelib1:COREDLL.dll
- 0001:00025ac8       fopen                      10026ac8 f   corelib1:COREDLL.dll
- 0001:00025ad8       _wfopen                    10026ad8 f   corelib1:COREDLL.dll
- 0001:00025ae8       _snprintf                  10026ae8 f   corelib1:COREDLL.dll
- 0001:00025af8       __itos                     10026af8 f   corelib1:COREDLL.dll
- 0001:00025b08       strchr                     10026b08 f   corelib1:COREDLL.dll
- 0001:00025b18       strncmp                    10026b18 f   corelib1:COREDLL.dll
- 0001:00025b28       __rt_udiv                  10026b28 f   corelib1:COREDLL.dll
- 0001:00025b38       ceil                       10026b38 f   corelib1:COREDLL.dll
- 0001:00025b48       __dtou                     10026b48 f   corelib1:COREDLL.dll
- 0001:00025b58       __CxxFrameHandler3         10026b58 f   corelib1:COREDLL.dll
- 0001:00025b68       tolower                    10026b68 f   corelib1:COREDLL.dll
- 0001:00025b78       sscanf                     10026b78 f   corelib1:COREDLL.dll
- 0001:00025b88       strncpy                    10026b88 f   corelib1:COREDLL.dll
- 0001:00025b98       __addd                     10026b98 f   corelib1:COREDLL.dll
- 0001:00025ba8       __dtou64                   10026ba8 f   corelib1:COREDLL.dll
- 0001:00025bb8       fflush                     10026bb8 f   corelib1:COREDLL.dll
- 0001:00025bc8       __stod                     10026bc8 f   corelib1:COREDLL.dll
- 0001:00025bd8       fputs                      10026bd8 f   corelib1:COREDLL.dll
- 0001:00025be8       _isctype                   10026be8 f   corelib1:COREDLL.dll
- 0001:00025bf8       fgetpos                    10026bf8 f   corelib1:COREDLL.dll
- 0001:00025c08       fsetpos                    10026c08 f   corelib1:COREDLL.dll
- 0001:00025c18       feof                       10026c18 f   corelib1:COREDLL.dll
- 0001:00025c28       fread                      10026c28 f   corelib1:COREDLL.dll
- 0001:00025c38       fwrite                     10026c38 f   corelib1:COREDLL.dll
- 0001:00025c48       __adds                     10026c48 f   corelib1:COREDLL.dll
- 0001:00025c58       __ges                      10026c58 f   corelib1:COREDLL.dll
- 0001:00025c68       __subs                     10026c68 f   corelib1:COREDLL.dll
- 0001:00025c78       vprintf                    10026c78 f   corelib1:COREDLL.dll
- 0001:00025c88       _XcptFilter                10026c88 f   corelib1:COREDLL.dll
- 0001:00025c98       __security_gen_cookie2     10026c98 f   corelib1:COREDLL.dll
- 0001:00025ca8       __report_gsfailure         10026ca8 f   corelib1:COREDLL.dll
- 0001:00025cb8       GetSystemTime              10026cb8 f   coredll:COREDLL.dll
- 0001:00025cc8       RaiseException             10026cc8 f   coredll:COREDLL.dll
- 0001:00025cd8       TerminateProcess           10026cd8 f   coredll:COREDLL.dll
- 0001:00025ebc       _TI2PAVMP4Error@@          10026ebc     libmp4v2:mp4.obj
- 0001:00025ecc       _CTA2PAVMP4Error@@         10026ecc     libmp4v2:mp4.obj
- 0001:00025ed8       _CT??_R0PAVMP4Error@@@84   10026ed8     libmp4v2:mp4.obj
- 0001:00025ef4       _CT??_R0PAX@84             10026ef4     libmp4v2:mp4.obj
- 0001:00025f10       __IMPORT_DESCRIPTOR_ole32  10026f10     ole32:ole32.dll
- 0001:00025f24       __IMPORT_DESCRIPTOR_COREDLL 10026f24     coredll:COREDLL.dll
- 0001:00025f38       __IMPORT_DESCRIPTOR_WS2    10026f38     ws2:WS2.dll
- 0001:00025f4c       __NULL_IMPORT_DESCRIPTOR   10026f4c     ole32:ole32.dll
+ 0001:00021540       ?Read@MP4MvhdAtom@@UAAXXZ  10022540 f   libmp4v2:atom_mvhd.obj
+ 0001:00021588       ??0MP4MdhdAtom@@QAA@XZ     10022588 f   libmp4v2:atom_mdhd.obj
+ 0001:000215bc       ??_GMP4MdhdAtom@@UAAPAXI@Z 100225bc f i libmp4v2:atom_mdhd.obj
+ 0001:000215bc       ??_EMP4MdhdAtom@@UAAPAXI@Z 100225bc f i libmp4v2:atom_mdhd.obj
+ 0001:000215e4       ?AddProperties@MP4MdhdAtom@@IAAXE@Z 100225e4 f   libmp4v2:atom_mdhd.obj
+ 0001:00021768       ?Generate@MP4MdhdAtom@@UAAXXZ 10022768 f   libmp4v2:atom_mdhd.obj
+ 0001:00021844       ?Read@MP4MdhdAtom@@UAAXXZ  10022844 f   libmp4v2:atom_mdhd.obj
+ 0001:0002188c       ?Generate@MP4FtypAtom@@UAAXXZ 1002288c f   libmp4v2:atom_ftyp.obj
+ 0001:00021950       ?Read@MP4FtypAtom@@UAAXXZ  10022950 f   libmp4v2:atom_ftyp.obj
+ 0001:000219d0       ??0MP4FtypAtom@@QAA@XZ     100229d0 f   libmp4v2:atom_ftyp.obj
+ 0001:00021b24       ??_GMP4FtypAtom@@UAAPAXI@Z 10022b24 f i libmp4v2:atom_ftyp.obj
+ 0001:00021b24       ??_EMP4FtypAtom@@UAAPAXI@Z 10022b24 f i libmp4v2:atom_ftyp.obj
+ 0001:00021b4c       ??0MP4FreeAtom@@QAA@XZ     10022b4c f   libmp4v2:atom_free.obj
+ 0001:00021b78       ?Read@MP4FreeAtom@@UAAXXZ  10022b78 f   libmp4v2:atom_free.obj
+ 0001:00021b88       ?Write@MP4FreeAtom@@UAAXXZ 10022b88 f   libmp4v2:atom_free.obj
+ 0001:00021c48       ??_GMP4FreeAtom@@UAAPAXI@Z 10022c48 f i libmp4v2:atom_free.obj
+ 0001:00021c48       ??_EMP4FreeAtom@@UAAPAXI@Z 10022c48 f i libmp4v2:atom_free.obj
+ 0001:00021c70       ??0MP4SmiAtom@@QAA@XZ      10022c70 f   libmp4v2:atom_smi.obj
+ 0001:00021cd4       ?Read@MP4SmiAtom@@UAAXXZ   10022cd4 f   libmp4v2:atom_smi.obj
+ 0001:00021d08       ??_EMP4SmiAtom@@UAAPAXI@Z  10022d08 f i libmp4v2:atom_smi.obj
+ 0001:00021d08       ??_GMP4SmiAtom@@UAAPAXI@Z  10022d08 f i libmp4v2:atom_smi.obj
+ 0001:00021d30       ?Generate@MP4VideoAtom@@UAAXXZ 10022d30 f   libmp4v2:atom_video.obj
+ 0001:00021df8       ??0MP4VideoAtom@@QAA@PBD@Z 10022df8 f   libmp4v2:atom_video.obj
+ 0001:00021fb8       ??_EMP4VideoAtom@@UAAPAXI@Z 10022fb8 f i libmp4v2:atom_video.obj
+ 0001:00021fb8       ??_GMP4VideoAtom@@UAAPAXI@Z 10022fb8 f i libmp4v2:atom_video.obj
+ 0001:00021fe0       ?Delete@MP4PropertyArray@@QAAXI@Z 10022fe0 f i libmp4v2:atom_sound.obj
+ 0001:0002208c       ?Generate@MP4SoundAtom@@UAAXXZ 1002308c f   libmp4v2:atom_sound.obj
+ 0001:00022180       ??0MP4SoundAtom@@QAA@PBD@Z 10023180 f   libmp4v2:atom_sound.obj
+ 0001:00022394       ??_EMP4SoundAtom@@UAAPAXI@Z 10023394 f i libmp4v2:atom_sound.obj
+ 0001:00022394       ??_GMP4SoundAtom@@UAAPAXI@Z 10023394 f i libmp4v2:atom_sound.obj
+ 0001:000223bc       ?AddProperties@MP4SoundAtom@@IAAXE@Z 100233bc f   libmp4v2:atom_sound.obj
+ 0001:000224ac       ?Read@MP4SoundAtom@@UAAXXZ 100234ac f   libmp4v2:atom_sound.obj
+ 0001:00022618       ??0MP4UrlAtom@@QAA@PBD@Z   10023618 f   libmp4v2:atom_url.obj
+ 0001:0002267c       ?Read@MP4UrlAtom@@UAAXXZ   1002367c f   libmp4v2:atom_url.obj
+ 0001:000226bc       ?Write@MP4UrlAtom@@UAAXXZ  100236bc f   libmp4v2:atom_url.obj
+ 0001:00022738       ??_EMP4UrlAtom@@UAAPAXI@Z  10023738 f i libmp4v2:atom_url.obj
+ 0001:00022738       ??_GMP4UrlAtom@@UAAPAXI@Z  10023738 f i libmp4v2:atom_url.obj
+ 0001:00022760       ?ReadEntry@SizeTableProperty@@MAAXPAVMP4File@@I@Z 10023760 f i libmp4v2:atom_avcC.obj
+ 0001:0002281c       ?Generate@MP4AvcCAtom@@UAAXXZ 1002381c f   libmp4v2:atom_avcC.obj
+ 0001:000228e4       ??_ESizeTableProperty@@UAAPAXI@Z 100238e4 f i libmp4v2:atom_avcC.obj
+ 0001:000228e4       ??_GSizeTableProperty@@UAAPAXI@Z 100238e4 f i libmp4v2:atom_avcC.obj
+ 0001:0002290c       ??0MP4AvcCAtom@@QAA@XZ     1002390c f   libmp4v2:atom_avcC.obj
+ 0001:00022c84       ??_GMP4AvcCAtom@@UAAPAXI@Z 10023c84 f i libmp4v2:atom_avcC.obj
+ 0001:00022c84       ??_EMP4AvcCAtom@@UAAPAXI@Z 10023c84 f i libmp4v2:atom_avcC.obj
+ 0001:00022cac       ?Generate@MP4Avc1Atom@@UAAXXZ 10023cac f   libmp4v2:atom_avc1.obj
+ 0001:00022d7c       ??0MP4Avc1Atom@@QAA@XZ     10023d7c f   libmp4v2:atom_avc1.obj
+ 0001:00022f10       ??_GMP4Avc1Atom@@UAAPAXI@Z 10023f10 f i libmp4v2:atom_avc1.obj
+ 0001:00022f10       ??_EMP4Avc1Atom@@UAAPAXI@Z 10023f10 f i libmp4v2:atom_avc1.obj
+ 0001:00022f38       ?Read@MP4TrefTypeAtom@@UAAXXZ 10023f38 f   libmp4v2:atom_treftype.obj
+ 0001:00022fa8       ??0MP4TrefTypeAtom@@QAA@PBD@Z 10023fa8 f   libmp4v2:atom_treftype.obj
+ 0001:00023070       ??_GMP4TrefTypeAtom@@UAAPAXI@Z 10024070 f i libmp4v2:atom_treftype.obj
+ 0001:00023070       ??_EMP4TrefTypeAtom@@UAAPAXI@Z 10024070 f i libmp4v2:atom_treftype.obj
+ 0001:000230b8       ?Read@MP4DrefAtom@@UAAXXZ  100240b8 f   libmp4v2:atom_dref.obj
+ 0001:00023134       ??0MP4DrefAtom@@QAA@XZ     10024134 f   libmp4v2:atom_dref.obj
+ 0001:000231e8       ??_GMP4DrefAtom@@UAAPAXI@Z 100241e8 f i libmp4v2:atom_dref.obj
+ 0001:000231e8       ??_EMP4DrefAtom@@UAAPAXI@Z 100241e8 f i libmp4v2:atom_dref.obj
+ 0001:00023210       ?Generate@MP4DamrAtom@@UAAXXZ 10024210 f   libmp4v2:atom_damr.obj
+ 0001:00023260       ??0MP4DamrAtom@@QAA@XZ     10024260 f   libmp4v2:atom_damr.obj
+ 0001:0002337c       ??_GMP4DamrAtom@@UAAPAXI@Z 1002437c f i libmp4v2:atom_damr.obj
+ 0001:0002337c       ??_EMP4DamrAtom@@UAAPAXI@Z 1002437c f i libmp4v2:atom_damr.obj
+ 0001:000233a4       ?Generate@MP4D263Atom@@UAAXXZ 100243a4 f   libmp4v2:atom_d263.obj
+ 0001:000233f4       ?Write@MP4D263Atom@@UAAXXZ 100243f4 f   libmp4v2:atom_d263.obj
+ 0001:00023498       ??0MP4D263Atom@@QAA@XZ     10024498 f   libmp4v2:atom_d263.obj
+ 0001:0002359c       ??_EMP4D263Atom@@UAAPAXI@Z 1002459c f i libmp4v2:atom_d263.obj
+ 0001:0002359c       ??_GMP4D263Atom@@UAAPAXI@Z 1002459c f i libmp4v2:atom_d263.obj
+ 0001:000235c4       ?Generate@MP4EncvAtom@@UAAXXZ 100245c4 f   libmp4v2:atom_encv.obj
+ 0001:00023694       ??0MP4EncvAtom@@QAA@XZ     10024694 f   libmp4v2:atom_encv.obj
+ 0001:00023828       ??_GMP4EncvAtom@@UAAPAXI@Z 10024828 f i libmp4v2:atom_encv.obj
+ 0001:00023828       ??_EMP4EncvAtom@@UAAPAXI@Z 10024828 f i libmp4v2:atom_encv.obj
+ 0001:00023850       ?Generate@MP4EncaAtom@@UAAXXZ 10024850 f   libmp4v2:atom_enca.obj
+ 0001:000238d4       ??0MP4EncaAtom@@QAA@XZ     100248d4 f   libmp4v2:atom_enca.obj
+ 0001:000239cc       ??_GMP4EncaAtom@@UAAPAXI@Z 100249cc f i libmp4v2:atom_enca.obj
+ 0001:000239cc       ??_EMP4EncaAtom@@UAAPAXI@Z 100249cc f i libmp4v2:atom_enca.obj
+ 0001:000239f4       ??0MP4ElstAtom@@QAA@XZ     100249f4 f   libmp4v2:atom_elst.obj
+ 0001:00023a90       ??_EMP4ElstAtom@@UAAPAXI@Z 10024a90 f i libmp4v2:atom_elst.obj
+ 0001:00023a90       ??_GMP4ElstAtom@@UAAPAXI@Z 10024a90 f i libmp4v2:atom_elst.obj
+ 0001:00023ab8       ?AddProperties@MP4ElstAtom@@IAAXE@Z 10024ab8 f   libmp4v2:atom_elst.obj
+ 0001:00023be4       ?Generate@MP4ElstAtom@@UAAXXZ 10024be4 f   libmp4v2:atom_elst.obj
+ 0001:00023c18       ?Read@MP4ElstAtom@@UAAXXZ  10024c18 f   libmp4v2:atom_elst.obj
+ 0001:00023c60       ?Read@MP4ContentClassDescriptor@@UAAXPAVMP4File@@@Z 10024c60 f   libmp4v2:ocidescriptors.obj
+ 0001:00023cac       ?Mutate@MP4KeywordDescriptor@@MAAXXZ 10024cac f   libmp4v2:ocidescriptors.obj
+ 0001:00023d1c       ?Read@MP4RatingDescriptor@@UAAXPAVMP4File@@@Z 10024d1c f   libmp4v2:ocidescriptors.obj
+ 0001:00023d68       ??0MP4LanguageDescriptor@@QAA@XZ 10024d68 f   libmp4v2:ocidescriptors.obj
+ 0001:00023dc8       ?Mutate@MP4ShortTextDescriptor@@MAAXXZ 10024dc8 f   libmp4v2:ocidescriptors.obj
+ 0001:00023e48       ?Mutate@MP4ExpandedTextDescriptor@@MAAXXZ 10024e48 f   libmp4v2:ocidescriptors.obj
+ 0001:00023f08       ?ReadEntry@MP4CreatorTableProperty@@MAAXPAVMP4File@@I@Z 10024f08 f   libmp4v2:ocidescriptors.obj
+ 0001:00024010       ?WriteEntry@MP4CreatorTableProperty@@MAAXPAVMP4File@@I@Z 10025010 f   libmp4v2:ocidescriptors.obj
+ 0001:00024088       ??0MP4UnknownOCIDescriptor@@QAA@XZ 10025088 f   libmp4v2:ocidescriptors.obj
+ 0001:000240e8       ?Read@MP4UnknownOCIDescriptor@@UAAXPAVMP4File@@@Z 100250e8 f   libmp4v2:ocidescriptors.obj
+ 0001:00024130       ??0MP4ContentClassDescriptor@@QAA@XZ 10025130 f   libmp4v2:ocidescriptors.obj
+ 0001:000241f0       ??_GMP4ContentClassDescriptor@@UAAPAXI@Z 100251f0 f i libmp4v2:ocidescriptors.obj
+ 0001:000241f0       ??_EMP4ContentClassDescriptor@@UAAPAXI@Z 100251f0 f i libmp4v2:ocidescriptors.obj
+ 0001:00024218       ??0MP4KeywordDescriptor@@QAA@XZ 10025218 f   libmp4v2:ocidescriptors.obj
+ 0001:000243ac       ??_EMP4KeywordDescriptor@@UAAPAXI@Z 100253ac f i libmp4v2:ocidescriptors.obj
+ 0001:000243ac       ??_GMP4KeywordDescriptor@@UAAPAXI@Z 100253ac f i libmp4v2:ocidescriptors.obj
+ 0001:000243d4       ??0MP4RatingDescriptor@@QAA@XZ 100253d4 f   libmp4v2:ocidescriptors.obj
+ 0001:00024494       ??_EMP4RatingDescriptor@@UAAPAXI@Z 10025494 f i libmp4v2:ocidescriptors.obj
+ 0001:00024494       ??_GMP4RatingDescriptor@@UAAPAXI@Z 10025494 f i libmp4v2:ocidescriptors.obj
+ 0001:000244bc       ??_GMP4LanguageDescriptor@@UAAPAXI@Z 100254bc f i libmp4v2:ocidescriptors.obj
+ 0001:000244bc       ??_EMP4LanguageDescriptor@@UAAPAXI@Z 100254bc f i libmp4v2:ocidescriptors.obj
+ 0001:000244e4       ??0MP4ShortTextDescriptor@@QAA@XZ 100254e4 f   libmp4v2:ocidescriptors.obj
+ 0001:00024644       ??_GMP4ShortTextDescriptor@@UAAPAXI@Z 10025644 f i libmp4v2:ocidescriptors.obj
+ 0001:00024644       ??_EMP4ShortTextDescriptor@@UAAPAXI@Z 10025644 f i libmp4v2:ocidescriptors.obj
+ 0001:0002466c       ??0MP4ExpandedTextDescriptor@@QAA@XZ 1002566c f   libmp4v2:ocidescriptors.obj
+ 0001:00024884       ??_GMP4ExpandedTextDescriptor@@UAAPAXI@Z 10025884 f i libmp4v2:ocidescriptors.obj
+ 0001:00024884       ??_EMP4ExpandedTextDescriptor@@UAAPAXI@Z 10025884 f i libmp4v2:ocidescriptors.obj
+ 0001:000248ac       ??_EMP4CreatorTableProperty@@UAAPAXI@Z 100258ac f i libmp4v2:ocidescriptors.obj
+ 0001:000248ac       ??_GMP4CreatorTableProperty@@UAAPAXI@Z 100258ac f i libmp4v2:ocidescriptors.obj
+ 0001:000248d4       ??0MP4CreatorDescriptor@@QAA@E@Z 100258d4 f   libmp4v2:ocidescriptors.obj
+ 0001:00024a68       ??_GMP4CreatorDescriptor@@UAAPAXI@Z 10025a68 f i libmp4v2:ocidescriptors.obj
+ 0001:00024a68       ??_EMP4CreatorDescriptor@@UAAPAXI@Z 10025a68 f i libmp4v2:ocidescriptors.obj
+ 0001:00024a90       ??0MP4CreationDescriptor@@QAA@E@Z 10025a90 f   libmp4v2:ocidescriptors.obj
+ 0001:00024afc       ??_EMP4CreationDescriptor@@UAAPAXI@Z 10025afc f i libmp4v2:ocidescriptors.obj
+ 0001:00024afc       ??_GMP4CreationDescriptor@@UAAPAXI@Z 10025afc f i libmp4v2:ocidescriptors.obj
+ 0001:00024b24       ??0MP4SmpteCameraDescriptor@@QAA@XZ 10025b24 f   libmp4v2:ocidescriptors.obj
+ 0001:00024c18       ??_GMP4SmpteCameraDescriptor@@UAAPAXI@Z 10025c18 f i libmp4v2:ocidescriptors.obj
+ 0001:00024c18       ??_EMP4SmpteCameraDescriptor@@UAAPAXI@Z 10025c18 f i libmp4v2:ocidescriptors.obj
+ 0001:00024c40       ??_EMP4UnknownOCIDescriptor@@UAAPAXI@Z 10025c40 f i libmp4v2:ocidescriptors.obj
+ 0001:00024c40       ??_GMP4UnknownOCIDescriptor@@UAAPAXI@Z 10025c40 f i libmp4v2:ocidescriptors.obj
+ 0001:00024c68       ?CreateOCIDescriptor@@YAPAVMP4Descriptor@@E@Z 10025c68 f   libmp4v2:ocidescriptors.obj
+ 0001:00024dbc       ??0MP4UnknownQosQualifier@@QAA@XZ 10025dbc f   libmp4v2:qosqualifiers.obj
+ 0001:00024e1c       ?Read@MP4UnknownQosQualifier@@UAAXPAVMP4File@@@Z 10025e1c f   libmp4v2:qosqualifiers.obj
+ 0001:00024e64       ??_GMP4QosQualifierProperty@@UAAPAXI@Z 10025e64 f i libmp4v2:qosqualifiers.obj
+ 0001:00024e64       ??_EMP4QosQualifierProperty@@UAAPAXI@Z 10025e64 f i libmp4v2:qosqualifiers.obj
+ 0001:00024e8c       ??0MP4QosDescriptor@@QAA@XZ 10025e8c f   libmp4v2:qosqualifiers.obj
+ 0001:00024f40       ??_EMP4QosDescriptor@@UAAPAXI@Z 10025f40 f i libmp4v2:qosqualifiers.obj
+ 0001:00024f40       ??_GMP4QosDescriptor@@UAAPAXI@Z 10025f40 f i libmp4v2:qosqualifiers.obj
+ 0001:00024f68       ??0MP4MaxDelayQosQualifier@@QAA@XZ 10025f68 f   libmp4v2:qosqualifiers.obj
+ 0001:00024fc0       ??_GMP4MaxDelayQosQualifier@@UAAPAXI@Z 10025fc0 f i libmp4v2:qosqualifiers.obj
+ 0001:00024fc0       ??_EMP4MaxDelayQosQualifier@@UAAPAXI@Z 10025fc0 f i libmp4v2:qosqualifiers.obj
+ 0001:00024fe8       ??0MP4PrefMaxDelayQosQualifier@@QAA@XZ 10025fe8 f   libmp4v2:qosqualifiers.obj
+ 0001:00025040       ??_EMP4PrefMaxDelayQosQualifier@@UAAPAXI@Z 10026040 f i libmp4v2:qosqualifiers.obj
+ 0001:00025040       ??_GMP4PrefMaxDelayQosQualifier@@UAAPAXI@Z 10026040 f i libmp4v2:qosqualifiers.obj
+ 0001:00025068       ??0MP4LossProbQosQualifier@@QAA@XZ 10026068 f   libmp4v2:qosqualifiers.obj
+ 0001:000250c0       ??_EMP4LossProbQosQualifier@@UAAPAXI@Z 100260c0 f i libmp4v2:qosqualifiers.obj
+ 0001:000250c0       ??_GMP4LossProbQosQualifier@@UAAPAXI@Z 100260c0 f i libmp4v2:qosqualifiers.obj
+ 0001:000250e8       ??0MP4MaxGapLossQosQualifier@@QAA@XZ 100260e8 f   libmp4v2:qosqualifiers.obj
+ 0001:00025140       ??_EMP4MaxGapLossQosQualifier@@UAAPAXI@Z 10026140 f i libmp4v2:qosqualifiers.obj
+ 0001:00025140       ??_GMP4MaxGapLossQosQualifier@@UAAPAXI@Z 10026140 f i libmp4v2:qosqualifiers.obj
+ 0001:00025168       ??0MP4MaxAUSizeQosQualifier@@QAA@XZ 10026168 f   libmp4v2:qosqualifiers.obj
+ 0001:000251c0       ??_EMP4MaxAUSizeQosQualifier@@UAAPAXI@Z 100261c0 f i libmp4v2:qosqualifiers.obj
+ 0001:000251c0       ??_GMP4MaxAUSizeQosQualifier@@UAAPAXI@Z 100261c0 f i libmp4v2:qosqualifiers.obj
+ 0001:000251e8       ??0MP4AvgAUSizeQosQualifier@@QAA@XZ 100261e8 f   libmp4v2:qosqualifiers.obj
+ 0001:00025240       ??_EMP4AvgAUSizeQosQualifier@@UAAPAXI@Z 10026240 f i libmp4v2:qosqualifiers.obj
+ 0001:00025240       ??_GMP4AvgAUSizeQosQualifier@@UAAPAXI@Z 10026240 f i libmp4v2:qosqualifiers.obj
+ 0001:00025268       ??0MP4MaxAURateQosQualifier@@QAA@XZ 10026268 f   libmp4v2:qosqualifiers.obj
+ 0001:000252c0       ??_EMP4MaxAURateQosQualifier@@UAAPAXI@Z 100262c0 f i libmp4v2:qosqualifiers.obj
+ 0001:000252c0       ??_GMP4MaxAURateQosQualifier@@UAAPAXI@Z 100262c0 f i libmp4v2:qosqualifiers.obj
+ 0001:000252e8       ??_GMP4UnknownQosQualifier@@UAAPAXI@Z 100262e8 f i libmp4v2:qosqualifiers.obj
+ 0001:000252e8       ??_EMP4UnknownQosQualifier@@UAAPAXI@Z 100262e8 f i libmp4v2:qosqualifiers.obj
+ 0001:00025310       ?CreateDescriptor@MP4QosQualifierProperty@@MAAPAVMP4Descriptor@@E@Z 10026310 f   libmp4v2:qosqualifiers.obj
+ 0001:00025434       htonl                      10026434 f   ws2:WS2.dll
+ 0001:00025444       DllMain                    10026444 f   corelib0:dllmain.obj
+ 0001:00025560       _DllMainCRTStartup         10026560 f   corelib0:pegdmain.obj
+ 0001:00025590       __GSHandlerCheckCommon     10026590 f   corelib0:gshandler.obj
+ 0001:000255cc       __GSHandlerCheck           100265cc f   corelib0:gshandler.obj
+ 0001:000255f0       __security_init_cookie     100265f0 f   corelib0:seccinit.obj
+ 0001:0002564c       __security_check_cookie    1002664c f   corelib0:armsecgs.obj
+ 0001:00025660       __gsfailure                10026660 f   corelib0:armsecgs.obj
+ 0001:000256a4       __GSHandlerCheck_SEH       100266a4 f   corelib0:gshandlerseh.obj
+ 0001:000257f0       _cexit                     100267f0 f   corelib0:cexit.obj
+ 0001:0002580c       _initterm                  1002680c f   corelib0:crt0dat.obj
+ 0001:00025840       _cinit                     10026840 f   corelib0:crt0dat.obj
+ 0001:00025874       __utod                     10026874 f   corelib1:COREDLL.dll
+ 0001:00025884       free                       10026884 f   corelib1:COREDLL.dll
+ 0001:00025894       ??3@YAXPAX@Z               10026894 f   corelib1:COREDLL.dll
+ 0001:000258a4       memcmp                     100268a4 f   corelib1:COREDLL.dll
+ 0001:000258b4       memcpy                     100268b4 f   corelib1:COREDLL.dll
+ 0001:000258c4       wcslen                     100268c4 f   corelib1:COREDLL.dll
+ 0001:000258d4       __divd                     100268d4 f   corelib1:COREDLL.dll
+ 0001:000258e4       printf                     100268e4 f   corelib1:COREDLL.dll
+ 0001:000258f4       malloc                     100268f4 f   corelib1:COREDLL.dll
+ 0001:00025904       strcmp                     10026904 f   corelib1:COREDLL.dll
+ 0001:00025914       memset                     10026914 f   corelib1:COREDLL.dll
+ 0001:00025924       ??2@YAPAXI@Z               10026924 f   corelib1:COREDLL.dll
+ 0001:00025934       wcscpy                     10026934 f   corelib1:COREDLL.dll
+ 0001:00025944       __utos                     10026944 f   corelib1:COREDLL.dll
+ 0001:00025954       __divs                     10026954 f   corelib1:COREDLL.dll
+ 0001:00025964       __muls                     10026964 f   corelib1:COREDLL.dll
+ 0001:00025974       __stou                     10026974 f   corelib1:COREDLL.dll
+ 0001:00025984       __i64tod                   10026984 f   corelib1:COREDLL.dll
+ 0001:00025994       __dtoi64                   10026994 f   corelib1:COREDLL.dll
+ 0001:000259a4       __muld                     100269a4 f   corelib1:COREDLL.dll
+ 0001:000259b4       __rt_sdiv64by64            100269b4 f   corelib1:COREDLL.dll
+ 0001:000259c4       __led                      100269c4 f   corelib1:COREDLL.dll
+ 0001:000259d4       _purecall                  100269d4 f   corelib1:COREDLL.dll
+ 0001:000259e4       __rt_udiv64by64            100269e4 f   corelib1:COREDLL.dll
+ 0001:000259f4       memmove                    100269f4 f   corelib1:COREDLL.dll
+ 0001:00025a04       __CxxThrowException        10026a04 f   corelib1:COREDLL.dll
+ 0001:00025a14       ??_7type_info@@6B@         10026a14 f   corelib1:COREDLL.dll
+ 0001:00025a24       __C_specific_handler       10026a24 f   corelib1:COREDLL.dll
+ 0001:00025a34       fprintf                    10026a34 f   corelib1:COREDLL.dll
+ 0001:00025a44       _getstdfilex               10026a44 f   corelib1:COREDLL.dll
+ 0001:00025a54       sprintf                    10026a54 f   corelib1:COREDLL.dll
+ 0001:00025a64       strlen                     10026a64 f   corelib1:COREDLL.dll
+ 0001:00025a74       _stricmp                   10026a74 f   corelib1:COREDLL.dll
+ 0001:00025a84       strcpy                     10026a84 f   corelib1:COREDLL.dll
+ 0001:00025a94       realloc                    10026a94 f   corelib1:COREDLL.dll
+ 0001:00025aa4       fclose                     10026aa4 f   corelib1:COREDLL.dll
+ 0001:00025ab4       ftell                      10026ab4 f   corelib1:COREDLL.dll
+ 0001:00025ac4       fseek                      10026ac4 f   corelib1:COREDLL.dll
+ 0001:00025ad4       fopen                      10026ad4 f   corelib1:COREDLL.dll
+ 0001:00025ae4       _wfopen                    10026ae4 f   corelib1:COREDLL.dll
+ 0001:00025af4       _snprintf                  10026af4 f   corelib1:COREDLL.dll
+ 0001:00025b04       __itos                     10026b04 f   corelib1:COREDLL.dll
+ 0001:00025b14       strchr                     10026b14 f   corelib1:COREDLL.dll
+ 0001:00025b24       strncmp                    10026b24 f   corelib1:COREDLL.dll
+ 0001:00025b34       __rt_udiv                  10026b34 f   corelib1:COREDLL.dll
+ 0001:00025b44       ceil                       10026b44 f   corelib1:COREDLL.dll
+ 0001:00025b54       __dtou                     10026b54 f   corelib1:COREDLL.dll
+ 0001:00025b64       __CxxFrameHandler3         10026b64 f   corelib1:COREDLL.dll
+ 0001:00025b74       tolower                    10026b74 f   corelib1:COREDLL.dll
+ 0001:00025b84       sscanf                     10026b84 f   corelib1:COREDLL.dll
+ 0001:00025b94       strncpy                    10026b94 f   corelib1:COREDLL.dll
+ 0001:00025ba4       __addd                     10026ba4 f   corelib1:COREDLL.dll
+ 0001:00025bb4       __dtou64                   10026bb4 f   corelib1:COREDLL.dll
+ 0001:00025bc4       fflush                     10026bc4 f   corelib1:COREDLL.dll
+ 0001:00025bd4       __stod                     10026bd4 f   corelib1:COREDLL.dll
+ 0001:00025be4       fputs                      10026be4 f   corelib1:COREDLL.dll
+ 0001:00025bf4       _isctype                   10026bf4 f   corelib1:COREDLL.dll
+ 0001:00025c04       fgetpos                    10026c04 f   corelib1:COREDLL.dll
+ 0001:00025c14       fsetpos                    10026c14 f   corelib1:COREDLL.dll
+ 0001:00025c24       feof                       10026c24 f   corelib1:COREDLL.dll
+ 0001:00025c34       fread                      10026c34 f   corelib1:COREDLL.dll
+ 0001:00025c44       fwrite                     10026c44 f   corelib1:COREDLL.dll
+ 0001:00025c54       __adds                     10026c54 f   corelib1:COREDLL.dll
+ 0001:00025c64       __ges                      10026c64 f   corelib1:COREDLL.dll
+ 0001:00025c74       __subs                     10026c74 f   corelib1:COREDLL.dll
+ 0001:00025c84       vprintf                    10026c84 f   corelib1:COREDLL.dll
+ 0001:00025c94       _XcptFilter                10026c94 f   corelib1:COREDLL.dll
+ 0001:00025ca4       __security_gen_cookie2     10026ca4 f   corelib1:COREDLL.dll
+ 0001:00025cb4       __report_gsfailure         10026cb4 f   corelib1:COREDLL.dll
+ 0001:00025cc4       GetSystemTime              10026cc4 f   coredll:COREDLL.dll
+ 0001:00025cd4       RaiseException             10026cd4 f   coredll:COREDLL.dll
+ 0001:00025ce4       TerminateProcess           10026ce4 f   coredll:COREDLL.dll
+ 0001:00025ec8       _TI2PAVMP4Error@@          10026ec8     libmp4v2:mp4.obj
+ 0001:00025ed8       _CTA2PAVMP4Error@@         10026ed8     libmp4v2:mp4.obj
+ 0001:00025ee4       _CT??_R0PAVMP4Error@@@84   10026ee4     libmp4v2:mp4.obj
+ 0001:00025f00       _CT??_R0PAX@84             10026f00     libmp4v2:mp4.obj
+ 0001:00025f1c       __IMPORT_DESCRIPTOR_ole32  10026f1c     ole32:ole32.dll
+ 0001:00025f30       __IMPORT_DESCRIPTOR_COREDLL 10026f30     coredll:COREDLL.dll
+ 0001:00025f44       __IMPORT_DESCRIPTOR_WS2    10026f44     ws2:WS2.dll
+ 0001:00025f58       __NULL_IMPORT_DESCRIPTOR   10026f58     ole32:ole32.dll
  0002:00000000       __imp___divs               10028000     corelib1:COREDLL.dll
  0002:00000004       __imp_TerminateProcess     10028004     coredll:COREDLL.dll
  0002:00000008       __imp_RaiseException       10028008     coredll:COREDLL.dll
@@ -2597,7 +2597,7 @@
  0002:000006e4       g_pcsExit                  100286e4     <common>
  0002:000006e8       _pRawDllMain               100286e8     <common>
 
- entry point at        0001:00025554
+ entry point at        0001:00025560
 
  Static symbols
 
@@ -2607,7 +2607,7 @@
  0001:00007350       ?GetVideoStreamHeader@@YAHPAXIHPAEPAH@Z 10008350 f   fSsapMp4Parser.obj
  0001:00007580       ?GetVideoProfileAndSize@@YAHPAXIHPAH11@Z 10008580 f   fSsapMp4Parser.obj
  0001:0000cd44       ?EnsureThreadPriorityLevels@@YAXXZ 1000dd44 f   strmbase:wxutil.obj
- 0001:0001554c       __catch$43565              1001654c f   libmp4v2:mp4property.obj
- 0001:0002308c       ?MP4Printf@@YAXPBDZZ       1002408c f   libmp4v2:atom_dref.obj
- 0001:00025458       _DllMainCRTStartupHelper   10026458 f   corelib0:pegdmain.obj
- 0001:000256e8       doexit                     100266e8 f   corelib0:cexit.obj
+ 0001:0001554c       __catch$43566              1001654c f   libmp4v2:mp4property.obj
+ 0001:00023098       ?MP4Printf@@YAXPBDZZ       10024098 f   libmp4v2:atom_dref.obj
+ 0001:00025464       _DllMainCRTStartupHelper   10026464 f   corelib0:pegdmain.obj
+ 0001:000256f4       doexit                     100266f4 f   corelib0:cexit.obj

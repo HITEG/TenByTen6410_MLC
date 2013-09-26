@@ -465,8 +465,7 @@ PWR_Init(DWORD dwContext)
 {
     LPTSTR   szActiveKey = (LPTSTR)dwContext; // name of driver's active key
     HKEY     hDeviceKey = NULL;               // handle to driver's reg key
-    DWORD    dwEthKitlIntEnabled;
-    DWORD    dwValueLength;
+
 
     RETAILMSG(PWR_ZONE_ENTER, (_T("[PWR] ++%s(0x%08x)\r\n"), _T(__FUNCTION__), dwContext));
 

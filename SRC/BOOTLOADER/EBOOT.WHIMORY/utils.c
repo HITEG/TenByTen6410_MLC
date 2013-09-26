@@ -283,12 +283,5 @@ USHORT GetIPString(char *szDottedD)
     return cwNumChars;
 
 }
- void Delay(UINT32 usec)
-{
-    volatile int i, j = 0;
-    volatile static int loop = S3C6410_ACLK/100000;
-    
-    for(;usec > 0;usec--)
-        for(i=0;i < loop; i++) { j++; }
-}
+
 

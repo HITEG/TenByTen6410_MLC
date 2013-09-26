@@ -3,7 +3,7 @@
 
 
 
-char *getDebugUARTName(unsigned port);
+const char *getDebugUARTName(unsigned port);
 unsigned toggleDebugUART(unsigned port);
 
 #endif

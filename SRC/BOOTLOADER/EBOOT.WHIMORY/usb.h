@@ -13,6 +13,7 @@
 #define _USB_H_
 
 #include "image_cfg.h"
+#include "InterruptController.h"
 
 #if 0
 #define DBGUSB(x) EdbgOutputDebugString(x)
@@ -29,39 +30,12 @@ typedef unsigned long    ULONG;
 typedef unsigned short    u16;
 typedef unsigned char    u8;
 
-#define I2C0_BASE    (0xB2B04000) //(0x7C000000) -> 0x91800000
-
-enum IIC0_SFR			// Channel0, Added by SOP on 2008/03/01
-{
-	rIICCON0		= I2C0_BASE+0x00,
-	rIICSTAT0		= I2C0_BASE+0x04,
-	rIICADD0		= I2C0_BASE+0x08,
-	rIICDS0			= I2C0_BASE+0x0C,
-	rIICLC0			= I2C0_BASE+0x10
-};
-
-#define	SlaveRX			(0)
-#define	SlaveTX			(1)
-#define	MasterRX		(2)
-#define	MasterTX		(3)
-
-void Isr_IIC( void);
-void IIC_Open(ULONG ufreq);
-void IIC_Close(void);
-static void IIC_SetWrite(u8 cSlaveAddr, u8 * pData, ULONG uDataLen);
-static BOOL IIC_Wait(void);
-u8 IIC_Status(void);
-
-BOOL IIC_Write(u8 cSlaveAddr,  u8 cAddr, u8 cData);
-
 //<----
 
 #define DMABUFFER           (EBOOT_USB_BUFFER_CA_START)            // Actually this buffer is not for DMA, Just read/write with ARM
 #define USBOTG_LINK_BASE    (0xB1800000) //(0x7C000000) -> 0x91800000
 #define USBOTG_PHY_BASE     (0xB1900000) //(0x7C100000) -> 0x91900000
 
-// IRQ Exception Handler Address
-#define pISR        (*(volatile unsigned *)(DRAM_BASE_PA_START+0x18))        // Virtual Address 0x0 is mapped to 0x50000000, ISR Address is VA 0x18
 
 #define Outp32(addr, data)  (*(volatile UINT32 *)(addr) = (data))
 #define Outp16(addr, data)  (*(volatile UINT16 *)(addr) = (data))

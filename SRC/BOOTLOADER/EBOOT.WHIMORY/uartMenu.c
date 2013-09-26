@@ -29,7 +29,7 @@ const static char *debugUARTNames[]={
 "COM1","COM2","COM3","COM4","NONE",
 };
 
-char * getDebugUARTName(unsigned port)
+const char * getDebugUARTName(unsigned port)
 {
 	if(port<4) return debugUARTNames[port];
 

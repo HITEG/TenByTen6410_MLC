@@ -2,7 +2,7 @@
 #include "MegaDisplay.h"
 #include "s3c6410_ldi.h"
 #include "s3c6410_display_con.h"
-#include "usb.h"
+#include "iic.h"
 
 static unsigned g_initIIC=FALSE;
 static unsigned g_hasPCA9530=FALSE;
@@ -18,6 +18,8 @@ static const unsigned char pwmtable[32]  =
     0, 1, 2, 2, 2, 3, 3, 4, 5, 6, 7, 8, 10, 11, 13, 16, 19, 23,
     27, 32, 38, 45, 54, 64, 76, 91, 108, 128, 152, 181, 215, 255
 };
+
+extern void InitializeInterrupt(void);
 
 static void InitIIC()
 {
@@ -62,13 +64,8 @@ void identifyDisplay()
 	EdbgOutputDebugString("Display has LED backlight boost: %s\r\n", boost->name);
 	backlight(255);
 }
-static void delayLoop(int count)
-{
-    volatile int j,i;
-    for(j = 0; j < count; j++)
-        for(i=0;i<1000;i++);
-}
-
+extern char getChar();
+extern void Delay(int ms);
 void testPWM()
 {
 	unsigned i=0,tmp=0;
@@ -80,7 +77,7 @@ void testPWM()
 		tmp=( i++) % 256;
 		backlight(tmp );
 		EdbgOutputDebugString ("pwm: %d\r\n",tmp);
-		delayLoop(500);
+		Delay(500);
 	}
 }
 void beep(unsigned freq, unsigned delay)
@@ -160,7 +157,6 @@ void editDisplayMenu(unsigned type)
 	static tDevInfo pDeviceInfo;
 	unsigned current=1;
 	unsigned ch;
-	unsigned data;
 	int dir=1;
 	LDI_copyDisplay(&tmp,(HITEG_DISPLAY_TYPE)type );
 	while(1)
@@ -193,9 +189,9 @@ void editDisplayMenu(unsigned type)
 		*/
 		ch=getChar();
 
-		if(ch=='P' | ch=='p') dir=1;
-		//if(ch=='B' | ch=='b') testPWM();
-		if(ch=='M' | ch=='p') dir=-1;
+		if(ch=='P' || ch=='p') dir=1;
+		//if(ch=='B' || ch=='b') testPWM();
+		if(ch=='M' || ch=='p') dir=-1;
 		if(ch=='q' || ch=='Q') return;
 		if(ch>='1' && ch<='8') current=ch-'0';
 		/*

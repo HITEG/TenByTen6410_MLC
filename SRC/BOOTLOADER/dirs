@@ -14,7 +14,7 @@ DIRS=\
 	Eboot.Whimory\
 	NBL1.LSB\
 	NBL2\
-	NBL1.IROM_SD
+	BLCOMMON
 
 !if 0	# For FMD
 #    EBOOT \

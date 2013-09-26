@@ -33,7 +33,9 @@
 { IOCTL_HAL_SET_SYSTEM_LEVEL,               0,    OALIoCtlHalSetSystemLevel         },
 { IOCTL_HAL_PROFILE_DVS,                    0,    OALIoCtlHalProfileDVS             },
 { IOCTL_HAL_CLOCK_INFO,                     0,    OALIoCtlHalClockInfo              },
-{ IOCTL_HAL_POWERCTL,						0,    OALIoCtlHalPowerCTL               },
+{ IOCTL_HAL_POWERCTL,			    0,    OALIoCtlHalPowerCTL               },
+{ IOCTL_HAL_EBOOT_MAC,			    0,    OALIoCtlEBootMAC},
+
 // Required Termination
 { 0,                                        0,    NULL    }
 

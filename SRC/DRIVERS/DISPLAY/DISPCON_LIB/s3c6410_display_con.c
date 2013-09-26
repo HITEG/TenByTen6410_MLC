@@ -38,9 +38,15 @@ Notes:
 #include "s3c6410_display_con.h"
 #include "s3c6410_display_con_macro.h"
 
+#ifdef DEBUG
 #define DISP_MSG(x)    RETAILMSG(TRUE, x)
 #define DISP_INF(x)    RETAILMSG(TRUE, x)
 #define DISP_ERR(x)    RETAILMSG(TRUE, x)
+#else
+#define DISP_MSG(x)    
+#define DISP_INF(x)    
+#define DISP_ERR(x)    RETAILMSG(TRUE, x)
+#endif
 
 #define ITU601OUTPUT    (FALSE)
 

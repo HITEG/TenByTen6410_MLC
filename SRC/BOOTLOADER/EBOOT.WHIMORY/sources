@@ -32,6 +32,7 @@ INCLUDES=$(INCLUDES);$(_TARGETPLATROOT)\Src\Common\Nandflash\Fmd;
 INCLUDES=$(INCLUDES);$(_TARGETPLATROOT)\src\drivers\display\INC;
 INCLUDES=$(INCLUDES);$(_TARGETPLATROOT)\src\drivers\ExtPowerCTL\INC;
 INCLUDES=$(INCLUDES);$(_TARGETPLATROOT)\src\common\kitldrv\usbdbg\inc;
+
 INCLUDES=$(INCLUDES);$(_WINCEROOT)\platform\common\src\inc;
 INCLUDES=$(INCLUDES);$(_TARGETPLATROOT)\src\Whimory\Inc;$(_TARGETPLATROOT)\src\Whimory\Core\VFL;$(_TARGETPLATROOT)\src\Whimory\OAM\OSLess;
 
@@ -73,7 +74,6 @@ TARGETLIBS= \
     $(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\fulllibc.lib           \
     $(_COMMONOAKROOT)\lib\$(_CPUINDPATH)\gsnull.lib             \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_args.lib      \
-#    $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_pm.lib        \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\extpowerctl_lib.lib  \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_disp_lib.lib  \
     $(_TARGETPLATROOT)\lib\$(_CPUINDPATH)\s3c6410_ldi_lib.lib   \
@@ -87,9 +87,7 @@ TARGETLIBS= \
     $(_TARGETPLATROOT)\src\Whimory\Lib\$(_TGTCPU)\$(WINCEDEBUG)\wmrglobal.lib	\
     $(_TARGETPLATROOT)\src\Whimory\Lib\$(_TGTCPU)\$(WINCEDEBUG)\bootpart.lib        \
     $(_TARGETPLATROOT)\src\Whimory\Lib\$(_TGTCPU)\$(WINCEDEBUG)\WMR_Utils.lib	\
-	
-	
-	
+    	
 SOURCES= \
     main.c \
     debug.c \
@@ -103,8 +101,8 @@ SOURCES= \
     utils.c \
     DisplayMenu.c \
     LogoCraft.c \
-    uartMenu.c \
     InterruptController.c \
+    i2c.c \
 
 
 ARM_SOURCES =    \
@@ -122,6 +120,6 @@ FILE_VIEW_INCLUDES_FOLDER= \
     PWRCTL_MENU.h \
     usb.h \
     utils.h \
-    debugUART.h \
     InterruptController.h \
+    iic.h \
 

@@ -33,7 +33,7 @@
 	"sysintr"=dword:12 
 	"Int_Active_High"=dword:1
 	"Flow_Control_Enable"=dword:1
-	"MAC_Load_Mode"=dword:0
+	"MAC_Load_Mode"=dword:5
 	"MAC_ADDR_0"=dword:10
 	"MAC_ADDR_1"=dword:23
 	"MAC_ADDR_2"=dword:45

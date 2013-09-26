@@ -933,8 +933,6 @@ BOOL ReadFBImageFromBootMedia()
 BOOL WriteFPImageToBootMedia()
 {
     LowFuncTbl *pLowFuncTbl;
-
-    UINT32 dwStartPage, dwNumPage, dwPage;
     UINT32 dwStartBlock, dwNumBlock, dwBlock;
     UINT32 dwPageOffset;
     INT32 nRet;
@@ -1061,6 +1059,8 @@ MarkAndSkipBadBlock:
 	}
 
 	OALMSG(TRUE, (TEXT("Write Framebuffer to BootMedia Success\r\n")));
+
+	return TRUE;
 }
 
 BOOL WriteRawImageToBootMedia(DWORD dwImageStart, DWORD dwImageLength, DWORD dwLaunchAddr)

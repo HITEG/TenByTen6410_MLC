@@ -1,0 +1,12 @@
+LIBRARY WDG
+EXPORTS
+	WDG_Close
+	WDG_Deinit
+	WDG_Init
+	WDG_IOControl
+	WDG_Open
+	WDG_PowerDown
+	WDG_PowerUp
+	WDG_Read
+	WDG_Seek
+	WDG_Write

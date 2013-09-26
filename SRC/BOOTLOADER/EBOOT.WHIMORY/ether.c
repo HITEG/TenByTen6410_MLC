@@ -76,7 +76,7 @@ BOOL InitEthDevice(PBOOT_CFG pBootCfg)
     // Use the MAC address programmed into flash by the user.
     //
     memcpy(pBSPArgs->kitl.mac, pBootCfg->EdbgAddr.wMAC, 6);
-
+	memcpy(pBSPArgs->uuid, pBootCfg->EdbgAddr.wMAC, 6);
     // Use the CS8900A Ethernet controller for download.
     //
 	pfnEDbgInit      = DM9000DBG_Init;

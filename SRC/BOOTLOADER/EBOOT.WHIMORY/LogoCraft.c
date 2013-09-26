@@ -8,6 +8,7 @@
 // IF NOT DECLARED CORRECTLY other functions will not work
 // USB download for example!
 
+/* hiteg logo */
 static const BOOT_LOGO logo={
 205,88,16,0x00FFFFFF,
 0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
@@ -2266,7 +2267,7 @@ static const BOOT_LOGO logo={
 0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
 0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
 
-};
+}; /* HITEG Logo */
 
 extern DWORD OEMgetDisplayType();
 extern void LDI_clearScreen(int framebuffer, DWORD color);
@@ -2295,11 +2296,11 @@ void displayLogo()
 {
 		DWORD scr_width, scr_height, dst_w, dst_h;
 
-		int xstart, ystart, ix, iy;
+		unsigned  xstart, ystart, ix, iy;
 		
 		unsigned short *data;
-		DWORD pixel;
-		DWORD dst_idx, src_idx;
+
+		DWORD dst_idx;
 		DWORD offset;
 		void (*setPixel)(unsigned idx,unsigned color);
 

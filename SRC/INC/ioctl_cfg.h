@@ -34,8 +34,8 @@ extern "C" {
 //
 //  Defines the platform type and OEM string.
 //
-#define IOCTL_PLATFORM_TYPE        (L"SMDK6410")
-#define IOCTL_PLATFORM_OEM        (L"Samsung SMDK6410")
+#define IOCTL_PLATFORM_TYPE        (L"TenByTen6410 MLC")
+#define IOCTL_PLATFORM_OEM        (L"HITEG Limited TenByTen64106410")
 
 //------------------------------------------------------------------------------
 //  Define:  IOCTL_PROCESSOR_VENDOR/NAME/CORE
@@ -67,7 +67,7 @@ extern "C" {
 #define IOCTL_HAL_PROFILE_DVS               CTL_CODE(FILE_DEVICE_UNKNOWN, 2102, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_HAL_CLOCK_INFO                CTL_CODE(FILE_DEVICE_UNKNOWN, 2103, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_HAL_POWERCTL                  CTL_CODE(FILE_DEVICE_UNKNOWN, 2104, METHOD_BUFFERED, FILE_ANY_ACCESS)
-
+#define IOCTL_HAL_EBOOT_MAC                 CTL_CODE(FILE_DEVICE_UNKNOWN, 2105, METHOD_BUFFERED, FILE_ANY_ACCESS)
 BOOL OALIoCtlHalGetCPUID(
     UINT32 code, void *pInBuffer, UINT32 inSize, void *pOutBuffer,
     UINT32 outSize, UINT32 *lpBytesReturned );

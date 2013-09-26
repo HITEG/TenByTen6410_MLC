@@ -18,8 +18,9 @@ set BSP_IROM_SDMMC_CH1_BOOT=
 
 set WINCEREL=1
 
-set ENABLE_WATCH_DOG=
-set BSP_NOWATCHDOG=1
+set PRJ_INCLUDE_LUA=1
+
+set BSP_NOWATCHDOG=
 
 set BSP_NODISPLAY=
 set BSP_NOBACKLIGHT=1
@@ -57,7 +58,7 @@ set BSP_NOCMM=
 set BSP_NOUAO=
 
 set BSP_NOSERIAL=
-set BSP_NOUART0=1
+set BSP_NOUART0=
 set BSP_NOUART1=
 set BSP_NOUART2=
 set BSP_NOUART3=
@@ -77,6 +78,11 @@ set BSP_NO_SDIO_WIFI=
 set BSP_NOGPIO= 
 set BSP_NOEXTPOWERCTL =
 
+set BSP_RT2870=
+set BSP_RT2501=
+
+set BSP_NOUSBCAM=1
+
 @REM If you want to exclude USB Function driver in BSP. Set this variable
 set BSP_NOUSBFN=
 @REM This select default function driver
@@ -86,7 +92,7 @@ set BSP_USBFNCLASS=SERIAL
 @REM DVFS is not yet implemented.
 set BSP_USEDVS=
 
-set BSP_DEBUGPORT=SERIAL_UART0
+@REM set BSP_DEBUGPORT=SERIAL_UART0
 @REM set BSP_DEBUGPORT=SERIAL_UART1
 @REM set BSP_DEBUGPORT=SERIAL_UART2
 @REM set BSP_DEBUGPORT=SERIAL_UART3
@@ -145,7 +151,7 @@ set SYSGEN_SAMPLEXAMLPERF=1
 @REM Need to sysgen. Choose only one or no Renderer Plugin.
 @REM Default Renderer Plugin is GDI Renderer
 @REM DDRAW has no other prerequisite.
-set BSP_XRPLUGIN_DDRAW=1
+set BSP_XRPLUGIN_DDRAW=
 @REM Silverlight OPENGL Renderer Plugin requires Shaders.dll,
 @REM Because 6410 has no runtime shader compiler.
 @REM This option will build SAMPLES\SHADERS also.
@@ -154,7 +160,7 @@ set BSP_XRPLUGIN_DDRAW=1
 @REM if Silverlight doesn't work correctly, ex) Shader Loading Error
 @REM you can try to build SAMPLES\XRRENDEREROPENGL
 @REM that's also forked from PUBLIC codes
-set BSP_XRPLUGIN_OPENGL=
+set BSP_XRPLUGIN_OPENGL=1
 
 @REM ******** DDR Size Setting ******************
 @REM BSP_DRAM128 and BSP_DRAM256 cannot be enabled  together due to hardware

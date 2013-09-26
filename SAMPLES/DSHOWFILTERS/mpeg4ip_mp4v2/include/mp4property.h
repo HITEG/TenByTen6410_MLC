@@ -441,7 +441,7 @@ public:
     }
 
     u_int32_t GetCount() {
-      return m_pCountProperty->GetValue();
+      return (u_int32_t)m_pCountProperty->GetValue();
     }
     void SetCount(u_int32_t count) {
       m_pCountProperty->SetValue(count);

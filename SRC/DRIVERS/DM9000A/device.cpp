@@ -8,6 +8,7 @@
  *
  ********************************************************************************/
 #include "device.h"
+#include <bsp.h>
 
 /********************************************************************************
  *
@@ -109,6 +110,8 @@ U32 NIC_DEVICE_OBJECT::DeviceCalculateCRC32(
 
 #endif
 
+#include <oal_kitl.h>
+#include <bsp_args.h>
 
 U32 NIC_DEVICE_OBJECT::DeviceCalculateCRC32(
     PU8 ptrBuffer,
@@ -239,6 +242,27 @@ PU8  NIC_DEVICE_OBJECT::DeviceMacAddress(
             *(PU8)(ptrBuffer + 5) = save_Random_mac[2];
 
             break;
+		case 0x05:		// use MAC gave for KITL ethernet in eBoot loader...well
+			{
+				unsigned char mac[6];
+				DWORD dwBytesRet;
+				if (   KernelIoControl (IOCTL_HAL_EBOOT_MAC, NULL, 0, mac, sizeof(char[6]), &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
+                        && (dwBytesRet == ( sizeof(char[6])) ))
+				{
+					RETAILMSG(TRUE,(TEXT("[DM9ISA] MAC %x:%x:%x:%x:%x:%x retrieved\r\n"),mac[0],mac[1],mac[2],mac[3],mac[4],mac[5]));
+					*(PU8)(ptrBuffer + 0) = mac[0];
+					*(PU8)(ptrBuffer + 1) = mac[1];
+					*(PU8)(ptrBuffer + 2) = mac[2];
+					*(PU8)(ptrBuffer + 3) = mac[3];
+					*(PU8)(ptrBuffer + 4) = mac[4];
+					*(PU8)(ptrBuffer + 5) = mac[5];			
+				}
+				else
+				{
+					RETAILMSG(TRUE,(TEXT("[DM9ISA] Error getting Eboot MAC from args section via Kernel IOCTL!!!\r\n")));
+				}
+			}
+			break;
     }
     
     RETAILMSG(TRUE, (TEXT("[DM9ISA]: MAC address is = %02x : %02x : %02x : %02x : %02x : %02x  \r\n"),

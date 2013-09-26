@@ -68,11 +68,11 @@ void MP4MdhdAtom::Generate()
     // set creation and modification times
     MP4Timestamp now = MP4GetAbsTimestamp();
     if (version == 1) {
-        ((MP4Integer64Property*)m_pProperties[2])->SetValue(now);
-        ((MP4Integer64Property*)m_pProperties[3])->SetValue(now);
+        ((MP4Integer64Property*)m_pProperties[2])->SetValue((u_int32_t)now);
+        ((MP4Integer64Property*)m_pProperties[3])->SetValue((u_int32_t)now);
     } else {
-        ((MP4Integer32Property*)m_pProperties[2])->SetValue(now);
-        ((MP4Integer32Property*)m_pProperties[3])->SetValue(now);
+        ((MP4Integer32Property*)m_pProperties[2])->SetValue((u_int32_t)now);
+        ((MP4Integer32Property*)m_pProperties[3])->SetValue((u_int32_t)now);
     }
 }
 

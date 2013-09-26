@@ -94,21 +94,25 @@ void __drawLineV24(int x,int y, int h)
 
 void __drawLineH(int x,int y, int w)
 {
-	if(bpp==16) return __drawLineH16(x,y,w);
-	__drawLineH24(x,y,w);
+	if(bpp==16) {
+		__drawLineH16(x,y,w);
+	}else{
+		__drawLineH24(x,y,w);}
 }
 void __drawLineV(int x,int y, int h)
 {
-	if(bpp==16) return __drawLineV16(x,y,h);
-	__drawLineV24(x,y,h);
+	if(bpp==16) {
+		__drawLineV16(x,y,h);}
+	else{
+		__drawLineV24(x,y,h);}
 }
 extern void displayLogo();
 
 void __TestPattern()
 {
 	DWORD scr_width, scr_height;
-	int n,m=0;
-	int step=128;
+	unsigned  n,m=0;
+	unsigned step=128;
 	LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, 0x00FFFFFF); //white screen
 	// black lines
 	scr_width=OEMGetWidth();
@@ -142,6 +146,9 @@ void __TestPattern()
 		
 	}
 }
+extern unsigned OEMgetLCDBpp();
+extern unsigned OEMgetBGColor();
+extern void OEMsetBGColor(unsigned c);
 
 void DisplayMenu(DWORD *displayType)
 {

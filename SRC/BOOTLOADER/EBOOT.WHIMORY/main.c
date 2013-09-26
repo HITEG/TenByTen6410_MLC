@@ -45,7 +45,6 @@
 #include "LogoCraft.h"
 #include "MegaDisplay.h"
 
-
 //#include <WMR_Eboot.h>
 
 
@@ -60,6 +59,7 @@ extern void InitializeInterrupt();
 extern BOOL UbootReadData(DWORD cbData, LPBYTE pbData);
 extern void OTGDEV_SetSoftDisconnect();
 static void InitializeOTGCLK(void);
+
 
 // For Ethernet Download function.
 char *inet_ntoa(DWORD dwIP);
@@ -396,7 +396,8 @@ static void SetCS8900MACAddress(PBOOT_CFG pBootCfg)
 
 char* BootDeviceString[NUM_BOOT_DEVICES] =
 {
-    "Ethernet", "USB_Serial", "USB_RNDIS", "*USB_DNW"
+    "Ethernet", "USB_Serial", "USB_RNDIS", "*USB_DNW", "TF Card",
+
 };
 
 
@@ -412,7 +413,8 @@ char* BootDeviceString[NUM_BOOT_DEVICES] =
 static void PrintMainMenu(PBOOT_CFG pBootCfg)
 {
     int i=0;
-    EdbgOutputDebugString ( "\r\nEthernet Boot Loader Configuration:\r\n\r\n");
+	EdbgOutputDebugString ( "\r\n-------------------------------------------\r\n");
+    EdbgOutputDebugString ( "Ethernet Boot Loader Configuration:\r\n\r\n");
     EdbgOutputDebugString ( "----------- Connectivity Settings ------------\r\n");
     EdbgOutputDebugString ( "0) IP address  : [%s]\r\n",inet_ntoa(pBootCfg->EdbgAddr.dwIP));
     EdbgOutputDebugString ( "1) Subnet mask : [%s]\r\n", inet_ntoa(pBootCfg->SubnetMask));
@@ -463,6 +465,9 @@ static void PrintMainMenu(PBOOT_CFG pBootCfg)
 	EdbgOutputDebugString ( "U) external Power modules config: [%s]\r\n",PWRCTL_isDefault((unsigned char)(OEMgetPowerCTL() & 0xff)));
     EdbgOutputDebugString ( "\r\n--------- Display and Logo section  ------\r\n");
     EdbgOutputDebugString ( "G) LCD attached: %s with %d Bit RGB\r\n", LDI_getDisplayName((HITEG_DISPLAY_TYPE)pBSPArgs->displayType ), OEMgetLCDBpp());
+	EdbgOutputDebugString ( "\r\n--------- Test Section --------\r\n");
+	EdbgOutputDebugString ( "O) SD Card Tools\r\n");
+	EdbgOutputDebugString ( "\r\n-------------------------------\r\n");
     EdbgOutputDebugString ( "\r\n\r\nEnter your selection: ");
 }
 
@@ -830,6 +835,7 @@ static BOOL MainMenu(PBOOT_CFG pBootCfg)
             }
 			bConfigChanged = TRUE;
 			break;	
+			
 #if 0
 		case 'Z': 
 		case 'z': 
@@ -1170,6 +1176,7 @@ BOOL OEMPlatformInit(void)
 
     // Try to initialize the boot media block driver and BinFS partition.
     //
+
     OALMSG(OAL_INFO, (TEXT("BP_Init\r\n")));
 
     memset(&RegInfo, 0, sizeof(PCI_REG_INFO));
@@ -1962,10 +1969,6 @@ InitializeDisplay();
 
 void InitializeDisplay(void)
 {
-	unsigned short rgb16;
-	DWORD n;
-	unsigned long pixels;
-
 	static tDevInfo RGBDevInfo;
     volatile S3C6410_GPIO_REG *pGPIOReg = (S3C6410_GPIO_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_GPIO, FALSE);
     volatile S3C6410_DISPLAY_REG *pDispReg = (S3C6410_DISPLAY_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_DISPLAY, FALSE);

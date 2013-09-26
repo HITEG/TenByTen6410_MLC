@@ -16,7 +16,6 @@ DIRS=\
 	ExtPowerCTL\
 	PowerControl\
 	HSMMC\
-	IIC\
 	Keybd\
 	OTG\
 	Serial\
@@ -34,5 +33,7 @@ DIRS=\
 	GPIODrv\
 	POWERBUTTON\
 	Led\
-	DM9000A
+	DM9000A\
+	I2C\
+	WATCHDOG
 

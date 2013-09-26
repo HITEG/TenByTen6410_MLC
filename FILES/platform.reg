@@ -539,7 +539,7 @@ IF BSP_NOPWRBTN !
     "Dll"="smdk6410_PwrBtn.dll"
     "Prefix"="PWR"
     "Order"=dword:2
-    "FriendlyName"="SMDK6410 Power Button Driver"
+    "FriendlyName"="TenByTen6410 Power Button Driver"
 ;   "IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"   ; Power-manageable generic
 ENDIF BSP_NOPWRBTN !
 ; @CESYSGEN ENDIF DEVICE_PMIF
@@ -562,7 +562,7 @@ IF BSP_NOI2C !
 ;; I2C Bus Driver
 [HKEY_LOCAL_MACHINE\Drivers\BuiltIn\IIC]
     "Prefix"="IIC"
-    "Dll"="s3c6410_iic.dll"
+	"Dll"="i2c.dll"
     "Order"=dword:1				; 5 -> 1, Now LDI depends on this
     "Index"=dword:0
     "Mode"=dword:1              ; Mode: 0 = POLLING, 1 = INTERRUPT
@@ -1035,23 +1035,148 @@ IF BSP_NO_LED !
     "Index"=dword:1
 ENDIF BSP_NO_LED !
 ;-------------------- GPIO --------------------
-IF BSP_NOGPIO !
-[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\GPIO]
-    "Dll"="GPIO.dll"
-    "Prefix"="PIO"
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\gpio]
+    "Dll"="gpio.dll"
+    "Prefix"="GIO"
     "Order"=dword:0
     "Index"=dword:1  
-    "FriendlyName" = "GPIO Driver"
-ENDIF BSP_NOGPIO !
+    "FriendlyName" = "TenByTenb6410 GPIO Driver"
+
 
 IF BSP_NOEXTPOWERCTL !
 #include "$(_winceroot)\platform\tenbyten6410_mlc\src\drivers\extpowerctl\extpowerctl_drv\epctl.reg"
 ENDIF BSP_NOEXTPOWERCTL !
-;IF BSP_NO_SDIO_WIFI
+
+IF BSP_NOWATCHDOG !
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\WDGDriver]
+	"Prefix"="WDG"
+	"Dll"="watchdog.dll"
+	"Order"="200"
+ENDIF BSP_NOWATCHDOG !
+
+IF BSP_NO_SDIO_WIFI !
 #include "$(_TARGETPLATROOT)\Src\Drivers\MAVELL_WIFI\SDIO8686.reg"
-;ENDIF BSP_NO_SDIO_WIFI !
+ENDIF BSP_NO_SDIO_WIFI !
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Ethernet (for RT2501 based USB_Wifi chip)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF BSP_RT2501 !
+[HKEY_LOCAL_MACHINE\Comm\RT2501USB]
+	"DisplayName"="Ralink RT2501USB Wireless LAN Driver"
+	"Group"="NDIS"
+	"ImagePath"="RT2501USB.DLL"
 
+[HKEY_LOCAL_MACHINE\Drivers\USB\LoadClients\Default\Default\Default\RT2501USB]
+	"Dll"="RT2501USB.DLL"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\RT2501USB]
+	"Dll"="RT2501USB.DLL"
+
+[HKEY_LOCAL_MACHINE\Comm\RT2501USB1\Parms]
+	"BusNumber"=dword:0
+	"BusType"=dword:0
+	"SSID"="RT2501USB"
+	"CountryRegion"=dword:5
+	"OpMode"=dword:0
+	"RtsThresh"=dword:92B
+	"FragThresh"=dword:92A
+	"Encryption"=dword:1
+	"AuthenType"=dword:0
+	"NetworkType"=dword:1
+	"ProviderName"="Ralink Technology, Inc."
+	"VendorDesc"="RT71W 802.11 b/g Wireless Card."
+	"WEPKeyUse"=dword:3
+	"WEPKey1"="12345678901234567890123456"
+	"WEPKey2"="12345678901234567890123456"
+	"WEPKey3"="12345678901234567890123456"
+	"WEPKey4"="12345678901234567890123456"
+	"WPAPSK"="3f348c1f8f8c8c701bac7b528e349ce2e647dfeb124f3be9f3d593fd054e7321"
+
+[HKEY_LOCAL_MACHINE\Comm\RT2501USB1\Parms\TcpIp]
+	"EnableDHCP"=dword:1
+	"DefaultGateway"=multi_sz:""
+	"IpAddress"=multi_sz:""
+	"Subnetmask"=multi_sz:""
+	"DNS"="221.21.4.130"
+	;"WINS"=""
+ENDIF BSP_RT2501 !
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Ethernet (for RT2870 based USB_Wifi chip)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IF BSP_RT2870 !
+[HKEY_LOCAL_MACHINE\Comm\RT2870]
+	"DisplayName"="RT2870 b/g/n Wireless LAN Driver"
+	"Group"="NDIS"
+	"ImagePath"="RT2870.dll"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\LoadClients\Default\Default\Default\RT2870]
+	"Dll"="RT2870.DLL"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\RT2870]
+	"Dll"="RT2870.DLL"
+	"Flags"=dword:1000
+
+[HKEY_LOCAL_MACHINE\Comm\RT28701\Parms]
+	"CustomizedVID"=dword:148f				; hex
+	"CustomizedPID"=dword:2673				; hex
+	"CustomizedControlFlag"=dword:2			; 0: Use internal table, 1: Use external pair, 2: both
+
+	"BusNumber"=dword:0
+	"BusType"=dword:0
+;
+	"OpMode"=dword:0
+	"WirelessMode"=dword:5
+	"Channel"=dword:1
+	"CountryRegion"=dword:5
+	"CountryRegionABand"=dword:7
+	"RtsThresh"=dword:92B
+	"FragThresh"=dword:92A
+	"Encryption"=dword:0
+	"AuthenType"=dword:0
+	"AutoReconnect"=dword:1
+	"NetworkType"=dword:1
+	"SSID"="RT2870AP"
+; 11n
+	"BACapability"=dword:07034020
+	"TransmitSetting"=dword:2ba15
+
+	"ProviderName"="Ralink Technology, Inc."
+	"VendorDesc"="RT2870 802.11 b/g Wireless Card."
+	"WEPKeyUse"=dword:1
+	"WEPKey1"=""
+	"WEPKey2"=""
+	"WEPKey3"=""
+	"WEPKey4"=""
+
+[HKEY_LOCAL_MACHINE\Comm\RT28701\Parms\TcpIp]
+	"EnableDHCP"=dword:1
+	;"DefaultGateway"=multi_sz:"192.168.2.254"
+	;"IpAddress"=multi_sz:"192.168.2.234"
+	;"Subnetmask"=multi_sz:"255.255.255.0"
+	;"DNS"="221.21.4.130"
+	;"DNS"=""
+	;"WINS"=""
+
+;
+; Strong recommend install 2007M6 QFE, if you want to higer USB performance
+;
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\PCI\Template\EHCI]
+	"IntThreshCtrl"=dword:1        ; 1~8 microframe   ( 1 microframe = 125us)
+ENDIF BSP_RT2870 !
+
+IF BSP_NOUSBCAM !
+;#include "$(DRIVERS_DIR)\USBCAM\usbcam.reg"
+[HKEY_LOCAL_MACHINE\Drivers\USB\LoadClients\Default\Default\14\Camera_Class]
+   "Prefix"="CAM"
+   "Dll"="USBCAM.DLL"
+
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers\Camera_Class]
+   "Prefix"="CAM"
+   "Dll"="USBCAM.DLL"
+ENDIF BSP_NOUSBCAM !
 ;============wave Volume=================
 [HKEY_CURRENT_USER\ControlPanel\Volume]
         "Volume"=dword:FFFFFFFF ; 0=off, 0xFFFFFFFF=maximum 

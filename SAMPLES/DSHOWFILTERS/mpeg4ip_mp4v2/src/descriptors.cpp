@@ -72,7 +72,7 @@ void MP4IODescriptor::Generate()
 
 void MP4IODescriptor::Mutate()
 {
-    bool urlFlag = ((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
+    bool urlFlag = bool (((MP4BitfieldProperty*)m_pProperties[1])->GetValue());
 
     m_pProperties[4]->SetImplicit(!urlFlag);
     for (u_int32_t i = 5; i <= 12; i++) {
@@ -115,7 +115,7 @@ void MP4ODescriptor::Generate()
 
 void MP4ODescriptor::Mutate()
 {
-    bool urlFlag = ((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
+    bool urlFlag =(bool) (((MP4BitfieldProperty*)m_pProperties[1])->GetValue());
 
     m_pProperties[3]->SetImplicit(!urlFlag);
     for (u_int32_t i = 4; i <= 6; i++) {
@@ -191,15 +191,15 @@ MP4ESDescriptor::MP4ESDescriptor()
 void MP4ESDescriptor::Mutate()
 {
     bool streamDependFlag = 
-        ((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
+        (bool)((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
     m_pProperties[5]->SetImplicit(!streamDependFlag);
 
     bool urlFlag = 
-        ((MP4BitfieldProperty*)m_pProperties[2])->GetValue();
+        (bool)((MP4BitfieldProperty*)m_pProperties[2])->GetValue();
     m_pProperties[6]->SetImplicit(!urlFlag);
 
     bool ocrFlag = 
-        ((MP4BitfieldProperty*)m_pProperties[3])->GetValue();
+        (bool)((MP4BitfieldProperty*)m_pProperties[3])->GetValue();
     m_pProperties[7]->SetImplicit(!ocrFlag);
 }
 
@@ -377,14 +377,14 @@ void MP4SLConfigDescriptor::Mutate()
     }
 
     bool durationFlag = 
-        ((MP4BitfieldProperty*)m_pProperties[8])->GetValue();
+        (bool)((MP4BitfieldProperty*)m_pProperties[8])->GetValue();
 
     for (i = 19; i <= 21; i++) {
         m_pProperties[i]->SetImplicit(!durationFlag);
     }
 
     bool useTimeStampsFlag = 
-        ((MP4BitfieldProperty*)m_pProperties[6])->GetValue();
+        (bool)((MP4BitfieldProperty*)m_pProperties[6])->GetValue();
 
     for (i = 22; i <= 23; i++) {
         m_pProperties[i]->SetImplicit(useTimeStampsFlag);
@@ -450,9 +450,9 @@ void MP4ContentIdDescriptor::Read(MP4File* pFile)
     /* which allows us to reconfigure ourselves */
     Mutate();
 
-    bool contentTypeFlag = ((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
+    bool contentTypeFlag = (bool)((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
 
-    bool contentIdFlag = ((MP4BitfieldProperty*)m_pProperties[2])->GetValue();
+    bool contentIdFlag = (bool)((MP4BitfieldProperty*)m_pProperties[2])->GetValue();
 
   if (contentIdFlag) {
 
@@ -476,10 +476,10 @@ void MP4ContentIdDescriptor::Read(MP4File* pFile)
 
 void MP4ContentIdDescriptor::Mutate()
 {
-    bool contentTypeFlag = ((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
+    bool contentTypeFlag = (bool)((MP4BitfieldProperty*)m_pProperties[1])->GetValue();
     m_pProperties[5]->SetImplicit(!contentTypeFlag);
 
-    bool contentIdFlag = ((MP4BitfieldProperty*)m_pProperties[2])->GetValue();
+    bool contentIdFlag = (bool)((MP4BitfieldProperty*)m_pProperties[2])->GetValue();
     m_pProperties[6]->SetImplicit(!contentIdFlag);
     m_pProperties[7]->SetImplicit(!contentIdFlag);
 

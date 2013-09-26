@@ -1,0 +1,131 @@
+ i2c
+
+ Timestamp is 5243da1c (Thu Sep 26 14:54:20 2013)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000122H .rdata                  CODE
+ 0001:00000124 00000020H .rdata$debug            CODE
+ 0001:00000144 000011c0H .text                   CODE
+ 0001:00001304 00000014H .xdata                  CODE
+ 0001:00001318 00000014H .idata$2                CODE
+ 0001:0000132c 00000014H .idata$3                CODE
+ 0001:00001340 0000008cH .idata$4                CODE
+ 0001:000013cc 0000000cH .idata$6                CODE
+ 0001:000013e0 000000ffH .edata                  CODE
+ 0002:00000000 0000008cH .idata$5                DATA
+ 0002:0000008c 00000004H .bss                    DATA
+ 0003:00000000 000000e0H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:000000b0       ??_C@_1EK@CMKFEOHP@?$AAI?$AA2?$AAC?$AA_?$AAI?$AAS?$AAT?$AA?$FL?$AA?$CF?$AAu?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$FN?$AA?3?$AA?5?$AAA?$AAC?$AAK?$AA?5?$AAN?$AAO?$AAT?$AA?5?$AAr?$AAe?$AAc?$AAe?$AAi?$AAv?$AAe@ 100010b0     i2c.obj
+ 0001:000000fc       ??_C@_1BK@BCFMDHJH@?$AAS?$AAl?$AAa?$AAv?$AAe?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$AA@ 100010fc     drv.obj
+ 0001:00000118       ??_C@_19OBGHODPD@?$AAM?$AAo?$AAd?$AAe?$AA?$AA@ 10001118     drv.obj
+ 0001:00000144       InitRegs                   10001144 f   i2c.obj
+ 0001:000001e4       HW_Deinit                  100011e4 f   i2c.obj
+ 0001:000002c0       HW_Open                    100012c0 f   i2c.obj
+ 0001:000002c8       HW_Close                   100012c8 f   i2c.obj
+ 0001:000005c8       HW_PowerUp                 100015c8 f   i2c.obj
+ 0001:000005f0       HW_PowerDown               100015f0 f   i2c.obj
+ 0001:00000628       HW_PowerCapabilities       10001628 f   i2c.obj
+ 0001:00000664       HW_PowerSet                10001664 f   i2c.obj
+ 0001:00000684       HW_PowerGet                10001684 f   i2c.obj
+ 0001:00000694       HW_Init                    10001694 f   i2c.obj
+ 0001:000007fc       SyncIst                    100017fc f i i2c.obj
+ 0001:00000880       HW_Read                    10001880 f   i2c.obj
+ 0001:00000a18       HW_Write                   10001a18 f   i2c.obj
+ 0001:00000b58       DllEntry                   10001b58 f   drv.obj
+ 0001:00000b60       GetRegistryData            10001b60 f   drv.obj
+ 0001:00000cd8       I2C_Deinit                 10001cd8 f   drv.obj
+ 0001:00000d50       I2C_Init                   10001d50 f   drv.obj
+ 0001:00000dcc       I2C_Open                   10001dcc f   drv.obj
+ 0001:00000df0       I2C_Close                  10001df0 f   drv.obj
+ 0001:00000e14       I2C_Write                  10001e14 f   drv.obj
+ 0001:00000e1c       I2C_Read                   10001e1c f   drv.obj
+ 0001:00000e24       I2C_IOControl              10001e24 f   drv.obj
+ 0001:000010bc       I2C_Seek                   100020bc f   drv.obj
+ 0001:000010c4       I2C_PowerUp                100020c4 f   drv.obj
+ 0001:000010d4       I2C_PowerDown              100020d4 f   drv.obj
+ 0001:000010e4       EventModify                100020e4 f   coredll:COREDLL.dll
+ 0001:000010f4       __GetUserKData             100020f4 f   coredll:COREDLL.dll
+ 0001:00001104       LeaveCriticalSection       10002104 f   coredll:COREDLL.dll
+ 0001:00001114       EnterCriticalSection       10002114 f   coredll:COREDLL.dll
+ 0001:00001124       DeleteCriticalSection      10002124 f   coredll:COREDLL.dll
+ 0001:00001134       InterruptDisable           10002134 f   coredll:COREDLL.dll
+ 0001:00001144       CloseHandle                10002144 f   coredll:COREDLL.dll
+ 0001:00001154       NKDbgPrintfW               10002154 f   coredll:COREDLL.dll
+ 0001:00001164       ExitThread                 10002164 f   coredll:COREDLL.dll
+ 0001:00001174       InterruptDone              10002174 f   coredll:COREDLL.dll
+ 0001:00001184       WaitForSingleObject        10002184 f   coredll:COREDLL.dll
+ 0001:00001194       SetInterruptEvent          10002194 f   coredll:COREDLL.dll
+ 0001:000011a4       GetLastError               100021a4 f   coredll:COREDLL.dll
+ 0001:000011b4       CeSetThreadPriority        100021b4 f   coredll:COREDLL.dll
+ 0001:000011c4       CreateThread               100021c4 f   coredll:COREDLL.dll
+ 0001:000011d4       InterruptInitialize        100021d4 f   coredll:COREDLL.dll
+ 0001:000011e4       KernelIoControl            100021e4 f   coredll:COREDLL.dll
+ 0001:000011f4       CreateEventW               100021f4 f   coredll:COREDLL.dll
+ 0001:00001204       InitializeCriticalSection  10002204 f   coredll:COREDLL.dll
+ 0001:00001214       IsBadWritePtr              10002214 f   coredll:COREDLL.dll
+ 0001:00001224       IsBadReadPtr               10002224 f   coredll:COREDLL.dll
+ 0001:00001234       RegCloseKey                10002234 f   coredll:COREDLL.dll
+ 0001:00001244       RegQueryValueExW           10002244 f   coredll:COREDLL.dll
+ 0001:00001254       OpenDeviceKey              10002254 f   coredll:COREDLL.dll
+ 0001:00001264       VirtualCopy                10002264 f   coredll:COREDLL.dll
+ 0001:00001274       VirtualAlloc               10002274 f   coredll:COREDLL.dll
+ 0001:00001284       LocalFree                  10002284 f   coredll:COREDLL.dll
+ 0001:00001294       VirtualFree                10002294 f   coredll:COREDLL.dll
+ 0001:000012a4       LocalAlloc                 100022a4 f   coredll:COREDLL.dll
+ 0001:000012b4       SetLastError               100022b4 f   coredll:COREDLL.dll
+ 0001:000012c4       MapPtrToProcess            100022c4 f   coredll:COREDLL.dll
+ 0001:000012d4       GetCallerProcess           100022d4 f   coredll:COREDLL.dll
+ 0001:000012e4       __C_specific_handler       100022e4 f   corelib1:COREDLL.dll
+ 0001:000012f4       memset                     100022f4 f   corelib1:COREDLL.dll
+ 0001:00001318       __IMPORT_DESCRIPTOR_COREDLL 10002318     coredll:COREDLL.dll
+ 0001:0000132c       __NULL_IMPORT_DESCRIPTOR   1000232c     coredll:COREDLL.dll
+ 0002:00000000       __imp_EventModify          10003000     coredll:COREDLL.dll
+ 0002:00000004       __imp___GetUserKData       10003004     coredll:COREDLL.dll
+ 0002:00000008       __imp_LeaveCriticalSection 10003008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_EnterCriticalSection 1000300c     coredll:COREDLL.dll
+ 0002:00000010       __imp_DeleteCriticalSection 10003010     coredll:COREDLL.dll
+ 0002:00000014       __imp_InterruptDisable     10003014     coredll:COREDLL.dll
+ 0002:00000018       __imp_CloseHandle          10003018     coredll:COREDLL.dll
+ 0002:0000001c       __imp_NKDbgPrintfW         1000301c     coredll:COREDLL.dll
+ 0002:00000020       __imp_ExitThread           10003020     coredll:COREDLL.dll
+ 0002:00000024       __imp_InterruptDone        10003024     coredll:COREDLL.dll
+ 0002:00000028       __imp_WaitForSingleObject  10003028     coredll:COREDLL.dll
+ 0002:0000002c       __imp_SetInterruptEvent    1000302c     coredll:COREDLL.dll
+ 0002:00000030       __imp_GetLastError         10003030     coredll:COREDLL.dll
+ 0002:00000034       __imp_CeSetThreadPriority  10003034     coredll:COREDLL.dll
+ 0002:00000038       __imp_CreateThread         10003038     coredll:COREDLL.dll
+ 0002:0000003c       __imp_InterruptInitialize  1000303c     coredll:COREDLL.dll
+ 0002:00000040       __imp_KernelIoControl      10003040     coredll:COREDLL.dll
+ 0002:00000044       __imp_CreateEventW         10003044     coredll:COREDLL.dll
+ 0002:00000048       __imp_InitializeCriticalSection 10003048     coredll:COREDLL.dll
+ 0002:0000004c       __imp_IsBadWritePtr        1000304c     coredll:COREDLL.dll
+ 0002:00000050       __imp_IsBadReadPtr         10003050     coredll:COREDLL.dll
+ 0002:00000054       __imp_RegCloseKey          10003054     coredll:COREDLL.dll
+ 0002:00000058       __imp_RegQueryValueExW     10003058     coredll:COREDLL.dll
+ 0002:0000005c       __imp_OpenDeviceKey        1000305c     coredll:COREDLL.dll
+ 0002:00000060       __imp_VirtualCopy          10003060     coredll:COREDLL.dll
+ 0002:00000064       __imp_VirtualAlloc         10003064     coredll:COREDLL.dll
+ 0002:00000068       __imp_LocalFree            10003068     coredll:COREDLL.dll
+ 0002:0000006c       __imp_VirtualFree          1000306c     coredll:COREDLL.dll
+ 0002:00000070       __imp_LocalAlloc           10003070     coredll:COREDLL.dll
+ 0002:00000074       __imp_SetLastError         10003074     coredll:COREDLL.dll
+ 0002:00000078       __imp_MapPtrToProcess      10003078     coredll:COREDLL.dll
+ 0002:0000007c       __imp_GetCallerProcess     1000307c     coredll:COREDLL.dll
+ 0002:00000080       __imp___C_specific_handler 10003080     corelib1:COREDLL.dll
+ 0002:00000084       __imp_memset               10003084     corelib1:COREDLL.dll
+ 0002:00000088       \177COREDLL_NULL_THUNK_DATA 10003088     coredll:COREDLL.dll
+ 0002:0000008c       gIntrIIC                   1000308c     i2c.obj
+
+ entry point at        0001:00000b58
+
+ Static symbols
+
+ 0001:000002d8       I2C_IST                    100012d8 f   i2c.obj
+ 0001:00000c10       InternalMapRegisters       10001c10 f   drv.obj

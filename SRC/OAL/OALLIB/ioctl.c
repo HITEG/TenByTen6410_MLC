@@ -88,11 +88,13 @@ static BOOL OALIoCtlHalGetHWEntropy(
 // Recommended method is to use NAND's ID or UUIC's ID
 // Device maker can make Unique ID with CHIP ID
     UINT8 *UniqueID;
+
     BOOL rc = FALSE;
 
     OALMSG(OAL_IOCTL&&OAL_FUNC, (L"+OALIoCtlHalGetHWEntropy\r\n"));    
 
     UniqueID = (UINT8 *)OALArgsQuery(OAL_ARGS_QUERY_UUID);
+	
 
     // Check buffer size
     if (lpBytesReturned != NULL)
@@ -117,7 +119,38 @@ static BOOL OALIoCtlHalGetHWEntropy(
     OALMSG(OAL_IOCTL&&OAL_FUNC, (L"-OALIoCtlHalGetHWEntropy(rc = %d)\r\n", rc));
     return rc;
 }
+static BOOL OALIoCtlEBootMAC(
+        UINT32 dwIoControlCode, VOID *lpInBuf, UINT32 nInBufSize, VOID *lpOutBuf,
+        UINT32 nOutBufSize, UINT32* lpBytesReturned)
+{
+		OAL_KITL_ARGS *pKITLArgs;
+		BOOL rc = FALSE;
 
+
+		pKITLArgs = (OAL_KITL_ARGS *)OALArgsQuery(OAL_ARGS_QUERY_KITL);
+	// Check buffer size
+    if (lpBytesReturned != NULL)
+    {
+        *lpBytesReturned = sizeof(UINT8[6]);
+    }
+
+    if (lpOutBuf == NULL || nOutBufSize < sizeof(UINT8[6]))
+    {
+        NKSetLastError(ERROR_INSUFFICIENT_BUFFER);
+       RETAILMSG(TRUE, (L"WARN: OALIoCtlEBootMAC: Buffer too small\r\n"));
+    }
+    else
+    {
+        // Copy pattern to output buffer
+        memcpy(lpOutBuf, pKITLArgs->mac, sizeof(UINT8[6]));
+        // We are done
+        rc = TRUE;
+    }
+    // Indicate status
+    //OALMSG(OAL_IOCTL&&OAL_FUNC, (L"-OALIoCtlEBootMAC(rc = %d)\r\n", rc));
+	RETAILMSG(TRUE, (L"-OALIoCtlEBootMAC(rc = %d)\r\n", rc));
+    return rc;
+}
 //------------------------------------------------------------------------------
 //
 //  Function:  OALIoCtlHalGetHiveCleanFlag
@@ -569,10 +602,9 @@ static BOOL OALIoCtlHalInitRegistry(
     UINT32 code, VOID *pInpBuffer, UINT32 inpSize, VOID *pOutBuffer, 
     UINT32 outSize, UINT32 *pOutSize) 
 {
-	DWORD *port;
+
     KITLIoctl(IOCTL_HAL_INITREGISTRY, NULL, 0, NULL, 0, NULL);
-	port = (DWORD *)OALArgsQuery(BSP_ARGS_QUERY_DEBUGUART);
-	//OALDebugRemoveFromRegistry(*port);
+
 
     return TRUE;
 }
@@ -622,6 +654,7 @@ BOOL OALIoCtlPocketStoreCMD(
 	}
 	return TRUE;
 }
+
 
 //------------------------------------------------------------------------------
 //

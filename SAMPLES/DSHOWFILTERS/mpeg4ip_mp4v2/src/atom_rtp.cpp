@@ -118,7 +118,7 @@ void MP4RtpAtom::ReadHntiType()
     ReadProperties(0, 1);
 
     // read sdp string, length is implicit in size of atom
-    u_int64_t size = GetEnd() - m_pFile->GetPosition();
+    size_t size =(size_t) (GetEnd() - m_pFile->GetPosition());
     char* data = (char*)MP4Malloc(size + 1);
     m_pFile->ReadBytes((u_int8_t*)data, size);
     data[size] = '\0';
