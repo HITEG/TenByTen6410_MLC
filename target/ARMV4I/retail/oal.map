@@ -1,20 +1,20 @@
  oal
 
- Timestamp is 5243da0b (Thu Sep 26 14:54:03 2013)
+ Timestamp is 52959dbc (Wed Nov 27 15:22:36 2013)
 
  Preferred load address is 00010000
 
  Start         Length     Name                   Class
  0001:00000000 00000654H .astart                 CODE
- 0001:00000660 00012862H .rdata                  CODE
- 0001:00012ec4 00000020H .rdata$debug            CODE
- 0001:00012ee4 0001903cH .text                   CODE
- 0001:0002bf20 0000008cH .xdata                  CODE
- 0001:0002bfac 00000000H .edata                  CODE
+ 0001:00000660 000128f2H .rdata                  CODE
+ 0001:00012f54 00000020H .rdata$debug            CODE
+ 0001:00012f74 00019240H .text                   CODE
+ 0001:0002c1b4 0000008cH .xdata                  CODE
+ 0001:0002c240 00000000H .edata                  CODE
  0002:00000000 00006000H .KDATA                  DATA
  0003:00000000 0000090cH .data                   DATA
  0003:00000920 0002f188H .bss                    DATA
- 0004:00000000 00000898H .pdata                  DATA
+ 0004:00000000 000008a0H .pdata                  DATA
 
   Address         Publics by Value              Rva+Base       Lib:Object
 
@@ -662,442 +662,447 @@
  0001:00010758       ??_C@_1DC@OJCNHMIF@?$AA?$FL?$AAD?$AAV?$AAS?$AA?$FN?$AA?5?$AAP?$AAr?$AAo?$AAf?$AAi?$AAl?$AAe?$AA?5?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?4?$AA?4?$AA?4?$AA?$AN?$AA?6?$AA?$AA@ 00021758     s3c6410_PM:dvs.obj
  0001:0001078c       ??_C@_1DK@JFDNMGAO@?$AA?$FL?$AAN?$AAo?$AAn?$AA?5?$AAD?$AAV?$AAS?$AA?$FN?$AA?5?$AAP?$AAr?$AAo?$AAf?$AAi?$AAl?$AAe?$AA?5?$AAS?$AAt?$AAa?$AAr?$AAt?$AA?4?$AA?4?$AA?4?$AA?$AN?$AA?6?$AA?$AA@ 0002178c     s3c6410_PM:dvs.obj
  0001:000107c8       ??_C@_1FA@BLKFPPCA@?$AA?$FL?$AAD?$AAV?$AAS?$AA?$FN?$AA?5?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AA?5?$AAL?$AAe?$AAv?$AAe?$AAl?$AA?5?$AAC?$AAh?$AAa?$AAn?$AAg?$AAe?$AAd?$AA?5?$AA?$FL?$AA?$CF?$AAd?$AA?5?$AA?9@ 000217c8     s3c6410_PM:dvs.obj
- 0001:000108a8       ??_C@_1EM@KGGHBFBJ@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5@ 000218a8     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:000108f8       ??_C@_1GK@HKEIPOOO@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAR?$AAE?$AAQ?$AAU?$AAE?$AAS?$AAT?$AA_?$AAS?$AAY?$AAS?$AAI?$AAN?$AAT?$AAR?$AA?5@ 000218f8     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:00010964       ??_C@_1DK@BMKLIPKJ@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$AN?$AA?6?$AA?$AA@ 00021964     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:000109a0       ??_C@_1GK@LIJAJEGD@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAR?$AAE?$AAL?$AAE?$AAA?$AAS?$AAE?$AA_?$AAS?$AAY?$AAS?$AAI?$AAN?$AAT?$AAR?$AA?5@ 000219a0     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:00010a10       ??_C@_1EM@DFAKLPBP@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5@ 00021a10     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:00010a60       ??_C@_1GC@BACPHDPH@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAR?$AAE?$AAQ?$AAU?$AAE?$AAS?$AAT?$AA_?$AAI?$AAR?$AAQ?$AA?5?$AAi?$AAn?$AAv?$AAa@ 00021a60     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:00010ac4       ??_C@_1DC@DIKJBBIL@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAI?$AAr?$AAq?$AA?$AN?$AA?6?$AA?$AA@ 00021ac4     oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:00010b88       ??_C@_1GM@ONPNNFJP@?$AA?$FL?$AAO?$AAA?$AAL?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAP?$AAU?$AAI?$AAD?$AA?$CI?$AA?$CJ?$AA?5@ 00021b88     oal_ioctl_s3c6410_sec_v1:CPUIDCheck.obj
- 0001:00010bf8       ??_C@_1IA@PCLNGAOA@?$AA?$FL?$AAO?$AAA?$AAL?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAP?$AAU?$AAI?$AAD?$AA?$CI?$AA?$CJ?$AA?5@ 00021bf8     oal_ioctl_s3c6410_sec_v1:CPUIDCheck.obj
- 0001:00010d08       ??_C@_1GK@GKDOOKDE@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAU?$AAp?$AAd?$AAa?$AAt?$AAe?$AAM?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAI?$AAn@ 00021d08     oal_ioctl_s3c6410_sec_v1:imgupd.obj
- 0001:00010d78       ??_C@_1IG@BENIAHFO@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAU?$AAp?$AAd?$AAa?$AAt?$AAe?$AAM?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAD?$AAe@ 00021d78     oal_ioctl_s3c6410_sec_v1:imgupd.obj
- 0001:00010e90       ??_C@_1FA@KIKMJANO@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAe?$AAg?$AAS?$AAe?$AAc?$AAu?$AAr?$AAe?$AAK?$AAe?$AAy?$AAs?$AA?$CI?$AAr?$AAc?$AA?5@ 00021e90     oal_ioctl_s3c6410_sec_v1:securekeys.obj
- 0001:00010f70       ??_C@_1EE@LLJFHFAM@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN@ 00021f70     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:00010fb8       ??_C@_1GA@EACFLEMI@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAB?$AAu?$AAf@ 00021fb8     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:00011018       ??_C@_1GI@EFCEJCLG@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAV?$AAe?$AAn@ 00022018     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:00011080       ??_C@_1GE@JPAPEENG@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAN?$AAa?$AAm@ 00022080     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:000110e8       ??_C@_1GE@OFFJPJMM@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAC?$AAo?$AAr@ 000220e8     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:00011150       ??_C@_1GK@MJNAOGCM@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAI?$AAn?$AAv@ 00022150     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:000111bc       ??_C@_1DM@NEACNOML@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 000221bc     oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:00011288       ??_C@_1EK@CIONDGAI@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAa?$AAn?$AAd?$AAo?$AAm?$AAS?$AAe?$AAe?$AAd?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF@ 00022288     oal_ioctl_s3c6410_sec_v1:randomseed.obj
- 0001:000112d8       ??_C@_1GI@DGLGODAM@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAa?$AAn?$AAd?$AAo?$AAm?$AAS?$AAe?$AAe?$AAd?$AA?3?$AA?5@ 000222d8     oal_ioctl_s3c6410_sec_v1:randomseed.obj
- 0001:00011340       ??_C@_1EC@KGKJCIAM@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAa?$AAn?$AAd?$AAo?$AAm?$AAS?$AAe?$AAe?$AAd?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6@ 00022340     oal_ioctl_s3c6410_sec_v1:randomseed.obj
- 0001:00011428       ??_C@_1FK@JJDHOCFD@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAU?$AAU?$AAI?$AAD?$AA?3?$AA?5?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr@ 00022428     oal_ioctl_s3c6410_sec_v1:uuid.obj
- 0001:00011488       ??_C@_1NA@DANHDCDJ@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAG?$AAE?$AAT?$AA_?$AAU?$AAU?$AAI?$AAD?$AA?5?$AAi?$AAs?$AA?5?$AAu@ 00022488     oal_ioctl_s3c6410_sec_v1:uuid.obj
- 0001:00011558       ??_C@_1HC@GCDGDEMK@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAU?$AAU?$AAI?$AAD?$AA?3?$AA?5?$AAD?$AAe?$AAv?$AAi?$AAc@ 00022558     oal_ioctl_s3c6410_sec_v1:uuid.obj
- 0001:000115d0       ??_C@_1GE@PBBGNNAO@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAU?$AAU?$AAI?$AAD?$AA?3?$AA?5?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi@ 000225d0     oal_ioctl_s3c6410_sec_v1:uuid.obj
- 0001:00011638       ??_C@_1OE@KFAEFCPB@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAy?$AAo?$AAu?$AA?5?$AAa?$AAr?$AAe?$AA?5?$AAc?$AAa?$AAl?$AAl?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH@ 00022638     oal_ioctl_s3c6410_sec_v1:uuid.obj
- 0001:00011734       ??_C@_1CI@DNLIPKLH@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AAT?$AAY?$AAP?$AAE?$AA?$AA@ 00022734     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011760       ??_C@_1BEM@IMHNFGHE@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAy?$AAo?$AAu?$AA?5?$AAa?$AAr?$AAe?$AA?5?$AAr?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAO?$AAC?$AAT@ 00022760     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:000118b0       ??_C@_1GO@GEFDPJAG@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAi?$AAn?$AAf?$AAo?$AA?3?$AA?3@ 000228b0     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011920       ??_C@_1NG@HBFOMIME@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAi?$AAn?$AAf?$AAo?$AA?3@ 00022920     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:000119f8       ??_C@_1LA@BNOICHNN@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3@ 000229f8     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011aa8       ??_C@_1BO@MIPEKPNN@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAO?$AAE?$AAM?$AAI?$AAN?$AAF?$AAO?$AA?$AA@ 00022aa8     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011ac8       ??_C@_1CO@EPEFNCOE@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AAV?$AAE?$AAR?$AAS?$AAI?$AAO?$AAN?$AA?$AA@ 00022ac8     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011af8       ??_C@_1CG@NCDPNLLL@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAR?$AAO?$AAJ?$AAE?$AAC?$AAT?$AAN?$AAA?$AAM?$AAE?$AA?$AA@ 00022af8     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011b20       ??_C@_1CI@BNCCNAEN@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AAN?$AAA?$AAM?$AAE?$AA?$AA@ 00022b20     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011b48       ??_C@_1CE@JLAPMINP@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAB?$AAO?$AAO?$AAT?$AAM?$AAE?$AAN?$AAA?$AAM?$AAE?$AA?$AA@ 00022b48     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011b6c       ??_C@_1BI@MGABGHAL@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAU?$AAU?$AAI?$AAD?$AA?$AA@ 00022b6c     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011b94       ??_C@_1CG@IIMMCNFM@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAG?$AAU?$AAI?$AAD?$AAP?$AAA?$AAT?$AAT?$AAE?$AAR?$AAN?$AA?$AA@ 00022b94     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011bc0       ??_C@_1FO@DMDJMEMA@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AAS?$AAP?$AAI?$AA?5?$AA?$DN?$AA?5@ 00022bc0     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011c20       ??_C@_1GK@FDHCLEBC@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3@ 00022c20     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011c90       ??_C@_1GG@BAANNGGI@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3@ 00022c90     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011cf8       ??_C@_1EC@NLAFOPGI@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6@ 00022cf8     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011d3c       ??_C@_11LOCGONAA@?$AA?$AA@ 00022d3c     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:00011dd0       ??_C@_1EG@HKOJPLNE@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ@ 00022dd0     oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:00011e18       ??_C@_1GE@GPJLHAFO@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?3?$AA?5?$AAI?$AAn@ 00022e18     oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:00011e80       ??_C@_1LK@FOLPDAJB@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?3?$AA?5?$AAC?$AAa@ 00022e80     oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:00011f40       ??_C@_1LO@DFJMJCEI@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?3?$AA?5?$AAC?$AAa@ 00022f40     oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:00012000       ??_C@_1PC@IHJIIKFF@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAy?$AAo?$AAu?$AA?5?$AAa?$AAr?$AAe?$AA?5?$AAr?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAO?$AAC?$AAT@ 00023000     oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:000120f4       ??_C@_1DO@MLDPBFAO@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 000230f4     oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:000121c8       ??_C@_1EE@EOJLKFMG@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN@ 000231c8     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:0001220c       ??_C@_1DG@KKNHDHOB@?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAS?$AAY?$AAS?$AAI?$AAN?$AAT?$AAR?$AA?5?$AAv?$AAa?$AAl?$AAu?$AAe?$AA?5?$AA?$CF?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 0002320c     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:00012244       ??_C@_1DO@BLFFHCCO@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?3?$AA?5?$AA?$AA@ 00023244     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:00012288       ??_C@_1EO@OMKOKHHJ@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAs?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?5?$AA?$DN@ 00023288     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:000122d8       ??_C@_1EG@KJIPIGDP@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ@ 000232d8     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:00012320       ??_C@_1EA@ENICBBFD@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?3?$AA?5?$AA?$AA@ 00023320     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:00012360       ??_C@_1FA@IFHNBJAE@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAs?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?5@ 00023360     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:000123b0       ??_C@_1GG@MBGEPMGD@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAW?$AAa?$AAk?$AAe?$AAS?$AAo?$AAu?$AAr?$AAc?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF@ 000233b0     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:00012418       ??_C@_1DI@DFOIFPDM@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAW?$AAa?$AAk?$AAe?$AAS?$AAo?$AAu?$AAr?$AAc?$AAe?$AA?$AN?$AA?6?$AA?$AA@ 00023418     oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:000124e0       ??_C@_1CO@IIFPHEPD@?$AA?$FL?$AAO?$AAE?$AAM?$AA?$FN?$AA?5?$AA?$CL?$AA?$CL?$AAO?$AAE?$AAM?$AAS?$AAW?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$CI?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 000234e0     oal_power_s3c6410_sec_v1:reset.obj
- 0001:00012510       ??_C@_1FI@JPPGGFEM@?$AA?$FL?$AAO?$AAE?$AAM?$AA?$FN?$AA?5?$AA?$CL?$AA?5?$AAO?$AAE?$AAM?$AAS?$AAW?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$CI?$AA?$CJ?$AA?5?$AAu?$AAs?$AAi?$AAn?$AAg?$AA?5?$AAw?$AAa?$AAt?$AAc?$AAh@ 00023510     oal_power_s3c6410_sec_v1:reset.obj
- 0001:000125f8       ??_C@_1HO@MKDKLGKM@?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAo?$AAf?$AA?5?$AAW?$AAa?$AAt?$AAc?$AAh?$AA?5?$AAD?$AAo?$AAg?$AA?5?$AAB?$AAa?$AAs?$AAe?$AA?5?$AAN?$AAo?$AAt?$AA?5?$AAD?$AAe@ 000235f8     oal_power_s3c6410_sec_v1:watchdog_sw_rst.obj
- 0001:00012708       ??_C@_1EI@PJAHKOP@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd@ 00023708     oal_cache_s3c6410_sec_v1:ioctl.obj
- 0001:00012750       ??_C@_1GE@MBKHJMBD@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAB@ 00023750     oal_cache_s3c6410_sec_v1:ioctl.obj
- 0001:000127b8       ??_C@_1HM@KKNPJOOC@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAI@ 000237b8     oal_cache_s3c6410_sec_v1:ioctl.obj
- 0001:00012838       ??_C@_1EA@GDPMLOAC@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023838     oal_cache_s3c6410_sec_v1:ioctl.obj
- 0001:00012908       ??_C@_1DO@JHJONFOE@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023908     oal_io:ioctl.obj
- 0001:00012948       ??_C@_1FM@IFHLCDE@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?3?$AA?5?$AAI?$AAN?$AAV?$AAA?$AAL?$AAI@ 00023948     oal_io:ioctl.obj
- 0001:000129a8       ??_C@_1HM@DONGDDHM@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?3?$AA?5?$AAU?$AAn?$AAs?$AAu?$AAp@ 000239a8     oal_io:ioctl.obj
- 0001:00012a28       ??_C@_1GE@BFODAIDF@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?3?$AA?5?$AAU?$AAn?$AAs?$AAu?$AAp@ 00023a28     oal_io:ioctl.obj
- 0001:00012a8c       ??_C@_1DG@HOFDDFMH@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023a8c     oal_io:ioctl.obj
- 0001:00012b58       ??_C@_1DK@DKAHFGMP@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAf?$AAf?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023b58     oal_io:power.obj
- 0001:00012b94       ??_C@_1DI@PEAMECNB@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAf?$AAf?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023b94     oal_io:power.obj
- 0001:00012bcc       ??_C@_1DI@BEKMCAGI@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAn?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023bcc     oal_io:power.obj
- 0001:00012c04       ??_C@_1DG@BNAKMMEE@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAn?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023c04     oal_io:power.obj
- 0001:00012cd0       ??_C@_1KE@FCFGNLKM@?$AA?9?$AAO?$AAA?$AAL?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAB?$AAu?$AAs?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AAS@ 00023cd0     oal_io:trans.obj
- 0001:00012d78       ??_C@_1GI@BPOGFGAB@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAB?$AAu?$AAs?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF?$AAd@ 00023d78     oal_io:trans.obj
- 0001:00012de0       ??_C@_1HM@IKCJOCJL@?$AA?9?$AAO?$AAA?$AAL?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AAb?$AAu?$AAs?$AAA?$AAd@ 00023de0     oal_io:trans.obj
- 0001:00012e60       ??_C@_1GC@GKDDBMML@?$AA?$CL?$AAO?$AAA?$AAL?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF@ 00023e60     oal_io:trans.obj
- 0001:00012ee4       System_EnableVIC           00023ee4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012ef4       System_DisableVIC          00023ef4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f04       System_EnableIRQ           00023f04 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f14       System_DisableIRQ          00023f14 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f24       System_EnableFIQ           00023f24 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f34       System_DisableFIQ          00023f34 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f44       System_EnableBP            00023f44 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f54       System_DisableBP           00023f54 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f64       System_EnableICache        00023f64 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f74       System_CheckSyncMode       00023f74 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012f90       System_SetSyncMode         00023f90 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00012fd4       System_SetAsyncMode        00023fd4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00013020       System_WaitForInterrupt    00024020 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00013030       ChangeAsyncToSync          00024030 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:0001309c       ChangeSyncToAsync          0002409c f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00013108       ChangeDivider              00024108 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:0001314c       ChangeToL1                 0002414c f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:00013200       ChangeToL0                 00024200 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
- 0001:000132cc       OALFlushDCache             000242cc f   oal_cache_s3c6410_sec_v1:flushdc.obj
- 0001:00013340       OALClearDTLB               00024340 f   oal_cache_s3c6410_sec_v1:cleardtlb.obj
- 0001:0001334c       OALFlushICache             0002434c f   oal_cache_s3c6410_sec_v1:flushic.obj
- 0001:00013358       OALClearUTLB               00024358 f   oal_cache_s3c6410_sec_v1:clearutlb.obj
- 0001:00013364       OALClearITLB               00024364 f   oal_cache_s3c6410_sec_v1:clearitlb.obj
- 0001:00013370       PaFromVa                   00024370 f   nkldr:armstart.obj
- 0001:000133c0       VaFromPa                   000243c0 f   nkldr:armstart.obj
- 0001:0001340c       GetCpuId                   0002440c f   nkldr:armstart.obj
- 0001:00013414       KernelStart                00024414 f   nkldr:armstart.obj
- 0001:0001361c       ARMInit                    0002461c f   nkldr:arminit.obj
- 0001:00013660       KernelRelocate             00024660 f   nkldr:ldrcmn.obj
- 0001:000136dc       FindKernelEntry            000246dc f   nkldr:ldrcmn.obj
- 0001:00013750       SetOsAxsDataBlockPointer   00024750 f   nkldr:kdinfo.obj
- 0001:00013768       _stricmp                   00024768 f   nkldr:strings.obj
- 0001:000137b8       memset                     000247b8 f   fulllibc:memset.obj
- 0001:00013840       memcpy                     00024840 f   fulllibc:memcpy.obj
- 0001:00013bec       memcpybigblk               00024bec f   fulllibc:memcpy.obj
- 0001:000145a0       tolower                    000255a0 f   fulllibc:tolower.obj
- 0001:000145c4       OEMInitGlobals             000255c4 f   oemmain:oemglobal.obj
- 0001:000145f4       NKDbgPrintfW               000255f4 f   nkstub:nkstub.obj
- 0001:00014628       NKwvsprintfW               00025628 f   nkstub:nkstub.obj
- 0001:0001464c       NKSetLastError             0002564c f   nkstub:nkstub.obj
- 0001:00014670       EnterCriticalSection       00025670 f   nkstub:nkstub.obj
- 0001:00014694       LeaveCriticalSection       00025694 f   nkstub:nkstub.obj
- 0001:000146b8       InitializeCriticalSection  000256b8 f   nkstub:nkstub.obj
- 0001:000146dc       INTERRUPTS_ENABLE          000256dc f   nkstub:nkstub.obj
- 0001:00014700       NKCallIntChain             00025700 f   nkstub:nkstub.obj
- 0001:00014724       NKIsSysIntrValid           00025724 f   nkstub:nkstub.obj
- 0001:00014748       NKVirtualSetAttributes     00025748 f   nkstub:nkstub.obj
- 0001:0001477c       NKForceCleanBoot           0002577c f   nkstub:nkstub.obj
- 0001:000147a0       NKwcslen                   000257a0 f   nkstub:nkstub.obj
- 0001:000147c4       NKwcscpy                   000257c4 f   nkstub:nkstub.obj
- 0001:000147f0       ProfilerHit                000257f0 f   nkstub:nkstub.obj
- 0001:00014844       NKPhysToVirt               00025844 f   nkstub:nkstub.obj
- 0001:00014868       __report_gsfailure         00025868 f   nkstub:nkstub.obj
- 0001:0001488c       InitPowerCTL               0002588c f   oal:init.obj
- 0001:000148bc       OEMSetMemoryAttributes     000258bc f   oal:init.obj
- 0001:000148fc       OEMGetExtensionDRAM        000258fc f   oal:init.obj
- 0001:00014914       OEMInit                    00025914 f   oal:init.obj
- 0001:00014c6c       OEMInitDebugSerial         00025c6c f   oal:debug.obj
- 0001:00014c70       OEMWriteDebugByte          00025c70 f   oal:debug.obj
- 0001:00014c74       OEMReadDebugByte           00025c74 f   oal:debug.obj
- 0001:00014c7c       OEMWriteDebugString        00025c7c f   oal:debug.obj
- 0001:00014c80       PWRCTL_setDAC0Power        00025c80 f   oal:ExtPowerCTL_LIB.obj
- 0001:00014cc4       PWRCTL_powerCTLInit        00025cc4 f   oal:ExtPowerCTL_LIB.obj
- 0001:00014e48       PWRCTL_setDAC1Power        00025e48 f   oal:ExtPowerCTL_LIB.obj
- 0001:00014e8c       PWRCTL_setAllTo            00025e8c f   oal:ExtPowerCTL_LIB.obj
- 0001:00014f74       PWRCTL_InitializePowerCTL  00025f74 f   oal:ExtPowerCTL_LIB.obj
- 0001:00014f94       PWRCTL_Sleep               00025f94 f   oal:ExtPowerCTL_LIB.obj
- 0001:00014fe0       PWRCTL_Awake               00025fe0 f   oal:ExtPowerCTL_LIB.obj
- 0001:00014ff8       OALArgsInit                00025ff8 f   s3c6410_args:args.obj
- 0001:00015194       OALArgsQuery               00026194 f   s3c6410_args:args.obj
- 0001:0001532c       System_GetAPLLCLK          0002632c f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:0001539c       System_GetMPLLCLK          0002639c f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:000153f4       System_VCheckSyncMode      000263f4 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:00015424       System_GetPCLK             00026424 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:0001548c       System_GetHCLK             0002648c f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:000154f4       System_GetARMCLK           000264f4 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:0001552c       FillClockInfo              0002652c f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
- 0001:00015568       OALStall_us                00026568 f   s3c6410_system_lib_sec_v1:s3c6410_stall.obj
- 0001:000155cc       OALStall_ms                000265cc f   s3c6410_system_lib_sec_v1:s3c6410_stall.obj
- 0001:00015634       OEMInterruptHandlerFIQ     00026634 f   oal_intr_s3c6410_sec_v1:fiq.obj
- 0001:00015638       OALIntrRequestIrqs         00026638 f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:000156ec       OALIntrEnableIrqs          000266ec f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:00015824       OALIntrDisableIrqs         00026824 f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:00015968       OALIntrDoneIrqs            00026968 f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:00015a84       OEMInterruptHandler        00026a84 f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:00015f74       VICTableInit               00026f74 f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:00016190       OALIntrInit                00027190 f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:000162d8       OALIntrMapInit             000272d8 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:00016358       OALIntrStaticTranslate     00027358 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:000163d0       OALIntrTranslateIrq        000273d0 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:00016440       OALIntrRequestSysIntr      00027440 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:00016584       OALIntrReleaseSysIntr      00027584 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:00016644       OEMInterruptEnable         00027644 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:000166d8       OEMInterruptDisable        000276d8 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:00016738       OEMInterruptMask           00027738 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:000167b0       OEMInterruptDone           000277b0 f   oal_intr_s3c6410_sec_v1:map.obj
- 0001:00016810       OEMIoControl               00027810 f   oal_ioctl_s3c6410_sec_v1:ioctl.obj
- 0001:0001723c       InitializeOTGCLK           0002823c f   oal_power_s3c6410_sec_v1:off.obj
- 0001:000172c0       OEMPowerOff                000282c0 f   oal_power_s3c6410_sec_v1:off.obj
- 0001:00017660       OEMProfileTimerDisable     00028660 f   oal_profiler_s3c6410_sec_v1:profiler.obj
- 0001:00017718       OALProfileIntrHandler      00028718 f   oal_profiler_s3c6410_sec_v1:profiler.obj
- 0001:000177b4       OEMProfileTimerEnable      000287b4 f   oal_profiler_s3c6410_sec_v1:profiler.obj
- 0001:000178f0       OEMGetRealTime             000288f0 f   oal_rtc_s3c6410_sec_v1:rtc.obj
- 0001:00017ad4       OEMSetRealTime             00028ad4 f   oal_rtc_s3c6410_sec_v1:rtc.obj
- 0001:00017d34       OEMSetAlarmTime            00028d34 f   oal_rtc_s3c6410_sec_v1:rtc.obj
- 0001:00017fa4       OALIoCtlHalInitRTC         00028fa4 f   oal_rtc_s3c6410_sec_v1:rtc.obj
- 0001:0001812c       InitSystemTimer            0002912c f   oal_timer_s3c6410_sec_v1:timer.obj
- 0001:000181c4       OALTimerInit               000291c4 f   oal_timer_s3c6410_sec_v1:timer.obj
- 0001:000183e4       OALTimerIntrHandler        000293e4 f   oal_timer_s3c6410_sec_v1:timer.obj
- 0001:00018478       OALTimerCountsSinceSysTick 00029478 f   oal_timer_s3c6410_sec_v1:timer.obj
- 0001:000184b0       OALCPUIdle                 000294b0 f   oal_timer_s3c6410_sec_v1:timer.obj
- 0001:000184f4       OEMIdle                    000294f4 f   oal_timer_s3c6410_sec_v1:timer.obj
- 0001:00018578       OEMGetTickCount            00029578 f   oal_timer_s3c6410_sec_v1:counts.obj
- 0001:000185e4       OALTimerQueryPerformanceFrequency 000295e4 f   oal_timer_s3c6410_sec_v1:counts.obj
- 0001:00018614       OALTimerQueryPerformanceCounter 00029614 f   oal_timer_s3c6410_sec_v1:counts.obj
- 0001:0001866c       OALIsProcessorFeaturePresent 0002966c f   oal_misc_s3c6410_sec_v1:feature.obj
- 0001:000186d0       OEMCacheRangeFlush         000296d0 f   oal_cache_s3c6410_sec_v1:flush.obj
- 0001:00018878       OEMARMCacheMode            00029878 f   oal_cache_s3c6410_sec_v1:cachemode.obj
- 0001:00018880       OALCacheGlobalsInit        00029880 f   oal_cache_s3c6410_sec_v1:init.obj
- 0001:000189f8       OALClearDTLBEntry          000299f8 f   oal_cache_s3c6410_sec_v1:cleardtlbentry.obj
- 0001:00018a08       OALClearITLBEntry          00029a08 f   oal_cache_s3c6410_sec_v1:clearitlbentry.obj
- 0001:00018a18       OALFlushICacheLines        00029a18 f   oal_cache_s3c6410_sec_v1:flushiclines.obj
- 0001:00018a38       OALCleanDCacheLines        00029a38 f   oal_cache_s3c6410_sec_v1:cleandclines.obj
- 0001:00018a60       OALCleanDCache             00029a60 f   oal_cache_s3c6410_sec_v1:cleandc.obj
- 0001:00018ad4       OALFlushDCacheLines        00029ad4 f   oal_cache_s3c6410_sec_v1:flushdclines.obj
- 0001:00018af4       OALPAtoVA                  00029af4 f   oal_memory_arm:memory.obj
- 0001:00018b80       OALLogSerial               00029b80 f   oal_log:log.obj
- 0001:00018bd4       __GSHandlerCheckCommon     00029bd4 f   fulllibc:gshandler.obj
- 0001:00018c10       __GSHandlerCheck           00029c10 f   fulllibc:gshandler.obj
- 0001:00018c34       __security_check_cookie    00029c34 f   fulllibc:armsecgs.obj
- 0001:00018c48       __gsfailure                00029c48 f   fulllibc:armsecgs.obj
- 0001:00018c8c       __rt_udiv                  00029c8c f   fulllibc:__udiv.obj
- 0001:00018d50       __rt_udivrem64by64         00029d50 f   fulllibc:mdsdiv64.obj
- 0001:00018e48       __rt_divrem64by64          00029e48 f   fulllibc:mdsdiv64.obj
- 0001:00018e98       __rt_udiv64by64            00029e98 f   fulllibc:mdsdiv64.obj
- 0001:00018ea8       __rt_urem64by64            00029ea8 f   fulllibc:mdsdiv64.obj
- 0001:00018ec0       __rt_sdiv64by64            00029ec0 f   fulllibc:mdsdiv64.obj
- 0001:00018ed0       __rt_srem64by64            00029ed0 f   fulllibc:mdsdiv64.obj
- 0001:00018ee8       __raise_int_divide_by_zero 00029ee8 f   fulllibc:diverr.obj
- 0001:00018f0c       __crtRaiseException        00029f0c f   fulllibc:raiseexc.obj
- 0001:00018f28       KITLIoctl                  00029f28 f   nkstub:kitlstub.obj
- 0001:00018f64       BSPIntrInit                00029f64 f   oal:intr.obj
- 0001:0001909c       BSPIntrRequestIrqs         0002a09c f   oal:intr.obj
- 0001:000191b8       BSPIntrEnableIrq           0002a1b8 f   oal:intr.obj
- 0001:00019214       BSPIntrDisableIrq          0002a214 f   oal:intr.obj
- 0001:00019270       BSPIntrDoneIrq             0002a270 f   oal:intr.obj
- 0001:00019c98       OALIoCtlPostInit           0002ac98 f   oal:ioctl.obj
- 0001:00019ccc       OALIoCtlPocketStoreCMD     0002accc f   oal:ioctl.obj
- 0001:00019e80       BSPPowerOff                0002ae80 f   oal:power.obj
- 0001:00019fbc       BSPPowerOn                 0002afbc f   oal:power.obj
- 0001:0001a004       PSII_HALWrapper            0002b004 f   oal:HALWrapper.obj
- 0001:0001aa60       VFL_Init                   0002ba60 f   oal:VFLInterface.obj
- 0001:0001abd4       _CheckNANDFlash            0002bbd4 f   oal:VFLInterface.obj
- 0001:0001af48       VFL_GetFTLCxtVbn           0002bf48 f   oal:VFLInterface.obj
- 0001:0001c018       DoSync                     0002d018 f   oal:VFLInterface.obj
- 0001:0001c0c4       VFL_Open                   0002d0c4 f   oal:VFLInterface.obj
- 0001:0001c5fc       VFL_Read                   0002d5fc f   oal:VFLInterface.obj
- 0001:0001d45c       VFL_Write                  0002e45c f   oal:VFLInterface.obj
- 0001:0001d71c       VFL_Sync                   0002e71c f   oal:VFLInterface.obj
- 0001:0001d77c       VFL_Erase                  0002e77c f   oal:VFLInterface.obj
- 0001:0001dfe0       VFL_Copyback               0002efe0 f   oal:VFLInterface.obj
- 0001:0001e9c8       VFL_ChangeFTLCxtVbn        0002f9c8 f   oal:VFLInterface.obj
- 0001:0001ebc0       VFL_Format                 0002fbc0 f   oal:VFLInterface.obj
- 0001:0001f05c       NF_WAIT_ECC_DEC_DONE       0003005c f   oal:S3C6410_FIL.obj
- 0001:0001f0e0       NAND_GetPlatformInfo       000300e0 f   oal:S3C6410_FIL.obj
- 0001:0001f180       NAND_Steploader_Write      00030180 f   oal:S3C6410_FIL.obj
- 0001:0001f480       NAND_Sync                  00030480 f   oal:S3C6410_FIL.obj
- 0001:0001f688       NAND_Reset                 00030688 f   oal:S3C6410_FIL.obj
- 0001:00020a84       NAND_Init                  00031a84 f   oal:S3C6410_FIL.obj
- 0001:00020f84       NAND_Write                 00031f84 f   oal:S3C6410_FIL.obj
- 0001:00021604       NAND_Erase                 00032604 f   oal:S3C6410_FIL.obj
- 0001:00022eac       NAND_Read                  00033eac f   oal:S3C6410_FIL.obj
- 0001:00023580       NAND_Read_Retry            00034580 f   oal:S3C6410_FIL.obj
- 0001:000237b8       WMR_Format_FIL             000347b8 f   oal:WMR_Utils.obj
- 0001:00023a6c       WMR_ERASE_VFLAREA          00034a6c f   oal:WMR_Utils.obj
- 0001:00023d0c       WMR_Format_VFL             00034d0c f   oal:WMR_Utils.obj
- 0001:00023e7c       WMR_Format_FTL             00034e7c f   oal:WMR_Utils.obj
- 0001:000255bc       FTL_Format                 000365bc f   oal:FTLInterface.obj
- 0001:0002582c       FTL_Init                   0003682c f   oal:FTLInterface.obj
- 0001:00025a38       FTL_Close                  00036a38 f   oal:FTLInterface.obj
- 0001:0002752c       FTL_Read                   0003852c f   oal:FTLInterface.obj
- 0001:0002797c       FTL_Scan                   0003897c f   oal:FTLInterface.obj
- 0001:00027b70       FTL_ReadReclaim            00038b70 f   oal:FTLInterface.obj
- 0001:00027d1c       FTL_GarbageCollect         00038d1c f   oal:FTLInterface.obj
- 0001:00028590       FTL_Open                   00039590 f   oal:FTLInterface.obj
- 0001:000287e4       FTL_Write                  000397e4 f   oal:FTLInterface.obj
- 0001:00029020       FTL_Delete                 0003a020 f   oal:FTLInterface.obj
- 0001:0002936c       FIL_Init                   0003a36c f   oal:FIL.obj
- 0001:000293f0       FIL_GetFuncTbl             0003a3f0 f   oal:FIL.obj
- 0001:000293fc       GetNandInfo                0003a3fc f   oal:FIL.obj
- 0001:00029430       CalcGlobal                 0003a430 f   oal:WMRGlobal.obj
- 0001:000295c8       GetMlcClass                0003a5c8 f   oal:WMRGlobal.obj
- 0001:000295d0       WMR_GetChkSum              0003a5d0 f   oal:OSLessWMROAM.obj
- 0001:00029690       OAM_Memcpy                 0003a690 f   oal:OSLessWMROAM.obj
- 0001:00029738       OAM_Memset                 0003a738 f   oal:OSLessWMROAM.obj
- 0001:000297ac       OAM_Assert                 0003a7ac f   oal:OSLessWMROAM.obj
- 0001:000297ec       BUF_Init                   0003a7ec f   oal:VFLBuffer.obj
- 0001:000298b0       BUF_Get                    0003a8b0 f   oal:VFLBuffer.obj
- 0001:000299f4       BUF_Release                0003a9f4 f   oal:VFLBuffer.obj
- 0001:00029b04       BUF_Reget                  0003ab04 f   oal:VFLBuffer.obj
- 0001:00029b9c       _Read_512Byte              0003ab9c f   oal:S3C6410_FIL_opt.obj
- 0001:00029bdc       _Read_512Byte_Unaligned    0003abdc f   oal:S3C6410_FIL_opt.obj
- 0001:00029c78       _Write_512Byte             0003ac78 f   oal:S3C6410_FIL_opt.obj
- 0001:00029cb8       _Write_512Byte_Unaligned   0003acb8 f   oal:S3C6410_FIL_opt.obj
- 0001:00029d54       _Write_Dummy_468Byte_AllFF 0003ad54 f   oal:S3C6410_FIL_opt.obj
- 0001:00029da8       _Write_Dummy_428Byte_AllFF 0003ada8 f   oal:S3C6410_FIL_opt.obj
- 0001:00029df4       _Write_Dummy_364Byte_AllFF 0003adf4 f   oal:S3C6410_FIL_opt.obj
- 0001:00029e40       _Write_Dummy_500Byte_AllFF 0003ae40 f   oal:S3C6410_FIL_opt.obj
- 0001:00029e94       _Write_Dummy_492Byte_AllFF 0003ae94 f   oal:S3C6410_FIL_opt.obj
- 0001:00029ee0       _Write_Dummy_480Byte_AllFF 0003aee0 f   oal:S3C6410_FIL_opt.obj
- 0001:00029f20       _Write_Dummy_448Byte_AllFF 0003af20 f   oal:S3C6410_FIL_opt.obj
- 0001:00029f60       _STOP_FOR_BREAK            0003af60 f   oal:S3C6410_FIL_opt.obj
- 0001:00029f78       InitializeDVS              0003af78 f   s3c6410_PM:dvs.obj
- 0001:00029fc8       SetCurrentIdleTime         0003afc8 f   s3c6410_PM:dvs.obj
- 0001:00029fd8       ChangeClockDivider         0003afd8 f   s3c6410_PM:dvs.obj
- 0001:0002a0ac       ProfileDVSOnOff            0003b0ac f   s3c6410_PM:dvs.obj
- 0001:0002a250       ChangeDVSLevel             0003b250 f   s3c6410_PM:dvs.obj
- 0001:0002a2b0       OALIoCtlHalRequestSysIntr  0003b2b0 f   oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:0002a3fc       OALIoCtlHalReleaseSysIntr  0003b3fc f   oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:0002a4ac       OALIoCtlHalRequestIrq      0003b4ac f   oal_intr_s3c6410_sec_v1:ioctl.obj
- 0001:0002a5ac       OALIoCtlHalGetCPUID        0003b5ac f   oal_ioctl_s3c6410_sec_v1:CPUIDCheck.obj
- 0001:0002a688       OALIoCtlHalUpdateMode      0003b688 f   oal_ioctl_s3c6410_sec_v1:imgupd.obj
- 0001:0002a72c       OALIoCtlHalGetRegSecureKeys 0003b72c f   oal_ioctl_s3c6410_sec_v1:securekeys.obj
- 0001:0002a7b0       OALIoCtlProcessorInfo      0003b7b0 f   oal_ioctl_s3c6410_sec_v1:procinfo.obj
- 0001:0002a998       OALIoCtlHalGetRandomSeed   0003b998 f   oal_ioctl_s3c6410_sec_v1:randomseed.obj
- 0001:0002ab5c       OALIoCtlHalGetUUID         0003bb5c f   oal_ioctl_s3c6410_sec_v1:uuid.obj
- 0001:0002ae50       OALIoCtlHalGetDeviceInfo   0003be50 f   oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:0002b218       OALIoCtlHalGetDeviceId     0003c218 f   oal_ioctl_s3c6410_sec_v1:deviceid.obj
- 0001:0002b424       OALIoCtlHalEnableWake      0003c424 f   oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:0002b508       OALIoCtlHalDisableWake     0003c508 f   oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:0002b5ec       OALIoCtlHalGetWakeSource   0003c5ec f   oal_power_s3c6410_sec_v1:ioctl.obj
- 0001:0002b694       OEMSWReset                 0003c694 f   oal_power_s3c6410_sec_v1:reset.obj
- 0001:0002b6e0       _OEMSWReset                0003c6e0 f   oal_power_s3c6410_sec_v1:watchdog_sw_rst.obj
- 0001:0002b770       OALIoCtlHalGetCacheInfo    0003c770 f   oal_cache_s3c6410_sec_v1:ioctl.obj
- 0001:0002b8b8       OALIoCtlHalDdkCall         0003c8b8 f   oal_io:ioctl.obj
- 0001:0002bb14       OALIoBusPowerOff           0003cb14 f   oal_io:power.obj
- 0001:0002bb74       OALIoBusPowerOn            0003cb74 f   oal_io:power.obj
- 0001:0002bbd4       OALIoTransBusAddress       0003cbd4 f   oal_io:trans.obj
- 0001:0002bc94       OALIoTransSystemAddress    0003cc94 f   oal_io:trans.obj
- 0001:0002bd20       OALIoReadBusData           0003cd20 f   oal_io:data.obj
- 0001:0002bd28       OALIoWriteBusData          0003cd28 f   oal_io:data.obj
- 0001:0002bd30       __C_specific_handler       0003cd30 f   fulllibc:chandler.obj
- 0001:0002be7c       strlen                     0003ce7c f   fulllibc:mdsstrlen.obj
- 0001:0002bee0       __C_ExecuteTerminationHandler 0003cee0 f   fulllibc:jmpuwind.obj
- 0001:0002bee0       __C_ExecuteExceptionFilter 0003cee0 f   fulllibc:jmpuwind.obj
- 0003:00000000       OsAxsDataBlock_2           00043000     nkldr:kdinfo.obj
- 0003:00000080       OsAxsHwTrap                00043080     nkldr:kdinfo.obj
- 0003:0000021c       g_pOemGlobal               0004321c     oemmain:oemglobal.obj
- 0003:00000220       __security_cookie          00043220     nkstub:nkstub.obj
- 0003:00000224       __security_cookie_complement 00043224     nkstub:nkstub.obj
- 0003:00000228       g_oalRtcResetTime          00043228     oal:init.obj
- 0003:00000290       initialOALLogZones         00043290     oal_log:debug.obj
- 0003:00000298       dpCurSettings              00043298     oal_log:debug.obj
- 0003:000006dc       g_oalIoCtlPlatformType     000436dc     oal:ioctl.obj
- 0003:000006e0       g_oalIoCtlPlatformOEM      000436e0     oal:ioctl.obj
- 0003:000006e4       g_oalIoCtlProcessorVendor  000436e4     oal:ioctl.obj
- 0003:000006e8       g_oalIoCtlProcessorName    000436e8     oal:ioctl.obj
- 0003:000006ec       g_oalIoCtlProcessorCore    000436ec     oal:ioctl.obj
- 0003:00000800       g_aTransitionTable         00043800     s3c6410_PM:dvs.obj
- 0003:00000908       g_oalWakeSource            00043908     oal_power_s3c6410_sec_v1:ioctl.obj
- 0003:0000094c       g_pProfilerISR             0004394c     oal_intr_s3c6410_sec_v1:intr.obj
- 0003:000013fc       g_oalRTCcsInit             000443fc     oal_rtc_s3c6410_sec_v1:rtc.obj
- 0003:00001418       g_oalIoCtlInstructionSet   00044418     oal:ioctl.obj
- 0003:0000143c       pLocalSData                0004443c     oal:VFLInterface.obj
- 0003:000036c0       pLocalMData                000466c0     oal:VFLInterface.obj
- 0003:000147e4       bReadSafeMode              000577e4     oal:S3C6410_FIL.obj
- 0003:000147e8       bECCEngineError            000577e8     oal:S3C6410_FIL.obj
- 0003:00020df8       stDeviceInfo               00063df8     oal:WMRGlobal.obj
- 0003:00020e60       stConfig                   00063e60     oal:WMRGlobal.obj
- 0003:00020ea8       stLayout                   00063ea8     oal:WMRGlobal.obj
- 0003:0002f9d0       g_pNKGlobal                000729d0     <common>
- 0003:0002f9d4       gnPpn                      000729d4     <common>
- 0003:0002f9e0       csPocketStoreVFL           000729e0     <common>
- 0003:0002f9f4       v_pIOP_PIO_regs            000729f4     <common>
- 0003:0002f9f8       g_oalIoCtlClockSpeed       000729f8     <common>
- 0003:0002fa00       g_oalRTCcs                 00072a00     <common>
- 0003:0002fa20       g_oalTimer                 00072a20     <common>
- 0003:0002fa60       g_oalCacheInfo             00072a60     <common>
+ 0001:00010818       ??_C@_1CI@DGKNCBIJ@?$AA?$FL?$AAD?$AAV?$AAS?$AA?$FN?$AA?5?$AAD?$AAV?$AAS?$AA?5?$AAe?$AAn?$AAa?$AAb?$AAl?$AAe?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 00021818     s3c6410_PM:dvs.obj
+ 0001:00010840       ??_C@_1DI@BMFMLNNG@?$AA?$FL?$AAD?$AAV?$AAS?$AA?$FN?$AA?5?$AAD?$AAV?$AAS?$AA?5?$AAd?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAd?$AA?5?$AAb?$AAy?$AA?5?$AAU?$AAS?$AAB?$AA?$AN?$AA?6?$AA?$AA@ 00021840     s3c6410_PM:dvs.obj
+ 0001:00010878       ??_C@_1BG@EOMGPFCE@?$AAD?$AA?$FL?$AA?$CF?$AAd?$AA?3?$AA?$CF?$AAd?$AA?$FN?$AA?$AN?$AA?6?$AA?$AA@ 00021878     s3c6410_PM:dvs.obj
+ 0001:00010890       ??_C@_1BG@PABJNLKF@?$AAU?$AA?$FL?$AA?$CF?$AAd?$AA?3?$AA?$CF?$AAd?$AA?$FN?$AA?$AN?$AA?6?$AA?$AA@ 00021890     s3c6410_PM:dvs.obj
+ 0001:00010938       ??_C@_1EM@KGGHBFBJ@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5@ 00021938     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:00010988       ??_C@_1GK@HKEIPOOO@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAR?$AAE?$AAQ?$AAU?$AAE?$AAS?$AAT?$AA_?$AAS?$AAY?$AAS?$AAI?$AAN?$AAT?$AAR?$AA?5@ 00021988     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:000109f4       ??_C@_1DK@BMKLIPKJ@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$AN?$AA?6?$AA?$AA@ 000219f4     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:00010a30       ??_C@_1GK@LIJAJEGD@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAR?$AAE?$AAL?$AAE?$AAA?$AAS?$AAE?$AA_?$AAS?$AAY?$AAS?$AAI?$AAN?$AAT?$AAR?$AA?5@ 00021a30     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:00010aa0       ??_C@_1EM@DFAKLPBP@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAS?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5@ 00021aa0     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:00010af0       ??_C@_1GC@BACPHDPH@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAR?$AAE?$AAQ?$AAU?$AAE?$AAS?$AAT?$AA_?$AAI?$AAR?$AAQ?$AA?5?$AAi?$AAn?$AAv?$AAa@ 00021af0     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:00010b54       ??_C@_1DC@DIKJBBIL@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAR?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAI?$AAr?$AAq?$AA?$AN?$AA?6?$AA?$AA@ 00021b54     oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:00010c18       ??_C@_1GM@ONPNNFJP@?$AA?$FL?$AAO?$AAA?$AAL?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAP?$AAU?$AAI?$AAD?$AA?$CI?$AA?$CJ?$AA?5@ 00021c18     oal_ioctl_s3c6410_sec_v1:CPUIDCheck.obj
+ 0001:00010c88       ??_C@_1IA@PCLNGAOA@?$AA?$FL?$AAO?$AAA?$AAL?$AA?3?$AAE?$AAR?$AAR?$AA?$FN?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAP?$AAU?$AAI?$AAD?$AA?$CI?$AA?$CJ?$AA?5@ 00021c88     oal_ioctl_s3c6410_sec_v1:CPUIDCheck.obj
+ 0001:00010d98       ??_C@_1GK@GKDOOKDE@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAU?$AAp?$AAd?$AAa?$AAt?$AAe?$AAM?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAI?$AAn@ 00021d98     oal_ioctl_s3c6410_sec_v1:imgupd.obj
+ 0001:00010e08       ??_C@_1IG@BENIAHFO@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAU?$AAp?$AAd?$AAa?$AAt?$AAe?$AAM?$AAo?$AAd?$AAe?$AA?3?$AA?5?$AAD?$AAe@ 00021e08     oal_ioctl_s3c6410_sec_v1:imgupd.obj
+ 0001:00010f20       ??_C@_1FA@KIKMJANO@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAe?$AAg?$AAS?$AAe?$AAc?$AAu?$AAr?$AAe?$AAK?$AAe?$AAy?$AAs?$AA?$CI?$AAr?$AAc?$AA?5@ 00021f20     oal_ioctl_s3c6410_sec_v1:securekeys.obj
+ 0001:00011000       ??_C@_1EE@LLJFHFAM@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN@ 00022000     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:00011048       ??_C@_1GA@EACFLEMI@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAB?$AAu?$AAf@ 00022048     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:000110a8       ??_C@_1GI@EFCEJCLG@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAV?$AAe?$AAn@ 000220a8     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:00011110       ??_C@_1GE@JPAPEENG@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAN?$AAa?$AAm@ 00022110     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:00011178       ??_C@_1GE@OFFJPJMM@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAC?$AAo?$AAr@ 00022178     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:000111e0       ??_C@_1GK@MJNAOGCM@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAI?$AAn?$AAv@ 000221e0     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:0001124c       ??_C@_1DM@NEACNOML@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAP?$AAr?$AAo?$AAc?$AAe?$AAs?$AAs?$AAo?$AAr?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 0002224c     oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:00011318       ??_C@_1EK@CIONDGAI@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAa?$AAn?$AAd?$AAo?$AAm?$AAS?$AAe?$AAe?$AAd?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF@ 00022318     oal_ioctl_s3c6410_sec_v1:randomseed.obj
+ 0001:00011368       ??_C@_1GI@DGLGODAM@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAa?$AAn?$AAd?$AAo?$AAm?$AAS?$AAe?$AAe?$AAd?$AA?3?$AA?5@ 00022368     oal_ioctl_s3c6410_sec_v1:randomseed.obj
+ 0001:000113d0       ??_C@_1EC@KGKJCIAM@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAR?$AAa?$AAn?$AAd?$AAo?$AAm?$AAS?$AAe?$AAe?$AAd?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6@ 000223d0     oal_ioctl_s3c6410_sec_v1:randomseed.obj
+ 0001:000114b8       ??_C@_1FK@JJDHOCFD@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAU?$AAU?$AAI?$AAD?$AA?3?$AA?5?$AAB?$AAu?$AAf?$AAf?$AAe?$AAr@ 000224b8     oal_ioctl_s3c6410_sec_v1:uuid.obj
+ 0001:00011518       ??_C@_1NA@DANHDCDJ@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH?$AAA?$AAL?$AA_?$AAG?$AAE?$AAT?$AA_?$AAU?$AAU?$AAI?$AAD?$AA?5?$AAi?$AAs?$AA?5?$AAu@ 00022518     oal_ioctl_s3c6410_sec_v1:uuid.obj
+ 0001:000115e8       ??_C@_1HC@GCDGDEMK@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAU?$AAU?$AAI?$AAD?$AA?3?$AA?5?$AAD?$AAe?$AAv?$AAi?$AAc@ 000225e8     oal_ioctl_s3c6410_sec_v1:uuid.obj
+ 0001:00011660       ??_C@_1GE@PBBGNNAO@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAU?$AAU?$AAI?$AAD?$AA?3?$AA?5?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi@ 00022660     oal_ioctl_s3c6410_sec_v1:uuid.obj
+ 0001:000116c8       ??_C@_1OE@KFAEFCPB@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAy?$AAo?$AAu?$AA?5?$AAa?$AAr?$AAe?$AA?5?$AAc?$AAa?$AAl?$AAl?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAO?$AAC?$AAT?$AAL?$AA_?$AAH@ 000226c8     oal_ioctl_s3c6410_sec_v1:uuid.obj
+ 0001:000117c4       ??_C@_1CI@DNLIPKLH@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AAT?$AAY?$AAP?$AAE?$AA?$AA@ 000227c4     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:000117f0       ??_C@_1BEM@IMHNFGHE@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAy?$AAo?$AAu?$AA?5?$AAa?$AAr?$AAe?$AA?5?$AAr?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAO?$AAC?$AAT@ 000227f0     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011940       ??_C@_1GO@GEFDPJAG@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAi?$AAn?$AAf?$AAo?$AA?3?$AA?3@ 00022940     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:000119b0       ??_C@_1NG@HBFOMIME@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAi?$AAn?$AAf?$AAo?$AA?3@ 000229b0     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011a88       ??_C@_1LA@BNOICHNN@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3@ 00022a88     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011b38       ??_C@_1BO@MIPEKPNN@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAO?$AAE?$AAM?$AAI?$AAN?$AAF?$AAO?$AA?$AA@ 00022b38     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011b58       ??_C@_1CO@EPEFNCOE@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AAV?$AAE?$AAR?$AAS?$AAI?$AAO?$AAN?$AA?$AA@ 00022b58     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011b88       ??_C@_1CG@NCDPNLLL@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAR?$AAO?$AAJ?$AAE?$AAC?$AAT?$AAN?$AAA?$AAM?$AAE?$AA?$AA@ 00022b88     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011bb0       ??_C@_1CI@BNCCNAEN@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAP?$AAL?$AAA?$AAT?$AAF?$AAO?$AAR?$AAM?$AAN?$AAA?$AAM?$AAE?$AA?$AA@ 00022bb0     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011bd8       ??_C@_1CE@JLAPMINP@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAB?$AAO?$AAO?$AAT?$AAM?$AAE?$AAN?$AAA?$AAM?$AAE?$AA?$AA@ 00022bd8     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011bfc       ??_C@_1BI@MGABGHAL@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAU?$AAU?$AAI?$AAD?$AA?$AA@ 00022bfc     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011c24       ??_C@_1CG@IIMMCNFM@?$AAS?$AAP?$AAI?$AA_?$AAG?$AAE?$AAT?$AAG?$AAU?$AAI?$AAD?$AAP?$AAA?$AAT?$AAT?$AAE?$AAR?$AAN?$AA?$AA@ 00022c24     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011c50       ??_C@_1FO@DMDJMEMA@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AAS?$AAP?$AAI?$AA?5?$AA?$DN?$AA?5@ 00022c50     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011cb0       ??_C@_1GK@FDHCLEBC@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3@ 00022cb0     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011d20       ??_C@_1GG@BAANNGGI@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3@ 00022d20     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011d88       ??_C@_1EC@NLAFOPGI@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6@ 00022d88     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011dcc       ??_C@_11LOCGONAA@?$AA?$AA@ 00022dcc     oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00011e60       ??_C@_1EG@HKOJPLNE@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ@ 00022e60     oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:00011ea8       ??_C@_1GE@GPJLHAFO@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?3?$AA?5?$AAI?$AAn@ 00022ea8     oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:00011f10       ??_C@_1LK@FOLPDAJB@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?3?$AA?5?$AAC?$AAa@ 00022f10     oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:00011fd0       ??_C@_1LO@DFJMJCEI@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?3?$AA?5?$AAC?$AAa@ 00022fd0     oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:00012090       ??_C@_1PC@IHJIIKFF@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAy?$AAo?$AAu?$AA?5?$AAa?$AAr?$AAe?$AA?5?$AAr?$AAe?$AAq?$AAu?$AAe?$AAs?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAI?$AAO?$AAC?$AAT@ 00023090     oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:00012184       ??_C@_1DO@MLDPBFAO@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAD?$AAe?$AAv?$AAi?$AAc?$AAe?$AAI?$AAD?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023184     oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:00012258       ??_C@_1EE@EOJLKFMG@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN@ 00023258     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:0001229c       ??_C@_1DG@KKNHDHOB@?$AAI?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAS?$AAY?$AAS?$AAI?$AAN?$AAT?$AAR?$AA?5?$AAv?$AAa?$AAl?$AAu?$AAe?$AA?5?$AA?$CF?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 0002329c     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:000122d4       ??_C@_1DO@BLFFHCCO@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?3?$AA?5?$AA?$AA@ 000232d4     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:00012318       ??_C@_1EO@OMKOKHHJ@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAE?$AAn?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAs?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?5?$AA?$DN@ 00023318     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:00012368       ??_C@_1EG@KJIPIGDP@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ@ 00023368     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:000123b0       ??_C@_1EA@ENICBBFD@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?3?$AA?5?$AA?$AA@ 000233b0     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:000123f0       ??_C@_1FA@IFHNBJAE@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAi?$AAs?$AAa?$AAb?$AAl?$AAe?$AAW?$AAa?$AAk?$AAe?$AA?$CI?$AAs?$AAy?$AAs?$AAI?$AAn?$AAt?$AAr?$AA?5@ 000233f0     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:00012440       ??_C@_1GG@MBGEPMGD@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAW?$AAa?$AAk?$AAe?$AAS?$AAo?$AAu?$AAr?$AAc?$AAe?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF@ 00023440     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:000124a8       ??_C@_1DI@DFOIFPDM@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAW?$AAa?$AAk?$AAe?$AAS?$AAo?$AAu?$AAr?$AAc?$AAe?$AA?$AN?$AA?6?$AA?$AA@ 000234a8     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:00012570       ??_C@_1CO@IIFPHEPD@?$AA?$FL?$AAO?$AAE?$AAM?$AA?$FN?$AA?5?$AA?$CL?$AA?$CL?$AAO?$AAE?$AAM?$AAS?$AAW?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$CI?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023570     oal_power_s3c6410_sec_v1:reset.obj
+ 0001:000125a0       ??_C@_1FI@JPPGGFEM@?$AA?$FL?$AAO?$AAE?$AAM?$AA?$FN?$AA?5?$AA?$CL?$AA?5?$AAO?$AAE?$AAM?$AAS?$AAW?$AAR?$AAe?$AAs?$AAe?$AAt?$AA?$CI?$AA?$CJ?$AA?5?$AAu?$AAs?$AAi?$AAn?$AAg?$AA?5?$AAw?$AAa?$AAt?$AAc?$AAh@ 000235a0     oal_power_s3c6410_sec_v1:reset.obj
+ 0001:00012688       ??_C@_1HO@MKDKLGKM@?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AAo?$AAf?$AA?5?$AAW?$AAa?$AAt?$AAc?$AAh?$AA?5?$AAD?$AAo?$AAg?$AA?5?$AAB?$AAa?$AAs?$AAe?$AA?5?$AAN?$AAo?$AAt?$AA?5?$AAD?$AAe@ 00023688     oal_power_s3c6410_sec_v1:watchdog_sw_rst.obj
+ 0001:00012798       ??_C@_1EI@PJAHKOP@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd@ 00023798     oal_cache_s3c6410_sec_v1:ioctl.obj
+ 0001:000127e0       ??_C@_1GE@MBKHJMBD@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAB@ 000237e0     oal_cache_s3c6410_sec_v1:ioctl.obj
+ 0001:00012848       ??_C@_1HM@KKNPJOOC@?$AAW?$AAA?$AAR?$AAN?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?3?$AA?5?$AAI@ 00023848     oal_cache_s3c6410_sec_v1:ioctl.obj
+ 0001:000128c8       ??_C@_1EA@GDPMLOAC@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAG?$AAe?$AAt?$AAC?$AAa?$AAc?$AAh?$AAe?$AAI?$AAn?$AAf?$AAo?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 000238c8     oal_cache_s3c6410_sec_v1:ioctl.obj
+ 0001:00012998       ??_C@_1DO@JHJONFOE@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023998     oal_io:ioctl.obj
+ 0001:000129d8       ??_C@_1FM@IFHLCDE@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?3?$AA?5?$AAI?$AAN?$AAV?$AAA?$AAL?$AAI@ 000239d8     oal_io:ioctl.obj
+ 0001:00012a38       ??_C@_1HM@DONGDDHM@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?3?$AA?5?$AAU?$AAn?$AAs?$AAu?$AAp@ 00023a38     oal_io:ioctl.obj
+ 0001:00012ab8       ??_C@_1GE@BFODAIDF@?$AAE?$AAR?$AAR?$AAO?$AAR?$AA?3?$AA?5?$AAO?$AAA?$AAL?$AAI?$AAo?$AAc?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?3?$AA?5?$AAU?$AAn?$AAs?$AAu?$AAp@ 00023ab8     oal_io:ioctl.obj
+ 0001:00012b1c       ??_C@_1DG@HOFDDFMH@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAC?$AAt?$AAl?$AAH?$AAa?$AAl?$AAD?$AAd?$AAk?$AAC?$AAa?$AAl?$AAl?$AA?$CI?$AA?4?$AA?4?$AA?4?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023b1c     oal_io:ioctl.obj
+ 0001:00012be8       ??_C@_1DK@DKAHFGMP@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAf?$AAf?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023be8     oal_io:power.obj
+ 0001:00012c24       ??_C@_1DI@PEAMECNB@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAf?$AAf?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023c24     oal_io:power.obj
+ 0001:00012c5c       ??_C@_1DI@BEKMCAGI@?$AA?9?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAn?$AA?$CI?$AAr?$AAc?$AA?5?$AA?$DN?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023c5c     oal_io:power.obj
+ 0001:00012c94       ??_C@_1DG@BNAKMMEE@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAB?$AAu?$AAs?$AAP?$AAo?$AAw?$AAe?$AAr?$AAO?$AAn?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF?$AAd?$AA?$CJ?$AA?$AN?$AA?6?$AA?$AA@ 00023c94     oal_io:power.obj
+ 0001:00012d60       ??_C@_1KE@FCFGNLKM@?$AA?9?$AAO?$AAA?$AAL?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAB?$AAu?$AAs?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AAS@ 00023d60     oal_io:trans.obj
+ 0001:00012e08       ??_C@_1GI@BPOGFGAB@?$AA?$CL?$AAO?$AAA?$AAL?$AAI?$AAo?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAB?$AAu?$AAs?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF?$AAd@ 00023e08     oal_io:trans.obj
+ 0001:00012e70       ??_C@_1HM@IKCJOCJL@?$AA?9?$AAO?$AAA?$AAL?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AAb?$AAu?$AAs?$AAA?$AAd@ 00023e70     oal_io:trans.obj
+ 0001:00012ef0       ??_C@_1GC@GKDDBMML@?$AA?$CL?$AAO?$AAA?$AAL?$AAT?$AAr?$AAa?$AAn?$AAs?$AAl?$AAa?$AAt?$AAe?$AAS?$AAy?$AAs?$AAt?$AAe?$AAm?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?$CI?$AA?$CF?$AAd?$AA?0?$AA?5?$AA?$CF@ 00023ef0     oal_io:trans.obj
+ 0001:00012f74       System_EnableVIC           00023f74 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012f84       System_DisableVIC          00023f84 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012f94       System_EnableIRQ           00023f94 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012fa4       System_DisableIRQ          00023fa4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012fb4       System_EnableFIQ           00023fb4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012fc4       System_DisableFIQ          00023fc4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012fd4       System_EnableBP            00023fd4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012fe4       System_DisableBP           00023fe4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00012ff4       System_EnableICache        00023ff4 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00013004       System_CheckSyncMode       00024004 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00013020       System_SetSyncMode         00024020 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00013064       System_SetAsyncMode        00024064 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:000130b0       System_WaitForInterrupt    000240b0 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:000130c0       ChangeAsyncToSync          000240c0 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:0001312c       ChangeSyncToAsync          0002412c f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00013198       ChangeDivider              00024198 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:000131dc       ChangeToL1                 000241dc f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:00013290       ChangeToL0                 00024290 f   s3c6410_system_lib_sec_v1:s3c6410_system.obj
+ 0001:0001335c       OALFlushDCache             0002435c f   oal_cache_s3c6410_sec_v1:flushdc.obj
+ 0001:000133d0       OALClearDTLB               000243d0 f   oal_cache_s3c6410_sec_v1:cleardtlb.obj
+ 0001:000133dc       OALFlushICache             000243dc f   oal_cache_s3c6410_sec_v1:flushic.obj
+ 0001:000133e8       OALClearUTLB               000243e8 f   oal_cache_s3c6410_sec_v1:clearutlb.obj
+ 0001:000133f4       OALClearITLB               000243f4 f   oal_cache_s3c6410_sec_v1:clearitlb.obj
+ 0001:00013400       PaFromVa                   00024400 f   nkldr:armstart.obj
+ 0001:00013450       VaFromPa                   00024450 f   nkldr:armstart.obj
+ 0001:0001349c       GetCpuId                   0002449c f   nkldr:armstart.obj
+ 0001:000134a4       KernelStart                000244a4 f   nkldr:armstart.obj
+ 0001:000136ac       ARMInit                    000246ac f   nkldr:arminit.obj
+ 0001:000136f0       KernelRelocate             000246f0 f   nkldr:ldrcmn.obj
+ 0001:0001376c       FindKernelEntry            0002476c f   nkldr:ldrcmn.obj
+ 0001:000137e0       SetOsAxsDataBlockPointer   000247e0 f   nkldr:kdinfo.obj
+ 0001:000137f8       _stricmp                   000247f8 f   nkldr:strings.obj
+ 0001:00013848       memset                     00024848 f   fulllibc:memset.obj
+ 0001:000138d0       memcpy                     000248d0 f   fulllibc:memcpy.obj
+ 0001:00013c7c       memcpybigblk               00024c7c f   fulllibc:memcpy.obj
+ 0001:00014630       tolower                    00025630 f   fulllibc:tolower.obj
+ 0001:00014654       OEMInitGlobals             00025654 f   oemmain:oemglobal.obj
+ 0001:00014684       NKDbgPrintfW               00025684 f   nkstub:nkstub.obj
+ 0001:000146b8       NKwvsprintfW               000256b8 f   nkstub:nkstub.obj
+ 0001:000146dc       NKSetLastError             000256dc f   nkstub:nkstub.obj
+ 0001:00014700       EnterCriticalSection       00025700 f   nkstub:nkstub.obj
+ 0001:00014724       LeaveCriticalSection       00025724 f   nkstub:nkstub.obj
+ 0001:00014748       InitializeCriticalSection  00025748 f   nkstub:nkstub.obj
+ 0001:0001476c       INTERRUPTS_ENABLE          0002576c f   nkstub:nkstub.obj
+ 0001:00014790       NKCallIntChain             00025790 f   nkstub:nkstub.obj
+ 0001:000147b4       NKIsSysIntrValid           000257b4 f   nkstub:nkstub.obj
+ 0001:000147d8       NKVirtualSetAttributes     000257d8 f   nkstub:nkstub.obj
+ 0001:0001480c       NKForceCleanBoot           0002580c f   nkstub:nkstub.obj
+ 0001:00014830       NKwcslen                   00025830 f   nkstub:nkstub.obj
+ 0001:00014854       NKwcscpy                   00025854 f   nkstub:nkstub.obj
+ 0001:00014880       ProfilerHit                00025880 f   nkstub:nkstub.obj
+ 0001:000148d4       NKPhysToVirt               000258d4 f   nkstub:nkstub.obj
+ 0001:000148f8       __report_gsfailure         000258f8 f   nkstub:nkstub.obj
+ 0001:0001491c       InitPowerCTL               0002591c f   oal:init.obj
+ 0001:0001494c       OEMSetMemoryAttributes     0002594c f   oal:init.obj
+ 0001:0001498c       OEMGetExtensionDRAM        0002598c f   oal:init.obj
+ 0001:000149a4       OEMInit                    000259a4 f   oal:init.obj
+ 0001:00014cfc       OEMInitDebugSerial         00025cfc f   oal:debug.obj
+ 0001:00014d00       OEMWriteDebugByte          00025d00 f   oal:debug.obj
+ 0001:00014d04       OEMReadDebugByte           00025d04 f   oal:debug.obj
+ 0001:00014d0c       OEMWriteDebugString        00025d0c f   oal:debug.obj
+ 0001:00014d10       PWRCTL_setDAC0Power        00025d10 f   oal:ExtPowerCTL_LIB.obj
+ 0001:00014d54       PWRCTL_powerCTLInit        00025d54 f   oal:ExtPowerCTL_LIB.obj
+ 0001:00014ed8       PWRCTL_setDAC1Power        00025ed8 f   oal:ExtPowerCTL_LIB.obj
+ 0001:00014f1c       PWRCTL_setAllTo            00025f1c f   oal:ExtPowerCTL_LIB.obj
+ 0001:00015004       PWRCTL_InitializePowerCTL  00026004 f   oal:ExtPowerCTL_LIB.obj
+ 0001:00015024       PWRCTL_Sleep               00026024 f   oal:ExtPowerCTL_LIB.obj
+ 0001:00015070       PWRCTL_Awake               00026070 f   oal:ExtPowerCTL_LIB.obj
+ 0001:00015088       OALArgsInit                00026088 f   s3c6410_args:args.obj
+ 0001:00015224       OALArgsQuery               00026224 f   s3c6410_args:args.obj
+ 0001:000153bc       System_GetAPLLCLK          000263bc f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:0001542c       System_GetMPLLCLK          0002642c f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:00015484       System_VCheckSyncMode      00026484 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:000154b4       System_GetPCLK             000264b4 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:0001551c       System_GetHCLK             0002651c f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:00015584       System_GetARMCLK           00026584 f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:000155bc       FillClockInfo              000265bc f   s3c6410_system_lib_sec_v1:s3c6410_util.obj
+ 0001:000155f8       OEMInterruptHandlerFIQ     000265f8 f   oal_intr_s3c6410_sec_v1:fiq.obj
+ 0001:000155fc       OALIntrRequestIrqs         000265fc f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:000156b0       OALIntrEnableIrqs          000266b0 f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:000157e8       OALIntrDisableIrqs         000267e8 f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:0001592c       OALIntrDoneIrqs            0002692c f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:00015a48       OEMInterruptHandler        00026a48 f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:00015f38       VICTableInit               00026f38 f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:00016154       OALIntrInit                00027154 f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:0001629c       OALIntrMapInit             0002729c f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:0001631c       OALIntrStaticTranslate     0002731c f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:00016394       OALIntrTranslateIrq        00027394 f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:00016404       OALIntrRequestSysIntr      00027404 f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:00016548       OALIntrReleaseSysIntr      00027548 f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:00016608       OEMInterruptEnable         00027608 f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:0001669c       OEMInterruptDisable        0002769c f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:000166fc       OEMInterruptMask           000276fc f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:00016774       OEMInterruptDone           00027774 f   oal_intr_s3c6410_sec_v1:map.obj
+ 0001:000167d4       OEMIoControl               000277d4 f   oal_ioctl_s3c6410_sec_v1:ioctl.obj
+ 0001:00017200       InitializeOTGCLK           00028200 f   oal_power_s3c6410_sec_v1:off.obj
+ 0001:00017284       OEMPowerOff                00028284 f   oal_power_s3c6410_sec_v1:off.obj
+ 0001:00017624       OEMProfileTimerDisable     00028624 f   oal_profiler_s3c6410_sec_v1:profiler.obj
+ 0001:000176dc       OALProfileIntrHandler      000286dc f   oal_profiler_s3c6410_sec_v1:profiler.obj
+ 0001:00017778       OEMProfileTimerEnable      00028778 f   oal_profiler_s3c6410_sec_v1:profiler.obj
+ 0001:000178b4       OEMGetRealTime             000288b4 f   oal_rtc_s3c6410_sec_v1:rtc.obj
+ 0001:00017a98       OEMSetRealTime             00028a98 f   oal_rtc_s3c6410_sec_v1:rtc.obj
+ 0001:00017cf8       OEMSetAlarmTime            00028cf8 f   oal_rtc_s3c6410_sec_v1:rtc.obj
+ 0001:00017f68       OALIoCtlHalInitRTC         00028f68 f   oal_rtc_s3c6410_sec_v1:rtc.obj
+ 0001:000180f0       InitSystemTimer            000290f0 f   oal_timer_s3c6410_sec_v1:timer.obj
+ 0001:00018188       OALTimerInit               00029188 f   oal_timer_s3c6410_sec_v1:timer.obj
+ 0001:000183a8       OALTimerIntrHandler        000293a8 f   oal_timer_s3c6410_sec_v1:timer.obj
+ 0001:00018440       OALTimerCountsSinceSysTick 00029440 f   oal_timer_s3c6410_sec_v1:timer.obj
+ 0001:00018478       OALCPUIdle                 00029478 f   oal_timer_s3c6410_sec_v1:timer.obj
+ 0001:000184bc       OEMIdle                    000294bc f   oal_timer_s3c6410_sec_v1:timer.obj
+ 0001:00018540       OEMGetTickCount            00029540 f   oal_timer_s3c6410_sec_v1:counts.obj
+ 0001:000185ac       OALTimerQueryPerformanceFrequency 000295ac f   oal_timer_s3c6410_sec_v1:counts.obj
+ 0001:000185dc       OALTimerQueryPerformanceCounter 000295dc f   oal_timer_s3c6410_sec_v1:counts.obj
+ 0001:00018634       OALIsProcessorFeaturePresent 00029634 f   oal_misc_s3c6410_sec_v1:feature.obj
+ 0001:00018698       OEMCacheRangeFlush         00029698 f   oal_cache_s3c6410_sec_v1:flush.obj
+ 0001:00018840       OEMARMCacheMode            00029840 f   oal_cache_s3c6410_sec_v1:cachemode.obj
+ 0001:00018848       OALCacheGlobalsInit        00029848 f   oal_cache_s3c6410_sec_v1:init.obj
+ 0001:000189c0       OALClearDTLBEntry          000299c0 f   oal_cache_s3c6410_sec_v1:cleardtlbentry.obj
+ 0001:000189d0       OALClearITLBEntry          000299d0 f   oal_cache_s3c6410_sec_v1:clearitlbentry.obj
+ 0001:000189e0       OALFlushICacheLines        000299e0 f   oal_cache_s3c6410_sec_v1:flushiclines.obj
+ 0001:00018a00       OALCleanDCacheLines        00029a00 f   oal_cache_s3c6410_sec_v1:cleandclines.obj
+ 0001:00018a28       OALCleanDCache             00029a28 f   oal_cache_s3c6410_sec_v1:cleandc.obj
+ 0001:00018a9c       OALFlushDCacheLines        00029a9c f   oal_cache_s3c6410_sec_v1:flushdclines.obj
+ 0001:00018abc       OALPAtoVA                  00029abc f   oal_memory_arm:memory.obj
+ 0001:00018b48       OALLogSerial               00029b48 f   oal_log:log.obj
+ 0001:00018b9c       __GSHandlerCheckCommon     00029b9c f   fulllibc:gshandler.obj
+ 0001:00018bd8       __GSHandlerCheck           00029bd8 f   fulllibc:gshandler.obj
+ 0001:00018bfc       __security_check_cookie    00029bfc f   fulllibc:armsecgs.obj
+ 0001:00018c10       __gsfailure                00029c10 f   fulllibc:armsecgs.obj
+ 0001:00018c54       __rt_udiv                  00029c54 f   fulllibc:__udiv.obj
+ 0001:00018d18       __rt_udivrem64by64         00029d18 f   fulllibc:mdsdiv64.obj
+ 0001:00018e10       __rt_divrem64by64          00029e10 f   fulllibc:mdsdiv64.obj
+ 0001:00018e60       __rt_udiv64by64            00029e60 f   fulllibc:mdsdiv64.obj
+ 0001:00018e70       __rt_urem64by64            00029e70 f   fulllibc:mdsdiv64.obj
+ 0001:00018e88       __rt_sdiv64by64            00029e88 f   fulllibc:mdsdiv64.obj
+ 0001:00018e98       __rt_srem64by64            00029e98 f   fulllibc:mdsdiv64.obj
+ 0001:00018eb0       __raise_int_divide_by_zero 00029eb0 f   fulllibc:diverr.obj
+ 0001:00018ed4       __crtRaiseException        00029ed4 f   fulllibc:raiseexc.obj
+ 0001:00018ef0       KITLIoctl                  00029ef0 f   nkstub:kitlstub.obj
+ 0001:00018f2c       BSPIntrInit                00029f2c f   oal:intr.obj
+ 0001:00019064       BSPIntrRequestIrqs         0002a064 f   oal:intr.obj
+ 0001:00019180       BSPIntrEnableIrq           0002a180 f   oal:intr.obj
+ 0001:000191dc       BSPIntrDisableIrq          0002a1dc f   oal:intr.obj
+ 0001:00019238       BSPIntrDoneIrq             0002a238 f   oal:intr.obj
+ 0001:00019c60       OALIoCtlPostInit           0002ac60 f   oal:ioctl.obj
+ 0001:00019c94       OALIoCtlPocketStoreCMD     0002ac94 f   oal:ioctl.obj
+ 0001:00019e48       BSPPowerOff                0002ae48 f   oal:power.obj
+ 0001:00019f84       BSPPowerOn                 0002af84 f   oal:power.obj
+ 0001:00019fcc       PSII_HALWrapper            0002afcc f   oal:HALWrapper.obj
+ 0001:0001aa28       VFL_Init                   0002ba28 f   oal:VFLInterface.obj
+ 0001:0001ab9c       _CheckNANDFlash            0002bb9c f   oal:VFLInterface.obj
+ 0001:0001af10       VFL_GetFTLCxtVbn           0002bf10 f   oal:VFLInterface.obj
+ 0001:0001bfe0       DoSync                     0002cfe0 f   oal:VFLInterface.obj
+ 0001:0001c08c       VFL_Open                   0002d08c f   oal:VFLInterface.obj
+ 0001:0001c5c4       VFL_Read                   0002d5c4 f   oal:VFLInterface.obj
+ 0001:0001d424       VFL_Write                  0002e424 f   oal:VFLInterface.obj
+ 0001:0001d6e4       VFL_Sync                   0002e6e4 f   oal:VFLInterface.obj
+ 0001:0001d744       VFL_Erase                  0002e744 f   oal:VFLInterface.obj
+ 0001:0001dfa8       VFL_Copyback               0002efa8 f   oal:VFLInterface.obj
+ 0001:0001e990       VFL_ChangeFTLCxtVbn        0002f990 f   oal:VFLInterface.obj
+ 0001:0001eb88       VFL_Format                 0002fb88 f   oal:VFLInterface.obj
+ 0001:0001f024       NF_WAIT_ECC_DEC_DONE       00030024 f   oal:S3C6410_FIL.obj
+ 0001:0001f0a8       NAND_GetPlatformInfo       000300a8 f   oal:S3C6410_FIL.obj
+ 0001:0001f148       NAND_Steploader_Write      00030148 f   oal:S3C6410_FIL.obj
+ 0001:0001f448       NAND_Sync                  00030448 f   oal:S3C6410_FIL.obj
+ 0001:0001f650       NAND_Reset                 00030650 f   oal:S3C6410_FIL.obj
+ 0001:00020a4c       NAND_Init                  00031a4c f   oal:S3C6410_FIL.obj
+ 0001:00020f4c       NAND_Write                 00031f4c f   oal:S3C6410_FIL.obj
+ 0001:000215cc       NAND_Erase                 000325cc f   oal:S3C6410_FIL.obj
+ 0001:00022e74       NAND_Read                  00033e74 f   oal:S3C6410_FIL.obj
+ 0001:00023548       NAND_Read_Retry            00034548 f   oal:S3C6410_FIL.obj
+ 0001:00023780       WMR_Format_FIL             00034780 f   oal:WMR_Utils.obj
+ 0001:00023a34       WMR_ERASE_VFLAREA          00034a34 f   oal:WMR_Utils.obj
+ 0001:00023cd4       WMR_Format_VFL             00034cd4 f   oal:WMR_Utils.obj
+ 0001:00023e44       WMR_Format_FTL             00034e44 f   oal:WMR_Utils.obj
+ 0001:00025584       FTL_Format                 00036584 f   oal:FTLInterface.obj
+ 0001:000257f4       FTL_Init                   000367f4 f   oal:FTLInterface.obj
+ 0001:00025a00       FTL_Close                  00036a00 f   oal:FTLInterface.obj
+ 0001:000274f4       FTL_Read                   000384f4 f   oal:FTLInterface.obj
+ 0001:00027944       FTL_Scan                   00038944 f   oal:FTLInterface.obj
+ 0001:00027b38       FTL_ReadReclaim            00038b38 f   oal:FTLInterface.obj
+ 0001:00027ce4       FTL_GarbageCollect         00038ce4 f   oal:FTLInterface.obj
+ 0001:00028558       FTL_Open                   00039558 f   oal:FTLInterface.obj
+ 0001:000287ac       FTL_Write                  000397ac f   oal:FTLInterface.obj
+ 0001:00028fe8       FTL_Delete                 00039fe8 f   oal:FTLInterface.obj
+ 0001:00029334       FIL_Init                   0003a334 f   oal:FIL.obj
+ 0001:000293b8       FIL_GetFuncTbl             0003a3b8 f   oal:FIL.obj
+ 0001:000293c4       GetNandInfo                0003a3c4 f   oal:FIL.obj
+ 0001:000293f8       CalcGlobal                 0003a3f8 f   oal:WMRGlobal.obj
+ 0001:00029590       GetMlcClass                0003a590 f   oal:WMRGlobal.obj
+ 0001:00029598       WMR_GetChkSum              0003a598 f   oal:OSLessWMROAM.obj
+ 0001:00029658       OAM_Memcpy                 0003a658 f   oal:OSLessWMROAM.obj
+ 0001:00029700       OAM_Memset                 0003a700 f   oal:OSLessWMROAM.obj
+ 0001:00029774       OAM_Assert                 0003a774 f   oal:OSLessWMROAM.obj
+ 0001:000297b4       BUF_Init                   0003a7b4 f   oal:VFLBuffer.obj
+ 0001:00029878       BUF_Get                    0003a878 f   oal:VFLBuffer.obj
+ 0001:000299bc       BUF_Release                0003a9bc f   oal:VFLBuffer.obj
+ 0001:00029acc       BUF_Reget                  0003aacc f   oal:VFLBuffer.obj
+ 0001:00029b64       _Read_512Byte              0003ab64 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029ba4       _Read_512Byte_Unaligned    0003aba4 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029c40       _Write_512Byte             0003ac40 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029c80       _Write_512Byte_Unaligned   0003ac80 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029d1c       _Write_Dummy_468Byte_AllFF 0003ad1c f   oal:S3C6410_FIL_opt.obj
+ 0001:00029d70       _Write_Dummy_428Byte_AllFF 0003ad70 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029dbc       _Write_Dummy_364Byte_AllFF 0003adbc f   oal:S3C6410_FIL_opt.obj
+ 0001:00029e08       _Write_Dummy_500Byte_AllFF 0003ae08 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029e5c       _Write_Dummy_492Byte_AllFF 0003ae5c f   oal:S3C6410_FIL_opt.obj
+ 0001:00029ea8       _Write_Dummy_480Byte_AllFF 0003aea8 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029ee8       _Write_Dummy_448Byte_AllFF 0003aee8 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029f28       _STOP_FOR_BREAK            0003af28 f   oal:S3C6410_FIL_opt.obj
+ 0001:00029f40       InitializeDVS              0003af40 f   s3c6410_PM:dvs.obj
+ 0001:00029f90       SetCurrentIdleTime         0003af90 f   s3c6410_PM:dvs.obj
+ 0001:00029fa0       ChangeClockDivider         0003afa0 f   s3c6410_PM:dvs.obj
+ 0001:0002a01c       ProfileDVSOnOff            0003b01c f   s3c6410_PM:dvs.obj
+ 0001:0002a1c0       ChangeDVSLevel             0003b1c0 f   s3c6410_PM:dvs.obj
+ 0001:0002a220       UpdateDVS                  0003b220 f   s3c6410_PM:dvs.obj
+ 0001:0002a498       OALStall_us                0003b498 f   s3c6410_system_lib_sec_v1:s3c6410_stall.obj
+ 0001:0002a4fc       OALStall_ms                0003b4fc f   s3c6410_system_lib_sec_v1:s3c6410_stall.obj
+ 0001:0002a564       OALIoCtlHalRequestSysIntr  0003b564 f   oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:0002a6b0       OALIoCtlHalReleaseSysIntr  0003b6b0 f   oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:0002a760       OALIoCtlHalRequestIrq      0003b760 f   oal_intr_s3c6410_sec_v1:ioctl.obj
+ 0001:0002a860       OALIoCtlHalGetCPUID        0003b860 f   oal_ioctl_s3c6410_sec_v1:CPUIDCheck.obj
+ 0001:0002a93c       OALIoCtlHalUpdateMode      0003b93c f   oal_ioctl_s3c6410_sec_v1:imgupd.obj
+ 0001:0002a9e0       OALIoCtlHalGetRegSecureKeys 0003b9e0 f   oal_ioctl_s3c6410_sec_v1:securekeys.obj
+ 0001:0002aa64       OALIoCtlProcessorInfo      0003ba64 f   oal_ioctl_s3c6410_sec_v1:procinfo.obj
+ 0001:0002ac4c       OALIoCtlHalGetRandomSeed   0003bc4c f   oal_ioctl_s3c6410_sec_v1:randomseed.obj
+ 0001:0002ae10       OALIoCtlHalGetUUID         0003be10 f   oal_ioctl_s3c6410_sec_v1:uuid.obj
+ 0001:0002b104       OALIoCtlHalGetDeviceInfo   0003c104 f   oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:0002b4cc       OALIoCtlHalGetDeviceId     0003c4cc f   oal_ioctl_s3c6410_sec_v1:deviceid.obj
+ 0001:0002b6d8       OALIoCtlHalEnableWake      0003c6d8 f   oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:0002b7bc       OALIoCtlHalDisableWake     0003c7bc f   oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:0002b8a0       OALIoCtlHalGetWakeSource   0003c8a0 f   oal_power_s3c6410_sec_v1:ioctl.obj
+ 0001:0002b948       OEMSWReset                 0003c948 f   oal_power_s3c6410_sec_v1:reset.obj
+ 0001:0002b994       _OEMSWReset                0003c994 f   oal_power_s3c6410_sec_v1:watchdog_sw_rst.obj
+ 0001:0002ba04       OALIoCtlHalGetCacheInfo    0003ca04 f   oal_cache_s3c6410_sec_v1:ioctl.obj
+ 0001:0002bb4c       OALIoCtlHalDdkCall         0003cb4c f   oal_io:ioctl.obj
+ 0001:0002bda8       OALIoBusPowerOff           0003cda8 f   oal_io:power.obj
+ 0001:0002be08       OALIoBusPowerOn            0003ce08 f   oal_io:power.obj
+ 0001:0002be68       OALIoTransBusAddress       0003ce68 f   oal_io:trans.obj
+ 0001:0002bf28       OALIoTransSystemAddress    0003cf28 f   oal_io:trans.obj
+ 0001:0002bfb4       OALIoReadBusData           0003cfb4 f   oal_io:data.obj
+ 0001:0002bfbc       OALIoWriteBusData          0003cfbc f   oal_io:data.obj
+ 0001:0002bfc4       __C_specific_handler       0003cfc4 f   fulllibc:chandler.obj
+ 0001:0002c110       strlen                     0003d110 f   fulllibc:mdsstrlen.obj
+ 0001:0002c174       __C_ExecuteTerminationHandler 0003d174 f   fulllibc:jmpuwind.obj
+ 0001:0002c174       __C_ExecuteExceptionFilter 0003d174 f   fulllibc:jmpuwind.obj
+ 0003:00000000       OsAxsDataBlock_2           00044000     nkldr:kdinfo.obj
+ 0003:00000080       OsAxsHwTrap                00044080     nkldr:kdinfo.obj
+ 0003:0000021c       g_pOemGlobal               0004421c     oemmain:oemglobal.obj
+ 0003:00000220       __security_cookie          00044220     nkstub:nkstub.obj
+ 0003:00000224       __security_cookie_complement 00044224     nkstub:nkstub.obj
+ 0003:00000228       g_oalRtcResetTime          00044228     oal:init.obj
+ 0003:00000290       initialOALLogZones         00044290     oal_log:debug.obj
+ 0003:00000298       dpCurSettings              00044298     oal_log:debug.obj
+ 0003:000006dc       g_oalIoCtlPlatformType     000446dc     oal:ioctl.obj
+ 0003:000006e0       g_oalIoCtlPlatformOEM      000446e0     oal:ioctl.obj
+ 0003:000006e4       g_oalIoCtlProcessorVendor  000446e4     oal:ioctl.obj
+ 0003:000006e8       g_oalIoCtlProcessorName    000446e8     oal:ioctl.obj
+ 0003:000006ec       g_oalIoCtlProcessorCore    000446ec     oal:ioctl.obj
+ 0003:00000800       g_aTransitionTable         00044800     s3c6410_PM:dvs.obj
+ 0003:00000908       g_oalWakeSource            00044908     oal_power_s3c6410_sec_v1:ioctl.obj
+ 0003:0000094c       g_pProfilerISR             0004494c     oal_intr_s3c6410_sec_v1:intr.obj
+ 0003:000013fc       g_oalRTCcsInit             000453fc     oal_rtc_s3c6410_sec_v1:rtc.obj
+ 0003:00001418       g_oalIoCtlInstructionSet   00045418     oal:ioctl.obj
+ 0003:0000143c       pLocalSData                0004543c     oal:VFLInterface.obj
+ 0003:000036c0       pLocalMData                000476c0     oal:VFLInterface.obj
+ 0003:000147e4       bReadSafeMode              000587e4     oal:S3C6410_FIL.obj
+ 0003:000147e8       bECCEngineError            000587e8     oal:S3C6410_FIL.obj
+ 0003:00020df8       stDeviceInfo               00064df8     oal:WMRGlobal.obj
+ 0003:00020e60       stConfig                   00064e60     oal:WMRGlobal.obj
+ 0003:00020ea8       stLayout                   00064ea8     oal:WMRGlobal.obj
+ 0003:0002f9d0       g_pNKGlobal                000739d0     <common>
+ 0003:0002f9d4       gnPpn                      000739d4     <common>
+ 0003:0002f9e0       csPocketStoreVFL           000739e0     <common>
+ 0003:0002f9f4       v_pIOP_PIO_regs            000739f4     <common>
+ 0003:0002f9f8       g_oalIoCtlClockSpeed       000739f8     <common>
+ 0003:0002fa00       g_oalRTCcs                 00073a00     <common>
+ 0003:0002fa20       g_oalTimer                 00073a20     <common>
+ 0003:0002fa60       g_oalCacheInfo             00073a60     <common>
 
  entry point at        0001:00000000
 
  Static symbols
 
- 0001:000145b0       ReturnFalse                000255b0 f   oemmain:oemglobal.obj
- 0001:000145b8       ReturnSelf                 000255b8 f   oemmain:oemglobal.obj
- 0001:000145bc       FakeCalcPage               000255bc f   oemmain:oemglobal.obj
- 0001:00015dcc       PrepareDMACIntr            00026dcc f   oal_intr_s3c6410_sec_v1:intr.obj
- 0001:000169bc       S3C6410_SaveState_GPIO     000279bc f   oal_power_s3c6410_sec_v1:off.obj
- 0001:00016c68       S3C6410_RestoreState_GPIO  00027c68 f   oal_power_s3c6410_sec_v1:off.obj
- 0001:00016f14       S3C6410_SaveState_DMACon   00027f14 f   oal_power_s3c6410_sec_v1:off.obj
- 0001:000170a8       S3C6410_RestoreState_DMACon 000280a8 f   oal_power_s3c6410_sec_v1:off.obj
- 0001:000192cc       OALIoCtlHalReboot          0002a2cc f   oal:ioctl.obj
- 0001:00019320       OALIoCtlHalGetHWEntropy    0002a320 f   oal:ioctl.obj
- 0001:000193d8       OALIoCtlEBootMAC           0002a3d8 f   oal:ioctl.obj
- 0001:00019458       OALIoCtlHalGetHiveCleanFlag 0002a458 f   oal:ioctl.obj
- 0001:00019588       OALIoCtlHalQueryFormatPartition 0002a588 f   oal:ioctl.obj
- 0001:0001971c       OALIoCtlHalQueryDisplaySettings 0002a71c f   oal:ioctl.obj
- 0001:00019880       OALIoCtlHalPowerCTL        0002a880 f   oal:ioctl.obj
- 0001:00019980       OALIoCtlHalSetSystemLevel  0002a980 f   oal:ioctl.obj
- 0001:00019a7c       OALIoCtlHalProfileDVS      0002aa7c f   oal:ioctl.obj
- 0001:00019b78       OALIoCtlHalClockInfo       0002ab78 f   oal:ioctl.obj
- 0001:00019c5c       OALIoCtlHalInitRegistry    0002ac5c f   oal:ioctl.obj
- 0001:00019d2c       S3C6410_WakeUpSource_Detect 0002ad2c f   oal:power.obj
- 0001:0001a22c       _GetReservedBlk            0002b22c f   oal:VFLInterface.obj
- 0001:0001a3ac       _RemapBadBlk               0002b3ac f   oal:VFLInterface.obj
- 0001:0001a5d0       _GetPhysicalAddr           0002b5d0 f   oal:VFLInterface.obj
- 0001:0001a6f4       _CheckInitialBad           0002b6f4 f   oal:VFLInterface.obj
- 0001:0001a880       _WriteBadMark              0002b880 f   oal:VFLInterface.obj
- 0001:0001ac8c       _PrintVFLCxt               0002bc8c f   oal:VFLInterface.obj
- 0001:0001af98       _StoreVFLCxt               0002bf98 f   oal:VFLInterface.obj
- 0001:0001b29c       _LoadVFLCxt                0002c29c f   oal:VFLInterface.obj
- 0001:0001b510       _ReplaceBadBlk             0002c510 f   oal:VFLInterface.obj
- 0001:0001b96c       _WaitEraseComplete         0002c96c f   oal:VFLInterface.obj
- 0001:0001ea48       _WriteInitBadList          0002fa48 f   oal:VFLInterface.obj
- 0001:0001f6e8       Read_DeviceID              000306e8 f   oal:S3C6410_FIL.obj
- 0001:0001f860       MLC_Print_Page_Data        00030860 f   oal:S3C6410_FIL.obj
- 0001:0001f94c       Write_Spare                0003094c f   oal:S3C6410_FIL.obj
- 0001:0001fc58       Write_Spare_Separate       00030c58 f   oal:S3C6410_FIL.obj
- 0001:00020078       Write_Spare_8BitECC        00031078 f   oal:S3C6410_FIL.obj
- 0001:000203e0       Decoding_MainECC           000313e0 f   oal:S3C6410_FIL.obj
- 0001:000204c0       Decoding_Main8BitECC       000314c0 f   oal:S3C6410_FIL.obj
- 0001:00020648       Decoding_SpareECC          00031648 f   oal:S3C6410_FIL.obj
- 0001:00020784       Decoding_Spare8BitECC      00031784 f   oal:S3C6410_FIL.obj
- 0001:00020940       MLC_Print_SFR              00031940 f   oal:S3C6410_FIL.obj
- 0001:00021848       Read_Sector                00032848 f   oal:S3C6410_FIL.obj
- 0001:00021a94       Read_Sector_8BitECC        00032a94 f   oal:S3C6410_FIL.obj
- 0001:00021ce4       Read_Spare                 00032ce4 f   oal:S3C6410_FIL.obj
- 0001:00022304       Read_Spare_Separate        00033304 f   oal:S3C6410_FIL.obj
- 0001:000228ac       Read_Spare_8BitECC         000338ac f   oal:S3C6410_FIL.obj
- 0001:00023f84       _InitBackupLBCxt           00034f84 f   oal:FTLInterface.obj
- 0001:00023ff8       _GetBackupLBIdx            00034ff8 f   oal:FTLInterface.obj
- 0001:00024040       _LogBlockFreePO            00035040 f   oal:FTLInterface.obj
- 0001:000240e4       _DisableCopyMerge          000350e4 f   oal:FTLInterface.obj
- 0001:000241a0       _ScanLogSection            000351a0 f   oal:FTLInterface.obj
- 0001:0002422c       _GetFreeVb                 0003522c f   oal:FTLInterface.obj
- 0001:00024434       _SetFreeVb                 00035434 f   oal:FTLInterface.obj
- 0001:00024508       _InitLogCxt                00035508 f   oal:FTLInterface.obj
- 0001:00024568       _ConvertL2V                00035568 f   oal:FTLInterface.obj
- 0001:000246a0       _GetEC                     000356a0 f   oal:FTLInterface.obj
- 0001:0002473c       _ModifyMap                 0003573c f   oal:FTLInterface.obj
- 0001:00024800       _ModifyReclaimMap          00035800 f   oal:FTLInterface.obj
- 0001:0002490c       _ModifyECTbl               0003590c f   oal:FTLInterface.obj
- 0001:00024a0c       _DoCopyMerge               00035a0c f   oal:FTLInterface.obj
- 0001:00024e28       _DoSimpleMerge             00035e28 f   oal:FTLInterface.obj
- 0001:00025188       _PrintFTLCxt               00036188 f   oal:FTLInterface.obj
- 0001:00025b0c       _ShouldLSBCopy             00036b0c f   oal:FTLInterface.obj
- 0001:00025c2c       _EraseBackupLB             00036c2c f   oal:FTLInterface.obj
- 0001:00025cc4       _BackupLSB                 00036cc4 f   oal:FTLInterface.obj
- 0001:00026088       _StoreFTLCxt               00037088 f   oal:FTLInterface.obj
- 0001:00026300       _LoadFTLCxt                00037300 f   oal:FTLInterface.obj
- 0001:000266b4       _MoveD2F                   000376b4 f   oal:FTLInterface.obj
- 0001:00026814       _AutoWearLevel             00037814 f   oal:FTLInterface.obj
- 0001:00026a50       _MetaWearLevel             00037a50 f   oal:FTLInterface.obj
- 0001:00026be8       _DoMoveMerge               00037be8 f   oal:FTLInterface.obj
- 0001:00026f28       _DoTripleMerge             00037f28 f   oal:FTLInterface.obj
- 0001:000272e0       _Merge                     000382e0 f   oal:FTLInterface.obj
- 0001:00027d68       _MakeLogMap                00038d68 f   oal:FTLInterface.obj
- 0001:00028384       _PrepareLog                00039384 f   oal:FTLInterface.obj
- 0001:0002ac98       ?CheckBufferSize@@YAHPBXABIPAI1PBG@Z 0003bc98 f   oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
- 0001:0002ad44       ?GetBootMeName@@YAHPAXIPAIPAPBG@Z 0003bd44 f   oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:00014640       ReturnFalse                00025640 f   oemmain:oemglobal.obj
+ 0001:00014648       ReturnSelf                 00025648 f   oemmain:oemglobal.obj
+ 0001:0001464c       FakeCalcPage               0002564c f   oemmain:oemglobal.obj
+ 0001:00015d90       PrepareDMACIntr            00026d90 f   oal_intr_s3c6410_sec_v1:intr.obj
+ 0001:00016980       S3C6410_SaveState_GPIO     00027980 f   oal_power_s3c6410_sec_v1:off.obj
+ 0001:00016c2c       S3C6410_RestoreState_GPIO  00027c2c f   oal_power_s3c6410_sec_v1:off.obj
+ 0001:00016ed8       S3C6410_SaveState_DMACon   00027ed8 f   oal_power_s3c6410_sec_v1:off.obj
+ 0001:0001706c       S3C6410_RestoreState_DMACon 0002806c f   oal_power_s3c6410_sec_v1:off.obj
+ 0001:00019294       OALIoCtlHalReboot          0002a294 f   oal:ioctl.obj
+ 0001:000192e8       OALIoCtlHalGetHWEntropy    0002a2e8 f   oal:ioctl.obj
+ 0001:000193a0       OALIoCtlEBootMAC           0002a3a0 f   oal:ioctl.obj
+ 0001:00019420       OALIoCtlHalGetHiveCleanFlag 0002a420 f   oal:ioctl.obj
+ 0001:00019550       OALIoCtlHalQueryFormatPartition 0002a550 f   oal:ioctl.obj
+ 0001:000196e4       OALIoCtlHalQueryDisplaySettings 0002a6e4 f   oal:ioctl.obj
+ 0001:00019848       OALIoCtlHalPowerCTL        0002a848 f   oal:ioctl.obj
+ 0001:00019948       OALIoCtlHalSetSystemLevel  0002a948 f   oal:ioctl.obj
+ 0001:00019a44       OALIoCtlHalProfileDVS      0002aa44 f   oal:ioctl.obj
+ 0001:00019b40       OALIoCtlHalClockInfo       0002ab40 f   oal:ioctl.obj
+ 0001:00019c24       OALIoCtlHalInitRegistry    0002ac24 f   oal:ioctl.obj
+ 0001:00019cf4       S3C6410_WakeUpSource_Detect 0002acf4 f   oal:power.obj
+ 0001:0001a1f4       _GetReservedBlk            0002b1f4 f   oal:VFLInterface.obj
+ 0001:0001a374       _RemapBadBlk               0002b374 f   oal:VFLInterface.obj
+ 0001:0001a598       _GetPhysicalAddr           0002b598 f   oal:VFLInterface.obj
+ 0001:0001a6bc       _CheckInitialBad           0002b6bc f   oal:VFLInterface.obj
+ 0001:0001a848       _WriteBadMark              0002b848 f   oal:VFLInterface.obj
+ 0001:0001ac54       _PrintVFLCxt               0002bc54 f   oal:VFLInterface.obj
+ 0001:0001af60       _StoreVFLCxt               0002bf60 f   oal:VFLInterface.obj
+ 0001:0001b264       _LoadVFLCxt                0002c264 f   oal:VFLInterface.obj
+ 0001:0001b4d8       _ReplaceBadBlk             0002c4d8 f   oal:VFLInterface.obj
+ 0001:0001b934       _WaitEraseComplete         0002c934 f   oal:VFLInterface.obj
+ 0001:0001ea10       _WriteInitBadList          0002fa10 f   oal:VFLInterface.obj
+ 0001:0001f6b0       Read_DeviceID              000306b0 f   oal:S3C6410_FIL.obj
+ 0001:0001f828       MLC_Print_Page_Data        00030828 f   oal:S3C6410_FIL.obj
+ 0001:0001f914       Write_Spare                00030914 f   oal:S3C6410_FIL.obj
+ 0001:0001fc20       Write_Spare_Separate       00030c20 f   oal:S3C6410_FIL.obj
+ 0001:00020040       Write_Spare_8BitECC        00031040 f   oal:S3C6410_FIL.obj
+ 0001:000203a8       Decoding_MainECC           000313a8 f   oal:S3C6410_FIL.obj
+ 0001:00020488       Decoding_Main8BitECC       00031488 f   oal:S3C6410_FIL.obj
+ 0001:00020610       Decoding_SpareECC          00031610 f   oal:S3C6410_FIL.obj
+ 0001:0002074c       Decoding_Spare8BitECC      0003174c f   oal:S3C6410_FIL.obj
+ 0001:00020908       MLC_Print_SFR              00031908 f   oal:S3C6410_FIL.obj
+ 0001:00021810       Read_Sector                00032810 f   oal:S3C6410_FIL.obj
+ 0001:00021a5c       Read_Sector_8BitECC        00032a5c f   oal:S3C6410_FIL.obj
+ 0001:00021cac       Read_Spare                 00032cac f   oal:S3C6410_FIL.obj
+ 0001:000222cc       Read_Spare_Separate        000332cc f   oal:S3C6410_FIL.obj
+ 0001:00022874       Read_Spare_8BitECC         00033874 f   oal:S3C6410_FIL.obj
+ 0001:00023f4c       _InitBackupLBCxt           00034f4c f   oal:FTLInterface.obj
+ 0001:00023fc0       _GetBackupLBIdx            00034fc0 f   oal:FTLInterface.obj
+ 0001:00024008       _LogBlockFreePO            00035008 f   oal:FTLInterface.obj
+ 0001:000240ac       _DisableCopyMerge          000350ac f   oal:FTLInterface.obj
+ 0001:00024168       _ScanLogSection            00035168 f   oal:FTLInterface.obj
+ 0001:000241f4       _GetFreeVb                 000351f4 f   oal:FTLInterface.obj
+ 0001:000243fc       _SetFreeVb                 000353fc f   oal:FTLInterface.obj
+ 0001:000244d0       _InitLogCxt                000354d0 f   oal:FTLInterface.obj
+ 0001:00024530       _ConvertL2V                00035530 f   oal:FTLInterface.obj
+ 0001:00024668       _GetEC                     00035668 f   oal:FTLInterface.obj
+ 0001:00024704       _ModifyMap                 00035704 f   oal:FTLInterface.obj
+ 0001:000247c8       _ModifyReclaimMap          000357c8 f   oal:FTLInterface.obj
+ 0001:000248d4       _ModifyECTbl               000358d4 f   oal:FTLInterface.obj
+ 0001:000249d4       _DoCopyMerge               000359d4 f   oal:FTLInterface.obj
+ 0001:00024df0       _DoSimpleMerge             00035df0 f   oal:FTLInterface.obj
+ 0001:00025150       _PrintFTLCxt               00036150 f   oal:FTLInterface.obj
+ 0001:00025ad4       _ShouldLSBCopy             00036ad4 f   oal:FTLInterface.obj
+ 0001:00025bf4       _EraseBackupLB             00036bf4 f   oal:FTLInterface.obj
+ 0001:00025c8c       _BackupLSB                 00036c8c f   oal:FTLInterface.obj
+ 0001:00026050       _StoreFTLCxt               00037050 f   oal:FTLInterface.obj
+ 0001:000262c8       _LoadFTLCxt                000372c8 f   oal:FTLInterface.obj
+ 0001:0002667c       _MoveD2F                   0003767c f   oal:FTLInterface.obj
+ 0001:000267dc       _AutoWearLevel             000377dc f   oal:FTLInterface.obj
+ 0001:00026a18       _MetaWearLevel             00037a18 f   oal:FTLInterface.obj
+ 0001:00026bb0       _DoMoveMerge               00037bb0 f   oal:FTLInterface.obj
+ 0001:00026ef0       _DoTripleMerge             00037ef0 f   oal:FTLInterface.obj
+ 0001:000272a8       _Merge                     000382a8 f   oal:FTLInterface.obj
+ 0001:00027d30       _MakeLogMap                00038d30 f   oal:FTLInterface.obj
+ 0001:0002834c       _PrepareLog                0003934c f   oal:FTLInterface.obj
+ 0001:0002af4c       ?CheckBufferSize@@YAHPBXABIPAI1PBG@Z 0003bf4c f   oal_ioctl_s3c6410_sec_v1:deviceinfo.obj
+ 0001:0002aff8       ?GetBootMeName@@YAHPAXIPAIPAPBG@Z 0003bff8 f   oal_ioctl_s3c6410_sec_v1:deviceinfo.obj

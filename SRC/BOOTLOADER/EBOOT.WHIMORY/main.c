@@ -128,6 +128,12 @@ DWORD				ExtPowerCTL;
 // we read from the args and write to both locations
 // thus we encourage you to use those getters and setters
 
+void Delay(unsigned dwCount)
+{
+	unsigned long dwTemp;
+	for(dwTemp =0; dwTemp < dwCount*10; dwTemp++);
+}
+
 DWORD OEMgetDisplayType()
 {
 	return (pBSPArgs->displayType);
