@@ -44,10 +44,10 @@ ULONG *
 APIENTRY
 DrvGetMasks(DHPDEV dhpdev)
 {
-	DWORD dwDisplayType[2] = {123,16};
+	DWORD dwDisplayType[3] = {123,16,0};
     DWORD dwBytesRet = 0;
-	if (KernelIoControl(IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*2, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
-                        && (dwBytesRet == (sizeof(DWORD)*2)))
+	if (KernelIoControl(IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*3, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
+                        && (dwBytesRet == (sizeof(DWORD)*3)))
 	{
 		DEBUGMSG(DISP_ZONE_ERROR,(TEXT("--------------display driver display: %s\r\n"),LDI_getDisplayName((HITEG_DISPLAY_TYPE)dwDisplayType[0])));
 	}
@@ -127,13 +127,14 @@ S3C6410Disp::NumModes()
 void
 S3C6410Disp::InitializeDisplayMode()
 {
-	DWORD dwDisplayType[2] = {123,16};
+	DWORD dwDisplayType[3] = {123,16,0};
     DWORD dwBytesRet = 0;
-	if (KernelIoControl(IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*2, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
-                        && (dwBytesRet == (sizeof(DWORD)*2)))
+	if (KernelIoControl(IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*3, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
+                        && (dwBytesRet == (sizeof(DWORD)*3)))
 	{
 		DEBUGMSG(DISP_ZONE_ERROR,(TEXT("[DSPL_MODE] display driver display: %s\r\n"),LDI_getDisplayName((HITEG_DISPLAY_TYPE)dwDisplayType[0])));
 		LDI_set_LCD_module_type((HITEG_DISPLAY_TYPE)dwDisplayType[0]);
+		
 	}
 	else
 	{
@@ -157,7 +158,7 @@ S3C6410Disp::InitializeDisplayMode()
     m_pMode->height = m_nScreenHeight=LDI_GetDisplayHeight( LDI_getDisplayType() );
     m_pMode->format = EDDGPEPixelFormatToEGPEFormat[m_pModeEx->ePixelFormat];
     m_pMode->Bpp = EGPEFormatToBpp[m_pMode->format];
-    m_pMode->frequency = 60;        // Usually LCD Panel require 60Hz
+    m_pMode->frequency = LDI_GetFrameRate(LDI_getDisplayType());        
 
     // Fill DDGPEStandardHeader
     m_pModeEx->dwSize = sizeof(GPEModeEx);

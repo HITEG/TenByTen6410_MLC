@@ -96,3 +96,6 @@ SOURCES=  initproc.c \
 	wlan_thread.c \
 	aes.c \
 	custom_interface.c
+FILE_VIEW_RESOURCE_FOLDER= \
+    ..\SDIO8686.reg \
+

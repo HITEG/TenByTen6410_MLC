@@ -242,7 +242,7 @@ PU8  NIC_DEVICE_OBJECT::DeviceMacAddress(
             *(PU8)(ptrBuffer + 5) = save_Random_mac[2];
 
             break;
-		case 0x05:		// use MAC gave for KITL ethernet in eBoot loader...well
+		case 0x05:		// use MAC gave for KITL ethernet in eBoot loader...well, not working, yet
 			{
 				unsigned char mac[6];
 				DWORD dwBytesRet;

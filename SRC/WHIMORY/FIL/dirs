@@ -10,5 +10,7 @@ this source code. For a copy of the EULA, please see the LICENSE.RTF on your
 install media.
 !endif
 
-DIRS= \
-     $(WMR_FIL).$(WMR_NAND_SUPPORT)     \
+DIRS=\
+	$(WMR_FIL).$(WMR_NAND_SUPPORT)\
+	SMDK6410.MLC
+

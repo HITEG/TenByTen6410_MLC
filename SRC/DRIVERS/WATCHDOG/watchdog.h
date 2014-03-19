@@ -8,21 +8,29 @@ extern "C" {
 
 
 #ifdef DEBUG
-#define ZONE_ERR            DEBUGZONE(0)
-#define ZONE_WRN            DEBUGZONE(1)
-#define ZONE_INIT           DEBUGZONE(2)
-#define ZONE_OPEN           DEBUGZONE(3)
-#define ZONE_READ           DEBUGZONE(4)
-#define ZONE_WRITE          DEBUGZONE(5)
-#define ZONE_IOCTL          DEBUGZONE(6)
-//...
+#ifdef ZONE_ERROR
+	#undef ZONE_ERROR
+#endif
+#define ZONE_ERROR            DEBUGZONE(0)
+#ifdef ZONE_WARNING
+#undef ZONE_WARNING
+#endif
+#define ZONE_WARNING            DEBUGZONE(1)
+#define ZONE_FUNCTION           DEBUGZONE(2)
+#ifdef ZONE_INIT
+#undef ZONE_INIT
+#endif
+#define ZONE_INIT           DEBUGZONE(3)
+#define ZONE_INFO           DEBUGZONE(4)
+#define ZONE_IST          DEBUGZONE(5)
+
 #define ZONE_TRACE          DEBUGZONE(15)
 
 //
 // these should be removed in the code if you can 'g' past these successfully
 //
 #define TEST_TRAP { \
-   NKDbgPrintfW( TEXT("%s: Code Coverage Trap in: Led, Line: %d\n"), TEXT(__FILE__), __LINE__); \
+   NKDbgPrintfW( TEXT("%s: Code Coverage Trap in: WDG, Line: %d\n"), TEXT(__FILE__), __LINE__); \
    DebugBreak();  \
 }
 #else

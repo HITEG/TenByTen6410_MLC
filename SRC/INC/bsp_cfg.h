@@ -40,6 +40,11 @@
 
 #define NO_DISPLAY		(~0)
 
+#define LCD_CURRENT_2MA	(0<<16)
+#define LCD_CURRENT_4MA	(1<<16)
+#define LCD_CURRENT_7MA	(2<<16)
+#define LCD_CURRENT_9MA	(3<<16)
+
 //------------------------------------------------------------------------------
 // SMDK6410 Audio Sampling Rate
 //------------------------------------------------------------------------------

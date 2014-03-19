@@ -304,7 +304,7 @@ static BOOL OALIoCtlHalQueryDisplaySettings(
         UINT32 dwIoControlCode, VOID *lpInBuf, UINT32 nInBufSize,
         VOID *lpOutBuf, UINT32 nOutBufSize, UINT32* lpBytesReturned)
 {
-    DWORD dwErr = 0;
+    DWORD	dwErr = 0;
 	DWORD    *displayType;
 	DWORD    *framebufferDepth;
  
@@ -323,7 +323,7 @@ static BOOL OALIoCtlHalQueryDisplaySettings(
     {
         dwErr = 1;
     }
-    else if ((sizeof(DWORD)*2) > nOutBufSize)
+    else if ((sizeof(DWORD)*3) > nOutBufSize)
     {
         dwErr = 2;
     }
@@ -332,11 +332,14 @@ static BOOL OALIoCtlHalQueryDisplaySettings(
         // Check the boot arg structure for the default display settings.
         __try
         {
-			((PDWORD)lpOutBuf)[0] = (DWORD)(*displayType);
+			((PDWORD)lpOutBuf)[0] = ((DWORD)(*displayType))& 0xFFFF;
+			RETAILMSG(TRUE, (TEXT("++BSP_ARGS_QUERY_DISPLAYTYPE: %d\r\n"), ((PDWORD)lpOutBuf)[0]));
 			((PDWORD)lpOutBuf)[1] = (DWORD)(*framebufferDepth);
+			((PDWORD)lpOutBuf)[2] = (((DWORD)(*displayType))& 0xFFFF0000)>>16;
+			RETAILMSG(TRUE, (TEXT("++BSP_ARGS_QUERY_DISPLAYCURRENT: %d\r\n"), ((PDWORD)lpOutBuf)[2]));
             if (lpBytesReturned)
             {
-                *lpBytesReturned = sizeof (DWORD)*2;
+                *lpBytesReturned = sizeof (DWORD)*3;
             }
 
         }

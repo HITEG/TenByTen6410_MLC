@@ -1135,7 +1135,7 @@ static DISP_ERROR Disp_initialize_port_RGBIF(DISP_RGBIFOUT_MODE RGBOutMode)
 
     // LCD Interface Type
     g_pGPIOReg->SPCON = (g_pGPIOReg->SPCON & ~(0x3)) | (0x1); // Select RGBIF style PIN
-	g_pGPIOReg->SPCON &=~(3<<24); // better pictures on displays connected with LONG cables....
+	
     DISP_MSG((_T("[DISP]--Disp_initialize_port_RGBIF() : %d\n\r"), error));
 
     return error;

@@ -1,6 +1,6 @@
 ;; External Power Control Driver
-[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\EPCTL]
-    "Prefix"="EPCTL"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\EPC]
+    "Prefix"="EPC"
     "Dll"="EPCTL.DLL"
     "Order"=dword:200
     "Index"=dword:0

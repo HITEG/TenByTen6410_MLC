@@ -11,21 +11,27 @@
 
 
 #if DEBUG
-#define ZONE_ERROR          DEBUGZONE(0)
-#define ZONE_WARN           DEBUGZONE(1)
-#define ZONE_FUNCTION       DEBUGZONE(2)
-#define ZONE_INIT           DEBUGZONE(3)
-#define ZONE_INFO           DEBUGZONE(4)
-#define ZONE_IST            DEBUGZONE(5)
 
 DBGPARAM dpCurSettings =
 {
-    TEXT("LED"),
+    TEXT("WDG"),
     {
-         TEXT("Errors"),TEXT("Warnings"),TEXT("Function"),TEXT("Init"),
-         TEXT("Info"),TEXT("Ist"),TEXT("Undefined"),TEXT("Undefined"),
-         TEXT("Undefined"),TEXT("Undefined"),TEXT("Undefined"),TEXT("Undefined"),
-         TEXT("Undefined"),TEXT("Undefined"),TEXT("Undefined"),TEXT("Undefined")
+        TEXT("Errors"),
+		TEXT("Warnings"),
+		TEXT("Function"),
+		TEXT("Init"),
+         TEXT("Info"),
+		 TEXT("Ist"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+         TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+         TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined")
     },
         (1 << 0)   // Errors
     |   (1 << 1)   // Warnings
@@ -45,14 +51,14 @@ bool InitializeAddresses(VOID)
 	v_pWDGregs = (volatile S3C6410_WATCHDOG_REG *)VirtualAlloc(0, sizeof(S3C6410_WATCHDOG_REG), MEM_RESERVE, PAGE_NOACCESS);
 	if (v_pWDGregs == NULL) 
 	{
-		DEBUGMSG(ZONE_ERROR,(TEXT("For IOPregs : VirtualAlloc faiGPIO!\r\n")));
+		DEBUGMSG(ZONE_ERROR,(TEXT("WDG: For IOPregs : VirtualAlloc failed in WDG!\r\n")));
 		RetValue = FALSE;
 	}
 	else 
 	{
 		if (!VirtualCopy((PVOID)v_pWDGregs, (PVOID)(S3C6410_BASE_REG_PA_WATCHDOG >> 8), sizeof(S3C6410_WATCHDOG_REG), PAGE_PHYSICAL | PAGE_READWRITE | PAGE_NOCACHE)) 
 		{
-			DEBUGMSG(ZONE_ERROR,(TEXT("For IOPregs: VirtualCopy for GPIO!\r\n")));
+			DEBUGMSG(ZONE_ERROR,(TEXT("WDG: For IOPregs: VirtualCopy failed in WDG!\r\n")));
 			RetValue = FALSE;
 		}
 	}
@@ -87,17 +93,17 @@ static BOOL FeedIt()
 }
 
 BOOL WINAPI  
-DllEntry(HANDLE	hinstDLL, DWORD dwReason, LPVOID  Reserved/* lpvReserved */)
+DllEntry(HMODULE hinstDLL, DWORD dwReason, LPVOID  Reserved/* lpvReserved */)
 {
 	switch(dwReason)
 	{
 	case DLL_PROCESS_ATTACH:
-		DEBUGREGISTER(hinstDll);
+		DEBUGREGISTER(hinstDLL);
 		DEBUGMSG (ZONE_INIT, (TEXT("process attach\r\n")));
-		//DisableThreadLibraryCalls((HMODULE) hinstDll);
+		DisableThreadLibraryCalls((HMODULE) hinstDLL);
 		break;
 	case DLL_PROCESS_DETACH:
-		DEBUGMSG(ZONE_INIT,(TEXT("LED: DLL_PROCESS_DETACH\r\n")));
+		DEBUGMSG(ZONE_INIT,(TEXT("WDG: DLL_PROCESS_DETACH\r\n")));
 		break;
 
 	}
@@ -138,13 +144,13 @@ DWORD WDG_Init(DWORD dwContext)
 {
 	if (!InitializeAddresses())
 		return (FALSE);
-	DEBUGMSG(ZONE_INFO,(TEXT("WDG:-- Init\r\n")));
+	DEBUGMSG(ZONE_INIT,(TEXT("WDG:-- Init\r\n")));
 	return TRUE;
 }
 
 BOOL WDG_Close(DWORD hOpenContext)
 {
-	DEBUGMSG(ZONE_INFO,(TEXT("WDG: Close\r\n")));
+	DEBUGMSG(ZONE_INIT,(TEXT("WDG: Close\r\n")));
 	return TRUE;
 }
 
@@ -152,14 +158,14 @@ BOOL WDG_Close(DWORD hOpenContext)
 
 DWORD WDG_Open(DWORD hDeviceContext, DWORD AccessCode, DWORD ShareMode)
 {
-	DEBUGMSG(ZONE_IST,(TEXT("WDG: Open\r\n")));
+	DEBUGMSG(ZONE_FUNCTION,(TEXT("WDG: Open\r\n")));
 	FeedIt();
 	return TRUE;
 }
 
 DWORD WDG_Write(DWORD hOpenContext, LPCVOID pSourceBytes, DWORD NumberOfBytes)
 {
-	DEBUGMSG(ZONE_IST,(TEXT("WDG: Write\r\n")));
+	DEBUGMSG(ZONE_FUNCTION,(TEXT("WDG: Write\r\n")));
 	FeedIt();
 	return TRUE;
 }

@@ -108,13 +108,14 @@ GetGPE()
 S3C6410Disp::S3C6410Disp()
 {
     DWORD dwSplashFrameBufferSize;
-	DWORD dwDisplayType[2] = {123,16};
+	DWORD dwDisplayType[3] = {123,16,0};
     DWORD dwBytesRet = 0;
-	if (   KernelIoControl (IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*2, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
-                        && (dwBytesRet == (sizeof(DWORD)*2)))
+	if (   KernelIoControl (IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*3, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
+                        && (dwBytesRet == (sizeof(DWORD)*3)))
 	{
 		DEBUGMSG(DISP_ZONE_ERROR,(TEXT("[DISPDRV1] display driver display: %s\r\n"),LDI_getDisplayName((HITEG_DISPLAY_TYPE)dwDisplayType[0])));
 		LDI_set_LCD_module_type((HITEG_DISPLAY_TYPE)dwDisplayType[0]);
+		
 	}
 	else
 	{
@@ -1545,7 +1546,7 @@ BOOL
 S3C6410Disp::DevInitialize(void)
 {
     SVEARG_FIMD_OUTPUT_IF tParam;
-	DWORD dwDisplayType[2] = {123,16};
+	DWORD dwDisplayType[3] = {123,16,0};
 	DWORD dwBytesRet = 0;
 
     DEBUGMSG(DISP_ZONE_ENTER, (_T("[DISPDRV_init] ++%s()\n\r"), _T(__FUNCTION__)));
@@ -1553,11 +1554,12 @@ S3C6410Disp::DevInitialize(void)
     EnterCriticalSection(&m_csDevice);
 
 	// we did this in the constructor already
-	if (KernelIoControl(IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*2, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
-                        && (dwBytesRet == (sizeof(DWORD)*2)))
+	if (KernelIoControl(IOCTL_HAL_QUERY_DISPLAYSETTINGS, NULL, 0, dwDisplayType, sizeof(DWORD)*3, &dwBytesRet)  // get data from BSP_ARGS via KernelIOCtl
+                        && (dwBytesRet == (sizeof(DWORD)*3)))
 	{
 		DEBUGMSG(DISP_ZONE_ERROR,(TEXT("[DISPDRV_INIT] display driver display: %s\r\n"),LDI_getDisplayName((HITEG_DISPLAY_TYPE)dwDisplayType[0])));
 		LDI_set_LCD_module_type((HITEG_DISPLAY_TYPE)dwDisplayType[0]);
+		LDI_setDisplayCurrent(dwDisplayType[2]);
 	}
 	else
 	{
@@ -1566,7 +1568,7 @@ S3C6410Disp::DevInitialize(void)
     // Initialize SFR Address of Sub Module
     LDI_initDisplay(LDI_getDisplayType(), m_pSYSReg, m_pDispConReg, m_pGPIOReg);
 
-	m_pGPIOReg->SPCON &=~(3<<24);
+	
     // Get RGB Interface Information from LDI Library
     LDI_fill_output_device_information(&tParam.tRGBDevInfo);
 

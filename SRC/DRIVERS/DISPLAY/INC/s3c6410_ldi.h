@@ -139,7 +139,8 @@ void LDI_setBacklight(unsigned char rate);
 DISP_VIDOUT_MODE LDI_getDisplayMode();
 void LDI_copyDisplay(HITEG_DISPLAY *tp,HITEG_DISPLAY_TYPE type );
 BACKLIGHT_BOOST *LDI_getBoost(HITEG_DISPLAY_TYPE type);
-
+void LDI_setDisplayCurrent(DWORD current);
+unsigned int LDI_GetFrameRate(HITEG_DISPLAY_TYPE type);
 
 // Macros to handle GPIOs
 

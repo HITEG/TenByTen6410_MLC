@@ -1,20 +1,20 @@
  watchdog
 
- Timestamp is 52959dcd (Wed Nov 27 15:22:53 2013)
+ Timestamp is 53291067 (Wed Mar 19 11:35:03 2014)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
  0001:00000000 0000001cH .rdata                  CODE
  0001:0000001c 00000025H .rdata$debug            CODE
- 0001:00000044 000001acH .text                   CODE
- 0001:000001f0 00000014H .idata$2                CODE
- 0001:00000204 00000014H .idata$3                CODE
- 0001:00000218 00000010H .idata$4                CODE
- 0001:00000228 0000000cH .idata$6                CODE
- 0001:00000240 000000ffH .edata                  CODE
- 0002:00000000 00000010H .idata$5                DATA
- 0002:00000010 00000004H .bss                    DATA
+ 0001:00000044 000001ccH .text                   CODE
+ 0001:00000210 00000014H .idata$2                CODE
+ 0001:00000224 00000014H .idata$3                CODE
+ 0001:00000238 00000014H .idata$4                CODE
+ 0001:0000024c 0000000cH .idata$6                CODE
+ 0001:00000260 000000ffH .edata                  CODE
+ 0002:00000000 00000014H .idata$5                DATA
+ 0002:00000014 00000004H .bss                    DATA
  0003:00000000 00000060H .pdata                  DATA
 
   Address         Publics by Value              Rva+Base       Lib:Object
@@ -22,27 +22,29 @@
  0000:00000000       ___safe_se_handler_table   00000000     <absolute>
  0000:00000000       ___safe_se_handler_count   00000000     <absolute>
  0001:00000044       ?InitializeAddresses@@YA_NXZ 10001044 f   watchdog.obj
- 0001:000000c8       ?DllEntry@@YAHPAXK0@Z      100010c8 f   watchdog.obj
- 0001:000000d0       WDG_Deinit                 100010d0 f   watchdog.obj
- 0001:000000d8       WDG_IOControl              100010d8 f   watchdog.obj
- 0001:000000e0       WDG_PowerDown              100010e0 f   watchdog.obj
- 0001:000000e4       WDG_PowerUp                100010e4 f   watchdog.obj
- 0001:000000e8       WDG_Read                   100010e8 f   watchdog.obj
- 0001:000000f0       WDG_Seek                   100010f0 f   watchdog.obj
- 0001:000000f8       WDG_Init                   100010f8 f   watchdog.obj
- 0001:00000118       WDG_Close                  10001118 f   watchdog.obj
- 0001:00000120       WDG_Open                   10001120 f   watchdog.obj
- 0001:00000170       WDG_Write                  10001170 f   watchdog.obj
- 0001:000001c0       VirtualFree                100011c0 f   coredll:COREDLL.dll
- 0001:000001d0       VirtualCopy                100011d0 f   coredll:COREDLL.dll
- 0001:000001e0       VirtualAlloc               100011e0 f   coredll:COREDLL.dll
- 0001:000001f0       __IMPORT_DESCRIPTOR_COREDLL 100011f0     coredll:COREDLL.dll
- 0001:00000204       __NULL_IMPORT_DESCRIPTOR   10001204     coredll:COREDLL.dll
+ 0001:000000c8       ?DllEntry@@YAHPAUHINSTANCE__@@KPAX@Z 100010c8 f   watchdog.obj
+ 0001:000000e0       WDG_Deinit                 100010e0 f   watchdog.obj
+ 0001:000000e8       WDG_IOControl              100010e8 f   watchdog.obj
+ 0001:000000f0       WDG_PowerDown              100010f0 f   watchdog.obj
+ 0001:000000f4       WDG_PowerUp                100010f4 f   watchdog.obj
+ 0001:000000f8       WDG_Read                   100010f8 f   watchdog.obj
+ 0001:00000100       WDG_Seek                   10001100 f   watchdog.obj
+ 0001:00000108       WDG_Init                   10001108 f   watchdog.obj
+ 0001:00000128       WDG_Close                  10001128 f   watchdog.obj
+ 0001:00000130       WDG_Open                   10001130 f   watchdog.obj
+ 0001:00000180       WDG_Write                  10001180 f   watchdog.obj
+ 0001:000001d0       VirtualFree                100011d0 f   coredll:COREDLL.dll
+ 0001:000001e0       VirtualCopy                100011e0 f   coredll:COREDLL.dll
+ 0001:000001f0       VirtualAlloc               100011f0 f   coredll:COREDLL.dll
+ 0001:00000200       DisableThreadLibraryCalls  10001200 f   coredll:COREDLL.dll
+ 0001:00000210       __IMPORT_DESCRIPTOR_COREDLL 10001210     coredll:COREDLL.dll
+ 0001:00000224       __NULL_IMPORT_DESCRIPTOR   10001224     coredll:COREDLL.dll
  0002:00000000       __imp_VirtualCopy          10002000     coredll:COREDLL.dll
  0002:00000004       __imp_VirtualAlloc         10002004     coredll:COREDLL.dll
- 0002:00000008       __imp_VirtualFree          10002008     coredll:COREDLL.dll
- 0002:0000000c       \177COREDLL_NULL_THUNK_DATA 1000200c     coredll:COREDLL.dll
- 0002:00000010       ?v_pWDGregs@@3PCUS3C6410_WATCHDOG_REG@@C 10002010     watchdog.obj
+ 0002:00000008       __imp_DisableThreadLibraryCalls 10002008     coredll:COREDLL.dll
+ 0002:0000000c       __imp_VirtualFree          1000200c     coredll:COREDLL.dll
+ 0002:00000010       \177COREDLL_NULL_THUNK_DATA 10002010     coredll:COREDLL.dll
+ 0002:00000014       ?v_pWDGregs@@3PCUS3C6410_WATCHDOG_REG@@C 10002014     watchdog.obj
 
  entry point at        0000:00000000
 

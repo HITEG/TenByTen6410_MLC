@@ -61,6 +61,7 @@ DWORD LogoHW;
 static volatile S3C6410_GPIO_REG *g_pGPIOReg = NULL;
 static volatile S3C6410_DISPLAY_REG *g_pDispConReg = NULL;
 static volatile S3C6410_SYSCON_REG *pSysConReg;
+static DWORD display_current=0;
 
 static BACKLIGHT_BOOST boost[]=
 {
@@ -103,6 +104,11 @@ unsigned int LDI_GetDisplayHeight(HITEG_DISPLAY_TYPE type)
     if (type>=MAX_DISPLAYS) return( (unsigned int )-1);
     return HitegDisplays[type].height;
 }
+unsigned int LDI_GetFrameRate(HITEG_DISPLAY_TYPE type)
+{
+    if (type>=MAX_DISPLAYS) return( (unsigned int )-1);
+    return HitegDisplays[type].FRAME_RATE;
+}
 char *LDI_getDisplayName(HITEG_DISPLAY_TYPE type) // strange format in NK.bin, can't have both?
 {
     if(type>=MAX_DISPLAYS) return "NONE";
@@ -124,7 +130,16 @@ void LDI_setBacklight(unsigned char rate)
 	else
 	{
 		BACKLIGHT_ON(g_pGPIOReg);
-		g_pGPIOReg->SPCON &=~(3<<24); // better pictures on displays connected with LONG cables....
+
+	}
+}
+
+void LDI_setDisplayCurrent(DWORD current)
+{
+	if(g_pGPIOReg != NULL)
+	{
+		g_pGPIOReg->SPCON &=~(3<<24); // better pictures on displays connected with LONG cables and lower ampere
+		g_pGPIOReg->SPCON |= (((display_current)& 0x3)<<24); // set LCD current...
 	}
 }
 
@@ -213,7 +228,8 @@ BOOL LDI_initDisplay(HITEG_DISPLAY_TYPE type, volatile void*syscon, volatile voi
 
 
 	LDI_setClock(0);
-	
+
+
 
 	LDI_MSG((_T("[LDI]--LDI_fill_output_device_information()\n\r")));
 	return 1;
@@ -240,7 +256,6 @@ LDI_ERROR LDI_initialize_register_address(void *pSPIReg, void *pDispConReg, void
     }
 
 	
-
     LDI_MSG((_T("[LDI]--LDI_initialize_register_address() : %d\n\r"), error));
 
     return error;

@@ -354,6 +354,21 @@ void    TOC_Print(void);
 void Delay(UINT32 usec);
 void MLC_LowLevelTest(void);
 unsigned OEMDisplayBytes();
-
+DWORD OEMgetDisplayType();
+DWORD OEMgetPowerCTL();
+DWORD OEMgetLCDBpp();
+DWORD OEMgetBGColor();
+DWORD OEMgetLogoHW();
+void OEMsetDisplayType(DWORD value);
+void OEMsetDisplayCurrent(DWORD value);
+DWORD OEMgetDisplayCurrent();
+void OEMsetPowerCTL(DWORD value);
+void OEMsetLCDBpp(DWORD value);
+void OEMsetBGColor(DWORD value);
+void OEMsetLogoHW(DWORD length);
+void OEMclrLogoHW();
+unsigned OEMGetHeight();
+unsigned OEMGetWidth();
+void initializeDisplay();
 
 #endif  // _LOADER_H_.

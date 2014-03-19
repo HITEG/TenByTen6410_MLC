@@ -109,7 +109,8 @@ static void BootConfigInit(DWORD dwIndex)
     g_pBootCfg->BootDevice = g_DefaultBootDevice;	  
 	//----------------------------------------------
     g_pBootCfg->powerCTL = pBSPArgs->powerCTL= PWRCTL_HITEG_FACTORY_DEFAULTS;		// Hiteg Ltd. default config;
-    g_pBootCfg->displayType = pBSPArgs->displayType= NO_DISPLAY;				// undefined value results to attached display==NONE	
+    OEMsetDisplayType(NO_DISPLAY);				// undefined value results to attached display==NONE
+	OEMsetDisplayCurrent(LCD_CURRENT_2MA);				// 	
     g_pBootCfg->framebufferDepth =pBSPArgs->framebufferDepth= 16;						// we set 16bpp as default, can be changed to 24/32 bit
 	g_pBootCfg->backgroundColor = pBSPArgs->backgroundColor=0x000a0a0a;	// a nice classy grey ... 
 	g_pBootCfg->logoHW=pBSPArgs->logoHW=~0;					// if set to ~0 no logo uploaded...		

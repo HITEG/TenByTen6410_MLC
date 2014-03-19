@@ -53,11 +53,19 @@ IF BSP_NODISPLAY !
 
 ; GWES will pass this value to the LCD driver; the driver will open the
 ; key to which it points to read its configuration.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\State\SystemIdle]
+    "Default"=dword:0           ; D0
+    "Flags"=dword:0
+    
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\State\UserIdle\{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}]
-	"Default"=dword:0								; D4    set Display on when useridle
+	"Default"=dword:0								; D0    set Display on when useridle
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\State\SystemIdle\{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}]
 	"Default"=dword:0
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\State\Off]
+   Default=dword:0          ; D0
+   Flags=dword:20000        ; POWER_STATE_OFF
 
 ; Let GWES save/restore video memory during suspend/resume
 [HKEY_LOCAL_MACHINE\SYSTEM\GWE]
@@ -487,20 +495,19 @@ ENDIF BSP_NOPWRBTN !
 ; @CESYSGEN ENDIF CE_MODULES_DISPLAY
 ;-------------------------------------------------------------------------
 
-;------------ I2C Bus Driver ------------------------------------------------
+;------------ I2C Driver ------------------------------------------------------------------------------------
 IF BSP_NOI2C !
 ;; I2C Bus Driver
-[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\IIC]
-    "Prefix"="IIC"
-	"Dll"="i2c.dll"
-    "Order"=dword:1				; 5 -> 1, Now LDI depends on this
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\I2C]
+    "Prefix"="I2C"
+    "Dll"="I2C.DLL"
+    "Order"=dword:0
     "Index"=dword:0
     "Mode"=dword:1              ; Mode: 0 = POLLING, 1 = INTERRUPT
     "SlaveAddress"=dword:0      ; Bus Driver's Slave Address
-    "FriendlyName"="IIC Bus Driver"
+    "FriendlyName"="I2C Bus Driver"
     "IClass"="{A32942B7-920C-486b-B0E6-92A702A99B35}"   ; Power-manageable generic
 ENDIF BSP_NOI2C !
-;-------------------------------------------------------------------------
 
 
 ;-------------- Wave Device Driver -----------------------------------------

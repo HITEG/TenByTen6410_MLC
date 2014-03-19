@@ -48,40 +48,31 @@ DBGPARAM dpCurSettings = {
     TEXT("Power"), TEXT("9"),     TEXT("10"),    TEXT("11"), 
     TEXT("12"),    TEXT("13"),    TEXT("14"),    TEXT("Trace"),
     },
-    0x0003 // ZONE_WRN|ZONE_ERR
+    0xffff // ZONE_WRN|ZONE_ERR
 };
 #endif  // DEBUG
 
 
-BOOL
-I2C_PowerUp(
-   PVOID Context
-   );
-
-BOOL
-I2C_PowerDown(
-   PVOID Context
-   );
-
-BOOL
-DllEntry(
-    HINSTANCE   hinstDll,             /*@parm Instance pointer. */
-    DWORD   dwReason,                 /*@parm Reason routine is called. */
-    LPVOID  lpReserved                /*@parm system parameter. */
-    )
+BOOL WINAPI DllMain(HANDLE hinstDll, ULONG Reason, LPVOID Reserved)
 {
-    if ( dwReason == DLL_PROCESS_ATTACH ) {
-        DEBUGREGISTER(hinstDll);
-        DEBUGMSG (ZONE_INIT, (TEXT("I2C: Process Attach\r\n")));
-    }
-
-    if ( dwReason == DLL_PROCESS_DETACH ) {
-        DEBUGMSG (ZONE_INIT, (TEXT("I2C: Process Detach\r\n")));
-    }
-
-    return(TRUE);
+	switch(Reason)
+	{
+		case DLL_PROCESS_ATTACH:
+			DEBUGREGISTER(hinstDll);
+			DEBUGMSG (ZONE_INIT, (TEXT("process attach\r\n")));
+			DisableThreadLibraryCalls((HMODULE) hinstDll);
+			break;
+			
+		case DLL_PROCESS_DETACH:
+			DEBUGMSG(ZONE_INIT,(TEXT("LED: DLL_PROCESS_DETACH\r\n")));
+			break;
+			
+		default:
+			break;
+	}
+	
+	return TRUE;
 }
-
 
 BOOL
 GetRegistryData(PI2C_CONTEXT pI2C, LPCTSTR regKeyPath)
@@ -142,83 +133,6 @@ _done:
     return ( TRUE ); 
 }
 
-#ifdef UTLDRV
-static
-DWORD
-InternalMapRegisters(
-    PI2C_CONTEXT pI2C
-    )
-{
-    HANDLE       hUtil;
-    UTL_FASTCALL utlFc = {0};
-    DWORD dwErr = ERROR_SUCCESS, bytes;
-
-    // Open the util driver so we can map in our registers VA
-    hUtil = CreateFile( TEXT("UTL0:"), GENERIC_READ|GENERIC_WRITE,
-                        FILE_SHARE_READ|FILE_SHARE_WRITE,
-                        NULL, OPEN_EXISTING, 0, 0);
-    
-    if (INVALID_HANDLE_VALUE == hUtil) {
-        dwErr = GetLastError();
-        DEBUGMSG(ZONE_ERR, (TEXT("CreateFile ERROR: %d\n"), dwErr));
-        goto _error_exit;
-    }
-
-    //  get it's FAST CALL function pointers.
-    if( !DeviceIoControl(hUtil, 
-                         IOCTL_UTL_GET_FASTCALL,
-                         NULL, 0, 
-                         &utlFc, sizeof(utlFc),
-                         &bytes, NULL)) {
-        dwErr = GetLastError();
-        DEBUGMSG(ZONE_ERR, (TEXT("DeviceIoControl ERROR: %d\n"), dwErr));
-        goto _error_exit;
-    }
-
-    // map in I2C registers
-    dwErr = utlFc.GetRegisterVA(utlFc.pContext, 
-                                IIC_BASE,
-                                sizeof(IICreg),
-                                FALSE, 
-                                (DWORD *)&pI2C->pI2CReg);
-    if ( dwErr ) {
-        DEBUGMSG(ZONE_ERR, (TEXT("GetRegisterVA(IIC_BASE) ERROR: %d\n"), dwErr));
-        goto _error_exit;
-    }
-
-    // map in GPIO
-    dwErr = utlFc.GetRegisterVA(utlFc.pContext, 
-                                IOP_BASE, 
-                                sizeof(IOPreg),
-                                FALSE, 
-                                (DWORD *)&pI2C->pIOPReg);
-    if ( dwErr ) {
-        DEBUGMSG(ZONE_ERR, (TEXT("GetRegisterVA(IOP_BASE) ERROR: %d\n"), dwErr));
-        goto _error_exit;
-    }
-
-    // map in CLK/PWR registers
-    dwErr = utlFc.GetRegisterVA(utlFc.pContext, 
-                                CLKPWR_BASE, 
-                                sizeof(CLKPWRreg),
-                                FALSE, 
-                                (DWORD *)&pI2C->pCLKPWRReg);
-    if ( dwErr ) {
-        DEBUGMSG(ZONE_ERR, (TEXT("GetRegisterVA(CLKPWR_BASE) ERROR: %d\n"), dwErr));
-        goto _error_exit;
-    }
-
-_error_exit:
-    // We only mapped in registers, which remain in utildrv forever.
-    // If we mapped in memory we would need to keep the handle and FreeMemVA later.
-    if (INVALID_HANDLE_VALUE != hUtil)
-        CloseHandle(hUtil);
-        
-    return dwErr;
-}
-
-
-#else
 
 static
 DWORD
@@ -280,7 +194,7 @@ InternalMapRegisters(
     return err;
 }
 
-#endif
+
 
 
 BOOL
@@ -295,7 +209,7 @@ I2C_Deinit(
         
     HW_Deinit(pI2C);
     
-#ifndef UTLDRV
+
     if (pI2C->pI2CReg)
         VirtualFree((PVOID)pI2C->pI2CReg, 0, MEM_RELEASE);
 
@@ -304,7 +218,6 @@ I2C_Deinit(
 
     if (pI2C->g_pSYSCONReg)
         VirtualFree((PVOID)pI2C->g_pSYSCONReg, 0, MEM_RELEASE);
-#endif
 
 	LocalFree(pI2C);
 

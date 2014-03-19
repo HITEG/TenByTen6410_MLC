@@ -34,6 +34,36 @@ Notes:
 
 #include "ExtPowerCTL_DRV.h"
 
+
+#if DEBUG
+
+DBGPARAM dpCurSettings =
+{
+    TEXT("ECL"),
+    {
+        TEXT("Errors"),
+		TEXT("Warnings"),
+		TEXT("Function"),
+		TEXT("Init"),
+         TEXT("Info"),
+		 TEXT("Ist"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+         TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+         TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined"),
+		 TEXT("Undefined")
+    },
+       0xFFFF
+};
+#endif
+
+
+
 extern "C" {
 #include "ExtPowerCTL_LIB.h"
 }
@@ -41,8 +71,7 @@ extern "C" {
 static DWORD power;
 volatile S3C6410_GPIO_REG *v_pIOP_PIO_regs = NULL;
 
-#define EPCTL_DBG_MSG	  0
-#define EPCTL_ERR_MSG		0
+
 
 /**
     @func   void | retrievs and sets the GPIO base.
@@ -61,7 +90,7 @@ void  InitGPIOBaseAddr()
 		v_pIOP_PIO_regs = (volatile S3C6410_GPIO_REG *)MmMapIoSpace(IOPhyAdr, (ULONG)dwIOSize, FALSE);	
 		if ( NULL == v_pIOP_PIO_regs)
 		{
-			RETAILMSG(EPCTL_ERR_MSG, (TEXT("GPIO init address failed PIO\r\n")));
+			DEBUGMSG(ZONE_ERROR, (TEXT("[EPCTL] GPIO init address failed PIO\r\n")));
 		}
 	}
 }
@@ -71,54 +100,25 @@ void  InitGPIOBaseAddr()
     @comm
     @xref
 **/
-BOOL WINAPI DllEntry(HANDLE	hinstDLL, DWORD dwReason, LPVOID /* lpvReserved */)
+BOOL WINAPI  
+DllEntry(HMODULE hinstDLL, DWORD dwReason, LPVOID  Reserved)
 {
 	switch(dwReason)
 	{
 	case DLL_PROCESS_ATTACH:
-		DEBUGREGISTER((HINSTANCE)hinstDLL);
-		return TRUE;
-	case DLL_THREAD_ATTACH:
-		break;
-	case DLL_THREAD_DETACH:
+		DEBUGREGISTER(hinstDLL);
+		DEBUGMSG (ZONE_INIT, (TEXT("[EPCTL] DLL_PROCESS_ATTACH\r\n")));
+		DisableThreadLibraryCalls((HMODULE) hinstDLL);
 		break;
 	case DLL_PROCESS_DETACH:
+		DEBUGMSG(ZONE_INIT,(TEXT("[EPCTL] DLL_PROCESS_DETACH\r\n")));
 		break;
-#ifdef UNDER_CE
-	case DLL_PROCESS_EXITING:
-		break;
-	case DLL_SYSTEM_STARTED:
-		break;
-#endif
-	}
 
+	}
 	return TRUE;
 }
 
-/**
-    @func   BOOL | DLL's main function
-    @comm
-    @xref
-**/
-BOOL WINAPI DllMain(HANDLE hinstDll, ULONG Reason, LPVOID Reserved)
-{
-	switch(Reason)
-	{
-		case DLL_PROCESS_ATTACH:
-		RETAILMSG(EPCTL_DBG_MSG,(TEXT("S3C6410 EPCTL: DLL_PROCESS_ATTCH\r\n")));
-			break;
-			
-		case DLL_PROCESS_DETACH:
-		RETAILMSG(EPCTL_DBG_MSG,(TEXT("S3C6410 EPCTL: DLL_PROCESS_DETACH\r\n")));
-			break;
-			
-		default:
-			
-			break;
-	}
-	
-	return TRUE;
-}
+
 /**
     @func   BOOL | deinitializes the driver.
     @comm
@@ -126,11 +126,11 @@ BOOL WINAPI DllMain(HANDLE hinstDll, ULONG Reason, LPVOID Reserved)
 **/
 BOOL EPCTL_Deinit(DWORD hDeviceContext)
 {
-	RETAILMSG(1,(TEXT("EPCTL: EPCTL_Deinit\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("[EPCTL] EPCTL_Deinit\r\n")));
 	return TRUE;
 } 
 /**
-    @func   DWORD | initializes the GPIO registers.
+    @func   HANDLE | initializes the GPIO registers.
     @comm
     @xref
 **/
@@ -139,21 +139,21 @@ DWORD EPCTL_Init(DWORD dwContext,
 {
 	DWORD powerCTL;
 	DWORD dwBytesRet = 0;
-	RETAILMSG(1,(TEXT("Initializing EPCTL driver...\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("[EPCTL]Initializing  driver...\r\n")));
 	if (KernelIoControl(IOCTL_HAL_POWERCTL, NULL, 0, &powerCTL, sizeof(powerCTL), &dwBytesRet) // get data from BSP_ARGS via KernelIOCtl
                         && (dwBytesRet == sizeof(powerCTL)))
 	{
-		RETAILMSG(1,(TEXT("--------------ExtPowerCTL driver read: %d\r\n"),powerCTL));
+		DEBUGMSG(ZONE_INFO,(TEXT("--------------ExtPowerCTL driver read: %d\r\n"),powerCTL));
 	}
 	else
 	{
-		RETAILMSG(1,(TEXT("Error getting ExtPowerCTL data from args section via Kernel IOCTL!!!\r\n")));
+		DEBUGMSG(ZONE_INFO,(TEXT("Error getting ExtPowerCTL data from args section via Kernel IOCTL!!!\r\n")));
 	}
 	power=(powerCTL & 0xff);							// get values from eboot
 	InitGPIOBaseAddr();								// get the base address for register access
 	PWRCTL_powerCTLInit(v_pIOP_PIO_regs);			// initialize all GPIOs used 
 	PWRCTL_setAllTo(&power);						// and set to given states
-	RETAILMSG(EPCTL_DBG_MSG, (TEXT("EPCTL_Init---\r\n")));
+	DEBUGMSG(ZONE_INFO, (TEXT("EPCTL_Init---\r\n")));
 	return TRUE;
 }
 // IMPORT the ioctl codes
@@ -173,8 +173,8 @@ BOOL EPCTL_IOControl(	DWORD dwOpenContext,
 						LPDWORD lpBytesReturned)
 {
 
-	RETAILMSG(EPCTL_DBG_MSG,(TEXT("EPCTL_IOControl+++\r\n")));
-	RETAILMSG(EPCTL_DBG_MSG,(TEXT("dwIoControlCode = %d.\r\n"), dwIoControlCode));
+	DEBUGMSG(ZONE_INFO,(TEXT("[EPCTL] IOControl+++\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("[EPCTL] dwIoControlCode = %d.\r\n"), dwIoControlCode));
 
 	PWRCTL_powerCTLInit(v_pIOP_PIO_regs); // again, make sure everything is setup as we need it
 
@@ -298,7 +298,7 @@ BOOL EPCTL_IOControl(	DWORD dwOpenContext,
 //-----------------------------------------------------------------------------
 DWORD EPCTL_Open(DWORD hDeviceContext, DWORD AccessCode, DWORD ShareMode)
 {
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_Open\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_Open\r\n")));
 	return TRUE;
 } 
 
@@ -311,7 +311,7 @@ DWORD EPCTL_Open(DWORD hDeviceContext, DWORD AccessCode, DWORD ShareMode)
 //-----------------------------------------------------------------------------
 BOOL EPCTL_Close(DWORD hOpenContext)
 {
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_Close\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_Close\r\n")));
 	PWRCTL_deinit();
 	return TRUE;
 } 
@@ -329,7 +329,7 @@ void EPCTL_PowerDown(DWORD hDeviceContext)
 	/**
 	* set all temporary to sleep, the current configuration is not changed, thus awaking is easy
 	**/
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_PowerDown\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_PowerDown\r\n")));
 	DWORD null_power=0x0;
 	PWRCTL_setAllTo(&null_power);
 	} 
@@ -345,7 +345,7 @@ void EPCTL_PowerUp(DWORD hDeviceContext)
 	/**
 	* sets all modules to configured state.
 	**/
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_PowerUp\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_PowerUp\r\n")));
 	PWRCTL_setAllTo(&power);	
 } 
 /**
@@ -359,7 +359,7 @@ void EPCTL_PowerUp(DWORD hDeviceContext)
 //-----------------------------------------------------------------------------
 DWORD EPCTL_Read(DWORD hOpenContext, LPVOID pBuffer, DWORD Count)
 {
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_Read\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_Read\r\n")));
 	if(Count>=1)
 	{	*((unsigned char *)pBuffer)=(unsigned char)(power & 0xFF);
 		return TRUE;
@@ -375,7 +375,7 @@ DWORD EPCTL_Read(DWORD hOpenContext, LPVOID pBuffer, DWORD Count)
 //-----------------------------------------------------------------------------
 DWORD EPCTL_Seek(DWORD hOpenContext, long Amount, DWORD Type)
 {
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_Seek\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_Seek\r\n")));
 	return 0;
 } 
 /**
@@ -387,7 +387,7 @@ DWORD EPCTL_Seek(DWORD hOpenContext, long Amount, DWORD Type)
 //-----------------------------------------------------------------------------
 DWORD EPCTL_Write(DWORD hOpenContext, LPCVOID pSourceBytes, DWORD NumberOfBytes)
 {
-	RETAILMSG(1,(TEXT("EPCTL : EPCTL_Write\r\n")));
+	DEBUGMSG(ZONE_INFO,(TEXT("EPCTL : EPCTL_Write\r\n")));
 	if(NumberOfBytes==0) return 0; // amount of bytes written ????
 	power=*((unsigned char *)pSourceBytes);
 	PWRCTL_setAllTo(&power); // apply immediately

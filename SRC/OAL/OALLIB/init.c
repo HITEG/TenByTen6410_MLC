@@ -396,7 +396,7 @@ static void InitializeCLKSource(void)
 static void InitializeRTC(void)
 {
     volatile S3C6410_RTC_REG *pRTCReg = (S3C6410_RTC_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_RTC, FALSE);
-
+#if 0
     // As per the S3C6410 User Manual, the RTC clock divider should be reset for exact RTC operation.
 
     // Enable RTC control first
@@ -417,9 +417,10 @@ static void InitializeRTC(void)
 
     // Disable RTC control.
     pRTCReg->RTCCON &= ~(1<<0);
+#endif
 }
 
-//-------------Modify for 256M RAM-------------------------------
+//-------------Modified for 256M RAM-------------------------------
 BOOL 
 OEMGetExtensionDRAM(
     LPDWORD lpMemStart, 

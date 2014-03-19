@@ -16,6 +16,7 @@ Abstract:
     Menu to configure Display attached to the TenByTen6410
 
 rev:
+	2013.11.29	: added Display Current settings
 	2012.03.30	: initial version, by Sven Riemann sven.riemann@hiteg.com
 
 Notes: 
@@ -29,19 +30,14 @@ Notes:
 #include "DisplayMenu.h"
 #include "s3c6410_ldi.h"
 #include "utils.h"
+#include "loader.h"
 
 // we call this one each time the user chooses a display
 // forward declartion, tbf at main.c
 extern void identifyDisplay();
-extern  void initDisplay();
 extern unsigned char getChar();
-extern void OEMsetDisplayType(DWORD value);
-extern void OEMsetLCDBpp(DWORD value);
-extern void OEMclrLogoHW();
-extern void editDisplayMenu(unsigned type);
-extern unsigned OEMGetHeight();
-extern unsigned OEMGetWidth();
-int bpp;
+
+static int bpp;
 
 DWORD enterBGColor()
 {
@@ -125,7 +121,7 @@ void __TestPattern()
 		if(m==2)
 		{
 			m=0;
-			if(step>=2)
+			if(step>=3)
 				step>>=1;
 		}
 		
@@ -140,21 +136,31 @@ void __TestPattern()
 		if(m==2)
 		{
 			m=0;
-			if(step>=2)
+			if(step>=3)
 				step>>=1;
 		}
 		
 	}
 }
-extern unsigned OEMgetLCDBpp();
-extern unsigned OEMgetBGColor();
-extern void OEMsetBGColor(unsigned c);
+
+static DWORD current_counter=0;
+
+char *LCD_current_names[]=
+{
+	"2mA",
+	"4mA",
+	"7mA",
+	"9mA"
+};
+
+#define LCDCURRENTNAME LCD_current_names[(OEMgetDisplayCurrent())&0x3]
 
 void DisplayMenu(DWORD *displayType)
 {
 	DWORD display;
 	int n;
 	bpp=16;
+	current_counter=OEMgetDisplayCurrent();
 displayMenu:
 	EdbgOutputDebugString("\r\n#############################################\r\n");
 	EdbgOutputDebugString("S) Set Display manually\r\n");
@@ -166,6 +172,8 @@ displayMenu:
 	
 	EdbgOutputDebugString("\r\n#############################################\r\n");
 	EdbgOutputDebugString("N) No display connected\r\n");
+	EdbgOutputDebugString("\r\n#############################################\r\n");
+	EdbgOutputDebugString("L) LCD Current: %s\r\n",LCDCURRENTNAME);
 	EdbgOutputDebugString("\r\n#############################################\r\n");
 	EdbgOutputDebugString("1) %sDepth 16BIT RGB565\r\n",(OEMgetLCDBpp()==16)?"*":"");
 	EdbgOutputDebugString("2) %sDepth 24BIT RGB888\r\n",(OEMgetLCDBpp()==24)?"*":"");
@@ -195,20 +203,28 @@ displayMenu:
 			display--;
 			if(display<MAX_DISPLAYS)
 				OEMsetDisplayType(display);
-			initDisplay();
+			initializeDisplay();
 			LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, OEMgetBGColor());
             goto displayMenu;
         }
+		if(key=='L')
+		{
+			current_counter++;
+			if(current_counter==4) current_counter=0;
+			OEMsetDisplayCurrent(current_counter);
+			initializeDisplay();
+			goto displayMenu;
+		}
         if(key=='N')
         {
             OEMsetDisplayType(NO_DISPLAY); // defined in bsp_cfg.h
-			initDisplay();
+			initializeDisplay();
             goto displayMenu;
         }
         if(key=='1')
         {
             OEMsetLCDBpp(16); // defined in bsp_cfg.h
-			initDisplay();
+			initializeDisplay();
 			bpp=16;
             goto displayMenu;
         }
@@ -262,12 +278,12 @@ displayMenu:
         if(key=='2')
         {
             OEMsetLCDBpp(24); // defined in bsp_cfg.h
-			initDisplay();
+			initializeDisplay();
 			bpp=24;
             goto displayMenu;
         }
 		if(key=='Q' || key==27){
-			initDisplay();
+			initializeDisplay();
             break;
 		}
 		if(key=='I'){

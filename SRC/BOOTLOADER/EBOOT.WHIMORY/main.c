@@ -78,7 +78,7 @@ extern BOOL IsValidMBRSector();
 extern BOOL CreateMBR();
 
 // Eboot Internal static function
-static void InitializeDisplay(void);
+
 static void InitializeRTC(void);
 static void SpinForever(void);
 
@@ -136,7 +136,7 @@ void Delay(unsigned dwCount)
 
 DWORD OEMgetDisplayType()
 {
-	return (pBSPArgs->displayType);
+	return ((pBSPArgs->displayType) & 0xFFFF);
 }
 DWORD OEMgetPowerCTL()
 {
@@ -157,7 +157,21 @@ DWORD OEMgetLogoHW()
 }
 void OEMsetDisplayType(DWORD value)
 {
-	g_pBootCfg->displayType=pBSPArgs->displayType=value;
+	pBSPArgs->displayType &= ~((0xFFFF));
+	pBSPArgs->displayType|=(value&0xFFFF);
+	g_pBootCfg->displayType=pBSPArgs->displayType;
+}
+
+void OEMsetDisplayCurrent(DWORD value)
+{
+	pBSPArgs->displayType &= ~(0xFFFF0000);
+	pBSPArgs->displayType |=(value<<16);
+	g_pBootCfg->displayType=pBSPArgs->displayType;
+}
+
+DWORD OEMgetDisplayCurrent()
+{
+	return (pBSPArgs->displayType & 0xFFFF0000)>>16;
 }
 void OEMsetPowerCTL(DWORD value)
 {
@@ -197,6 +211,98 @@ unsigned OEMDisplayBytes()
 {
 	return (OEMGetWidth() * OEMGetHeight() * (OEMgetLCDBpp()/8));
 }
+
+
+void initializeDisplay()
+{
+	static tDevInfo RGBDevInfo;
+    volatile S3C6410_GPIO_REG *pGPIOReg = (S3C6410_GPIO_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_GPIO, FALSE);
+    volatile S3C6410_DISPLAY_REG *pDispReg = (S3C6410_DISPLAY_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_DISPLAY, FALSE);
+    volatile S3C6410_MSMIF_REG *pMSMIFReg = (S3C6410_MSMIF_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_MSMIF_SFR, FALSE);
+    volatile S3C6410_SYSCON_REG *pSysConReg = (S3C6410_SYSCON_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_SYSCON, FALSE);
+	volatile PUSHORT framebuffer = (PUSHORT)EBOOT_FRAMEBUFFER_UA_START;
+    if(!(pSysConReg->BLK_PWR_STAT & (1<<4))) {
+        pSysConReg->NORMAL_CFG |= (1<<14);
+        while(!(pSysConReg->BLK_PWR_STAT & (1<<4)));
+        }
+	pSysConReg->CLK_SRC = (pSysConReg->CLK_SRC & ~(0xFFFFFFF0))
+			|( 0<<31)		// TV27_SEL    -> 27MHz
+            |(0<<30)				// DAC27        -> 27MHz
+            |(0<<28)				// SCALER_SEL    -> MOUT_EPLL
+			|( 0<<26)		// LCD_SEL    -> Dout_MPLL
+            |(0<<24)				// IRDA_SEL    -> MOUT_EPLL
+            |(0<<22)				// MMC2_SEL    -> MOUT_EPLL
+            |(0<<20)				// MMC1_SEL    -> MOUT_EPLL
+            |(0<<18)				// MMC0_SEL    -> MOUT_EPLL
+            |(0<<16)				// SPI1_SEL    -> MOUT_EPLL
+            |(0<<14)				// SPI0_SEL    -> MOUT_EPLL
+            |(0<<13)				// UART_SEL    -> MOUT_EPLL
+            |(0<<10)				// AUDIO1_SEL    -> MOUT_EPLL
+            |(0<<7)					// AUDIO0_SEL    -> MOUT_EPLL
+            |(0<<5)					// UHOST_SEL    -> 48MHz
+            |(0<<4);				// MFCCLK_SEL    -> HCLKx2 (0:HCLKx2, 1:MoutEPLL)	
+	
+	
+
+	if(OEMgetDisplayType()==NO_DISPLAY) 
+	{
+		Disp_envid_onoff(DISP_ENVID_OFF);
+		return;
+	}
+
+
+		LDI_setBPP(OEMgetLCDBpp());
+		LDI_initDisplay(OEMgetDisplayType(),pSysConReg, pDispReg, pGPIOReg); 
+	
+		Disp_initialize_register_address(pDispReg, pMSMIFReg, pGPIOReg);
+
+		LDI_fill_output_device_information(&RGBDevInfo);
+
+		// Setup Output Device Information
+		Disp_set_output_device_information(&RGBDevInfo);
+			
+		// Initialize Display Controller
+		//Disp_initialize_output_interface(DISP_VIDOUT_RGBIF_TVENCODER);
+		Disp_initialize_output_interface(DISP_VIDOUT_RGBIF);
+		
+		if(OEMgetLCDBpp()==16)
+		{
+			EdbgOutputDebugString("[eBOOT]-- display bpp: %d found\n\r", OEMgetLCDBpp());	
+			Disp_set_window_mode(DISP_WIN1_DMA, DISP_16BPP_565, LDI_GetDisplayWidth(OEMgetDisplayType()), LDI_GetDisplayHeight(OEMgetDisplayType()), 0, 0);
+		}
+		else if(OEMgetLCDBpp()==24)
+		{
+			EdbgOutputDebugString("[eBOOT]-- display bpp: %d found\n\r", OEMgetLCDBpp());	
+			Disp_set_window_mode(DISP_WIN1_DMA, DISP_24BPP_888, LDI_GetDisplayWidth(OEMgetDisplayType()), LDI_GetDisplayHeight(OEMgetDisplayType()), 0, 0);
+		}
+		else
+			EdbgOutputDebugString("[eBOOT]--BBP of %d is not supported\n\r", OEMgetLCDBpp());
+
+		EdbgOutputDebugString("[LDI:ERR] framebuffer at: 0x%X\n\r",IMAGE_FRAMEBUFFER_PA_START );
+
+		Disp_set_framebuffer(DISP_WIN1,IMAGE_FRAMEBUFFER_PA_START);
+		Disp_window_onfoff(DISP_WIN1, DISP_WINDOW_ON);
+		//LDI_setClock((OEMgetDisplayType()==HITEG_TV)?1:0);
+	
+
+			PWRCTL_clrPower(&pBSPArgs->powerCTL, DAC0);
+			PWRCTL_setPower(&pBSPArgs->powerCTL, LCD);
+			PWRCTL_setAllTo(&pBSPArgs->powerCTL);
+			OEMsetPowerCTL(pBSPArgs->powerCTL);
+
+
+		Disp_envid_onoff(DISP_ENVID_ON); // we switch the TFT controller on...
+		LDI_setDisplayCurrent(OEMgetDisplayCurrent());
+		LDI_setBacklight(100);
+		
+		LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, OEMgetBGColor());
+		displayLogo();
+
+			
+
+}
+
+
 
 void main(void)
 {
@@ -470,7 +576,7 @@ static void PrintMainMenu(PBOOT_CFG pBootCfg)
 	EdbgOutputDebugString ( "\r\n--------- External Power modules --------\r\n");
 	EdbgOutputDebugString ( "U) external Power modules config: [%s]\r\n",PWRCTL_isDefault((unsigned char)(OEMgetPowerCTL() & 0xff)));
     EdbgOutputDebugString ( "\r\n--------- Display and Logo section  ------\r\n");
-    EdbgOutputDebugString ( "G) LCD attached: %s with %d Bit RGB\r\n", LDI_getDisplayName((HITEG_DISPLAY_TYPE)pBSPArgs->displayType ), OEMgetLCDBpp());
+    EdbgOutputDebugString ( "G) LCD attached: %s with %d Bit RGB\r\n", LDI_getDisplayName( OEMgetDisplayType()), OEMgetLCDBpp());
 	EdbgOutputDebugString ( "\r\n--------- Test Section --------\r\n");
 	EdbgOutputDebugString ( "O) SD Card Tools\r\n");
 	EdbgOutputDebugString ( "\r\n-------------------------------\r\n");
@@ -1227,9 +1333,9 @@ BOOL OEMPlatformInit(void)
 	//----------------------          
     // Initialize the display.
 	EdbgOutputDebugString("\r\nStart display...");
-	identifyDisplay();
+	//identifyDisplay();
 	//backlight(0);
-    InitializeDisplay();
+    initializeDisplay();
 	//---------------------	
     ///////////////////////////////////////////////////////////////////////////////
     // Power on USB OTG
@@ -1962,105 +2068,8 @@ void    SaveEthernetAddress()
         pBSPArgs->kitl.flags     |= OAL_KITL_FLAGS_DHCP;
     }
 }
-void initDisplay();
-
-void initDisplay() // we need to use this hack here, as the linker refuse to find >>InitializeDisplay<<
-{					// don't know were I made a mistake there....anyone?
-InitializeDisplay();
-}
 
 
-
-
-
-void InitializeDisplay(void)
-{
-	static tDevInfo RGBDevInfo;
-    volatile S3C6410_GPIO_REG *pGPIOReg = (S3C6410_GPIO_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_GPIO, FALSE);
-    volatile S3C6410_DISPLAY_REG *pDispReg = (S3C6410_DISPLAY_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_DISPLAY, FALSE);
-    volatile S3C6410_MSMIF_REG *pMSMIFReg = (S3C6410_MSMIF_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_MSMIF_SFR, FALSE);
-    volatile S3C6410_SYSCON_REG *pSysConReg = (S3C6410_SYSCON_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_SYSCON, FALSE);
-	volatile PUSHORT framebuffer = (PUSHORT)EBOOT_FRAMEBUFFER_UA_START;
-    if(!(pSysConReg->BLK_PWR_STAT & (1<<4))) {
-        pSysConReg->NORMAL_CFG |= (1<<14);
-        while(!(pSysConReg->BLK_PWR_STAT & (1<<4)));
-        }
-	pSysConReg->CLK_SRC = (pSysConReg->CLK_SRC & ~(0xFFFFFFF0))
-			|( 0<<31)		// TV27_SEL    -> 27MHz
-            |(0<<30)				// DAC27        -> 27MHz
-            |(0<<28)				// SCALER_SEL    -> MOUT_EPLL
-			|( 0<<26)		// LCD_SEL    -> Dout_MPLL
-            |(0<<24)				// IRDA_SEL    -> MOUT_EPLL
-            |(0<<22)				// MMC2_SEL    -> MOUT_EPLL
-            |(0<<20)				// MMC1_SEL    -> MOUT_EPLL
-            |(0<<18)				// MMC0_SEL    -> MOUT_EPLL
-            |(0<<16)				// SPI1_SEL    -> MOUT_EPLL
-            |(0<<14)				// SPI0_SEL    -> MOUT_EPLL
-            |(0<<13)				// UART_SEL    -> MOUT_EPLL
-            |(0<<10)				// AUDIO1_SEL    -> MOUT_EPLL
-            |(0<<7)					// AUDIO0_SEL    -> MOUT_EPLL
-            |(0<<5)					// UHOST_SEL    -> 48MHz
-            |(0<<4);				// MFCCLK_SEL    -> HCLKx2 (0:HCLKx2, 1:MoutEPLL)	
-	
-	
-
-	if(OEMgetDisplayType()==NO_DISPLAY) 
-	{
-		Disp_envid_onoff(DISP_ENVID_OFF);
-		return;
-	}
-
-
-		LDI_setBPP(OEMgetLCDBpp());
-		LDI_initDisplay(OEMgetDisplayType(),pSysConReg, pDispReg, pGPIOReg); 
-	
-		Disp_initialize_register_address(pDispReg, pMSMIFReg, pGPIOReg);
-
-		LDI_fill_output_device_information(&RGBDevInfo);
-
-		// Setup Output Device Information
-		Disp_set_output_device_information(&RGBDevInfo);
-			
-		// Initialize Display Controller
-		//Disp_initialize_output_interface(DISP_VIDOUT_RGBIF_TVENCODER);
-		Disp_initialize_output_interface(DISP_VIDOUT_RGBIF);
-		
-		if(OEMgetLCDBpp()==16)
-		{
-			EdbgOutputDebugString("[eBOOT]-- display bpp: %d found\n\r", OEMgetLCDBpp());	
-			Disp_set_window_mode(DISP_WIN1_DMA, DISP_16BPP_565, LDI_GetDisplayWidth(OEMgetDisplayType()), LDI_GetDisplayHeight(OEMgetDisplayType()), 0, 0);
-		}
-		else if(OEMgetLCDBpp()==24)
-		{
-			EdbgOutputDebugString("[eBOOT]-- display bpp: %d found\n\r", OEMgetLCDBpp());	
-			Disp_set_window_mode(DISP_WIN1_DMA, DISP_24BPP_888, LDI_GetDisplayWidth(OEMgetDisplayType()), LDI_GetDisplayHeight(OEMgetDisplayType()), 0, 0);
-		}
-		else
-			EdbgOutputDebugString("[eBOOT]--BBP of %d is not supported\n\r", OEMgetLCDBpp());
-
-		EdbgOutputDebugString("[LDI:ERR] framebuffer at: 0x%X\n\r",IMAGE_FRAMEBUFFER_PA_START );
-
-		Disp_set_framebuffer(DISP_WIN1,IMAGE_FRAMEBUFFER_PA_START);
-		Disp_window_onfoff(DISP_WIN1, DISP_WINDOW_ON);
-		//LDI_setClock((OEMgetDisplayType()==HITEG_TV)?1:0);
-	
-
-			PWRCTL_clrPower(&pBSPArgs->powerCTL, DAC0);
-			PWRCTL_setPower(&pBSPArgs->powerCTL, LCD);
-			PWRCTL_setAllTo(&pBSPArgs->powerCTL);
-			OEMsetPowerCTL(pBSPArgs->powerCTL);
-
-
-		Disp_envid_onoff(DISP_ENVID_ON); // we switch the TFT controller on...
-
-		LDI_setBacklight(100);
-		
-		LDI_clearScreen(IMAGE_FRAMEBUFFER_PA_START, OEMgetBGColor());
-		displayLogo();
-
-			
-
-}
 
 static void SpinForever(void)
 {
@@ -2146,13 +2155,14 @@ static void InitializeRTC(void)
     volatile S3C6410_RTC_REG *pRTCReg = (S3C6410_RTC_REG *)OALPAtoVA(S3C6410_BASE_REG_PA_RTC, FALSE);
 
     // As per the S3C6410 User Manual, the RTC clock divider should be reset for exact RTC operation.
-
+#if 0
     // Enable RTC control first
     pRTCReg->RTCCON |= (1<<0);
 
     // Pulse the RTC clock divider reset
     pRTCReg->RTCCON |= (1<<3);
     pRTCReg->RTCCON &= ~(1<<3);
+
 
     // The value of BCD registers in the RTC are undefined at reset. Set them to a known value
     pRTCReg->BCDSEC  = 0;
@@ -2165,4 +2175,6 @@ static void InitializeRTC(void)
 
     // Disable RTC control.
     pRTCReg->RTCCON &= ~(1<<0);
+
+#endif
 }
